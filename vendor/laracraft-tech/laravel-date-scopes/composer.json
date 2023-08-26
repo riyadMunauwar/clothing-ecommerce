@@ -1,0 +1,72 @@
+{
+    "name": "laracraft-tech/laravel-date-scopes",
+    "description": "Some useful date scopes for your Laravel Eloquent models!",
+    "keywords": [
+        "laracraft-tech",
+        "laravel",
+        "laravel-date-scopes"
+    ],
+    "homepage": "https://github.com/laracraft-tech/laravel-date-scopes",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Zacharias Creutznacher",
+            "email": "zacharias@laracraft.tech",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/contracts": "^9.0 || ^10.0",
+        "illuminate/database": "^9.0 || ^10.0",
+        "illuminate/support": "^9.0 || ^10.0",
+        "nesbot/carbon": "^2.66",
+        "spatie/laravel-package-tools": "^1.13.0"
+    },
+    "require-dev": {
+        "nunomaduro/larastan": "^2.0.1",
+        "orchestra/testbench": "^7.0  || ^8.0",
+        "pestphp/pest": "^1.22 || ^2.0",
+        "pestphp/pest-plugin-laravel": "^1.22 || ^2.0",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "phpstan/phpstan-phpunit": "^1.0",
+        "spatie/laravel-ray": "^1.26"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaracraftTech\\LaravelDateScopes\\": "src",
+            "LaracraftTech\\LaravelDateScopes\\Database\\Factories\\": "database/factories"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LaracraftTech\\LaravelDateScopes\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaracraftTech\\LaravelDateScopes\\LaravelDateScopesServiceProvider"
+            ],
+            "aliases": {
+                "LaravelDateScopes": "LaracraftTech\\LaravelDateScopes\\Facades\\LaravelDateScopes"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
