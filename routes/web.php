@@ -60,5 +60,5 @@ Route::middleware([
 });
 
 
-Route::redirect('/', 'login');
+Route::view('/', 'front.pages.home');
 

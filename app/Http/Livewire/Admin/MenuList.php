@@ -3,16 +3,13 @@
 namespace App\Http\Livewire\Admin;
 
 use Livewire\Component;
-use Livewire\WithPagination;
 use App\Traits\WithSweetAlert;
 use App\Models\Menu;
 
 class MenuList extends Component
 {
-    use WithPagination;
     use WithSweetAlert;
 
-    public $search;
 
     protected $listeners = [
         'onMenuCreated' => '$refresh',
@@ -23,15 +20,18 @@ class MenuList extends Component
 
     public function render()
     {
-        $menus = $this->getMenus();
-
-        return view('admin.components.menu-list', compact('menus'));
+        return view('admin.components.menu-list');
     }
 
 
     public function enableMenuEditMode($id)
     {
         $this->emit('onMenuEdit', $id);
+    }
+
+    public function enableAddNewMenuModal($parent_id)
+    {
+        $this->emit('onShowCreateMenuModal', $parent_id);
     }
 
 
@@ -43,27 +43,14 @@ class MenuList extends Component
 
     public function deleteMenu($id)
     {
-        if(Menu::destroy($id)){
-            return $this->success('Success', 'Menu deleted successfully.');
+        try {
+            if(Menu::destroy($id)){
+                return $this->success('Success', 'Menu deleted successfully.');
+            }
+        }catch(\Exception $e){
+            return $this->error('Failed', 'Delete child menu first.');
         }
 
-        return $this->error('Failed', 'Failed to delete Menu. try again');
     }
 
-
-    private function getMenus()
-    {
-
-        $search = $this->search;
-
-        $query = Menu::query();
-
-        $query->when($this->search, function($query) use($search){
-            $query->where('name', 'like', '%' . $search . '%')
-                  ->orWhere('name', $search);
-        });
-
-        return $query->paginate(25);
-
-    }
 }

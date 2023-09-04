@@ -1,4 +1,4 @@
-<x-admin.master-layout title="General Setting | Ebnshop">
+<x-admin.master-layout title="General Setting">
     <div class="grid grid-cols-1 md:grid-cols-4 md:gap-5">
         <div class="col-span-3">
             <livewire:admin.general-setting />

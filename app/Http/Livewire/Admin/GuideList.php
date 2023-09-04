@@ -25,7 +25,7 @@ class GuideList extends Component
     {
         $guides = $this->getGuides();
 
-        return view('admin.components.Guide-list', compact('guides'));
+        return view('admin.components.guide-list', compact('guides'));
     }
 
 

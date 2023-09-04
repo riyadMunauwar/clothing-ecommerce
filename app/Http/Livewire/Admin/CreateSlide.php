@@ -38,7 +38,7 @@ class CreateSlide extends Component
 
     public function render()
     {
-        return view('admin.components.create-Slide');
+        return view('admin.components.create-slide');
     }
 
 

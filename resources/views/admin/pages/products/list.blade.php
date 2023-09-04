@@ -1,3 +1,3 @@
-<x-admin.master-layout title="Product list | Ebnshop">
+<x-admin.master-layout title="Product list">
     <livewire:admin.product-list />
 </x-admin.master-layout>

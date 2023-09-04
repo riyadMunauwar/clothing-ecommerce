@@ -13,6 +13,7 @@
         "laravel/framework": "^9.19",
         "laravel/jetstream": "3.0",
         "laravel/sanctum": "^3.0",
+        "laravel/socialite": "^5.8",
         "laravel/tinker": "^2.7",
         "livewire/livewire": "^2.11",
         "spatie/laravel-medialibrary": "^10.0.0",

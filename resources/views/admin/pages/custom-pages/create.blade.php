@@ -1,4 +1,4 @@
-<x-admin.master-layout title="Create Pages | Ebnshop">
+<x-admin.master-layout title="Create Pages">
     <div class="grid grid-cols-1 md:grid-cols-6 md:gap-5">
         <div class="col-span-4">
             <livewire:admin.create-edit-page />

@@ -1,4 +1,4 @@
-<x-admin.master-layout title="Create Coupons | Ebnshop">
+<x-admin.master-layout title="Create Coupons">
     <div class="grid grid-cols-1 md:grid-cols-7 md:gap-5">
         <div class="col-span-2">
             <livewire:admin.create-coupon />
