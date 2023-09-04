@@ -56,7 +56,7 @@ class Menu extends Model implements HasMedia
         return $this->belongsTo(Category::class)->with('children');
     }
 
-    // Model Scrop
+    // Model Scope
 
     public function scopePublished($query)
     {
