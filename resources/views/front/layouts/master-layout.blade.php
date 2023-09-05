@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Rayat Boutique</title>
+        <title>{{ $title ?? 'Rayat Boutique' }}</title>
         <meta name="keywords" content="HTML5 Template">
         <meta name="description" content="Molla - Bootstrap eCommerce Template">
         <meta name="author" content="p-themes">
@@ -19,12 +19,16 @@
         <link rel="manifest" href="assets/images/icons/site.html">
         <link rel="mask-icon" href="assets/images/icons/safari-pinned-tab.svg" color="#666666">
         <link rel="shortcut icon" href="assets/images/icons/favicon.ico">
-        <meta name="apple-mobile-web-app-title" content="Molla">
+        <meta name="apple-mobile-web-app-title" content="Rayat Boutique">
         <meta name="application-name" content="Molla">
         <meta name="msapplication-TileColor" content="#cc9966">
         <meta name="msapplication-config" content="assets/images/icons/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
         <!-- End Favicon -->
+        
+        {{ $meta_tags ?? '' }}
+
+
 
         <!-- Plugins CSS File -->
 

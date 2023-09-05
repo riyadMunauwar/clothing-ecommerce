@@ -59,6 +59,36 @@ Route::middleware([
 
 });
 
+Route::group(['prefix' => 'auth'], function(){
+
+    Route::get('/login/google/redirect', [\App\Http\Controllers\Auth\GoogleAuthController::class, 'googleAuthRedirect'])->name('auth-google-redirect');
+    Route::get('/login/google/callback', [\App\Http\Controllers\Auth\GoogleAuthController::class, 'googleAuthCallback'])->name('auth-google-callback');
+
+    Route::get('/login/facebook/redirect', [\App\Http\Controllers\Auth\FacebookAuthController::class, 'facebookAuthRedirect'])->name('auth-facebook-redirect');
+    Route::get('/login/facebook/callback', [\App\Http\Controllers\Auth\FacebookAuthController::class, 'facebookAuthCallback'])->name('auth-facebook-callback');
+
+    Route::view('/login', 'front.pages.auth.login')->name('auth-login');
+    Route::view('/register', 'front.pages.auth.register')->name('auth-register');
+
+});
+
+
+// Redirect
+Route::redirect('/login', '/auth/login');
+Route::redirect('/register', '/auth/register');
+
+// Static Pages
+Route::view('/about-us', 'front.pages.static.about')->name('about-us');
+Route::view('/contact-us', 'front.pages.static.contact')->name('contact-us');
+Route::view('/terms-of-service', 'front.pages.static.tos')->name('tos');
+Route::view('/privacy-policty', 'front.pages.static.privacy')->name('privacy');
+Route::view('/refund-policy', 'front.pages.static.refund')->name('refund');
+
 
 Route::view('/', 'front.pages.home');
+
+
+
+
+
 

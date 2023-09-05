@@ -2,26 +2,25 @@
     <div class="header-top">
         <div class="container">
             <div class="header-left">
-                <div class="header-dropdown">
+                <!-- <div class="header-dropdown">
                     <a href="#">Usd</a>
                     <div class="header-menu">
                         <ul>
                             <li><a href="#">Eur</a></li>
                             <li><a href="#">Usd</a></li>
                         </ul>
-                    </div><!-- End .header-menu -->
-                </div><!-- End .header-dropdown -->
+                    </div>
+                </div> -->
 
                 <div class="header-dropdown">
-                    <a href="#">Eng</a>
+                    <a href="#">Wholesale/Custom Orders</a>
                     <div class="header-menu">
                         <ul>
-                            <li><a href="#">English</a></li>
-                            <li><a href="#">French</a></li>
-                            <li><a href="#">Spanish</a></li>
+                            <li><a href="#">Login</a></li>
+                            <li><a href="#">Register</a></li>
                         </ul>
-                    </div><!-- End .header-menu -->
-                </div><!-- End .header-dropdown -->
+                    </div>
+                </div>
             </div><!-- End .header-left -->
 
             <div class="header-right">
@@ -31,9 +30,9 @@
                         <ul>
                             <li><a href="tel:#"><i class="icon-phone"></i>Call: +0123 456 789</a></li>
                             <li><a href="wishlist.html"><i class="icon-heart-o"></i>Wishlist <span>(3)</span></a></li>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
-                            <li><a href="#signin-modal" data-toggle="modal"><i class="icon-user"></i>Login</a></li>
+                            <li><a href="{{ route('about-us') }}">About Us</a></li>
+                            <li><a href="{{ route('contact-us') }}">Contact Us</a></li>
+                            <li><a href="{{ route('login') }}"><i class="icon-user"></i>Login</a></li>
                         </ul>
                     </li>
                 </ul><!-- End .top-menu -->
