@@ -17,7 +17,7 @@ class FooterColumnAttribute extends Model
         return $this->belongsTo(FooterColumn::class);
     }
 
-    // Model Scrop
+    // Model Scope
 
     public function scopePublished($query)
     {

@@ -16,7 +16,7 @@ class FooterColumn extends Model
         return $this->hasMany(FooterColumnAttribute::class);
     }
 
-    // Model Scrop
+    // Model Scope
 
     public function scopePublished($query)
     {

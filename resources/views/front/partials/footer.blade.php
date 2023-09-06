@@ -17,48 +17,33 @@
                     </div><!-- End .widget about-widget -->
                 </div><!-- End .col-sm-6 col-lg-3 -->
 
-                <div class="col-sm-6 col-lg-3">
-                    <div class="widget">
-                        <h4 class="widget-title">Useful Links</h4><!-- End .widget-title -->
+                @php 
+                    
+                    $footer_columns = \App\Models\FooterColumn::published()->get();
 
-                        <ul class="widget-list">
-                            <li><a href="about.html">About Molla</a></li>
-                            <li><a href="#">How to shop on Molla</a></li>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="contact.html">Contact us</a></li>
-                            <li><a href="login.html">Log in</a></li>
-                        </ul><!-- End .widget-list -->
-                    </div><!-- End .widget -->
-                </div><!-- End .col-sm-6 col-lg-3 -->
+                @endphp
 
-                <div class="col-sm-6 col-lg-3">
-                    <div class="widget">
-                        <h4 class="widget-title">Customer Service</h4><!-- End .widget-title -->
 
-                        <ul class="widget-list">
-                            <li><a href="#">Payment Methods</a></li>
-                            <li><a href="#">Money-back guarantee!</a></li>
-                            <li><a href="#">Returns</a></li>
-                            <li><a href="#">Shipping</a></li>
-                            <li><a href="#">Terms and conditions</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                        </ul><!-- End .widget-list -->
-                    </div><!-- End .widget -->
-                </div><!-- End .col-sm-6 col-lg-3 -->
+                @foreach($footer_columns as $footer_column)
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="widget">
+                            <h4 class="widget-title">{{ $footer_column->column_title }}</h4><!-- End .widget-title -->
 
-                <div class="col-sm-6 col-lg-3">
-                    <div class="widget">
-                        <h4 class="widget-title">My Account</h4><!-- End .widget-title -->
+                            <ul class="widget-list">
+                                @php 
+                                    
+                                    $columns_attributes = \App\Models\FooterColumnAttribute::published()->where('footer_column_id', $footer_column->id)->get();
 
-                        <ul class="widget-list">
-                            <li><a href="#">Sign In</a></li>
-                            <li><a href="cart.html">View Cart</a></li>
-                            <li><a href="#">My Wishlist</a></li>
-                            <li><a href="#">Track My Order</a></li>
-                            <li><a href="#">Help</a></li>
-                        </ul><!-- End .widget-list -->
-                    </div><!-- End .widget -->
-                </div><!-- End .col-sm-6 col-lg-3 -->
+                                @endphp
+
+                                @foreach($columns_attributes as $columns_attribute)
+                                    <li><a href="{{ $columns_attribute->link }}">{{ $columns_attribute->name }}</a></li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                @endforeach
+                
             </div><!-- End .row -->
         </div><!-- End .container -->
     </div><!-- End .footer-middle -->
