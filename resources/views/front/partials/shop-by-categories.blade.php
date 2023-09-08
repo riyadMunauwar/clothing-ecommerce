@@ -6,7 +6,7 @@
             <div class="col-6 col-lg-4">
                 <div class="banner banner-display banner-link-anim">
                     <a href="#">
-                        <img src="{{ asset('assets/images/banners/home/banner-1.jpg')" alt="Banner">
+                        <img src="{{ asset('assets/images/banners/home/banner-1.jpg') }}" alt="Banner">
                     </a>
 
                     <div class="banner-content banner-content-center">
