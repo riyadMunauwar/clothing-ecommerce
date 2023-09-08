@@ -3,7 +3,7 @@
 
     @include('front.partials.intro-slider')
     @include('front.partials.brands-slider')
-    @include('front.partials.recent-arrivals-products')
+    <livewire:front.recent-arrival-products />
     @include('front.partials.selling-feature-banner')
 
 </x-front.master-layout>
