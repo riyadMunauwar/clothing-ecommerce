@@ -25,13 +25,13 @@
                     <x-input wire:model.debounce="caurosel.show_in_page" id="show_in_page" class="block h-8 mt-1 w-full" type="text" />
                 </div>
 
-                
-
-                <div class="block">
-                    <label for="is_published" class="flex items-center">
-                        <x-checkbox wire:model.debounce="caurosel.is_published" id="is_published" />
-                        <span class="ml-2 text-sm text-gray-600">{{ __('Published') }}</span>
-                    </label>
+                <div>
+                    <x-label for="show_in_page" value="{{ __('For') }}" />
+                    <x-ui.select wire:model.debounce="caurosel.show_in_page" id="show_in_page" class="block h-10 text-md mt-1 w-full">
+                        <option value="">Select</option>
+                        <option value="intro-caurosel">Intro</option>
+                        <option value="brand-caurosel">Brand Caurosel</option>
+                    </x-ui.select>
                 </div>
 
                 <div class="flex items-center justify-end">

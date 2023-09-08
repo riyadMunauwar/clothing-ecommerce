@@ -14,7 +14,7 @@
                         <div class="intro-slide">
                             <figure class="slide-image">
                                 <picture>
-                                    <!-- <source media="(max-width: 480px)" srcset="assets/images/slider/slide-1-480w.jpg"> -->
+                                    <source media="(max-width: 480px)" srcset="{{ asset('assets/images/slider/slide-1-480w.jpg') }}">
                                     <img src="{{ asset('assets/front/images/slider/slide-1.jpg') }}" alt="Image Desc">
                                 </picture>
                             </figure><!-- End .slide-image -->
@@ -33,7 +33,7 @@
                         <div class="intro-slide">
                             <figure class="slide-image">
                                 <picture>
-                                    <!-- <source media="(max-width: 480px)" srcset="assets/images/slider/slide-2-480w.jpg"> -->
+                                    <source media="(max-width: 480px)" srcset="{{ asset('assets/images/slider/slide-2-480w.jpg') }}">
                                     <img src="{{ asset('assets/front/images/slider/slide-2.jpg') }}" alt="Image Desc">
                                 </picture>
                             </figure><!-- End .slide-image -->
@@ -52,7 +52,7 @@
                         <div class="intro-slide">
                             <figure class="slide-image">
                                 <picture>
-                                    <!-- <source media="(max-width: 480px)" srcset="assets/images/slider/slide-3-480w.jpg"> -->
+                                    <source media="(max-width: 480px)" srcset="{{ asset('assets/images/slider/slide-3-480w.jpg') }}">
                                     <img src="{{ asset('assets/front/images/slider/slide-3.jpg') }}" alt="Image Desc">
                                 </picture>
                             </figure><!-- End .slide-image -->
@@ -107,55 +107,6 @@
             </div><!-- End .col-lg-4 -->
         </div><!-- End .row -->
 
-        <div class="mb-6"></div><!-- End .mb-6 -->
-
-        <div class="owl-carousel owl-simple" data-toggle="owl" 
-            data-owl-options='{
-                "nav": false, 
-                "dots": false,
-                "margin": 30,
-                "loop": false,
-                "responsive": {
-                    "0": {
-                        "items":2
-                    },
-                    "420": {
-                        "items":3
-                    },
-                    "600": {
-                        "items":4
-                    },
-                    "900": {
-                        "items":5
-                    },
-                    "1024": {
-                        "items":6
-                    }
-                }
-            }'>
-            <a href="#" class="brand">
-                <img src="{{ asset('assets/front/images/brands/1.png') }}" alt="Brand Name">
-            </a>
-
-            <a href="#" class="brand">
-                <img src="{{ asset('assets/front/images/brands/2.png') }}" alt="Brand Name">
-            </a>
-
-            <a href="#" class="brand">
-                <img src="{{ asset('assets/front/images/brands/3.png') }}" alt="Brand Name">
-            </a>
-
-            <a href="#" class="brand">
-                <img src="{{ asset('assets/front/images/brands/4.png') }} " alt="Brand Name">
-            </a>
-
-            <a href="#" class="brand">
-                <img src="{{ asset('assets/front/images/brands/5.png') }}" alt="Brand Name">
-            </a>
-
-            <a href="#" class="brand">
-                <img src="{{ asset('assets/front/images/brands/6.png') }}" alt="Brand Name">
-            </a>
-        </div><!-- End .owl-carousel -->
+        <!-- <div class="mb-6"></div> -->
     </div><!-- End .container -->
 </div><!-- End .bg-lighter -->

@@ -11,8 +11,12 @@
         </div>
 
         <div>
-            <x-label for="show_in_page" value="{{ __('Show In Page') }}" />
-            <x-input wire:model.debounce="show_in_page" id="show_in_page" class="block h-8 mt-1 w-full" type="text" />
+            <x-label for="show_in_page" value="{{ __('For') }}" />
+            <x-ui.select wire:model.debounce="show_in_page" id="show_in_page" class="block h-10 text-md mt-1 w-full">
+                <option value="">Select</option>
+                <option value="intro-caurosel">Intro</option>
+                <option value="brand-caurosel">Brand Caurosel</option>
+            </x-ui.select>
         </div>
 
         <div class="block">

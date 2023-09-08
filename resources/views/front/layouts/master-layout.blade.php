@@ -49,7 +49,6 @@
         <!-- Main CSS File -->
         <link rel="stylesheet" href="{{ asset('assets/front/css/style.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/front/css/plugins/nouislider/nouislider.css') }}">
-        <link rel="stylesheet" href="{{ asset('assets/front/css/demos/demo-11.css') }}">
 
         <!-- Sweet Alert -->
         <link rel="stylesheet" href="{{ asset('assets/sweetalert2/sweetalert2.min.css') }}">

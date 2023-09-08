@@ -74,8 +74,8 @@ Route::group(['prefix' => 'auth'], function(){
 
 
 // Redirect
-Route::redirect('/login', '/auth/login');
-Route::redirect('/register', '/auth/register');
+// Route::redirect('/login', '/auth/login');
+// Route::redirect('/register', '/auth/register');
 
 // Static Pages
 Route::view('/about-us', 'front.pages.static.about')->name('about-us');

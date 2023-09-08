@@ -1,7 +1,10 @@
 <x-front.master-layout title="Home">
 
 
-    @include('front.partials.layout-slider')
+    @include('front.partials.intro-slider')
+    @include('front.partials.brands-slider')
+    @include('front.partials.recent-arrivals-products')
+    @include('front.partials.selling-feature-banner')
 
 </x-front.master-layout>
 
