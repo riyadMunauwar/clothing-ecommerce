@@ -1,4 +1,5 @@
 <section>
+    <div class="mb-6"></div>
     <div class="container">
         <div class="heading heading-center mb-6">
             <h2 class="title">Recent Arrivals</h2><!-- End .title -->
