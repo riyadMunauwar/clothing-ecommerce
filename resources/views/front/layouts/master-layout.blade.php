@@ -58,20 +58,23 @@
 
         <div class="page-wrapper">
             <!-- Header -->
-            @include('front.partials.header')
+            <livewire:front.header />
+
             <!-- Main -->
             <main class="main">
                 {{ $slot }}
             </main>
+
             <!-- Footer -->
-            @include('front.partials.footer')
+            <livewire:front.footer />
         </div>
 
         
 
         @stack('modals')
 
-        @include('front.partials.news-letter-popup')
+        <livewire:front.news-letter-popup />
+
         @include('front.partials.mobile-nav')
 
         @stack('scripts')
