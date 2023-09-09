@@ -29,10 +29,17 @@
                         <a href="#">Links</a>
                         <ul>
                             <li><a href="tel:#"><i class="icon-phone"></i>Call: +0123 456 789</a></li>
-                            <li><a href="wishlist.html"><i class="icon-heart-o"></i>Wishlist <span>(3)</span></a></li>
+                            <li><a href="{{ route('wishlist') }}"><i class="icon-heart-o"></i>Wishlist <span>(3)</span></a></li>
                             <li><a href="{{ route('about-us') }}">About Us</a></li>
                             <li><a href="{{ route('contact-us') }}">Contact Us</a></li>
-                            <li><a href="{{ route('login') }}"><i class="icon-user"></i>Login</a></li>
+                            @auth
+                                <li><a href="{{ route('user-dashboard') }}">Account</a></li>
+                            @endauth
+
+                            @guest
+                                <li><a href="{{ route('login') }}"><i class="icon-user"></i>Login</a></li>
+                                <li><a href="{{ route('register') }}"><i class="icon-user"></i>Register</a></li>
+                            @endguest
                         </ul>
                     </li>
                 </ul><!-- End .top-menu -->
@@ -127,6 +134,8 @@
             </div><!-- End .header-left -->
 
             <div class="header-right">
+
+                <!-- Search -->
                 <div class="header-search">
                     <a href="#" class="search-toggle" role="button" title="Search"><i class="icon-search"></i></a>
                     <form action="#" method="get">
@@ -136,7 +145,10 @@
                         </div><!-- End .header-search-wrapper -->
                     </form>
                 </div><!-- End .header-search -->
-                <div class="dropdown compare-dropdown">
+
+
+                <!-- Compare -->
+                <!-- <div class="dropdown compare-dropdown">
                     <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static" title="Compare Products" aria-label="Compare Products">
                         <i class="icon-random"></i>
                     </a>
@@ -157,9 +169,11 @@
                             <a href="#" class="action-link">Clear All</a>
                             <a href="#" class="btn btn-outline-primary-2"><span>Compare</span><i class="icon-long-arrow-right"></i></a>
                         </div>
-                    </div><!-- End .dropdown-menu -->
-                </div><!-- End .compare-dropdown -->
+                    </div>
+                </div> -->
 
+
+                <!-- Header Cart -->
                 <div class="dropdown cart-dropdown">
                     <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
                         <i class="icon-shopping-cart"></i>
@@ -216,11 +230,15 @@
                         </div><!-- End .dropdown-cart-total -->
 
                         <div class="dropdown-cart-action">
-                            <a href="cart.html" class="btn btn-primary">View Cart</a>
-                            <a href="checkout.html" class="btn btn-outline-primary-2"><span>Checkout</span><i class="icon-long-arrow-right"></i></a>
+                            <a href="{{ route('cart') }}" class="btn btn-primary">View Cart</a>
+                            <a href="{{ route('checkout') }}" class="btn btn-outline-primary-2"><span>Checkout</span><i class="icon-long-arrow-right"></i></a>
                         </div><!-- End .dropdown-cart-total -->
+
                     </div><!-- End .dropdown-menu -->
                 </div><!-- End .cart-dropdown -->
+
+
+
             </div><!-- End .header-right -->
         </div><!-- End .container -->
     </div><!-- End .header-middle -->

@@ -78,6 +78,16 @@ Route::group(['prefix' => 'auth'], function(){
 // Route::redirect('/register', '/auth/register');
 
 // Static Pages
+Route::view('/c/{category_slug}/{id}', 'front.pages.archieve')->name('category');
+Route::view('/p/{product_slug}/{id}', 'front.pages.single')->name('product');
+Route::view('/cart', 'front.pages.cart')->name('cart');
+Route::view('/checkout', 'front.pages.checkout')->name('checkout');
+Route::view('/wishlist', 'front.pages.wishlist')->name('wishlist');
+
+// User Profile
+Route::view('/accounts', 'front.pages.profile.dashboard')->name('user-dashboard');
+
+
 Route::view('/about-us', 'front.pages.static.about')->name('about-us');
 Route::view('/contact-us', 'front.pages.static.contact')->name('contact-us');
 Route::view('/terms-of-service', 'front.pages.static.tos')->name('tos');

@@ -1,10 +1,8 @@
 <x-front.master-layout title="Home">
 
-    @include('front.partials.intro-slider')
-    @include('front.partials.brands-slider')
+    @include('front.partials.category-collection')
     <livewire:front.trendy-products-with-caurosel />
     <livewire:front.product-collection-with-filter />
-    @include('front.partials.shop-by-categories')
     <livewire:front.recent-arrival-products />
     @include('front.partials.selling-feature-banner')
 
