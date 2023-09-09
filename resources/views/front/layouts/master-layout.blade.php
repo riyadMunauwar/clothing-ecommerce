@@ -33,8 +33,7 @@
         <!-- Plugins CSS File -->
 
 
-        <!-- Styles For This Page -->
-        @stack('styles')
+
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -53,6 +52,9 @@
         <!-- Sweet Alert -->
         <link rel="stylesheet" href="{{ asset('assets/sweetalert2/sweetalert2.min.css') }}">
 
+        <!-- Styles For This Page -->
+        @stack('styles')
+        
     </head>
     <body>
 
