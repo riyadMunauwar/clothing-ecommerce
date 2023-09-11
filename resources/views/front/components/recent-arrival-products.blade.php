@@ -65,7 +65,7 @@
 
 
             @foreach($categories as $category)
-                <div class="tab-pane p-0 fade" id="#recent-fur-{{ $category->slug }}-{{$category->id}}" role="tabpanel" aria-labelledby="#recent-fur-{{ $category->slug }}-{{$category->id}}">
+                <div class="tab-pane p-0 fade" id="recent-fur-{{ $category->slug }}-{{$category->id}}" role="tabpanel" aria-labelledby="#recent-fur-{{ $category->slug }}-{{$category->id}}">
                     <div class="products">
                         <div class="row justify-content-center">
 
