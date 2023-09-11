@@ -24,13 +24,13 @@ class TrendyProductsWithCaurosel extends Component
 
     private function gentAllProducts()
     {
-        return Product::withMedia()->published()->featured()->inRandomOrder()->take(8)->get();
+        return Product::published()->featured()->inRandomOrder()->take(8)->get();
     }
 
     private function getCategories()
     {
         return  Category::with(['products' => function ($query) {
-                            $query->published()->take(10)->withMedia(); 
+                            $query->published()->take(10);
                     }])->published()->inRandomOrder()->take(4)->get();
     }
             
