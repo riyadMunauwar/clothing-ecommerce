@@ -10,7 +10,7 @@
                 </li>
                 @foreach($categories as $category)
                     <li class="nav-item">
-                        <a class="nav-link" id="trendy-{{ $category->id }}" data-toggle="tab" href="#trendy-{{ $category->id }}" role="tab" aria-controls="trendy-{{ $category->id }}" aria-selected="false">{{ $category->name }}</a>
+                        <a class="nav-link" id="trendy-{{ $category->name }}" data-toggle="tab" href="#trendy-{{ $category->name }}" role="tab" aria-controls="trendy-{{ $category->id }}" aria-selected="false">{{ $category->name }}</a>
                     </li>
                 @endforeach
             </ul>
@@ -93,7 +93,7 @@
 
             <!-- Category Wise Product -->
             @foreach($categories as $category)
-                <div class="tab-pane p-0 fade" id="trendy-{{ $category->id }}" role="tabpanel" aria-labelledby="trendy-all-link">
+                <div class="tab-pane p-0 fade" id="trendy-{{ $category->name }}" role="tabpanel" aria-labelledby="trendy-{{ $category->id }}">
                     <div class="owl-carousel owl-simple carousel-equal-height carousel-with-shadow" data-toggle="owl" 
                         data-owl-options='{
                             "nav": false, 
