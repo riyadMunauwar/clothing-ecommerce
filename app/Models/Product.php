@@ -162,10 +162,24 @@ class Product extends Model implements HasMedia
     }
 
     // Model Scope
-
     public function scopePublished($query)
     {
         return $query->where('is_published', true);
+    }
+
+    public function scopeFeatured($query)
+    {
+        return $query->where('is_featured', true);
+    }
+
+    public function scopePremium($query)
+    {
+        return $query->where('is_premium', true);
+    }
+
+    public function scopeGrocery($query)
+    {
+        return $query->where('is_grocery', true);
     }
 
 }
