@@ -22,7 +22,7 @@ class TrendyProductsWithCaurosel extends Component
         return view('front.components.trendy-products-with-caurosel');
     }
 
-    private function gentAllProducts()
+    private function getAllProducts()
     {
         return Product::published()->featured()->inRandomOrder()->take(8)->get();
     }
