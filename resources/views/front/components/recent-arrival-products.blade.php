@@ -10,7 +10,7 @@
                 </li>
                 @foreach($categories as $category)
                     <li class="nav-item">
-                        <a class="nav-link" id="recent-fur-{{ $category->slug }}-{{$category->id}}-link" data-toggle="tab" href="#recent-fur-{{ $category->name }}-{{$category->id}}" role="tab" aria-controls="#recent-fur-{{ $category->name }}-{{$category->id}}" aria-selected="false">{{ $category->name }}</a>
+                        <a class="nav-link" id="recent-fur-{{ $category->slug }}-{{$category->id}}-link" data-toggle="tab" href="#recent-fur-{{ $category->slug }}-{{$category->id}}" role="tab" aria-controls="#recent-fur-{{ $category->slug }}-{{$category->id}}" aria-selected="false">{{ $category->name }}</a>
                     </li>
                 @endforeach
             </ul>
