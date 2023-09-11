@@ -11,7 +11,7 @@
                         <figure class="product-media">
                             <span class="product-label">Sale</span>
                             <a href="">
-                                <img src="{{ $product->thumbnaiUrl() }}" alt="{{ $product->name }}" class="product-image">
+                                <img src="{{ $product->thumbnailUrl() }}" alt="{{ $product->name }}" class="product-image">
                             </a>
 
                             <div class="product-action-vertical">
