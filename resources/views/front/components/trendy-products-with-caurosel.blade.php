@@ -92,76 +92,78 @@
 
 
             <!-- Category Wise Product -->
-            <div class="tab-pane p-0 fade show active" id="trendy-all-tab" role="tabpanel" aria-labelledby="trendy-all-link">
-                <div class="owl-carousel owl-simple carousel-equal-height carousel-with-shadow" data-toggle="owl" 
-                    data-owl-options='{
-                        "nav": false, 
-                        "dots": true,
-                        "margin": 20,
-                        "loop": false,
-                        "responsive": {
-                            "0": {
-                                "items":2
-                            },
-                            "480": {
-                                "items":2
-                            },
-                            "768": {
-                                "items":3
-                            },
-                            "992": {
-                                "items":4
-                            },
-                            "1200": {
-                                "items":4,
-                                "nav": true,
-                                "dots": false
+            @foreach($categories as $category)
+                <div class="tab-pane p-0 fade" id="trendy-{{ $category->id }}" role="tabpanel" aria-labelledby="trendy-all-link">
+                    <div class="owl-carousel owl-simple carousel-equal-height carousel-with-shadow" data-toggle="owl" 
+                        data-owl-options='{
+                            "nav": false, 
+                            "dots": true,
+                            "margin": 20,
+                            "loop": false,
+                            "responsive": {
+                                "0": {
+                                    "items":2
+                                },
+                                "480": {
+                                    "items":2
+                                },
+                                "768": {
+                                    "items":3
+                                },
+                                "992": {
+                                    "items":4
+                                },
+                                "1200": {
+                                    "items":4,
+                                    "nav": true,
+                                    "dots": false
+                                }
                             }
-                        }
-                    }'>
+                        }'>
 
 
-                    <!-- Product Item Start -->
-                    <div class="product product-11 text-center">
-                        <figure class="product-media">
-                            <a href="">
-                                <img src="assets/images/demos/demo-2/products/product-2-1.jpg" alt="Product image" class="product-image">
-                                <img src="assets/images/demos/demo-2/products/product-2-2.jpg" alt="Product image" class="product-image-hover">
-                            </a>
+                        <!-- Product Item Start -->
+                        @foreach($category->products as $product)
+                            <div class="product product-11 text-center">
+                                <figure class="product-media">
+                                    <a href="">
+                                        <img src="{{ $product->thumbnailUrl() }}" alt="{{ $product->name }}" class="product-image">
+                                        <!-- <img src="assets/images/demos/demo-2/products/product-2-2.jpg" alt="Product image" class="product-image-hover"> -->
+                                    </a>
 
-                            <div class="product-action-vertical">
-                                <a href="#" class="btn-product-icon btn-wishlist"><span>add to wishlist</span></a>
-                            </div><!-- End .product-action-vertical -->
-                        </figure><!-- End .product-media -->
+                                    <div class="product-action-vertical">
+                                        <a href="#" class="btn-product-icon btn-wishlist"><span>add to wishlist</span></a>
+                                    </div>
+                                </figure>
 
-                        <div class="product-body">
+                                <div class="product-body">
 
-                            <h3 class="product-title"><a href="">Octo 4240</a></h3><!-- End .product-title -->
-                            
-                            <div class="product-price">
-                                $746,00
+                                    <h3 class="product-title"><a href="">{{ $product->name }}</a></h3>
+                                    
+                                    <div class="product-price">
+                                        {{ $product->sale_price }}
+                                    </div>
+
+                                    <!-- Product Color -->
+                                    <!-- <div class="product-nav product-nav-dots">
+                                        <a href="#" class="active" style="background: #1f1e18;"><span class="sr-only">Color name</span></a>
+                                        <a href="#" style="background: #e8e8e8;"><span class="sr-only">Color name</span></a>
+                                    </div> -->
+
+                                </div>
+
+                                <div class="product-action">
+                                    <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                </div>
                             </div>
+                        @endforeach
+                        <!-- Product Item End -->
 
-                            <!-- Product Color -->
-                            <!-- <div class="product-nav product-nav-dots">
-                                <a href="#" class="active" style="background: #1f1e18;"><span class="sr-only">Color name</span></a>
-                                <a href="#" style="background: #e8e8e8;"><span class="sr-only">Color name</span></a>
-                            </div> -->
-
-                        </div>
-
-                        <div class="product-action">
-                            <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
-                        </div>
-
-                    </div>
-                    <!-- Product Item End -->
-
-                
-                </div><!-- End .owl-carousel -->
-            </div><!-- .End .tab-pane -->
+                    
+                    </div><!-- End .owl-carousel -->
+                </div><!-- .End .tab-pane -->
+            @endforeach
             <!-- End Category Wise Product -->
-            
         </div><!-- End .tab-content -->
     </div><!-- End .container -->
 </section>
