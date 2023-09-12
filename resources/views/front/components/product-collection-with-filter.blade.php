@@ -29,7 +29,7 @@
                             </div>
 
                             <div class="product-cat">
-                                <a href="{{ route('category', ['category_slug' => $product->categories->first()->slug ?? '', 'id' => $product->categories->first()->id ?? '' ]) }}">{{ $product->categories->first()->name ?? 'None' }}</a>
+                                <a href="{{ route('category', ['category_slug' => $product->categories->first()->slug ?? 'none', 'id' => $product->categories->first()->id ?? 'none' ]) }}">{{ $product->categories->first()->name ?? 'None' }}</a>
                             </div>
                             
                             <h3 class="product-title"><a href="{{ route('product', ['product_slug' => $product->slug, 'id' => $product->id]) }}">{{ $product->name }}</a></h3>
