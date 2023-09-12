@@ -79,7 +79,7 @@
                             @if(!count($children) > 0)
                                 @if($menu->category)
                                     <li>
-                                        <a href="{{ route('category', ['category_slug' => $menu->category->slug, 'id' => $]) }}">{{ $menu->category->id }}</a>
+                                        <a href="{{ route('category', ['category_slug' => $menu->category->slug, 'id' => $menu->category->id]) }}">{{ $menu->name }}</a>
                                     </li>
                                 @else 
                                     <li>
