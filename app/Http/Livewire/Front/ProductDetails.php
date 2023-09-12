@@ -23,6 +23,8 @@ class ProductDetails extends Component
     {
         $produdctId = request()->id;
 
+        dd($produdctId);
+
         if(!$productId) redirect()->to('/');
 
         return Product::find($productId);
