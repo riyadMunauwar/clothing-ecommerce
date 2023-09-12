@@ -28,7 +28,7 @@
                             <div class="col-6 col-md-4 col-lg-3">
                                 <div class="product product-11 mt-v3 text-center">
                                     <figure class="product-media">
-                                        <a href="product.html">
+                                        <a href="{{ route('product', ['product_slug' => $product->slug, 'id' => $product->id]) }}">
                                             <img src="{{ $product->thumbnailUrl() }}" alt="{{ $product->name }}" class="product-image">
                                             <!-- <img src="assets/images/demos/demo-2/products/product-14-2.jpg" alt="Product image" class="product-image-hover"> -->
                                         </a>
@@ -39,7 +39,7 @@
                                     </figure>
 
                                     <div class="product-body">
-                                        <h3 class="product-title"><a href="">{{ $product->name }}</a></h3>
+                                        <h3 class="product-title"><a href="{{ route('product', ['product_slug' => $product->slug, 'id' => $product->id]) }}">{{ $product->name }}</a></h3>
                                         
                                         <div class="product-price">
                                             BDT {{ $product->sale_price }}
@@ -73,7 +73,7 @@
                                 <div class="col-6 col-md-4 col-lg-3">
                                     <div class="product product-11 mt-v3 text-center">
                                         <figure class="product-media">
-                                            <a href="product.html">
+                                            <a href="{{ route('product', ['product_slug' => $product->slug, 'id' => $product->id]) }}">
                                                 <img src="{{ $product->thumbnailUrl() }}" alt="{{ $product->name }}" class="product-image">
                                                 <!-- <img src="assets/images/demos/demo-2/products/product-14-2.jpg" alt="Product image" class="product-image-hover"> -->
                                             </a>
@@ -84,7 +84,7 @@
                                         </figure>
 
                                         <div class="product-body">
-                                            <h3 class="product-title"><a href="">{{ $product->name }}</a></h3>
+                                            <h3 class="product-title"><a href="{{ route('product', ['product_slug' => $product->slug, 'id' => $product->id]) }}">{{ $product->name }}</a></h3>
                                             
                                             <div class="product-price">
                                                 BDT {{ $product->sale_price }}

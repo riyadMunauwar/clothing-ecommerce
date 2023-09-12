@@ -52,7 +52,7 @@
                     @foreach($all_products as $product)
                         <div class="product product-11 text-center">
                             <figure class="product-media">
-                                <a href="">
+                                <a href="{{ route('product', ['product_slug' => $product->slug, 'id' => $product->id]) }}">
                                     <img src="{{ $product->thumbnailUrl() }}" alt="{{ $product->name }}" class="product-image">
                                     <!-- <img src="assets/images/demos/demo-2/products/product-2-2.jpg" alt="Product image" class="product-image-hover"> -->
                                 </a>
@@ -64,7 +64,7 @@
 
                             <div class="product-body">
 
-                                <h3 class="product-title"><a href="">{{ $product->name }}</a></h3>
+                                <h3 class="product-title"><a href="{{ route('product', ['product_slug' => $product->slug, 'id' => $product->id]) }}">{{ $product->name }}</a></h3>
                                 
                                 <div class="product-price">
                                     BDT {{ $product->sale_price }}
@@ -126,7 +126,7 @@
                         @foreach($category->products as $product)
                             <div class="product product-11 text-center">
                                 <figure class="product-media">
-                                    <a href="">
+                                    <a href="{{ route('product', ['product_slug' => $product->slug, 'id' => $product->id]) }}">
                                         <img src="{{ $product->thumbnailUrl() }}" alt="{{ $product->name }}" class="product-image">
                                         <!-- <img src="assets/images/demos/demo-2/products/product-2-2.jpg" alt="Product image" class="product-image-hover"> -->
                                     </a>
@@ -138,7 +138,7 @@
 
                                 <div class="product-body">
 
-                                    <h3 class="product-title"><a href="">{{ $product->name }}</a></h3>
+                                    <h3 class="product-title"><a href="{{ route('product', ['product_slug' => $product->slug, 'id' => $product->id]) }}">{{ $product->name }}</a></h3>
                                     
                                     <div class="product-price">
                                         {{ $product->sale_price }}

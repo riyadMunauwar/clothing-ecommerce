@@ -25,14 +25,14 @@
                         <div class="product-body">
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                <a href="" class="btn-product btn-cart"><span>add to cart</span></a>
                             </div>
 
                             <div class="product-cat">
-                                <a href="#">{{ $product->categories->first()->name ?? 'None' }}</a>
+                                <a href="{{ route('category', ['category_slug' => $product->categories->first()->slug, 'id' => $product->categories->first()->id ]) }}">{{ $product->categories->first()->name ?? 'None' }}</a>
                             </div>
                             
-                            <h3 class="product-title"><a href="product.html">{{ $product->name }}</a></h3>
+                            <h3 class="product-title"><a href="{{ route('product', ['product_slug' => $product->slug, 'id' => $product->id]) }}">{{ $product->name }}</a></h3>
                             
                             <div class="product-price">
                                 <span class="new-price">BDT {{ $product->sale_price }}</span>
