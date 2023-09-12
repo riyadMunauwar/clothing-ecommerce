@@ -11,7 +11,7 @@
 
                         <figure class="product-media">
                             <span class="product-label">Sale</span>
-                            <a href="">
+                            <a href="{{ route('product', ['product_slug' => $product->slug, 'id' => $product->id]) }}">
                                 <img src="{{ $product->thumbnailUrl() }}" alt="{{ $product->name }}" class="product-image">
                             </a>
 
