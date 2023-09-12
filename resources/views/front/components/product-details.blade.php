@@ -45,7 +45,7 @@
                             </div><!-- End .product-price -->
 
                             <div class="product-content">
-                                {!! $produdct->short_description !!}
+                                {!! $product->short_description !!}
                             </div><!-- End .product-content -->
 
                             <div class="details-filter-row details-row-size">
