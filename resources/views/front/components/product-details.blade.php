@@ -7,7 +7,7 @@
                         <div class="product-gallery">
                             <figure class="product-main-image">
                                 <span class="product-label label-top">Top</span>
-                                <img id="product-zoom" src="assets/images/products/single/sidebar-gallery/1.jpg" data-zoom-image="assets/images/products/single/sidebar-gallery/1-big.jpg" alt="product image">
+                                <img id="product-zoom" src="{{ $product->thumbnailUrl('medium') }}" data-zoom-image="{{ $product->thumbnailUrl('medium') }}" alt="{{ $product->name }}">
 
                                 <a href="#" id="btn-product-gallery" class="btn-product-gallery">
                                     <i class="icon-arrows"></i>
@@ -15,28 +15,23 @@
                             </figure><!-- End .product-main-image -->
 
                             <div id="product-zoom-gallery" class="product-image-gallery">
-                                <a class="product-gallery-item active" href="#" data-image="assets/images/products/single/sidebar-gallery/1.jpg" data-zoom-image="assets/images/products/single/sidebar-gallery/1-big.jpg">
-                                    <img src="assets/images/products/single/sidebar-gallery/1-small.jpg" alt="product side">
+                                <a class="product-gallery-item active" href="#" data-image="{{ $product->thumbnailUrl('medium') }}" data-zoom-image="{{ $product->thumbnailUrl('medium') }}">
+                                    <img src="{{ $product->thumbnailUrl('thumb') }}" alt="{{ $product->name }}">
                                 </a>
 
-                                <a class="product-gallery-item" href="#" data-image="assets/images/products/single/sidebar-gallery/2.jpg" data-zoom-image="assets/images/products/single/sidebar-gallery/2-big.jpg">
-                                    <img src="assets/images/products/single/sidebar-gallery/2-small.jpg" alt="product cross">
-                                </a>
+                                @foreach($product->galleryImage() as $image)
+                                    <a class="product-gallery-item" href="#" data-image="{{ $image['medium'] }}" data-zoom-image="{{ $image['medium'] }}">
+                                        <img src="{{ $image['thumb'] }}" alt="product cross">
+                                    </a>
+                                @endforeach
 
-                                <a class="product-gallery-item" href="#" data-image="assets/images/products/single/sidebar-gallery/3.jpg" data-zoom-image="assets/images/products/single/sidebar-gallery/3-big.jpg">
-                                    <img src="assets/images/products/single/sidebar-gallery/3-small.jpg" alt="product with model">
-                                </a>
-
-                                <a class="product-gallery-item" href="#" data-image="assets/images/products/single/sidebar-gallery/4.jpg" data-zoom-image="assets/images/products/single/sidebar-gallery/4-big.jpg">
-                                    <img src="assets/images/products/single/sidebar-gallery/4-small.jpg" alt="product back">
-                                </a>
                             </div><!-- End .product-image-gallery -->
                         </div><!-- End .product-gallery -->
                     </div><!-- End .col-md-6 -->
 
                     <div class="col-md-6">
                         <div class="product-details product-details-sidebar">
-                            <h1 class="product-title">Black faux leather chain trim sandals</h1><!-- End .product-title -->
+                            <h1 class="product-title">{{ $product->name }}</h1><!-- End .product-title -->
 
                             <div class="ratings-container">
                                 <div class="ratings">
@@ -46,11 +41,11 @@
                             </div><!-- End .rating-container -->
 
                             <div class="product-price">
-                                $90.00
+                                {{ $product->sale_price }}
                             </div><!-- End .product-price -->
 
                             <div class="product-content">
-                                <p>Sed egestas, ante et vulputate volutpat, eros semper est, vitae luctus metus libero eu augue.</p>
+                                {!! $produdct->short_description !!}
                             </div><!-- End .product-content -->
 
                             <div class="details-filter-row details-row-size">

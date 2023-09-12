@@ -61,19 +61,19 @@ class Product extends Model implements HasMedia
                 ->width(150)
                 ->height(150)
                 ->format('webp')
-                ->quality(80);
+                ->quality(100);
 
             $this->addMediaConversion('small')
                 ->width(640)
                 ->height(640)
                 ->format('webp')
-                ->quality(80);
+                ->quality(100);
 
             $this->addMediaConversion('medium')
                 ->width(800)
                 ->height(800)
                 ->format('webp')
-                ->quality(80);  
+                ->quality(100);  
         });
 
         $this->addMediaCollection('gallery')
@@ -83,19 +83,19 @@ class Product extends Model implements HasMedia
                 ->width(150)
                 ->height(150)
                 ->format('webp')
-                ->quality(80);
+                ->quality(100);
 
             $this->addMediaConversion('small')
                 ->width(640)
                 ->height(640)
                 ->format('webp')
-                ->quality(80);
+                ->quality(100);
 
             $this->addMediaConversion('medium')
                 ->width(800)
                 ->height(800)
                 ->format('webp')
-                ->quality(80);  
+                ->quality(100);  
 
         });
     }
