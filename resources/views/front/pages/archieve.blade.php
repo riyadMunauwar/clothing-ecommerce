@@ -1,4 +1,4 @@
-<x-front.master-layout title="Archieve">
+<x-front.archieve-layout title="Archieve">
 
 
     <div class="page-header text-center" style="background-image: url('{{ asset('assets/images/page-header-bg.jpg') }}')">
@@ -21,7 +21,7 @@
         <livewire:front.category-archieve />
     </div>
 
-</x-front.master-layout>
+</x-front.archieve-layout>
 
 
 @push('scripts')
