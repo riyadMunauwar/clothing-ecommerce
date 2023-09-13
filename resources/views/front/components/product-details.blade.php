@@ -311,66 +311,24 @@
                     <h4 class="widget-title">Related Product</h4><!-- End .widget-title -->
 
                     <div class="products">
-                        <div class="product product-sm">
-                            <figure class="product-media">
-                                <a href="product.html">
-                                    <img src="assets/images/products/single/sidebar/1.jpg" alt="Product image" class="product-image">
-                                </a>
-                            </figure>
 
-                            <div class="product-body">
-                                <h5 class="product-title"><a href="product.html">Light brown studded Wide fit wedges</a></h5><!-- End .product-title -->
-                                <div class="product-price">
-                                    <span class="new-price">$50.00</span>
-                                    <span class="old-price">$110.00</span>
-                                </div><!-- End .product-price -->
-                            </div><!-- End .product-body -->
-                        </div><!-- End .product product-sm -->
+                        @foreach($related_products as $product)
+                            <div class="product product-sm">
+                                <figure class="product-media">
+                                    <a href="{{ route('product', ['product_slug' => $product->slug, 'id' => $product->id]) }}">
+                                        <img src="{{ $product->thumbnailUrl('thumb') }}" alt="{{ $product->name }}" class="product-image">
+                                    </a>
+                                </figure>
 
-                        <div class="product product-sm">
-                            <figure class="product-media">
-                                <a href="product.html">
-                                    <img src="assets/images/products/single/sidebar/2.jpg" alt="Product image" class="product-image">
-                                </a>
-                            </figure>
-
-                            <div class="product-body">
-                                <h5 class="product-title"><a href="product.html">Yellow button front tea top</a></h5><!-- End .product-title -->
-                                <div class="product-price">
-                                    $56.00
-                                </div><!-- End .product-price -->
-                            </div><!-- End .product-body -->
-                        </div><!-- End .product product-sm -->
-
-                        <div class="product product-sm">
-                            <figure class="product-media">
-                                <a href="product.html">
-                                    <img src="assets/images/products/single/sidebar/3.jpg" alt="Product image" class="product-image">
-                                </a>
-                            </figure>
-
-                            <div class="product-body">
-                                <h5 class="product-title"><a href="product.html">Beige metal hoop tote bag</a></h5><!-- End .product-title -->
-                                <div class="product-price">
-                                    $50.00
-                                </div><!-- End .product-price -->
-                            </div><!-- End .product-body -->
-                        </div><!-- End .product product-sm -->
-
-                        <div class="product product-sm">
-                            <figure class="product-media">
-                                <a href="product.html">
-                                    <img src="assets/images/products/single/sidebar/4.jpg" alt="Product image" class="product-image">
-                                </a>
-                            </figure>
-
-                            <div class="product-body">
-                                <h5 class="product-title"><a href="product.html">Black soft RI weekend travel bag</a></h5><!-- End .product-title -->
-                                <div class="product-price">
-                                    $75.00
-                                </div><!-- End .product-price -->
-                            </div><!-- End .product-body -->
-                        </div><!-- End .product product-sm -->
+                                <div class="product-body">
+                                    <h5 class="product-title"><a href="{{ route('product', ['product_slug' => $product->slug, 'id' => $product->id]) }}">{{ $product->name }}</a></h5><!-- End .product-title -->
+                                    <div class="product-price">
+                                        <span class="new-price">BDT {{ $product->sale_price }}</span>
+                                        <span class="old-price">BDT {{ $product->regular_price }}</span>
+                                    </div><!-- End .product-price -->
+                                </div><!-- End .product-body -->
+                            </div><!-- End .product product-sm -->
+                        @endforeach
                     </div><!-- End .products -->
 
                     <a href="category.html" class="btn btn-outline-dark-3"><span>View More Products</span><i class="icon-long-arrow-right"></i></a>
