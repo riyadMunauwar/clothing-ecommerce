@@ -57,37 +57,21 @@
                                 </div><!-- End .product-nav -->
                             </div><!-- End .details-filter-row -->
 
-                            <div class="details-filter-row details-row-size">
-                                <label for="size">Size:</label>
-                                <div class="select-custom">
-                                    <select name="size" id="size" class="form-control">
-                                        <option value="#" selected="selected">Select a size</option>
-                                        <option value="s">Small</option>
-                                        <option value="m">Medium</option>
-                                        <option value="l">Large</option>
-                                        <option value="xl">Extra Large</option>
-                                    </select>
-                                </div><!-- End .select-custom -->
+                            @foreach($product->variation_options as $attribute => $values)
+                                <div class="details-filter-row details-row-size">
+                                    <label for="size">{{$attribute}}:</label>
+                                    <div class="select-custom">
+                                        <select name="size" id="size" class="form-control">
+                                            <option value="#" selected="selected">Select a {{ $attribute }}</option>
+                                            @foreach($values as $value)
+                                                <option value="{{ $value }}">{{ $value }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div><!-- End .select-custom -->
 
-                                <a href="#" class="size-guide"><i class="icon-th-list"></i>size guide</a>
-                            </div><!-- End .details-filter-row -->
-
-
-                            <div class="details-filter-row details-row-size">
-                                <label for="size">Size:</label>
-                                <div class="select-custom">
-                                    <select name="size" id="size" class="form-control">
-                                        <option value="#" selected="selected">Select a size</option>
-                                        <option value="s">Small</option>
-                                        <option value="m">Medium</option>
-                                        <option value="l">Large</option>
-                                        <option value="xl">Extra Large</option>
-                                    </select>
-                                </div><!-- End .select-custom -->
-
-                                <a href="#" class="size-guide"><i class="icon-th-list"></i>size guide</a>
-                            </div><!-- End .details-filter-row -->
-
+                                    <a href="#" class="size-guide"><i class="icon-th-list"></i>{{ $attribute }} guide</a>
+                                </div><!-- End .details-filter-row -->
+                            @endforeach
                             <div class="product-details-action">
                                 <div class="details-action-col">
                                     <label for="qty">Qty:</label>
