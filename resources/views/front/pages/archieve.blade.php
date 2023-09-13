@@ -22,3 +22,10 @@
     </div>
 
 </x-front.master-layout>
+
+
+@push('scripts')
+
+    <script src="{{ asset('assets/front/js/wNumb.js') }}"></script>
+
+@endpush
