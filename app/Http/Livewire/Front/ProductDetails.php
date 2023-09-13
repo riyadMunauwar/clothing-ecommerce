@@ -34,11 +34,11 @@ class ProductDetails extends Component
 
     private function getRecommendationProducts()
     {
-        return Product::select('id', 'slug', 'sale_price', 'regular_price')->whereNotIn('id', [$product->id])->inRandomOrder()->take(4)->get();
+        return Product::select('id', 'slug', 'sale_price', 'regular_price')->whereNotIn('id', [$this->product->id])->inRandomOrder()->take(4)->get();
     }
 
     private function getRelatedProducts()
     {
-        return Product::select('id', 'slug', 'sale_price', 'regular_price')->whereNotIn('id', [$product->id])->inRandomOrder()->take(4)->get();
+        return Product::select('id', 'slug', 'sale_price', 'regular_price')->whereNotIn('id', [$this->product->id])->inRandomOrder()->take(4)->get();
     }
 }
