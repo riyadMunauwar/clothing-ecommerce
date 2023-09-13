@@ -38,6 +38,9 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+        <!-- Sweet Alert -->
+        <link rel="stylesheet" href="{{ asset('assets/sweetalert2/sweetalert2.min.css') }}">
+
         <!-- Styles -->
         @livewireStyles
         <link rel="stylesheet" href="{{ asset('assets/front/css/bootstrap.min.css') }}">
@@ -49,8 +52,6 @@
         <link rel="stylesheet" href="{{ asset('assets/front/css/style.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/front/css/plugins/nouislider/nouislider.css') }}">
 
-        <!-- Sweet Alert -->
-        <link rel="stylesheet" href="{{ asset('assets/sweetalert2/sweetalert2.min.css') }}">
 
         <!-- Styles For This Page -->
         @stack('styles')
