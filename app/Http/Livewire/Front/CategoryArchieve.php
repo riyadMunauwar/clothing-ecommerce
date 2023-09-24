@@ -17,7 +17,7 @@ class CategoryArchieve extends Component
     public $brands = [];
     public $colors = [];
     public $sizes = [];
-    public $prices_ranges = [];
+    public $price_ranges = [];
 
     public $select_category_id;
     public $select_brand_id;
@@ -49,7 +49,7 @@ class CategoryArchieve extends Component
         $this->brands = $this->getBrands();
         $this->colors = $this->getColors();
         $this->sizes = $this->getSizes();
-        $this->prices_ranges = $this->getPriceRanges();
+        $this->price_ranges = $this->getPriceRanges();
     }
 
     private function setCategoryIdFromRequest()
