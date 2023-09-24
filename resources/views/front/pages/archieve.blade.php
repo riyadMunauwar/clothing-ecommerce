@@ -7,7 +7,7 @@
 
     <div class="page-header text-center" style="background-image: url('{{ asset('assets/images/page-header-bg.jpg') }}')">
         <div class="container-fluid">
-            <h1 class="page-title">{{ $category->name }}<span>Shop</span></h1>
+            <h1 class="page-title">{{ $category->name ?? '' }}<span>Shop</span></h1>
         </div><!-- End .container-fluid -->
     </div><!-- End .page-header -->
 
@@ -16,7 +16,7 @@
         <div class="container-fluid">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item"><a href="#{{ $category->name }}">{{ $category->name }}</a></li>
+                <li class="breadcrumb-item"><a href="#{{ $category->name ?? '' }}">{{ $category->name ?? '' }}</a></li>
             </ol>
         </div><!-- End .container-fluid -->
     </nav><!-- End .breadcrumb-nav -->
