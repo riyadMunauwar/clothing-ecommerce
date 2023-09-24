@@ -723,14 +723,14 @@
                     </div><!-- End .collapse -->
                 </div><!-- End .widget -->
 
-                <div class="widget widget-collapsible">
+                <div class="widget">
                     <h3 class="widget-title">
                         <a data-toggle="collapse" href="#widget-4" role="button" aria-expanded="true" aria-controls="widget-4">
                             Brand
                         </a>
                     </h3><!-- End .widget-title -->
 
-                    <div class="collapse show" id="widget-4">
+                    <div class="" id="widget-4">
                         <div class="widget-body">
                             <div class="filter-items">
                                 <div class="filter-item">
