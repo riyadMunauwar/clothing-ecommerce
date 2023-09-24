@@ -33,7 +33,7 @@
 
 
         <!-- Sweet Alert -->
-        <link rel="stylesheet" href="{{ asset('assets/sweetalert2/sweetalert2.min.css') }}">
+        <!-- <link rel="stylesheet" href="{{ asset('assets/sweetalert2/sweetalert2.min.css') }}"> -->
 
         <!-- Styles -->
         @livewireStyles
