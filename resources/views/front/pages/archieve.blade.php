@@ -1,7 +1,7 @@
 <x-front.master-layout title="Archieve">
 
     @php 
-        $category = \App\Modles\Category::select('name')->find(request()->id);
+        $category = \App\Models\Category::select('name')->find(request()->id);
     @endphp
 
 
