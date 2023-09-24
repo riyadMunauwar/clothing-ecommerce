@@ -3,7 +3,7 @@
 namespace App\Http\Livewire\Front;
 
 use Livewire\Component;
-use Livewire\WithPaginations;
+use Livewire\WithPagination;
 use App\Models\Product;
 use App\Models\Category;
 use App\Models\Brand;
