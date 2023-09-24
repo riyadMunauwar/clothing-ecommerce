@@ -587,7 +587,7 @@
                                             </div><!-- End .custom-checkbox -->
                                             <span class="item-count">{{ $category->products_count }}</span>
                                         </div><!-- End .filter-item -->
-                                    @endif
+                                    @endforeach
                                 </div><!-- End .filter-items -->
                             </div><!-- End .widget-body -->
                         </div><!-- End .collapse -->
