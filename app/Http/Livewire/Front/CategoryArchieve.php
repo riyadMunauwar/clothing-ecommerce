@@ -50,8 +50,6 @@ class CategoryArchieve extends Component
         $this->colors = $this->getColors();
         $this->sizes = $this->getSizes();
         $this->prices_ranges = $this->getPriceRanges();
-
-        dd($this->categories);
     }
 
     private function setCategoryIdFromRequest()
