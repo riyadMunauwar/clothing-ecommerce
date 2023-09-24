@@ -28,7 +28,10 @@
         
         {{ $meta_tags ?? '' }}
 
-
+        {!! SEOMeta::generate() !!}
+        {!! OpenGraph::generate() !!}
+        {!! Twitter::generate() !!}
+        {!! JsonLd::generate() !!}
 
         <!-- Plugins CSS File -->
 
