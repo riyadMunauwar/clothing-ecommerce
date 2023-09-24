@@ -692,7 +692,7 @@
                                         <div class="filter-item">
                                             <div class="custom-control custom-checkbox">
                                                 <input type="checkbox" class="custom-control-input" id="brand-{{ $_price }}">
-                                                <label class="custom-control-label" for="brand-{{ $_price }}">{{ _price}}</label>
+                                                <label class="custom-control-label" for="brand-{{ $_price }}">{{ $_price}}</label>
                                             </div><!-- End .custom-checkbox -->
                                         </div><!-- End .filter-item -->
                                     @endforeach
