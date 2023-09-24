@@ -93,6 +93,6 @@ class CategoryArchieve extends Component
 
     private function getPriceRanges()
     {
-
+        return ['100 to 1000', '1000 to 5000'];
     }
 }
