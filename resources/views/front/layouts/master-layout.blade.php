@@ -25,8 +25,6 @@
         <meta name="msapplication-config" content="assets/images/icons/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
         <!-- End Favicon -->
-        
-        {{ $meta_tags ?? '' }}
 
         {!! SEOMeta::generate() !!}
         {!! OpenGraph::generate() !!}

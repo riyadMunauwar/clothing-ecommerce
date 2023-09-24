@@ -1,5 +1,3 @@
-
-
 <x-front.master-layout title="Accounts">
 
     <div class="page-header text-center" style="background-image: url('assets/images/page-header-bg.jpg')">
