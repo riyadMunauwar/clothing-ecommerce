@@ -129,7 +129,7 @@
                                     @foreach($categories as $category)
                                         <div class="filter-item">
                                             <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" wire:model.debounce="select_category_id" value="{{ $category->id }}" name="select_category" class="custom-control-input" id="cat-{{ $category->id }}">
+                                                <input type="radio" wire:model.debounce="select_category_id" value="{{ $category->id }}" name="select_category" class="custom-control-input" id="cat-{{ $category->id }}">
                                                 <label class="custom-control-label" for="cat-{{ $category->id }}">{{ $category->name }}</label>
                                             </div><!-- End .custom-checkbox -->
                                             <span class="item-count">{{ $category->products_count }}</span>
