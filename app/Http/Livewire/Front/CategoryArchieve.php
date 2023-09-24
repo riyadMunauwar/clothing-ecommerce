@@ -11,7 +11,7 @@ use App\Models\Brand;
 class CategoryArchieve extends Component
 {
 
-    use WithPaginations;
+    use WithPagination;
 
     public $categories = [];
     public $brands = [];
