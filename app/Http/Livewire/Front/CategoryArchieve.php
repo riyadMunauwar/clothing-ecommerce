@@ -45,11 +45,11 @@ class CategoryArchieve extends Component
 
     private function initData()
     {
-        $this->getCategories();
-        $this->getBrands();
-        $this->getColors();
-        $this->getSizes();
-        $this->getPriceRanges();
+        $this->categories = $this->getCategories();
+        $this->brands = $this->getBrands();
+        $this->colors = $this->getColors();
+        $this->sizes = $this->getSizes();
+        $this->prices_ranges = $this->getPriceRanges();
 
         dd($this->categories);
     }
