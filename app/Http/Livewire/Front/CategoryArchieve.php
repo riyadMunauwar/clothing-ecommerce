@@ -68,7 +68,7 @@ class CategoryArchieve extends Component
 
     private function getProducts()
     {
-        $this->category->products()->get();
+        return $this->category->products()->get();
     }
 
     private function getCategories()
