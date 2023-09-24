@@ -566,14 +566,14 @@
                     <a href="#" class="sidebar-filter-clear">Clean All</a>
                 </div><!-- End .widget widget-clean -->
 
-                <div class="widget widget-collapsible">
+                <div class="widget">
                     <h3 class="widget-title">
-                        <a data-toggle="collapse" href="#widget-1" role="button" aria-expanded="true" aria-controls="widget-1">
+                        <a>
                             Category
                         </a>
                     </h3><!-- End .widget-title -->
 
-                    <div class="collapse show" id="widget-1">
+                    <div>
                         <div class="widget-body">
                             <div class="filter-items filter-items-count">
                                 <div class="filter-item">
@@ -644,14 +644,14 @@
                     </div><!-- End .collapse -->
                 </div><!-- End .widget -->
 
-                <div class="widget widget-collapsible">
+                <div class="widget">
                     <h3 class="widget-title">
-                        <a data-toggle="collapse" href="#widget-2" role="button" aria-expanded="true" aria-controls="widget-2">
+                        <a>
                             Size
                         </a>
                     </h3><!-- End .widget-title -->
 
-                    <div class="collapse show" id="widget-2">
+                    <div>
                         <div class="widget-body">
                             <div class="filter-items">
                                 <div class="filter-item">
@@ -700,14 +700,14 @@
                     </div><!-- End .collapse -->
                 </div><!-- End .widget -->
 
-                <div class="widget widget-collapsible">
+                <div class="widget">
                     <h3 class="widget-title">
-                        <a data-toggle="collapse" href="#widget-3" role="button" aria-expanded="true" aria-controls="widget-3">
+                        <a>
                             Colour
                         </a>
                     </h3><!-- End .widget-title -->
 
-                    <div class="collapse show" id="widget-3">
+                    <div>
                         <div class="widget-body">
                             <div class="filter-colors">
                                 <a href="#" style="background: #b87145;"><span class="sr-only">Color Name</span></a>
@@ -725,12 +725,12 @@
 
                 <div class="widget">
                     <h3 class="widget-title">
-                        <a data-toggle="collapse" href="#widget-4" role="button" aria-expanded="true" aria-controls="widget-4">
+                        <a>
                             Brand
                         </a>
                     </h3><!-- End .widget-title -->
 
-                    <div class="" id="widget-4">
+                    <div>
                         <div class="widget-body">
                             <div class="filter-items">
                                 <div class="filter-item">
@@ -789,12 +789,12 @@
 
                 <div class="widget">
                     <h3 class="widget-title">
-                        <a data-toggle="collapse" href="#widget-5" role="button" aria-expanded="true" aria-controls="widget-5">
+                        <a>
                             Price
                         </a>
                     </h3><!-- End .widget-title -->
 
-                    <div class="" id="widget-5">
+                    <div>
                         <div class="widget-body">
                             <div class="filter-price">
                                 <div class="filter-price-text">
