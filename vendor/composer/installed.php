@@ -3,13 +3,22 @@
         'name' => 'laravel/laravel',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'bbaf4adf6d48e1610e600e19fea47d81d432e35e',
+        'reference' => '6359c6967e636dae847cfcb459db9a193e2a3ffb',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
+        'artesaos/seotools' => array(
+            'pretty_version' => 'v1.2.0',
+            'version' => '1.2.0.0',
+            'reference' => '99744eaa8c3e21a2121914d8a7ca61284e5497a4',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../artesaos/seotools',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'bacon/bacon-qr-code' => array(
             'pretty_version' => '2.0.8',
             'version' => '2.0.8.0',
@@ -475,7 +484,7 @@
         'laravel/laravel' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'bbaf4adf6d48e1610e600e19fea47d81d432e35e',
+            'reference' => '6359c6967e636dae847cfcb459db9a193e2a3ffb',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
