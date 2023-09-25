@@ -23,7 +23,7 @@ class RecentArrivalProducts extends Component
 
     public function render()
     {
-        $all_products = $this->getProducts($this->per_page, ['*'], $this->page_name, $this->current_page);
+        $all_products = $this->getAllProducts($this->per_page, ['*'], $this->page_name, $this->current_page);
 
         $this->current_page = $products->currentPage();
 
