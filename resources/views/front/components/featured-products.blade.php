@@ -74,9 +74,11 @@
 
     </div>
 
-    <div class="more-container text-center mt-0 mb-7">
-        <a href="category.html" class="btn btn-outline-dark-3 btn-more"><span>more products</span><i class="la la-refresh"></i></a>
-    </div><!-- End .more-container -->
+    @if($products->nextPageUrl())
+        <div class="more-container text-center mt-0 mb-7">
+            <a href="$products->nextPageUrl()" class="btn btn-outline-dark-3 btn-more"><span>more products</span><i class="la la-refresh"></i></a>
+        </div>
+    @endif
 </section>
 
 
