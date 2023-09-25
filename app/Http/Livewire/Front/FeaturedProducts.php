@@ -3,13 +3,11 @@
 namespace App\Http\Livewire\Front;
 
 use Livewire\Component;
-use Livewire\WithPagination;
 use App\Traits\WithSweetAlert;
 use App\Models\Product;
 
 class FeaturedProducts extends Component
 {
-    use WithPagination;
 
     public $current_page = 1;
     public $per_page = 8;

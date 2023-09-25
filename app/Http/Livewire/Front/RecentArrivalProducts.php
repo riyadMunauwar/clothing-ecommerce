@@ -9,8 +9,6 @@ use App\Models\Category;
 class RecentArrivalProducts extends Component
 {
 
-    use WithPagination;
-
     public $current_page = 1;
     public $per_page = 2;
     public $page_name = 'page';
