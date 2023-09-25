@@ -35,6 +35,10 @@ class FeaturedProducts extends Component
             $this->products->push($product);
         }
 
+        if($this->current_page === 2){
+            dd($this->products);
+        }
+
         return view('front.components.featured-products');
     }
 
