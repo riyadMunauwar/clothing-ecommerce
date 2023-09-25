@@ -32,6 +32,12 @@ class SocialLink extends Model implements HasMedia
                     ->format('webp')
                     ->quality(100);
 
+                $this->addMediaConversion('thumb-100')
+                    ->width(100)
+                    ->height(100)
+                    ->format('webp')
+                    ->quality(100);
+
                 $this->addMediaConversion('thumb-150')
                     ->width(150)
                     ->height(150)
