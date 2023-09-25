@@ -20,6 +20,6 @@ class FeaturedProducts extends Component
 
     private function getProducts()
     {
-        return Product::published()->inRandomOrder()->paginate(8);
+        return Product::published()->inRandomOrder()->paginate(1);
     }
 }
