@@ -12,7 +12,7 @@ class FeaturedProducts extends Component
     use WithPagination;
 
     public $current_page = 1;
-    public $per_page = 1;
+    public $per_page = 3;
     public $page_name = 'page';
     public $last_page = null;
 
