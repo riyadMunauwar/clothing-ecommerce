@@ -41,6 +41,8 @@ class FeaturedProducts extends Component
     {
         if($this->current_page < $this->last_page){
             $this->current_page++;
+
+            $this->render();
         }
     }
 
