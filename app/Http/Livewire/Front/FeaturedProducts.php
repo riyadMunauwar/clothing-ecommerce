@@ -13,6 +13,7 @@ class FeaturedProducts extends Component
     public function render()
     {
         $products = $this->getProducts();
+        dd($products);
         return view('front.components.featured-products', compact('products'));
     }
 
