@@ -11,39 +11,21 @@ class FeaturedProducts extends Component
 {
     use WithPagination;
 
-    public $products = null;
     public $current_page = 1;
     public $per_page = 1;
     public $page_name = 'page';
     public $last_page = null;
 
 
-    public function initProducts()
+    public function render()
     {
-        if(!$this->products){
-            $this->products = collect([]);
-        }
-
         $products = $this->getProducts($this->per_page, ['*'], $this->page_name, $this->current_page);
 
         $this->current_page = $products->currentPage();
 
         $this->last_page = $products->lastPage();
 
-        foreach($products as $product){
-            $this->products->push($product);
-        }
-
-        if($this->current_page === 2){
-            dd($this->products);
-        }
-
-    }
-
-    public function render()
-    {
-        $this->initProducts();
-        return view('front.components.featured-products');
+        return view('front.components.featured-products', compact('products'));
     }
 
 
