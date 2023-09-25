@@ -11,14 +11,20 @@ class FeaturedProducts extends Component
 {
     use WithPagination;
 
-    public $products = [];
+    public $products = null;
     public $current_page = 1;
     public $per_page = 1;
     public $page_name = 'page';
     public $last_page = null;
 
+
+
     public function render()
     {
+        if(!$this->products){
+            $this->products = collect([]);
+        }
+        
         $products = $this->getProducts($this->per_page, ['*'], $this->page_name, $this->current_page);
 
         $this->current_page = $products->currentPage();
