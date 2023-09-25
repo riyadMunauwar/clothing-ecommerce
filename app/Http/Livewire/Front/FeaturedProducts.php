@@ -12,7 +12,7 @@ class FeaturedProducts extends Component
     use WithPagination;
 
     public $current_page = 1;
-    public $per_page = 3;
+    public $per_page = 1;
     public $page_name = 'page';
     public $last_page = null;
 
@@ -39,6 +39,6 @@ class FeaturedProducts extends Component
 
     private function getProducts($per_page, $wild_card, $page_name, $current_page)
     {
-        return Product::published()->inRandomOrder()->paginate($per_page, $wild_card, $page_name, $current_page);
+        return Product::published()->paginate($per_page, $wild_card, $page_name, $current_page);
     }
 }
