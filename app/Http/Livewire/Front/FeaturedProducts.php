@@ -31,7 +31,7 @@ class FeaturedProducts extends Component
         $this->last_page = $products->lastPage();
 
         foreach($products as $product){
-            if($current_page === 2){
+            if($this->current_page === 2){
                 dd($product);
             }
             $this->products->push($product);
