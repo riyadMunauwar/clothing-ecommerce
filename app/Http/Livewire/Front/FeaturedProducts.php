@@ -18,8 +18,7 @@ class FeaturedProducts extends Component
     public $last_page = null;
 
 
-
-    public function render()
+    public function initProducts()
     {
         if(!$this->products){
             $this->products = collect([]);
@@ -35,10 +34,11 @@ class FeaturedProducts extends Component
             $this->products->push($product);
         }
 
-        if($this->current_page === 2){
-            dd($this->products);
-        }
+    }
 
+    public function render()
+    {
+        $this->initProducts();
         return view('front.components.featured-products');
     }
 
