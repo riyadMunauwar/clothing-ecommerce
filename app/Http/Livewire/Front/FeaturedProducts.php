@@ -21,17 +21,21 @@ class FeaturedProducts extends Component
 
     public function render()
     {
+        if(!$this->products){
+            $this->products = collect([]);
+        }
+
         $products = $this->getProducts($this->per_page, ['*'], $this->page_name, $this->current_page);
 
         $this->current_page = $products->currentPage();
 
         $this->last_page = $products->lastPage();
 
-        if(!$this->products){
-            $this->products = $products;
-        }else {
-            $this->products = $this->products->concat($products);
+        foreach($products as $product){
+            $this->products->push($product);
         }
+
+        dd($this->products);
 
         return view('front.components.featured-products');
     }
