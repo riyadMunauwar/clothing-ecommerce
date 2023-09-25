@@ -33,9 +33,7 @@ class FeaturedProducts extends Component
 
         $this->products = $this->products->concat($products);
 
-        if($current_page === 2){
-            dd($this->products);
-        }
+        dd($this->products);
 
         return view('front.components.featured-products');
     }
