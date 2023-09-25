@@ -9,6 +9,7 @@ use App\Models\Product;
 
 class FeaturedProducts extends Component
 {
+    use WithPagination;
     
     public function render()
     {
