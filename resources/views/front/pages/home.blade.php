@@ -2,7 +2,7 @@
 
     @include('front.partials.category-collection')
     <livewire:front.trendy-products-with-caurosel />
-    <livewire:front.product-collection-with-filter />
+    <livewire:front.featured-products />
     <livewire:front.recent-arrival-products />
     @include('front.partials.selling-feature-banner')
 

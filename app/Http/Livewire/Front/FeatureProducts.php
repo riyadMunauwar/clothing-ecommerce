@@ -7,13 +7,13 @@ use Livewire\WithPagination;
 use App\Traits\WithSweetAlert;
 use App\Models\Product;
 
-class ProductCollectionWithFilter extends Component
+class FeaturedProducts extends Component
 {
     
     public function render()
     {
         $products = $this->getProducts();
-        return view('front.components.product-collection-with-filter', compact('products'));
+        return view('front.components.featured-products', compact('products'));
     }
 
 
