@@ -24,7 +24,7 @@ class FeaturedProducts extends Component
         if(!$this->products){
             $this->products = collect([]);
         }
-        
+
         $products = $this->getProducts($this->per_page, ['*'], $this->page_name, $this->current_page);
 
         $this->current_page = $products->currentPage();
@@ -32,6 +32,10 @@ class FeaturedProducts extends Component
         $this->last_page = $products->lastPage();
 
         $this->products = $this->products->concat($products);
+
+        if($current_page === 2){
+            dd($this->products);
+        }
 
         return view('front.components.featured-products');
     }
