@@ -25,9 +25,9 @@ class RecentArrivalProducts extends Component
     {
         $all_products = $this->getAllProducts($this->per_page, ['*'], $this->page_name, $this->current_page);
 
-        $this->current_page = $products->currentPage();
+        $this->current_page = $all_products->currentPage();
 
-        $this->last_page = $products->lastPage();
+        $this->last_page = $all_products->lastPage();
 
         return view('front.components.recent-arrival-products', compact('all_products'));
     }
