@@ -9,23 +9,41 @@ use App\Models\Category;
 class RecentArrivalProducts extends Component
 {
 
+    use WithPagination;
+
+    public $current_page = 1;
+    public $per_page = 2;
+    public $page_name = 'page';
+    public $last_page = null;
+
     public $categories = [];
-    public $all_products = [];
 
     public function mount()
     {
         $this->categories = $this->getCategories();
-        $this->all_products = $this->getAllProducts();
     }
 
     public function render()
     {
-        return view('front.components.recent-arrival-products');
+        $all_products = $this->getProducts($this->per_page, ['*'], $this->page_name, $this->current_page);
+
+        $this->current_page = $products->currentPage();
+
+        $this->last_page = $products->lastPage();
+
+        return view('front.components.recent-arrival-products', compact('all_products'));
     }
 
-    private function getAllProducts()
+    public function loadMore()
     {
-        return Product::published()->latest()->inRandomOrder()->take(8)->get();
+        if($this->current_page < $this->last_page){
+            $this->current_page++;
+        }
+    }
+
+    private function getAllProducts($per_page, $wild_card, $page_name, $current_page)
+    {
+        return Product::published()->paginate($per_page, $wild_card, $page_name, $current_page);
     }
 
     private function getCategories()

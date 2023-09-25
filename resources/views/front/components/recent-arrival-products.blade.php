@@ -61,6 +61,13 @@
                         @endforeach
                     </div><!-- End .row -->
                 </div><!-- End .products -->
+
+                @if($current_page < $last_page)
+                    <div class="more-container text-center mt-0 mb-7">
+                        <a wire:click.debounce="loadMore" class="btn btn-outline-dark-3 btn-more"><span wire:loading.remove wire:target="loadMore">Load more products</span><span wire:loading wire:target="loadMore">Loading...</span><i class="la la-refresh"></i></a>
+                    </div>
+                @endif
+
             </div><!-- .End .tab-pane -->
 
 
