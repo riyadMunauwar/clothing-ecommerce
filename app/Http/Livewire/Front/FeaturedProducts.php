@@ -22,7 +22,7 @@ class FeaturedProducts extends Component
         $products = $this->getProducts($this->per_page, ['*'], $this->page_name, $this->current_page);
 
         $this->current_page = $products->currentPage();
-        $this->per_page = $products->current_page;
+
         $this->last_page = $products->lastPage();
 
         $this->products = $this->products->concat($products);
