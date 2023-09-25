@@ -10,7 +10,7 @@ class RecentArrivalProducts extends Component
 {
 
     public $current_page = 1;
-    public $per_page = 2;
+    public $per_page = 8;
     public $page_name = 'page';
     public $last_page = null;
 
