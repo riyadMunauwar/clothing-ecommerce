@@ -33,8 +33,6 @@ class FeaturedProducts extends Component
 
         $this->products = $this->products->concat($products);
 
-        dd($this->products);
-
         return view('front.components.featured-products');
     }
 
