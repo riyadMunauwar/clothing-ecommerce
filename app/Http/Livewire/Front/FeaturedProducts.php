@@ -35,8 +35,6 @@ class FeaturedProducts extends Component
             $this->products->push($product);
         }
 
-        dd($this->products);
-
         return view('front.components.featured-products');
     }
 
