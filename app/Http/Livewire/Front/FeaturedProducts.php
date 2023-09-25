@@ -17,7 +17,7 @@ class FeaturedProducts extends Component
 
     public function render()
     {
-        $products = $this->getProducts($this->per_page, ['*'], $this->page_name, $this->current_page);
+        $products = $this->getAllProducts($this->per_page, ['*'], $this->page_name, $this->current_page);
 
         $this->current_page = $products->currentPage();
 
