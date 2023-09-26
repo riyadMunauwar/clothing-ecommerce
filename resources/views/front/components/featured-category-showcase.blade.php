@@ -4,6 +4,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="row">
+                        @if($featured_category_one)
                         <div class="col-sm-8">
                             <div class="banner banner-cat banner-badge">
                                 <a href="#">
@@ -17,6 +18,7 @@
                                 </a><!-- End .banner-link -->
                             </div><!-- End .banner -->
                         </div><!-- End .col-sm-8 -->
+                        @endif
 
                         <div class="col-sm-4">
                             <div class="banner banner-cat banner-badge">
