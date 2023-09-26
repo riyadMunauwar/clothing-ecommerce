@@ -25,8 +25,8 @@
                 </div>
 
                 <div class="">
-                    <x-label for="order" value="{{ __('Order') }}" />
-                    <x-input wire:model.debounce="category.order" id="order" class="block mt-1 w-full" type="number"/>
+                    <x-label for="order" value="{{ __('Sort Order') }}" />
+                    <x-input wire:model.debounce="category.sort_order" id="order" class="block mt-1 w-full" type="number"/>
                 </div>
 
                 <div class="">

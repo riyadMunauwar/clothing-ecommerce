@@ -17,7 +17,7 @@
 
         <div class="">
             <x-label for="order" value="{{ __('Sort Order') }}" />
-            <x-input wire:model.debounce="sort_order" id="order" class="block h-8 mt-1 w-full" type="number" />
+            <x-input wire:model.debounce="sortOrder" id="order" class="block h-8 mt-1 w-full" type="number" />
         </div>
 
         <div class="col-span-2">
