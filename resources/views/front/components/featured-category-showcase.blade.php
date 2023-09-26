@@ -1,7 +1,7 @@
 <div class="page-content">
     <div class="categories-page">
         <div class="container-fluid">
-            <h4 class="mb-5">Brows Categories</h4>
+            <h4 class="mb-5 page-titles">Brows Categories</h4>
             <div class="row">
 
                 @foreach($categories as $category)
