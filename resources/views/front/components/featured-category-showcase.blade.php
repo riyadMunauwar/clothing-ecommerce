@@ -8,7 +8,7 @@
                         <div class="col-sm-4 col-md-2">
                             <div class="banner banner-cat banner-badge">
                                 <a href="#">
-                                    <img src="{{ $category->iconUrl('medium') }}" alt="{{ $category->name }}">
+                                    <img style="aspect-ratio: 1 / 1; object-fit: contain" src="{{ $category->iconUrl('medium') }}" alt="{{ $category->name }}">
                                 </a>
 
                                 <a class="banner-link" href="#">
