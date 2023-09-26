@@ -39,7 +39,6 @@ class CreateCategory extends Component
         'metaDescription' => ['nullable', 'string'],
         'name' => ['required', 'string'],
         'slug' => ['required', 'string', 'unique:categories'],
-        'order' => ['nullable', 'integer'],
         'parentCategoryId' => ['nullable', 'string'],
         'icon' => ['nullable'],
         'description' => ['nullable', 'string'],
