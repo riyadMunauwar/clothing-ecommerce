@@ -47,6 +47,10 @@
                                 @else
                                     <span class="bg-yellow-100 text-yellow-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">Unpublished</span>
                                 @endif
+
+                                @if($category->is_featured)
+                                    <span class="bg-indigo-100 text-indigo-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">Featured</span>
+                                @endif
                             </td>
                             <td class="px-4 py-3 flex items-center justify-end">
                                 <button wire:click.debounce="enableCategoryEditMode({{ $category->id }})" type="button">
