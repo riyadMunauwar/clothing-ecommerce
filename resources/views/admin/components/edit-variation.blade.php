@@ -60,7 +60,7 @@
 
                     @if(!$new_image && $old_image)
                         <div class="flex items-center justify-center mb-3">
-                            <img class="h-20 h-20 object-contain block" src="{{ $old_image ?? '' }}">
+                            <img class="h-20 object-contain block" src="{{ $old_image ?? '' }}">
                         </div>
                     @endif
 

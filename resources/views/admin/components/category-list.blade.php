@@ -24,7 +24,7 @@
                         <tr>
                             <th scope="col" class="px-4 py-3">Name</th>
                             <th scope="col" class="px-4 py-3">Icon</th>
-                            <th scope="col" class="px-4 py-3">Rank</th>
+                            <th scope="col" class="px-4 py-3">Sort Order</th>
                             <th scope="col" class="px-4 py-3">Parent</th>
                             <th scope="col" class="px-4 py-3">Status</th>
                             <th scope="col" class="px-4 py-3">
@@ -39,7 +39,7 @@
                             <td class="px-4 py-3">
                                 <img class="w-10 h-10 rounded-full object-cover" src="{{ $category->iconUrl('thumb') }}" alt="{{ $category->name ?? '' }}">
                             </td>
-                            <td class="px-4 py-3">{{ $category->order ?? '' }}</td>
+                            <td class="px-4 py-3">{{ $category->sort_order ?? '' }}</td>
                             <td class="px-4 py-3"><span class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">{{ $category->parent->name ?? 'None' }}</span></td>
                             <td class="px-4 py-3">
                                 @if($category->is_published)
