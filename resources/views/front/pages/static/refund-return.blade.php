@@ -26,7 +26,7 @@
 
         <div class="page-header text-center" style="background-image: url('{{ asset('assets/images/page-header-bg.jpg') }}'">
             <div class="container">
-                <h1 class="page-title">Exchange and Return Policy/h1>
+                <h1 class="page-title">Exchange and Return Policy </h1>
             </div><!-- End .container -->
         </div><!-- End .page-header -->
 

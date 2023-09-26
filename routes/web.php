@@ -95,6 +95,7 @@ Route::view('/privacy-policy', 'front.pages.static.privacy')->name('privacy');
 Route::view('/billing-and-payment', 'front.pages.static.billing-payment')->name('billing-payment');
 Route::view('/shipping-and-delivery', 'front.pages.static.shipping-delivery')->name('shipping-delivery');
 Route::view('/return-and-refund-policy', 'front.pages.static.refund-return')->name('return-and-refund');
+Route::view('/cancellation-policy', 'front.pages.static.cancellation')->name('cancellation-policy');
 Route::view('/faq', 'front.pages.static.faq')->name('faq');
 
 
