@@ -49,20 +49,24 @@
                     <div class="row">
                         <div class="col-sm-7">
                             <div class="contact-info">
-                                <h3>The Office</h3>
+                                <h3>Rayat Boutique &amp; Craft Limited</h3>
 
                                 <ul class="contact-list">
                                     <li>
                                         <i class="icon-map-marker"></i>
-                                        70 Washington Square South New York, NY 10012, United States
+                                        Factory &amp; Head Office- Dhorompur, Bogura Sadar, Bogura-5800
+                                    </li>
+                                    <li>
+                                        <i class="icon-map-marker"></i>
+                                        Dhaka Office- House#30, Road#11, Kallyanpur, Dhaka-1216
                                     </li>
                                     <li>
                                         <i class="icon-phone"></i>
-                                        <a href="tel:#">+92 423 567</a>
+                                        <a href="tel:#">+8809644776611,</a>
                                     </li>
                                     <li>
                                         <i class="icon-envelope"></i>
-                                        <a href="https://portotheme.com/cdn-cgi/l/email-protection#7b58"><span class="__cf_email__" data-cfemail="4e272028210e032122222f602d2123">[email&#160;protected]</span></a>
+                                        <a href=""><span class="__cf_email__" data-cfemail="4e272028210e032122222f602d2123">customercare@rayat.com.bd</span></a>
                                     </li>
                                 </ul><!-- End .contact-list -->
                             </div><!-- End .contact-info -->
@@ -75,11 +79,11 @@
                                 <ul class="contact-list">
                                     <li>
                                         <i class="icon-clock-o"></i>
-                                        <span class="text-dark">Monday-Saturday</span> <br>11am-7pm ET
+                                        <span class="text-dark">Saturday - Thursday</span> <br>11am-7pm
                                     </li>
                                     <li>
                                         <i class="icon-calendar"></i>
-                                        <span class="text-dark">Sunday</span> <br>11am-6pm ET
+                                        <span class="text-dark">Friday</span> <br>11am-6pm
                                     </li>
                                 </ul><!-- End .contact-list -->
                             </div><!-- End .contact-info -->
@@ -137,18 +141,18 @@
                             <div class="row">
                                 <div class="col-sm-5 col-xl-6">
                                     <figure class="store-media mb-2 mb-lg-0">
-                                        <img src="{{ asset('assets/images/stores/img-1.jpg') }}" alt="image">
+                                        <img src="{{ asset('assets/images/stores/bogura-showroom.jpg') }}" alt="image">
                                     </figure><!-- End .store-media -->
                                 </div><!-- End .col-xl-6 -->
                                 <div class="col-sm-7 col-xl-6">
                                     <div class="store-content">
-                                        <h3 class="store-title">Wall Street Plaza</h3><!-- End .store-title -->
-                                        <address>88 Pine St, New York, NY 10005, USA</address>
-                                        <div><a href="tel:#">+1 987-876-6543</a></div>
+                                        <h3 class="store-title">Bogura</h3><!-- End .store-title -->
+                                        <address>Somir uddin Market, Monihar Jewellers 1st Floor, Bogura New Market, Bogura -5800</address>
+                                        <div><a href="tel:#">+8809649776611</a></div>
 
                                         <h4 class="store-subtitle">Store Hours:</h4><!-- End .store-subtitle -->
-                                        <div>Monday - Saturday 11am to 7pm</div>
-                                        <div>Sunday 11am to 6pm</div>
+                                        <div>Saturday - Thursday 11am to 8pm</div>
+                                        <div>Friday -  Close</div>
 
                                         <a href="#" class="btn btn-link" target="_blank"><span>View Map</span><i class="icon-long-arrow-right"></i></a>
                                     </div><!-- End .store-content -->
@@ -162,22 +166,20 @@
                             <div class="row">
                                 <div class="col-sm-5 col-xl-6">
                                     <figure class="store-media mb-2 mb-lg-0">
-                                        <img src="{{ asset('assets/images/stores/img-2.jpg') }}" alt="image">
+                                        <img src="{{ asset('assets/images/stores/dhaka-showroom.jpg') }}" alt="image">
                                     </figure><!-- End .store-media -->
                                 </div><!-- End .col-xl-6 -->
 
                                 <div class="col-sm-7 col-xl-6">
                                     <div class="store-content">
-                                        <h3 class="store-title">One New York Plaza</h3><!-- End .store-title -->
-                                        <address>88 Pine St, New York, NY 10005, USA</address>
-                                        <div><a href="tel:#">+1 987-876-6543</a></div>
+                                        <h3 class="store-title">Dhaka</h3><!-- End .store-title -->
+                                        <address>House#30, Road#11, Kallyanpur, Dhaka-1216</address>
+                                        <div><a href="tel:#">+8809644776611</a></div>
 
                                         <h4 class="store-subtitle">Store Hours:</h4><!-- End .store-subtitle -->
-                                        <div>Monday - Friday 9am to 8pm</div>
-                                        <div>Saturday - 9am to 2pm</div>
-                                        <div>Sunday - Closed</div>
-
-                                        <a href="#" class="btn btn-link" target="_blank"><span>View Map</span><i class="icon-long-arrow-right"></i></a>
+                                        <div>Saturday - Thursday 11am to 8pm</div>
+                                        <div>Friday - Close</div>
+                                                                         <a href="#" class="btn btn-link" target="_blank"><span>View Map</span><i class="icon-long-arrow-right"></i></a>
                                     </div><!-- End .store-content -->
                                 </div><!-- End .col-xl-6 -->
                             </div><!-- End .row -->

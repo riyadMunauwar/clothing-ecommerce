@@ -135,7 +135,7 @@
                                     @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
                                         <div class="custom-control custom-checkbox">
                                             <input name="terms" type="checkbox" class="custom-control-input" id="register-policy-2" required>
-                                            <label class="custom-control-label" for="register-policy-2">I agree to the <a href="#">Terms of Service</a> & <a href="#">privacy policy</a></label>
+                                            <label class="custom-control-label" for="register-policy-2">I agree to the <a href="{{ route('tos') }}">Terms of Service</a> & <a href="{{ route('privacy') }}">privacy policy</a></label>
                                         </div><!-- End .custom-checkbox -->
                                     @endif
                                 </div>

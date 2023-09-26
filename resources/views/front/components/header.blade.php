@@ -28,7 +28,7 @@
                     <li>
                         <a href="#">Links</a>
                         <ul>
-                            <li><a href="tel:#"><i class="icon-phone"></i>Call: +0123 456 789</a></li>
+                            <li><a href="tel:#"><i class="icon-phone"></i>Call: +8809644776611</a></li>
                             <li><a href="{{ route('wishlist') }}"><i class="icon-heart-o"></i>Wishlist <span>(3)</span></a></li>
                             <li><a href="{{ route('about-us') }}">About Us</a></li>
                             <li><a href="{{ route('contact-us') }}">Contact Us</a></li>
