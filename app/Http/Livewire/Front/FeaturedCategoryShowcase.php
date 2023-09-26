@@ -22,7 +22,7 @@ class FeaturedCategoryShowcase extends Component
 
     private function getFeaturedCategories()
     {
-        return Category::withCount('products')->published()->featured()->take(8);
+        return Category::withCount('products')->published()->featured()->take(12)->get();
     }
 
 
