@@ -1,5 +1,6 @@
 <x-front.master-layout title="Home">
 
+    @include('front.partials.category-collection')
     <livewire:front.featured-category-showcase />
     <livewire:front.trendy-products-with-caurosel />
     <livewire:front.featured-products />
