@@ -8,7 +8,7 @@
                         <div class="col-sm-8">
                             <div class="banner banner-cat banner-badge">
                                 <a href="#">
-                                    <img src="{{ $featured_category_one->iconUrl('medium') }}" alt="{{ $featured_category_one->name }}">
+                                    <img src="{{ $featured_category_one->iconUrl('small') }}" alt="{{ $featured_category_one->name }}">
                                 </a>
 
                                 <a class="banner-link" href="#">
