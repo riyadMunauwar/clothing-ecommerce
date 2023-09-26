@@ -19,7 +19,7 @@
                             </div><!-- End .banner -->
                         </div><!-- End .col-sm-8 -->
 
-                @endofreach
+                @endforeach
 
             </div><!-- End .row -->
         </div><!-- End .container-fluid -->
