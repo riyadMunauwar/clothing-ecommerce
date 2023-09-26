@@ -45,7 +45,7 @@
             <div class="row">
                 <div class="col-lg-6 mb-2 mb-lg-0">
                     <h2 class="title mb-1">Contact Information</h2><!-- End .title mb-2 -->
-                    <p class="mb-3">Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</p>
+                    <!-- <p class="mb-3">Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</p> -->
                     <div class="row">
                         <div class="col-sm-7">
                             <div class="contact-info">

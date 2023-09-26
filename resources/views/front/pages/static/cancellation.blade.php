@@ -20,7 +20,7 @@
             <div class="container">
                 <p>Orders can be canceled upon the customer’s request at any time before it is processed.</p>
 
-                <h1 class="title text-center mb-3 mt-5">RAYAT reserves the right to cancel orders for any reasons of the following reasons:</h1>
+                <h1 class="title mb-3 mt-5">RAYAT reserves the right to cancel orders for any reasons of the following reasons:</h1>
 
                 <ul class="ml-5">
                     <li>* Articles Out-Of-Stock</li>
