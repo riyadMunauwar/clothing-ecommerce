@@ -42,21 +42,6 @@
     </div><!-- End .container -->
 
     <div class="page-content pb-0">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 mb-3 mb-lg-0">
-                    <h2 class="title">Our Vision</h2><!-- End .title -->
-                    <p>To ensure best quality product &amp; satisfaction of customer we believe in organized Quality system, teamwork and continuous process improvement.</p>
-                </div><!-- End .col-lg-6 -->
-                
-                <div class="col-lg-6">
-                    <h2 class="title">Our Mission</h2><!-- End .title -->
-                    <p>To be recognized as a company well-known for considered, functional design, where fit and comfort are the focus regardless of the purpose of the clothing, for work or leisure.</p>
-                </div><!-- End .col-lg-6 -->
-            </div><!-- End .row -->
-
-            <div class="mb-5"></div><!-- End .mb-4 -->
-        </div><!-- End .container -->
 
         <div class="bg-light-2 pt-6 pb-5 mb-6 mb-lg-8">
             <div class="container">
