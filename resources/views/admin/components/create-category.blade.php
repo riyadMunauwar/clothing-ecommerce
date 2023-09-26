@@ -213,7 +213,7 @@
         </div>
 
         
-        <div class="flex items-center justify-end mt-4">
+        <div class="col-span-2 flex items-center justify-end mt-4">
             <x-button wire:click.debounce="createCategory" class="ml-4">
                 {{ __('Create') }}
             </x-button>

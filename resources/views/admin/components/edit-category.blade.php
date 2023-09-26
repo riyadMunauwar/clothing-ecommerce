@@ -110,7 +110,7 @@
                     </div>
                 </div>
 
-                <div class="flex items-center justify-end">
+                <div class="col-span-2 flex items-center justify-end">
                     <x-button wire:click.debounce="updateCategory" type="button" class="ml-4">
                         {{ __('Update') }}
                     </x-button>
