@@ -14,7 +14,7 @@
 
                                 <a class="banner-link" href="#">
                                     <h3 class="banner-title">{{ $category->name }}</h3><!-- End .banner-title -->
-                                    <h4 class="banner-subtitle">{{ $category->count_products }} Products</h4><!-- End .banner-subtitle -->
+                                    <h4 class="banner-subtitle">{{ $category->products_count }} Products</h4><!-- End .banner-subtitle -->
                                     <span class="banner-link-text">Shop Now</span>
                                 </a><!-- End .banner-link -->
                             </div><!-- End .banner -->

@@ -13,8 +13,6 @@ class FeaturedCategoryShowcase extends Component
     public function mount()
     {
         $this->categories = $this->getFeaturedCategories();
-
-        dd($this->categories);
     }
 
     public function render()
