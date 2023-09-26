@@ -20,7 +20,6 @@ return new class extends Migration
             $table->string('meta_description')->nullable();
             $table->string('name');
             $table->string('slug');
-            $table->integer('order')->nullable();
             $table->text('description')->nullable();
             $table->foreignId('parent_id')->nullable()->constrained('categories');
             $table->boolean('is_published')->default(true);

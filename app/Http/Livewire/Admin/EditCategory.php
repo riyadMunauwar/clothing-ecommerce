@@ -34,9 +34,10 @@ class EditCategory extends Component
         'category.name' => ['required', 'string'],
         'category.slug' => ['required', 'string'],
         'category.description' => ['nullable', 'string'],
-        'category.order' => ['nullable', 'integer'],
         'category.parent_id' => ['nullable', 'integer'],
         'category.is_published' => ['nullable', 'boolean'],
+        'category.is_featured' => ['nullable', 'boolean'],
+        'category.sort_order' => ['nullable', 'integer'],
     ];
 
     public function mount()

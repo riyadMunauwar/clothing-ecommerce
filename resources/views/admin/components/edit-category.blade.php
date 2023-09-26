@@ -44,7 +44,7 @@
 
                     @if(!$newIcon && $oldIcon)
                         <div class="flex items-center justify-center mb-3">
-                            <img class="h-20 h-20 object-contain block" src="{{ $oldIcon ?? '' }}">
+                            <img class="h-20 object-contain block" src="{{ $oldIcon ?? '' }}">
                         </div>
                     @endif
 
@@ -95,11 +95,19 @@
                     <x-ui.textarea wire:model.debounce="category.meta_description" id="metaDescription" class="block mt-1 w-full" type="text" required />
                 </div>
 
-                <div class="block">
-                    <label for="isPublished" class="flex items-center">
-                        <x-checkbox wire:model.debounce="category.is_published" id="isPublished" name="remember" />
-                        <span class="ml-2 text-sm text-gray-600">{{ __('Published') }}</span>
-                    </label>
+                <div class="col-span-2 flex gap-3.5">
+                    <div class="block">
+                        <label for="isPublished" class="flex items-center">
+                            <x-checkbox wire:model.debounce="category.is_published" id="isPublished" />
+                            <span class="ml-2 text-sm text-gray-600">{{ __('Published') }}</span>
+                        </label>
+                    </div>
+                    <div class="block">
+                        <label for="isFeatured" class="flex items-center">
+                            <x-checkbox wire:model.debounce="category.is_featured" id="isFeatured"/>
+                            <span class="ml-2 text-sm text-gray-600">{{ __('Featured') }}</span>
+                        </label>
+                    </div>
                 </div>
 
                 <div class="flex items-center justify-end">

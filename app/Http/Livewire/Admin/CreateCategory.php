@@ -25,11 +25,12 @@ class CreateCategory extends Component
     public $metaDescription;
     public $name;
     public $slug;
-    public $order;
     public $parentCategoryId;
     public $icon;
     public $description;
+    public $sortOrder;
     public $isPublished;
+    public $isFeatured;
 
 
     protected $rules = [
@@ -42,7 +43,9 @@ class CreateCategory extends Component
         'parentCategoryId' => ['nullable', 'string'],
         'icon' => ['nullable'],
         'description' => ['nullable', 'string'],
+        'sort_order' => ['nullable', 'integer'],
         'isPublished' => ['nullable', 'boolean'],
+        'isFeatured' => ['nullable', 'boolean'],
     ];
 
 
@@ -74,10 +77,11 @@ class CreateCategory extends Component
             'meta_description' => $this->metaDescription,
             'name' => $this->name,
             'slug' => $this->slug,
-            'order' => $this->order,
             'parent_id' => $this->parentCategoryId,
             'description' => $this->description,
+            'sort_order' => $this->sortOrder,
             'is_published' => $this->isPublished,
+            'is_featured' => $this->isFeatured,
         ]);
 
 

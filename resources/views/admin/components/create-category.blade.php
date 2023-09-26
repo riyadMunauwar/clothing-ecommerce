@@ -16,8 +16,8 @@
         </div>
 
         <div class="">
-            <x-label for="order" value="{{ __('Order') }}" />
-            <x-input wire:model.debounce="order" id="order" class="block h-8 mt-1 w-full" type="number" />
+            <x-label for="order" value="{{ __('Sort Order') }}" />
+            <x-input wire:model.debounce="sort_order" id="order" class="block h-8 mt-1 w-full" type="number" />
         </div>
 
         <div class="col-span-2">
@@ -196,11 +196,20 @@
             <x-ui.textarea wire:model.debounce="metaDescription" id="metaDescription" class="block mt-1 w-full" type="text" required />
         </div>
 
-        <div class="block">
-            <label for="published" class="flex items-center">
-                <x-checkbox name="parent_id" wire:model.debounce="isPublished" id="published" />
-                <span class="ml-2 text-sm text-gray-600">{{ __('Published') }}</span>
-            </label>
+        <div class="col-span-2 flex gap-5">
+            <div class="block">
+                <label for="published" class="flex items-center">
+                    <x-checkbox wire:model.debounce="isPublished" id="published" />
+                    <span class="ml-2 text-sm text-gray-600">{{ __('Published') }}</span>
+                </label>
+            </div>
+
+            <div class="block">
+                <label for="isFeatured" class="flex items-center">
+                    <x-checkbox wire:model.debounce="isFeatured" id="isFeatured" />
+                    <span class="ml-2 text-sm text-gray-600">{{ __('Featured') }}</span>
+                </label>
+            </div>
         </div>
 
         
