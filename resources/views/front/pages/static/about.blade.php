@@ -65,6 +65,8 @@
                         <p class="mb-3">To be recognized as a company well-known for considered, functional design, where fit and comfort are the focus regardless of the purpose of the clothing, for work or leisure.</p>
                    
 
+                        <h2 class="title mb-2">Brand Values</h2><!-- End .title -->
+
                         <p class="lead text-primary mb-2">Quality:</p>
                         <p class="mb-1">— To ensure quality is our brands&#39; top priority.</p>
                         <p class="mb-3">— To maintain consistently high quality in all the brands&#39; products and services.</p>
