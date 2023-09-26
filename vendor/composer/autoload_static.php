@@ -679,7 +679,6 @@ class ComposerStaticInitdb19b2e6fc021f932c09e790795b7f45
     );
 
     public static $classMap = array (
-        'App\\Actions\\Admin\\ShoppingCart' => __DIR__ . '/../..' . '/app/Actions/Admin/ShoppingCart.php',
         'App\\Actions\\Cache\\RemoveCachedBrandList' => __DIR__ . '/../..' . '/app/Actions/Cache/RemoveCachedBrandList.php',
         'App\\Actions\\Cache\\RemoveCachedCategoryList' => __DIR__ . '/../..' . '/app/Actions/Cache/RemoveCachedCategoryList.php',
         'App\\Actions\\Cache\\RemoveCachedFooterItems' => __DIR__ . '/../..' . '/app/Actions/Cache/RemoveCachedFooterItems.php',
@@ -788,10 +787,10 @@ class ComposerStaticInitdb19b2e6fc021f932c09e790795b7f45
         'App\\Http\\Livewire\\Front\\Cart' => __DIR__ . '/../..' . '/app/Http/Livewire/Front/Cart.php',
         'App\\Http\\Livewire\\Front\\CategoryArchieve' => __DIR__ . '/../..' . '/app/Http/Livewire/Front/CategoryArchieve.php',
         'App\\Http\\Livewire\\Front\\Checkout' => __DIR__ . '/../..' . '/app/Http/Livewire/Front/Checkout.php',
+        'App\\Http\\Livewire\\Front\\FeaturedProducts' => __DIR__ . '/../..' . '/app/Http/Livewire/Front/FeaturedProducts.php',
         'App\\Http\\Livewire\\Front\\Footer' => __DIR__ . '/../..' . '/app/Http/Livewire/Front/Footer.php',
         'App\\Http\\Livewire\\Front\\Header' => __DIR__ . '/../..' . '/app/Http/Livewire/Front/Header.php',
         'App\\Http\\Livewire\\Front\\NewsLetterPopup' => __DIR__ . '/../..' . '/app/Http/Livewire/Front/NewsLetterPopup.php',
-        'App\\Http\\Livewire\\Front\\ProductCollectionWithFilter' => __DIR__ . '/../..' . '/app/Http/Livewire/Front/ProductCollectionWithFilter.php',
         'App\\Http\\Livewire\\Front\\ProductDetails' => __DIR__ . '/../..' . '/app/Http/Livewire/Front/ProductDetails.php',
         'App\\Http\\Livewire\\Front\\QuickView' => __DIR__ . '/../..' . '/app/Http/Livewire/Front/QuickView.php',
         'App\\Http\\Livewire\\Front\\RecentArrivalProducts' => __DIR__ . '/../..' . '/app/Http/Livewire/Front/RecentArrivalProducts.php',

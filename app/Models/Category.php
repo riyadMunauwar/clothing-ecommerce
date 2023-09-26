@@ -63,6 +63,17 @@ class Category extends Model implements HasMedia
     }
 
 
+    public function scopeFeatured($query)
+    {
+        return $query->where('is_featured', true);
+    }
+
+    public function scopeOrderd($query)
+    {
+        return $query->orderBy('sort_order');
+    }
+
+
     public function iconUrl($size = 'thumb')
     {
         if($this->hasMedia('icon'))

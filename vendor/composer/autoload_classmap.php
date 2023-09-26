@@ -6,7 +6,6 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'App\\Actions\\Admin\\ShoppingCart' => $baseDir . '/app/Actions/Admin/ShoppingCart.php',
     'App\\Actions\\Cache\\RemoveCachedBrandList' => $baseDir . '/app/Actions/Cache/RemoveCachedBrandList.php',
     'App\\Actions\\Cache\\RemoveCachedCategoryList' => $baseDir . '/app/Actions/Cache/RemoveCachedCategoryList.php',
     'App\\Actions\\Cache\\RemoveCachedFooterItems' => $baseDir . '/app/Actions/Cache/RemoveCachedFooterItems.php',
@@ -115,10 +114,10 @@ return array(
     'App\\Http\\Livewire\\Front\\Cart' => $baseDir . '/app/Http/Livewire/Front/Cart.php',
     'App\\Http\\Livewire\\Front\\CategoryArchieve' => $baseDir . '/app/Http/Livewire/Front/CategoryArchieve.php',
     'App\\Http\\Livewire\\Front\\Checkout' => $baseDir . '/app/Http/Livewire/Front/Checkout.php',
+    'App\\Http\\Livewire\\Front\\FeaturedProducts' => $baseDir . '/app/Http/Livewire/Front/FeaturedProducts.php',
     'App\\Http\\Livewire\\Front\\Footer' => $baseDir . '/app/Http/Livewire/Front/Footer.php',
     'App\\Http\\Livewire\\Front\\Header' => $baseDir . '/app/Http/Livewire/Front/Header.php',
     'App\\Http\\Livewire\\Front\\NewsLetterPopup' => $baseDir . '/app/Http/Livewire/Front/NewsLetterPopup.php',
-    'App\\Http\\Livewire\\Front\\ProductCollectionWithFilter' => $baseDir . '/app/Http/Livewire/Front/ProductCollectionWithFilter.php',
     'App\\Http\\Livewire\\Front\\ProductDetails' => $baseDir . '/app/Http/Livewire/Front/ProductDetails.php',
     'App\\Http\\Livewire\\Front\\QuickView' => $baseDir . '/app/Http/Livewire/Front/QuickView.php',
     'App\\Http\\Livewire\\Front\\RecentArrivalProducts' => $baseDir . '/app/Http/Livewire/Front/RecentArrivalProducts.php',

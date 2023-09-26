@@ -59,7 +59,7 @@ class SocialLink extends Model implements HasMedia
     }
 
 
-    // Model Scrop
+    // Model Scope
 
     public function scopePublished($query)
     {
