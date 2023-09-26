@@ -39,7 +39,7 @@ class Category extends Model implements HasMedia
                     ->width(100)
                     ->height(100)
                     ->format('webp')
-                    ->quality(95);
+                    ->quality(100);
 
                 $this->addMediaConversion('small')
                     ->width(240)

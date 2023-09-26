@@ -8,59 +8,66 @@
                         <div class="col-sm-8">
                             <div class="banner banner-cat banner-badge">
                                 <a href="#">
-                                    <img src="{{ $featured_category_one->iconUrl('small') }}" alt="{{ $featured_category_one->name }}">
+                                    <img src="{{ $featured_category_one->iconUrl('medium') }}" alt="{{ $featured_category_one->name }}">
                                 </a>
 
                                 <a class="banner-link" href="#">
                                     <h3 class="banner-title">{{ $featured_category_one->name }}</h3><!-- End .banner-title -->
-                                    <h4 class="banner-subtitle">2 Products</h4><!-- End .banner-subtitle -->
+                                    <h4 class="banner-subtitle">{{ $featured_category_one->count_products }} Products</h4><!-- End .banner-subtitle -->
                                     <span class="banner-link-text">Shop Now</span>
                                 </a><!-- End .banner-link -->
                             </div><!-- End .banner -->
                         </div><!-- End .col-sm-8 -->
                         @endif
 
-                        <div class="col-sm-4">
-                            <div class="banner banner-cat banner-badge">
-                                <a href="#">
-                                    <img src="{{ asset('assets/images/category/fullwidth-page/banner-2.jpg') }}" alt="Banner">
-                                </a>
+                        @if($featured_category_two)
+                            <div class="col-sm-4">
+                                <div class="banner banner-cat banner-badge">
+                                    <a href="#">
+                                        <img src="{{ $featured_category_two->iconUrl('medium') }}" alt="{{ $featured_category_two->name }}">
+                                    </a>
 
-                                <a class="banner-link" href="#">
-                                    <h3 class="banner-title">Jeans</h3><!-- End .banner-title -->
-                                    <h4 class="banner-subtitle">1 Product</h4><!-- End .banner-subtitle -->
-                                    <span class="banner-link-text">Shop Now</span>
-                                </a><!-- End .banner-link -->
-                            </div><!-- End .banner -->
-                        </div><!-- End .col-sm-4 -->
+                                    <a class="banner-link" href="#">
+                                        <h3 class="banner-title">{{ $featured_category_two->name }}</h3><!-- End .banner-title -->
+                                        <h4 class="banner-subtitle">{{ $featured_category_two->count_products }} Products</h4><!-- End .banner-subtitle -->
+                                        <span class="banner-link-text">Shop Now</span>
+                                    </a><!-- End .banner-link -->
+                                </div><!-- End .banner -->
+                            </div><!-- End .col-sm-4 -->
+                        @endif
 
-                        <div class="col-sm-4">
-                            <div class="banner banner-cat banner-badge">
-                                <a href="#">
-                                    <img src="{{ asset('assets/images/category/fullwidth-page/banner-3.jpg') }}" alt="Banner">
-                                </a>
+                        @if($featured_category_three)
+                            <div class="col-sm-4">
+                                <div class="banner banner-cat banner-badge">
+                                    <a href="#">
+                                        <img src="{{ $featured_category_three->iconUrl('medium') }}" alt="{{ $featured_category_three->name }}">
+                                    </a>
 
-                                <a class="banner-link" href="#">
-                                    <h3 class="banner-title">Sportwear</h3><!-- End .banner-title -->
-                                    <h4 class="banner-subtitle">0 Product</h4><!-- End .banner-subtitle -->
-                                    <span class="banner-link-text">Shop Now</span>
-                                </a><!-- End .banner-link -->
-                            </div><!-- End .banner -->
-                        </div><!-- End .col-sm-4 -->
+                                    <a class="banner-link" href="#">
+                                        <h3 class="banner-title">{{ $featured_category_three->name }}</h3><!-- End .banner-title -->
+                                        <h4 class="banner-subtitle">{{ $featured_category_three->count_products }} Products</h4><!-- End .banner-subtitle -->
+                                        <span class="banner-link-text">Shop Now</span>
+                                    </a><!-- End .banner-link -->
+                                </div><!-- End .banner -->
+                            </div><!-- End .col-sm-4 -->
+                        @endif
 
-                        <div class="col-sm-8">
-                            <div class="banner banner-cat banner-badge">
-                                <a href="#">
-                                    <img src="{{ asset('assets/images/category/fullwidth-page/banner-4.jpg') }}" alt="Banner">
-                                </a>
+                        @if($featured_category_four)
+                            <div class="col-sm-8">
+                                <div class="banner banner-cat banner-badge">
+                                    <a href="#">
+                                        <img src="{{ $featured_category_four->iconUrl('medium') }}" alt="{{ $featured_category_four->name }}">
+                                    </a>
 
-                                <a class="banner-link" href="#">
-                                    <h3 class="banner-title">Bags</h3><!-- End .banner-title -->
-                                    <h4 class="banner-subtitle">4 Products</h4><!-- End .banner-subtitle -->
-                                    <span class="banner-link-text">Shop Now</span>
-                                </a><!-- End .banner-link -->
-                            </div><!-- End .banner -->
-                        </div><!-- End .col-sm-8 -->
+                                    <a class="banner-link" href="#">
+                                        <h3 class="banner-title">{{ $featured_category_four->name }}</h3><!-- End .banner-title -->
+                                        <h4 class="banner-subtitle">{{ $featured_category_four->count_products }} Products</h4><!-- End .banner-subtitle -->
+                                        <span class="banner-link-text">Shop Now</span>
+                                    </a><!-- End .banner-link -->
+                                </div><!-- End .banner -->
+                            </div><!-- End .col-sm-4 -->
+                        @endif
+
                     </div><!-- End .row -->
                 </div><!-- End .col-lg-6 -->
 

@@ -29,34 +29,34 @@ class FeaturedCategoryShowcase extends Component
 
     private function getFeaturedCategories()
     {
-        $this->featured_category_one = Category::published()->featured()->first();
+        $this->featured_category_one = Category::withCount('products')->published()->featured()->first();
 
         if($this->featured_category_one){
-            $this->featured_category_two = Category::published()->featured()->whereNotIn('id', [$this->featured_category_one->id])->first();
+            $this->featured_category_two = Category::withCount('products')->published()->featured()->whereNotIn('id', [$this->featured_category_one->id])->first();
         }
 
         if($this->featured_category_two){
-            $this->featured_category_three = Category::published()->featured()->whereNotIn('id', [$this->featured_category_two->id])->first();
+            $this->featured_category_three = Category::withCount('products')->published()->featured()->whereNotIn('id', [$this->featured_category_two->id])->first();
         }
 
         if($this->featured_category_three){
-            $this->featured_category_four = Category::published()->featured()->whereNotIn('id', [$this->featured_category_three->id])->first();
+            $this->featured_category_four = Category::withCount('products')->published()->featured()->whereNotIn('id', [$this->featured_category_three->id])->first();
         }
         
         if($this->featured_category_four){
-            $this->featured_category_five = Category::published()->featured()->whereNotIn('id', [$this->featured_category_four->id])->first();
+            $this->featured_category_five = Category::withCount('products')->published()->featured()->whereNotIn('id', [$this->featured_category_four->id])->first();
         }
 
         if($this->featured_category_five){
-            $this->featured_category_six = Category::published()->featured()->whereNotIn('id', [$this->featured_category_five->id])->first();
+            $this->featured_category_six = Category::withCount('products')->published()->featured()->whereNotIn('id', [$this->featured_category_five->id])->first();
         }
 
         if($this->featured_category_six){
-            $this->featured_category_seven = Category::published()->featured()->whereNotIn('id', [$this->featured_category_six->id])->first();
+            $this->featured_category_seven = Category::withCount('products')->published()->featured()->whereNotIn('id', [$this->featured_category_six->id])->first();
         }
 
         if($this->featured_category_seven){
-            $this->featured_category_eight = Category::published()->featured()->whereNotIn('id', [$this->featured_category_seven->id])->first();
+            $this->featured_category_eight = Category::withCount('products')->published()->featured()->whereNotIn('id', [$this->featured_category_seven->id])->first();
         }
         
     }
