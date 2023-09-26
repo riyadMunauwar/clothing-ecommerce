@@ -62,7 +62,7 @@
                                     </li>
                                     <li>
                                         <i class="icon-phone"></i>
-                                        <a href="tel:#">+8809644776611,</a>
+                                        <a href="tel:#">+8809644776611, +8809649776611</a>
                                     </li>
                                     <li>
                                         <i class="icon-envelope"></i>
@@ -148,7 +148,7 @@
                                     <div class="store-content">
                                         <h3 class="store-title">Bogura</h3><!-- End .store-title -->
                                         <address>Somir uddin Market, Monihar Jewellers 1st Floor, Bogura New Market, Bogura -5800</address>
-                                        <div><a href="tel:#">+8809649776611</a></div>
+                                        <div><a href="tel:#">+8809644776611</a></div>
 
                                         <h4 class="store-subtitle">Store Hours:</h4><!-- End .store-subtitle -->
                                         <div>Saturday - Thursday 11am to 8pm</div>
@@ -174,7 +174,7 @@
                                     <div class="store-content">
                                         <h3 class="store-title">Dhaka</h3><!-- End .store-title -->
                                         <address>House#30, Road#11, Kallyanpur, Dhaka-1216</address>
-                                        <div><a href="tel:#">+8809644776611</a></div>
+                                        <div><a href="tel:#">++8809649776611</a></div>
 
                                         <h4 class="store-subtitle">Store Hours:</h4><!-- End .store-subtitle -->
                                         <div>Saturday - Thursday 11am to 8pm</div>
