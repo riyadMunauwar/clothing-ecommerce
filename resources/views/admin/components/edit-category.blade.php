@@ -95,7 +95,7 @@
                     <x-ui.textarea wire:model.debounce="category.meta_description" id="metaDescription" class="block mt-1 w-full" type="text" required />
                 </div>
 
-                <div class="col-span-2 flex gap-3.5">
+                <div class="col-span-2 flex gap-5">
                     <div class="block">
                         <label for="isPublished" class="flex items-center">
                             <x-checkbox wire:model.debounce="category.is_published" id="isPublished" />
