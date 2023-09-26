@@ -42,7 +42,7 @@ class CreateCategory extends Component
         'parentCategoryId' => ['nullable', 'string'],
         'icon' => ['nullable'],
         'description' => ['nullable', 'string'],
-        'sort_order' => ['nullable', 'integer'],
+        'sortOrder' => ['nullable', 'integer'],
         'isPublished' => ['nullable', 'boolean'],
         'isFeatured' => ['nullable', 'boolean'],
     ];
