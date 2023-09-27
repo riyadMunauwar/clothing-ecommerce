@@ -22,10 +22,10 @@
 
                     <figure class="product-image-container">
                         <a href="" class="product-image">
-                            <img src="{{ $item->options->thumbnail }}" alt="{{ $item->name }}">
+                            <img title="Image" src="{{ $item->options->thumbnail }}" alt="{{ $item->name }}">
                         </a>
                     </figure>
-                    <button wire:click.debounce="prearedCartItemsData({{ $item->id }})" class="btn-remove" title="Remove Product"><i class="icon-close"></i></button>
+                    <button wire:click.debounce="removeCartItemRowId({{ $item->id }})" class="btn-remove" title="Remove Product"><i class="icon-close"></i></button>
                 </div><!-- End .product -->
             @empty 
                 <p class="text-center">Cart is empty!</p>
