@@ -54,7 +54,7 @@
                         </form>
                     </div><!-- End .cart-discount -->
 
-                    <a href="#" class="btn btn-outline-dark-2"><span>CART RESET</span><i class="icon-trash"></i></a>
+                    <a href="#" class="btn btn-outline-dark-2"><span>CART RESET</span><i class="icon-delete"></i></a>
                 </div><!-- End .cart-bottom -->
             </div><!-- End .col-lg-9 -->
             <aside class="col-lg-3">
