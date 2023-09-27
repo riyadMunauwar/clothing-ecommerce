@@ -77,7 +77,6 @@
 
         @stack('modals')
 
-        <livewire:front.news-letter-popup />
 
         @include('front.partials.mobile-nav')
 
