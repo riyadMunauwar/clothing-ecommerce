@@ -10,12 +10,8 @@ use App\Services\Cart\CartService;
 class AddToCartButton extends Component
 {
     protected $productId;
-    protected $cart;
+ 
 
-    public function mount()
-    {
-        $this->cart = new CartService();
-    }
 
     public function render()
     {
@@ -24,8 +20,8 @@ class AddToCartButton extends Component
 
     public function addToCartHandeler()
     {
-        dd($this->cart);
-        
+        dd($this->productId);
+
         $result = $this->cart->add($productId, null, 1);
 
         dd($result);
