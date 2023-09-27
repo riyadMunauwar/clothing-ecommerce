@@ -153,7 +153,7 @@
                                 </div>
 
                                 <!-- Add To Cart Button Goes Here Below -->
-                                <livewire:front.add-to-cart-button :productId="$product->id" wire:key="now() . $product->id" />
+                                <livewire:front.add-to-cart-button :productId="$product->id" wire:key="$product->id" />
                             </div>
                         @endforeach
                         <!-- Product Item End -->
