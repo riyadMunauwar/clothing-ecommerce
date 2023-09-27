@@ -2,7 +2,7 @@
     <div class="footer-middle">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 col-lg-3">
+                <div class="col-sm-6 col-lg-5">
                     <div class="widget widget-about">
                         <img src="{{ asset('assets/images/rayatboutiqe-logo.png') }}" class="footer-logo" alt="Footer Logo" width="105" height="25">
                          <h6>Rayat Boutique &amp; Craft Limited </h6>
@@ -29,7 +29,7 @@
 
 
                 @foreach($footer_columns as $footer_column)
-                    <div class="col-sm-6 col-lg-3">
+                    <div class="col-sm-6 col-lg-2">
                         <div class="widget">
                             <h4 class="widget-title">{{ $footer_column->column_title }}</h4><!-- End .widget-title -->
 
