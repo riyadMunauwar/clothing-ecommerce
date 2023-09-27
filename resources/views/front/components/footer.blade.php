@@ -6,7 +6,8 @@
                     <div class="widget">
                         <img src="{{ asset('assets/images/rayatboutiqe-logo.png') }}" class="footer-logo" alt="Footer Logo" width="105" height="25">
                          <h6>Rayat Boutique &amp; Craft Limited </h6>
-                         <p class="mb-2">Factory & Head Office- Dhorompur, Bogura Sadar, Bogura-5800</p>
+                         <p class="mb-1">Factory & Head Office- Dhorompur, Bogura Sadar, Bogura-5800</p>
+                         <p class="mb-2">Dhaka Office- House#30, Road#11, Kallyanpur, Dhaka-1216</p>
                          <p>Help Line: +8809644776611</p>
                          <p>Help Line: +8809649776611</p>
                          <p>Mobile: +8801920776611(WhatsApp & Imo)</p>
