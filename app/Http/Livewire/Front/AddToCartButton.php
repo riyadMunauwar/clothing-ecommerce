@@ -32,6 +32,8 @@ class AddToCartButton extends Component
 
         if(!$result['isError']){
             return $this->success('Item added to cart', $result['message']);
+        }else {
+            return $this->error('Woops !', $result['message']);
         }
     }
 }
