@@ -156,6 +156,11 @@ class Product extends Model implements HasMedia
         return $gallery_items;
     }
 
+    public function uniqueRandomToken()
+    {
+        return \Illuminate\Support\Str::random(18);
+    }
+
 
     // Relationship
     public function categories()

@@ -41,7 +41,7 @@
                                     </div><!-- End .product-action-vertical -->
 
                                     <!-- Add to Cart Button -->
-                                    <livewire:front.add-to-cart-button :productId="$product->id" wire:key="$product->id" />
+                                    <livewire:front.add-to-cart-button :productId="$product->id" wire:key="$product->uniqueRandomToken()" />
                                 </figure><!-- End .product-media -->
 
                                 <div class="product-body">

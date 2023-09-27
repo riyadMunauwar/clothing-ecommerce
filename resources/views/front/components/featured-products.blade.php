@@ -25,7 +25,7 @@
                         <div class="product-body">
 
                             <!-- Add To Cart Button -->
-                            <livewire:front.add-to-cart-button :productId="$product->id" wire:key="$product->id" />
+                            <livewire:front.add-to-cart-button :productId="$product->id" wire:key="$product->uniqueRandomToken()" />
 
                             <div class="product-cat">
                                 <a href="{{ route('category', ['category_slug' => $product->categories->first()->slug ?? 'none', 'id' => $product->categories->first()->id ?? 'none' ]) }}">{{ $product->categories->first()->name ?? 'None' }}</a>

@@ -105,7 +105,7 @@
                                         </div>
 
                                         <!-- Add To Cart Button -->
-                                        <livewire:front.add-to-cart-button :productId="$product->id" wire:key="$product->id" />
+                                        <livewire:front.add-to-cart-button :productId="$product->id" wire:key="$product->uniqueRandomToken()" />
 
                                     </div>
                                 </div>
