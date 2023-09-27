@@ -24,8 +24,8 @@ class Header extends Component
 
     public function mount()
     {
-        // $cart = new CartService();
-        $this->prearedCartItemsData();
+        $cart = new CartService();
+        $this->prearedCartItemsData($cart);
     }
 
     public function render()
