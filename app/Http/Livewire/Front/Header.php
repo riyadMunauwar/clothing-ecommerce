@@ -15,6 +15,8 @@ class Header extends Component
 
     public $cart_items_count = 0;
 
+    public $sub_total = 0;
+
     protected $cart;
 
     protected $rules = [
@@ -36,5 +38,6 @@ class Header extends Component
     {
         $this->cart_items = $this->cart->all();
         $this->cart_items_count = $this->cart->itemsCount();
+        $this->sub_total = $this->cart->subTotal();
     }
 }
