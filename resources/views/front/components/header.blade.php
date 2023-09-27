@@ -183,7 +183,7 @@
                     <div class="dropdown-menu dropdown-menu-right">
                         <div class="dropdown-cart-products">
 
-                            @forelse($cart_items_count as $item)
+                            @forelse($cart_items as $item)
                                 <div class="product">
                                     <div class="product-cart-details">
                                         <h4 class="product-title">
