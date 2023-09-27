@@ -35,6 +35,8 @@ class HeaderCartSection extends Component
 
     public function prearedCartItemsData(CartService $cart)
     {
+        $cart = new CartService();
+
         $this->cart_items = $cart->all();
         $this->cart_items_count = $cart->itemsCount();
         $this->sub_total = $cart->subTotal();
