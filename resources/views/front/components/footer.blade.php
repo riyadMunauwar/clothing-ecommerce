@@ -29,7 +29,12 @@
 
 
                 @foreach($footer_columns as $footer_column)
-                    <div class="col-sm-6 col-lg-2">
+
+                    @php
+                        $column = $footer_column === 'Policies' ? '4' : '2';
+                    @endphp
+
+                    <div class="col-sm-6 col-lg-{{ $column }}">
                         <div class="widget">
                             <h4 class="widget-title">{{ $footer_column->column_title }}</h4><!-- End .widget-title -->
 
