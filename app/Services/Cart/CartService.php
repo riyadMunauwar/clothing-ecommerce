@@ -44,6 +44,7 @@ class CartService {
 
         }else {
 
+            $slug = $product->slug;
             $salePrice = $product->sale_price;
             $thumbnail = $product->thumbnailUrl('thumb');
             $weight = $product->weight ?? 0;
@@ -71,6 +72,7 @@ class CartService {
                 'options' => [
                     'variation_id' => $variationId,
                     'thumbnail' => $thumbnail,
+                    'slug' => $slug,
                     'width' => $width,
                     'height' => $height,
                     'length' => $length,
@@ -85,13 +87,17 @@ class CartService {
 
     public function remove($rowId)
     {
-        return Cart::remove($rowId);
+        Cart::remove($rowId);
+
+        return $this->success('Cart item removed');
     }
 
 
     public function removeAll()
     {
-        return Cart::destroy();
+        Cart::destroy();
+
+        return $this->success('All the cart item removed');
     }
 
 

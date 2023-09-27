@@ -21,11 +21,11 @@
                     </div><!-- End .product-cart-details -->
 
                     <figure class="product-image-container">
-                        <a href="" title="Image" class="product-image">
+                        <a href="{{ route('product', ['product_slug' => $item->slug, 'id' => $item->id]) }}" class="product-image">
                             <img src="{{ $item->options->thumbnail }}" alt="{{ $item->name }}">
                         </a>
                     </figure>
-                    <button wire:click.debounce="removeCartItemByRowId({{ $item->id }})" class="btn-remove" title="Remove Product"><i class="icon-close"></i></button>
+                    <button wire:click.debounce="removeCartItemByRowId({{ $item->rowId }})" class="btn-remove" title="Remove Product"><i class="icon-close"></i></button>
                 </div><!-- End .product -->
             @empty 
                 <p class="text-center">Cart is empty!</p>
