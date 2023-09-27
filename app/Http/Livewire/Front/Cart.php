@@ -10,6 +10,8 @@ use App\Services\Cart\CartService;
 class Cart extends Component
 {
 
+    use WithSweetAlert;
+
     public $cart_items = [];
 
     public $sub_total = 0;
