@@ -40,7 +40,7 @@ class HeaderCartSection extends Component
         $this->sub_total = $cart->subTotal();
     }
 
-    public function removeCartItemRowId($rowId)
+    public function removeCartItemByRowId($rowId)
     {
         $cart = new CartService();
 
