@@ -17,7 +17,6 @@ class Header extends Component
 
     public $sub_total = 0;
 
-    protected $cart;
 
     protected $listeners = [
         'onCartItemChanges' => 'prearedCartItemsData',
@@ -25,7 +24,7 @@ class Header extends Component
 
     public function mount()
     {
-        $this->cart = new CartService();
+        // $cart = new CartService();
         $this->prearedCartItemsData();
     }
 
@@ -34,10 +33,10 @@ class Header extends Component
         return view('front.components.header');
     }
 
-    public function prearedCartItemsData()
+    public function prearedCartItemsData(CartService $cart)
     {
-        $this->cart_items = $this->cart->all();
-        $this->cart_items_count = $this->cart->itemsCount();
-        $this->sub_total = $this->cart->subTotal();
+        $this->cart_items = $cart->all();
+        $this->cart_items_count = $cart->itemsCount();
+        $this->sub_total = $cart->subTotal();
     }
 }
