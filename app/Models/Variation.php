@@ -41,22 +41,28 @@ class Variation extends Model implements HasMedia
         ->registerMediaConversions(function (Media $media = null) {
             
             $this->addMediaConversion('thumb')
-                ->width(150)
-                ->height(150)
+                ->width(100)
+                ->height(100)
                 ->format('webp')
-                ->quality(80);
+                ->quality(100);
+
+            $this->addMediaConversion('card')
+                ->width(300)
+                ->height(300)
+                ->format('webp')
+                ->quality(100);
 
             $this->addMediaConversion('small')
                 ->width(640)
                 ->height(640)
                 ->format('webp')
-                ->quality(80);
+                ->quality(100);
 
             $this->addMediaConversion('medium')
                 ->width(800)
                 ->height(800)
                 ->format('webp')
-                ->quality(80);
+                ->quality(100);
                 
         });
     }
