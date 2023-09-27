@@ -31,7 +31,7 @@
                 @foreach($footer_columns as $footer_column)
 
                     @php
-                        $column = $footer_column->column_title === 'Policies' ? '4' : '2';
+                        $column = $loop->index === 1 ? '3' : '2';
                     @endphp
 
                     <div class="col-sm-6 col-lg-{{ $column }}">
