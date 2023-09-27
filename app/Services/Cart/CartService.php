@@ -46,19 +46,19 @@ class CartService {
 
             $salePrice = $product->sale_price;
             $thumbnail = $product->thumbnailUrl('thumb');
-            $weight = $product->weight;
-            $height = $product->height;
-            $width = $product->width;
-            $length = $product->length;
+            $weight = $product->weight ?? 0;
+            $height = $product->height ?? 0;
+            $width = $product->width ?? 0;
+            $length = $product->length ?? 0;
             $variationId = null;
 
             if($variation){
                 $salePrice = $variation->sale_price;
                 $thumbnail = $variation->thumbnailUrl('thumb');
-                $weight = $variation->weight;
-                $height = $variation->height;
-                $width = $variation->width;
-                $length = $variation->length;
+                $weight = $variation->weight ?? 0;
+                $height = $variation->height ?? 0;
+                $width = $variation->width ?? 0;
+                $length = $variation->length ?? 0;
                 $variationId = $variation->id;
             }
 
