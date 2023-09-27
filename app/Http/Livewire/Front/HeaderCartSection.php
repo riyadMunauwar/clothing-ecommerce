@@ -24,8 +24,7 @@ class HeaderCartSection extends Component
 
     public function mount()
     {
-        $cart = new CartService();
-        $this->prearedCartItemsData($cart);
+        $this->prearedCartItemsData();
     }
 
     public function render()
@@ -33,7 +32,7 @@ class HeaderCartSection extends Component
         return view('front.components.header-cart-section');
     }
 
-    public function prearedCartItemsData(CartService $cart)
+    public function prearedCartItemsData()
     {
         $cart = new CartService();
 
