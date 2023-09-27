@@ -50,6 +50,7 @@ class HeaderCartSection extends Component
         if($result['isError']) {
             return $this->error($result['message'], '');
         }else {
+            $this->prearedCartItemsData();
             return $this->success($result['message'], '');
         }
     }
