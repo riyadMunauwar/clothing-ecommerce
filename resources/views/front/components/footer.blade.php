@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-lg-5">
-                    <div class="widget widget-about">
+                    <div class="widget-about">
                         <img src="{{ asset('assets/images/rayatboutiqe-logo.png') }}" class="footer-logo" alt="Footer Logo" width="105" height="25">
                          <h6>Rayat Boutique &amp; Craft Limited </h6>
                          <p class="mb-2">Factory & Head Office- Dhorompur, Bogura Sadar, Bogura-5800</p>
