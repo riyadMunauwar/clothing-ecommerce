@@ -152,9 +152,8 @@
 
                                 </div>
 
-                                <div class="product-action">
-                                    <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
-                                </div>
+                                <!-- Add To Cart Button Goes Here Below -->
+                                <livewire:front.add-to-cart-button :productId="$product->id" wire:key="now() . $product->id" />
                             </div>
                         @endforeach
                         <!-- Product Item End -->
