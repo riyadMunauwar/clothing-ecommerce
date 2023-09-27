@@ -11,7 +11,7 @@
                 <div class="product">
                     <div class="product-cart-details">
                         <h4 class="product-title">
-                            <a href="">{{ $item->name }}</a>
+                            <a href="{{ route('product', ['product_slug' => $item->slug ?? $item->name, 'id' => $item->id]) }}">{{ $item->name }}</a>
                         </h4>
 
                         <span class="cart-product-info">
