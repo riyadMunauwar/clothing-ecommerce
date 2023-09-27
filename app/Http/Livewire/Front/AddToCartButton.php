@@ -24,7 +24,7 @@ class AddToCartButton extends Component
 
     public function addToCartHandeler()
     {
-        dd($this->productId);
+        $cart = new CartService();
 
         $result = $this->cart->add($productId, null, 1);
 
