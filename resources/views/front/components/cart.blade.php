@@ -36,7 +36,7 @@
                                     </div><!-- End .cart-product-quantity -->
                                 </td>
                                 <td class="total-col">BDT {{ $item->qty * $item->price }}</td>
-                                <td class="remove-col"><button class="btn-remove"><i class="icon-close"></i></button></td>
+                                <td class="remove-col"><button wire:click.debounce="removeCartItemByRowId('{{ $item->rowId }}')" class="btn-remove"><i class="icon-close"></i></button></td>
                             </tr>
                         @endforeach
                     </tbody>
