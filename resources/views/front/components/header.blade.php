@@ -203,7 +203,7 @@
                                     </figure>
                                     <a href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
                                 </div><!-- End .product -->
-                            @else 
+                            @empty 
                                 <p class="text-center">Cart is empty!</p>
                             @endforelse
              
