@@ -116,9 +116,9 @@ class CartService {
         $nextQty = $item->qty + (int) $updatedQty;
 
         if($variation){
-            if(!$this->checkIsStockAvailable($variation->stock_qty, $nextQty)) return $this->error('Your selected quantity is greater than stock quantity');
+            if(!$this->checkIsStockAvailable($variation->stock_qty, $nextQty)) return $this->error('Your desired quantity is not available for this product');
         }else {
-            if(!$this->checkIsStockAvailable($product->stock_qty, $nextQty)) return $this->error('Your selected quantity is greater than stock quantity');
+            if(!$this->checkIsStockAvailable($product->stock_qty, $nextQty)) return $this->error('Your desired quantity is not available for this product');
         }
         
         Cart::update($rowId, $nextQty);
