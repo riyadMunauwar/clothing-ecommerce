@@ -44,6 +44,7 @@ class HeaderCartSection extends Component
     {
         $cart = new CartService();
 
+        dd($rowId);
         $result = $cart->remove($rowId);
 
         dd($result);
