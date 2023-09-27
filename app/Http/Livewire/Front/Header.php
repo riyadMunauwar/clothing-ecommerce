@@ -19,7 +19,7 @@ class Header extends Component
 
     protected $cart;
 
-    protected $rules = [
+    protected $listeners = [
         'onCartItemChanges' => 'prearedCartItemsData',
     ];
 
