@@ -51,7 +51,7 @@ class Cart extends Component
         if($result['isError']) {
             return $this->error($result['message'], '');
         }else {
-            $this->prearedCartItemsData();
+            $this->emit('onCartItemChanges');
             return $this->success($result['message'], '');
         }
     }
