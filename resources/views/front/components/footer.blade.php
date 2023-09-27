@@ -2,14 +2,15 @@
     <div class="footer-middle">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 col-lg-4">
+                <div class="col-sm-6 col-lg-5">
                     <div class="widget widget-about">
                         <img src="{{ asset('assets/images/rayatboutiqe-logo.png') }}" class="footer-logo" alt="Footer Logo" width="105" height="25">
                          <h6>Rayat Boutique &amp; Craft Limited </h6>
-                         <p>Help Line-+8809644776611</p>
-                         <p>Help Line-+8809649776611</p>
-                         <p>Mobile-+8801920776611(WhatsApp &amp; Imo)</p>
-                         <p>Email- customercare@rayat.com.bd </p>
+                         <p class="mb-2">Factory & Head Office- Dhorompur, Bogura Sadar, Bogura-5800</p>
+                         <p>Help Line: +8809644776611</p>
+                         <p>Help Line: +8809649776611</p>
+                         <p>Mobile: +8801920776611(WhatsApp & Imo)</p>
+                         <p>Email: customercare@rayat.com.bd </p>
 
                         <div class="social-icons">
                             <a href="#" class="social-icon" target="_blank" title="Facebook"><i class="icon-facebook-f"></i></a>
