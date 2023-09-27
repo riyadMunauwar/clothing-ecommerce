@@ -174,7 +174,7 @@
 
 
                 <!-- Header Cart -->
-                <livewire:front.header-cart-section />
+                <livewire:front.header-cart-section wire:key="6sdf6s5df46sdfsdf"/>
 
 
 
