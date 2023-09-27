@@ -9,6 +9,8 @@ use App\Services\Cart\CartService;
 
 class AddToCartButton extends Component
 {
+    use WithSweetAlert;
+    
     public $productId;
  
 
