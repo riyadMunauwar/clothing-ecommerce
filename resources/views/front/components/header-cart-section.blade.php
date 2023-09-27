@@ -25,7 +25,7 @@
                             <img src="{{ $item->options->thumbnail }}" alt="{{ $item->name }}">
                         </a>
                     </figure>
-                    <a href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
+                    <button wire:click.debounce="prearedCartItemsData({{ $item->id }})" class="btn-remove" title="Remove Product"><i class="icon-close"></i></button>
                 </div><!-- End .product -->
             @empty 
                 <p class="text-center">Cart is empty!</p>

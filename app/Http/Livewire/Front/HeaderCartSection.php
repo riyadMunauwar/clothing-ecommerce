@@ -39,4 +39,13 @@ class HeaderCartSection extends Component
         $this->cart_items_count = $cart->itemsCount();
         $this->sub_total = $cart->subTotal();
     }
+
+    public function removeCartItemRowId($rowId)
+    {
+        $cart = new CartService();
+
+        $result = $cart->all();
+
+        dd($result);
+    }
 }
