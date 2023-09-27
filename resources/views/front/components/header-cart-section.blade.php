@@ -11,7 +11,7 @@
                 <div class="product">
                     <div class="product-cart-details">
                         <h4 class="product-title">
-                            <a href="{{ route('product', ['product_slug' => $item->options->slug ?? $item->name, 'id' => $item->id]) }}">{{ $item->name }}</a>
+                            <a href="{{ route('product', ['product_slug' => $item->options->slug, 'id' => $item->id]) }}">{{ $item->name }}</a>
                         </h4>
 
                         <span class="cart-product-info">
@@ -21,7 +21,7 @@
                     </div><!-- End .product-cart-details -->
 
                     <figure class="product-image-container">
-                        <a href="{{ route('product', ['product_slug' => $item->options->slug ?? $item->name, 'id' => $item->id]) }}" class="product-image">
+                        <a href="{{ route('product', ['product_slug' => $item->options->slug, 'id' => $item->id]) }}" class="product-image">
                             <img src="{{ $item->options->thumbnail }}" alt="{{ $item->name }}">
                         </a>
                     </figure>
