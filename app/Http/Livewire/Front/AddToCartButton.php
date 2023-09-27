@@ -9,8 +9,8 @@ use App\Services\Cart\CartService;
 
 class AddToCartButton extends Component
 {
-    public $productId;
-    public $cart;
+    protected $productId;
+    protected $cart;
 
     public function mount()
     {
