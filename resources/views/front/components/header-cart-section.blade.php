@@ -25,7 +25,7 @@
                             <img src="{{ $item->options->thumbnail }}" alt="{{ $item->name }}">
                         </a>
                     </figure>
-                    <button wire:click.debounce="removeCartItemByRowId({{ $item->rowId }})" class="btn-remove" title="Remove Product"><i class="icon-close"></i></button>
+                    <button wire:click.debounce="removeCartItemByRowId('{{ $item->rowId }}')" class="btn-remove" title="Remove Product"><i class="icon-close"></i></button>
                 </div><!-- End .product -->
             @empty 
                 <p class="text-center">Cart is empty!</p>
