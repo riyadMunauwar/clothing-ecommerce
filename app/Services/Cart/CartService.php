@@ -38,7 +38,7 @@ class CartService {
 
         if($item){
 
-            $item = Cart::update($item->rowId, $qty);
+            $this->increment($item->rowId, 1);
 
             return $this->success('Success fully added to the cart');
 
