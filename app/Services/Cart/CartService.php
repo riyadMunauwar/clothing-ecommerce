@@ -38,9 +38,7 @@ class CartService {
 
         if($item){
 
-            $this->increment($item->rowId, 1);
-
-            return $this->success('Success fully added to the cart');
+            return $this->increment($item->rowId, 1);
 
         }else {
 
