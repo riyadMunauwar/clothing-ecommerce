@@ -24,9 +24,8 @@
 
                         <div class="product-body">
 
-                            <div class="product-action">
-                                <a href="" class="btn-product btn-cart"><span>add to cart</span></a>
-                            </div>
+                            <!-- Add To Cart Button -->
+                            <livewire:front.add-to-cart-button :productId="$product->id" wire:key="$product->id" />
 
                             <div class="product-cat">
                                 <a href="{{ route('category', ['category_slug' => $product->categories->first()->slug ?? 'none', 'id' => $product->categories->first()->id ?? 'none' ]) }}">{{ $product->categories->first()->name ?? 'None' }}</a>
