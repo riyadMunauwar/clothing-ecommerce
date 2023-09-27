@@ -177,7 +177,7 @@
                 <div class="dropdown cart-dropdown">
                     <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
                         <i class="icon-shopping-cart"></i>
-                        <span class="cart-count">2</span>
+                        <span class="cart-count">{{ $cart_items_count }}</span>
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right">
