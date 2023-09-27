@@ -47,6 +47,10 @@ class HeaderCartSection extends Component
 
         $result = $cart->remove($rowId);
 
-        dd($result);
+        if($resulst['isError']) {
+            return $this->error($result['message'], '');
+        }else {
+            return $this->success($result['message'], '');
+        }
     }
 }
