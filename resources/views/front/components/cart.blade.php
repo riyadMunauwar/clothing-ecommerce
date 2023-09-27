@@ -20,7 +20,7 @@
                                     <div class="product">
                                         <figure class="product-media">
                                             <a href="{{ route('product', ['product_slug' => $item->options->slug, 'id' => $item->id]) }}">
-                                                <img src="{{ $items->options->thumbnail }}" alt="{{ $item->name }}">
+                                                <img src="{{ $item->options->thumbnail }}" alt="{{ $item->name }}">
                                             </a>
                                         </figure>
 
@@ -54,7 +54,7 @@
                         </form>
                     </div><!-- End .cart-discount -->
 
-                    <a href="#" class="btn btn-outline-dark-2"><span>CART RESET</span><i class="icon-delete"></i></a>
+                    <a href="#" class="btn btn-outline-dark-2"><span>RESET CART</span><i class="icon-refresh"></i></a>
                 </div><!-- End .cart-bottom -->
             </div><!-- End .col-lg-9 -->
             <aside class="col-lg-3">
