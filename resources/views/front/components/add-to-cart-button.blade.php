@@ -1,3 +1,3 @@
 <div class="product-action">
-    <button class="btn-product btn-cart"><span>add to cart</span></button>
+    <button wire:click.debounce="addToCartHandeler" class="btn-product btn-cart"><span>add to cart</span></button>
 </div>
