@@ -28,6 +28,8 @@ class AddToCartButton extends Component
 
         $result = $cart->add($this->productId, null, 1);
 
-        dd($result);
+        if(!$result['isError']){
+            return $this->success('Item added to cart', $result['message']);
+        }
     }
 }
