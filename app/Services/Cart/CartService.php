@@ -13,7 +13,7 @@ class CartService {
     public function add($productId, $variantId = null, $qty)
     {
         // Check Valid Product
-        $product = checkIsValidProduct($productId);
+        $product = $this->checkIsValidProduct($productId);
 
         $variation = Variation::find($variantId);
 
@@ -22,7 +22,7 @@ class CartService {
         }
 
         // Check Valid Qty
-        if(!checkIsValidQty($qty)){
+        if(!$this->checkIsValidQty($qty)){
             return $this->error('You can not select less then 1');
         }
 
