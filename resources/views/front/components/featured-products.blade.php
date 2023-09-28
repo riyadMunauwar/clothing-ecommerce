@@ -34,8 +34,8 @@
                             <h3 class="product-title"><a href="{{ route('product', ['product_slug' => $product->slug, 'id' => $product->id]) }}">{{ $product->name }}</a></h3>
                             
                             <div class="product-price">
-                                <span class="new-price">BDT {{ $product->sale_price }}</span>
-                                <span class="old-price">Was BDT {{ $product->regular_price }}</span>
+                                <span class="new-price">BDT {{ number_format($product->sale_price) }}</span>
+                                <span class="old-price">Was BDT {{ number_format($product->regular_price) }}</span>
                             </div>
 
                         </div>
