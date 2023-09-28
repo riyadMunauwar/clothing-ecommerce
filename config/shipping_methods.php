@@ -3,8 +3,8 @@
 return [
 
     [
-        'shipper' => null,
-        'area' => 'Inside Dhaka City Corp.',
+        'shipper' => 'Free',
+        'area' => 'Inside Dhaka & Bogura',
         'estimate_delivery_time' => 'Delivery within 1-5 days',
         'delivery_cost' => 60,
     ],

@@ -72,12 +72,12 @@
                                 <td>&nbsp;</td>
                             </tr>
 
-                            @foreach(config('shipping_methods') as $method)
+                            @foreach(config('shipping_methods') as $index => $method)
                                 <tr class="summary-shipping-row">
                                     <td>
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="free-shipping" name="shipping" class="custom-control-input">
-                                            <label class="custom-control-label" for="free-shipping">
+                                            <input type="radio" id="shipping-method-{{ $index }}" name="shipping-method" class="custom-control-input">
+                                            <label class="custom-control-label" for="shipping-method-{{ $index }}">
                                                 <span class="text-md">{{ $method['shipper'] ?? $method['area'] }}</span>
                                                 <span class="d-block text-sm"> {{ $method['area'] }} </span>
                                                 <span class="d-block text-sm"> {{ $method['estimate_delivery_time'] }} </span>
