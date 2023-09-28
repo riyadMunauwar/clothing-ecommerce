@@ -78,8 +78,9 @@
                                         <div class="custom-control custom-radio">
                                             <input type="radio" id="free-shipping" name="shipping" class="custom-control-input">
                                             <label class="custom-control-label" for="free-shipping">
-                                                <span>{{ $method['shipper'] ?? $method['area'] }}</span>
-                                                <span class="d-block text-xs"> {{ $method['area'] }} </span>
+                                                <span class="text-md">{{ $method['shipper'] ?? $method['area'] }}</span>
+                                                <span class="d-block text-sm"> {{ $method['area'] }} </span>
+                                                <span class="d-block text-sm"> {{ $method['estimate_delivery_time'] }} </span>
                                             </label>
                                         </div><!-- End .custom-control -->
                                     </td>
