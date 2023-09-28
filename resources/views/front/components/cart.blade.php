@@ -29,13 +29,13 @@
                                         </h3><!-- End .product-title -->
                                     </div><!-- End .product -->
                                 </td>
-                                <td class="price-col">BDT {{ $item->price }}</td>
+                                <td class="price-col">BDT {{ number_format($item->price, 2) }}</td>
 
                                 <td class="quantity-col">
                                     <livewire:front.cart-quantity-changer :qty="$item->qty" :rowId="$item->rowId" :key="$item->rowId" />
                                 </td>
                                 
-                                <td class="total-col">BDT {{ $item->qty * $item->price }}</td>
+                                <td class="total-col">BDT {{ number_format($item->qty * $item->price, 2) }}</td>
                                 <td class="remove-col"><button wire:click.debounce="removeCartItemByRowId('{{ $item->rowId }}')" class="btn-remove"><i class="icon-close"></i></button></td>
                             </tr>
                         @endforeach
@@ -54,7 +54,7 @@
                         </form>
                     </div><!-- End .cart-discount -->
 
-                    <a href="#" class="btn btn-outline-dark-2"><span>RESET CART</span><i class="icon-refresh"></i></a>
+                    <button wire:click.debounce="removeAll" class="btn btn-outline-dark-2"><span wire:loading.remove wire:target="removeAll">RESET CART</span> <span wire:loading wire:target="removeAll">RESETING...</span><i class="icon-refresh"></i></button>
                 </div><!-- End .cart-bottom -->
             </div><!-- End .col-lg-9 -->
             <aside class="col-lg-3">

@@ -51,4 +51,18 @@ class Cart extends Component
             return $this->success($result['message'], '');
         }
     }
+
+    public function removeAll()
+    {
+        $cart = new CartService();
+
+        $result = $cart->removeAll();
+
+        if($result['isError']) {
+            return $this->error($result['message'], '');
+        }else {
+            $this->emit('onCartItemChanges');
+            return $this->success($result['message'], '');
+        }
+    }
 }
