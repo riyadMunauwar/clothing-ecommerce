@@ -77,7 +77,10 @@
                                     <td>
                                         <div class="custom-control custom-radio">
                                             <input type="radio" id="free-shipping" name="shipping" class="custom-control-input">
-                                            <label class="custom-control-label" for="free-shipping">{{ $method['shipper'] ?? $method['area'] }}</label>
+                                            <label class="custom-control-label" for="free-shipping">
+                                                <span>{{ $method['shipper'] ?? $method['area'] }}</span>
+                                                <span class="d-block text-xs"> {{ $method['area'] }} </span>
+                                            </label>
                                         </div><!-- End .custom-control -->
                                     </td>
                                     <td>BDT {{ $method['delivery_cost'] }}</td>
