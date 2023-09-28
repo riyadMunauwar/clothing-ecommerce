@@ -6,7 +6,7 @@ return [
         'shipper' => 'Free',
         'area' => 'Inside Dhaka & Bogura',
         'estimate_delivery_time' => 'Delivery within 1-5 days',
-        'delivery_cost' => 60,
+        'delivery_cost' => 0,
     ],
 
     [

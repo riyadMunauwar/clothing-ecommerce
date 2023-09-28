@@ -84,7 +84,7 @@
                                             </label>
                                         </div><!-- End .custom-control -->
                                     </td>
-                                    <td>BDT {{ $method['delivery_cost'] }}</td>
+                                    <td>BDT {{ number_format($method['delivery_cost'], 2) }}</td>
                                 </tr><!-- End .summary-shipping-row -->
                             @endforeach
     
