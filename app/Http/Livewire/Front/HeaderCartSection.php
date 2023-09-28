@@ -19,7 +19,7 @@ class HeaderCartSection extends Component
 
 
     protected $listeners = [
-        'onCartItemChanges' => 'prearedCartItemsData',
+        'onCartItemChanges' => '$refresh',
     ];
 
 

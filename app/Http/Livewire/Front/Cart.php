@@ -19,7 +19,7 @@ class Cart extends Component
     public $total = 0;
 
     protected $listeners = [
-        'onCartItemChanges' => '$fresh',
+        'onCartItemChanges' => '$refresh',
 
     ];
 
