@@ -32,7 +32,7 @@
                                 <td class="price-col">BDT {{ $item->price }}</td>
 
                                 <td class="quantity-col">
-                                    <livewire:front.cart-quantity-changer :qty="$item->qty" :rowId="$item->rowId" wire:key="$item->rowId" />
+                                    <livewire:front.cart-quantity-changer :qty="$item->qty" :rowId="$item->rowId" :key="$item->rowId" />
                                 </td>
                                 
                                 <td class="total-col">BDT {{ $item->qty * $item->price }}</td>
