@@ -37,7 +37,7 @@ class CartQuantityChanger extends Component
         $result = $cart->bulkIncrementOrDrecrement($this->rowId, $qty);
 
         if($result['isError']) {
-            return $this->error($result['message'], '');
+            return $this->info('Sorry !', $result['message']);
         }else {
             $this->emit('onCartItemChanges');
             return $this->success($result['message'], '');
