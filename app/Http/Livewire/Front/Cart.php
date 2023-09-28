@@ -19,17 +19,14 @@ class Cart extends Component
     public $total = 0;
 
     protected $listeners = [
-        'onCartItemChanges' => 'prearedCartItemsData',
+        'onCartItemChanges' => '$fresh',
+
     ];
 
 
-    public function mount()
-    {
-        $this->prearedCartItemsData();
-    }
-
     public function render()
     {
+        $this->prearedCartItemsData();
         return view('front.components.cart');
     }
 
@@ -53,8 +50,7 @@ class Cart extends Component
         if($result['isError']) {
             return $this->error($result['message'], '');
         }else {
-            // $this->emit('onCartItemChanges');
-            $this->prearedCartItemsData();
+            $this->emit('onCartItemChanges');
             return $this->success($result['message'], '');
         }
     }

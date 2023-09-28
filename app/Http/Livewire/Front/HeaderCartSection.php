@@ -22,13 +22,10 @@ class HeaderCartSection extends Component
         'onCartItemChanges' => 'prearedCartItemsData',
     ];
 
-    public function mount()
-    {
-        $this->prearedCartItemsData();
-    }
 
     public function render()
     {
+        $this->prearedCartItemsData();
         return view('front.components.header-cart-section');
     }
 
@@ -50,8 +47,7 @@ class HeaderCartSection extends Component
         if($result['isError']) {
             return $this->error($result['message'], '');
         }else {
-            // $this->emit('onCartItemChanges');
-            $this->prearedCartItemsData();
+            $this->emit('onCartItemChanges');
             return $this->success($result['message'], '');
         }
     }
