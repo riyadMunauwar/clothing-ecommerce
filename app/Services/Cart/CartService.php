@@ -99,6 +99,39 @@ class CartService {
     }
 
 
+    public function bulkIncrementOrDrecrement($rowId, $qty)
+    {
+
+        // Check Valid Qty
+        if(!$this->checkIsValidQty($qty)){
+            return $this->error('You can not select less then 1');
+        }
+
+        $item = Cart::get($rowId);
+
+        if(!$item){
+            return $this->error('Invalid action');
+        }
+
+        $product = Product::find($item->id);
+
+        $variation = Product::find($item->options->variation_id);
+
+        if(!$product) return $this->error('Invalid product id');
+
+        $nextQty = $qty;
+
+        if($variation){
+            if(!$this->checkIsStockAvailable($variation->stock_qty, $nextQty)) return $this->error('Your desired quantity is not available for this product');
+        }else {
+            if(!$this->checkIsStockAvailable($product->stock_qty, $nextQty)) return $this->error('Your desired quantity is not available for this product');
+        }
+        
+        Cart::update($rowId, $nextQty);
+
+        return $this->success('Updated');
+    }
+
     public function increment($rowId, $updatedQty)
     {
         $item = Cart::get($rowId);

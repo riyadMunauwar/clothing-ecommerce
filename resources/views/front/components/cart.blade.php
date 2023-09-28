@@ -30,11 +30,11 @@
                                     </div><!-- End .product -->
                                 </td>
                                 <td class="price-col">BDT {{ $item->price }}</td>
+
                                 <td class="quantity-col">
-                                    <div class="cart-product-quantity">
-                                        <input type="number" class="form-control" min="1" step="1" data-decimals="0" required>
-                                    </div><!-- End .cart-product-quantity -->
+                                    <livewire:front.cart-quantity-changer :qty="$item->qty" :rowId="$item->rowId" wire:key="$item->rowId" />
                                 </td>
+                                
                                 <td class="total-col">BDT {{ $item->qty * $item->price }}</td>
                                 <td class="remove-col"><button wire:click.debounce="removeCartItemByRowId('{{ $item->rowId }}')" class="btn-remove"><i class="icon-close"></i></button></td>
                             </tr>

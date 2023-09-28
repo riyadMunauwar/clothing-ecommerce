@@ -20,16 +20,13 @@ class Cart extends Component
 
     protected $listeners = [
         'onCartItemChanges' => '$refresh',
-
     ];
-
 
     public function render()
     {
         $this->prearedCartItemsData();
         return view('front.components.cart');
     }
-
 
     public function prearedCartItemsData()
     {
