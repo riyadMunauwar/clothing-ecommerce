@@ -32,7 +32,7 @@ class CartQuantityChanger extends Component
 
     private function changeQty($qty)
     {
-        $cart = new Service();
+        $cart = new CartService();
 
         $result = $cart->bulkIncrementOrDrecrement($this->rowId, $qty);
 
