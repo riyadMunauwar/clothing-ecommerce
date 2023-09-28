@@ -16,7 +16,7 @@
 
                         <span class="cart-product-info">
                             <span class="cart-product-qty">{{ $item->qty }}</span>
-                            x BDT {{ $item->price }}
+                            x BDT {{ number_format($item->price) }}
                         </span>
                     </div><!-- End .product-cart-details -->
 
@@ -36,7 +36,7 @@
         <div class="dropdown-cart-total">
             <span>Total</span>
 
-            <span class="cart-total-price">BDT {{ $sub_total }}</span>
+            <span class="cart-total-price">BDT {{ number_format($sub_total) }}</span>
         </div><!-- End .dropdown-cart-total -->
 
         <div class="dropdown-cart-action">

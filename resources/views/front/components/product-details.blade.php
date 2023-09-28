@@ -41,7 +41,7 @@
                             </div><!-- End .rating-container -->
 
                             <div class="product-price">
-                                {{ $product->sale_price }}
+                                {{ number_format($product->sale_price) }}
                             </div><!-- End .product-price -->
 
                             <div class="product-content">
@@ -280,7 +280,7 @@
                             <h3 class="product-title"><a href="{{ route('product', ['product_slug' => $product->slug, 'id' => $product->id]) }}">{{ $product->name }}</a></h3>
                             
                             <div class="product-price">
-                                BDT {{ $product->sale_price }}
+                                BDT {{ number_format($product->sale_price) }}
                             </div><!-- End .product-price -->
 
                             <div class="ratings-container">
@@ -323,8 +323,8 @@
                                 <div class="product-body">
                                     <h5 class="product-title"><a href="{{ route('product', ['product_slug' => $product->slug, 'id' => $product->id]) }}">{{ $product->name }}</a></h5><!-- End .product-title -->
                                     <div class="product-price">
-                                        <span class="new-price">BDT {{ $product->sale_price }}</span>
-                                        <span class="old-price"><del>was BDT {{ $product->regular_price }}</del></span>
+                                        <span class="new-price">BDT {{ number_format($product->sale_price) }}</span>
+                                        <span class="old-price"><del>was BDT {{ number_format($product->regular_price) }}</del></span>
                                     </div><!-- End .product-price -->
                                 </div><!-- End .product-body -->
                             </div><!-- End .product product-sm -->

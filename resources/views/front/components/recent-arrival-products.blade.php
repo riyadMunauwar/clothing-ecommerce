@@ -42,7 +42,7 @@
                                         <h3 class="product-title"><a href="{{ route('product', ['product_slug' => $product->slug, 'id' => $product->id]) }}">{{ $product->name }}</a></h3>
                                         
                                         <div class="product-price">
-                                            BDT {{ $product->sale_price }}
+                                            BDT {{ number_format($product->sale_price) }}
                                         </div>
 
                                         <!-- Product Variation -->
