@@ -13,6 +13,8 @@ class Checkout extends Component
 
     public function mount()
     {
+        $cart = new CartService();
+        
         $this->subTotal = $cart->subTotal();
     }
 
