@@ -185,6 +185,13 @@
                             </div><!-- End .card -->
                         </div><!-- End .accordion -->
 
+                        <div class="form-group">
+                                <div class="custom-control custom-checkbox">
+                                    <input name="terms" type="checkbox" class="custom-control-input" id="register-policy-2" required>
+                                    <label class="custom-control-label" for="register-policy-2">I agree to the <a href="{{ route('tos') }}">Terms of Service</a> & <a href="{{ route('privacy') }}">privacy policy</a></label>
+                                </div><!-- End .custom-checkbox -->
+                        </div>
+
                         <button type="submit" class="btn btn-outline-primary-2 btn-order btn-block">
                             <span class="btn-text">Place Order</span>
                             <span class="btn-hover-text">Proceed to Checkout</span>
