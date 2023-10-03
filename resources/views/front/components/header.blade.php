@@ -56,7 +56,7 @@
                 </button>
 
                 <a href="/" class="logo">
-                    <img src="{{ asset('assets/images/rayatboutiqe-logo.png') }}" alt="Rayatboutique Logo" width="105" height="25">
+                    <img src="{{ asset('assets/logos/rayat-logo.png') }}" alt="Rayatboutique Logo" width="105" height="25">
                 </a>
 
                 <nav class="main-nav">
