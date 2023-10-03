@@ -85,7 +85,7 @@
                             </thead>
 
                             <tbody>
-                                <tr>
+                                <!-- <tr>
                                     <td><a href="#">Beige knitted elastic runner shoes</a></td>
                                     <td>$84.00</td>
                                 </tr>
@@ -93,10 +93,10 @@
                                 <tr>
                                     <td><a href="#">Blue utility pinafore denimdress</a></td>
                                     <td>$76,00</td>
-                                </tr>
+                                </tr> -->
                                 <tr class="summary-subtotal">
                                     <td>Subtotal:</td>
-                                    <td>$160.00</td>
+                                    <td>BDT {{ number_format($subTotal, 2) }}</td>
                                 </tr><!-- End .summary-subtotal -->
                                 <tr>
                                     <td>Shipping:</td>
@@ -104,7 +104,7 @@
                                 </tr>
                                 <tr class="summary-total">
                                     <td>Total:</td>
-                                    <td>$160.00</td>
+                                    <td>BDT {{ number_format($subTotal, 2) }}</td>
                                 </tr><!-- End .summary-total -->
                             </tbody>
                         </table><!-- End .table table-summary -->
@@ -147,12 +147,12 @@
                                             Cash on delivery
                                         </a>
                                     </h2>
-                                </div><!-- End .card-header -->
+                                </div>
                                 <div id="collapse-3" class="collapse" aria-labelledby="heading-3" data-parent="#accordion-payment">
                                     <div class="card-body">Quisque volutpat mattis eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. 
-                                    </div><!-- End .card-body -->
-                                </div><!-- End .collapse -->
-                            </div><!-- End .card -->
+                                    </div>
+                                </div>
+                            </div>
 
                             <div class="card">
                                 <div class="card-header" id="heading-4">

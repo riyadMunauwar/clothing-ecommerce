@@ -4,9 +4,15 @@ namespace App\Http\Livewire\Front;
 
 use Livewire\Component;
 use App\Models\Product;
+use App\Traits\WithSweetAlert;
+use App\Traits\WithSweetAlertToast;
+use App\Services\Cart\CartService;
 
 class ProductDetails extends Component
 {
+
+    use WithSweetAlert;
+
     public $product;
     public $recommendation_products = [];
     public $related_products = [];
@@ -21,6 +27,22 @@ class ProductDetails extends Component
     public function render()
     {
         return view('front.components.product-details');
+    }
+
+
+    public function AddToCart()
+    {
+        $cart = new CartService();
+
+        $result = $cart->add($this->product->id, null, 1);
+
+        if(!$result['isError']){
+            $this->emit('onCartItemChanges');
+
+            return $this->success('Item added to cart', $result['message']);
+        }else {
+            return $this->info('Sorry !', $result['message']);
+        }
     }
 
     private function getProduct()

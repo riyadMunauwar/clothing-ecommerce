@@ -267,7 +267,7 @@
                             </div><!-- End .product-action-vertical -->
 
                             <div class="product-action">
-                                <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                <button wire:click.debounce="AddToCart" class="btn-product btn-cart"><span>add to cart</span></button>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
 
