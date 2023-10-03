@@ -188,7 +188,7 @@
                         <div class="form-group">
                                 <div class="custom-control custom-checkbox">
                                     <input name="terms" type="checkbox" class="custom-control-input" id="register-policy-2" required>
-                                    <label class="custom-control-label text-md" for="register-policy-2">I agree to the <a href="{{ route('tos') }}">Terms of Service</a> & <a href="{{ route('return-and-refund') }}">refund, return</a>&<a href="{{ route('cancellation-policy') }}">cancellation</a> policy</label>
+                                    <label class="custom-control-label text-sm" for="register-policy-2">I agree to the <a href="{{ route('tos') }}">Terms of Service</a> & <a href="{{ route('return-and-refund') }}">refund, return</a> & <a href="{{ route('cancellation-policy') }}">cancellation</a> policy</label>
                                 </div><!-- End .custom-checkbox -->
                         </div>
 
