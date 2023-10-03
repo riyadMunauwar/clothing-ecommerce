@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-sm-6 col-lg-5">
                     <div class="widget">
-                        <img src="{{ asset('assets/images/rayat-logo.png') }}" class="footer-logo" alt="Footer Logo" width="105" height="25">
+                        <img src="{{ asset('assets/logos/rayat-logo.png') }}" class="footer-logo" alt="Footer Logo" width="105" height="25">
                          <h6>Rayat Boutique &amp; Craft Limited </h6>
                          <p class="mb-1">Factory & Head Office- Dhorompur, Bogura Sadar, Bogura-5800</p>
                          <p class="mb-2">Dhaka Office- House#30, Road#11, Kallyanpur, Dhaka-1216</p>
