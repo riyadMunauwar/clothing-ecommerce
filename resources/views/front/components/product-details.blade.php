@@ -80,7 +80,7 @@
                                         <input type="number" id="qty" class="form-control" value="1" min="1" max="10" step="1" data-decimals="0" required>
                                     </div><!-- End .product-details-quantity -->
 
-                                    <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                                    <button wire:click.debounce="AddToCart" class="btn-product btn-cart"><span>add to cart</span></button>
                                 </div><!-- End .details-action-col -->
 
                                 <div class="details-action-wrapper">
@@ -267,7 +267,7 @@
                             </div><!-- End .product-action-vertical -->
 
                             <div class="product-action">
-                                <button wire:click.debounce="AddToCart" class="btn-product btn-cart"><span>add to cart</span></button>
+                                <button  class="btn-product btn-cart"><span>add to cart</span></button>
                             </div><!-- End .product-action -->
                         </figure><!-- End .product-media -->
 
