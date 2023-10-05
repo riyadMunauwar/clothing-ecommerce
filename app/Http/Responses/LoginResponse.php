@@ -17,9 +17,9 @@ class LoginResponse implements LoginResponseContract
         $role = auth()->user()->getRoleNames()->first();
 
         if(!$role || $role === 'user'){
-            $redirectTo = '/dashboard';
-        }else {
             $redirectTo = '/accounts';
+        }else {
+            $redirectTo = '/dashboard';
         }
  
         return redirect()->intended($redirectTo);
