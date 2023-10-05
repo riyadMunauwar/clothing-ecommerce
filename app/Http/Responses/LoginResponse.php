@@ -22,6 +22,8 @@ class LoginResponse implements LoginResponseContract
             $redirectTo = '/dashboard';
         }
  
+        dd($role);
+        
         return redirect()->intended($redirectTo);
     }
 }
