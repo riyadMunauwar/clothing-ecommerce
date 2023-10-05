@@ -1,0 +1,27 @@
+<?php 
+
+namespace App\Http\Responses;
+ 
+use Laravel\Fortify\Contracts\LoginResponse as LoginResponseContract;
+ 
+class LoginResponse implements LoginResponseContract
+{
+    /**
+     * @param  $request
+     * @return mixed
+     */
+    public function toResponse($request)
+    {
+        $redirectTo;
+
+        $role = auth()->user()->getRoleNames()->first();
+
+        if(!$role || $role === 'user'){
+            $redirectTo = '/dashboard';
+        }else {
+            $redirectTo = '/accounts';
+        }
+ 
+        return redirect()->intended($redirectTo);
+    }
+}
