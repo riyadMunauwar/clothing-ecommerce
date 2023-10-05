@@ -15,27 +15,23 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->dateTime('order_date')->nullable();
-            $table->dateTime('paid_at')->nullable();
-            $table->decimal('total_product_price', 12, 2);
-            $table->decimal('shipping_cost', 12, 2)->nullable();
-            $table->decimal('total_vat', 12, 2)->nullable();
+            $table->string('order_no', 32)->unique();
+
+            $table->decimal('total_price', 10, 2);
+            $table->decimal('shipping_price', 10, 2)->default(0);
+
+            $table->string('admin_notes', 2048)->nullable();
+            $table->string('customer_notes', 2048)->nullable();
+
             $table->foreignId('user_id')->constrained();
             $table->foreignId('admin_id')->nullalbe()->constrained('users', 'id');
-            $table->string('coupon_id')->nullable();
-            $table->string('shipper_id')->nullable();
-            $table->string('shippo_address_object_id')->nullable();
-            $table->string('lebel_url', 2048)->nullable();
-            $table->string('tracking_url', 2048)->nullable();
-            $table->string('tracking_number')->nullable();
-            $table->string('parcel_id')->nullable();
-            $table->string('parcel_width')->nullable();
-            $table->string('parcel_height')->nullable();
-            $table->string('parcel_length')->nullable();
-            $table->string('parcel_wieght')->nullable();
-            $table->string('rate_object_id')->nullable();
-            $table->string('payment_method_id')->nullable();
-            $table->string('order_status_id')->nullable();
+            $table->foreignId('address_id')->constrained();
+
+            $table->string('shipping_option')->nullable();
+            $table->string('payment_option');
+            $table->enum('order_status', ['new', 'processing', 'shipped', 'delivered', 'cancelled'])->default('new');
+            $table->enum('payment_status', ['paid', 'unpaid', 'partially-paid'])->default('unpaid');
+
             $table->timestamps();
         });
     }
