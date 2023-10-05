@@ -65,8 +65,8 @@
         </div><!-- End .container -->
     </div><!-- End .footer-bottom -->
     <div class="container">
-        <figure>
-            <img src="{{ asset('assets/images/aamarpay.png') }}" alt="Payment methods" width="272" height="20">
+        <figure class="footer-payments">
+            <img src="{{ asset('assets/images/aamarpay.png') }}" alt="Payment methods">
         </figure><!-- End .footer-payments -->
     </div>
 </footer><!-- End .footer -->
