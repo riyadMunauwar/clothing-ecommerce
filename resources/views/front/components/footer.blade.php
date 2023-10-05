@@ -61,7 +61,7 @@
 
     <div class="footer-bottom">
         <div class="container">
-            <p class="footer-copyright">Copyright © {{ date('Y') }} {{ request()->getHttpHost() }}. All Rights Reserved.</p><!-- End .footer-copyright -->
+            <p class="footer-copyright text-md">Copyright © {{ date('Y') }} {{ request()->getHttpHost() }}. All Rights Reserved.</p><!-- End .footer-copyright -->
             <figure class="footer-payments">
                 <img src="{{ asset('assets/images/aamarpay.png') }}" alt="Payment methods">
             </figure><!-- End .footer-payments -->
