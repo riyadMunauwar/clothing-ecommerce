@@ -111,9 +111,7 @@
 
                         <div class="custom-control custom-radio">
                             <input type="radio" id="payment-method" name="payment-method" class="custom-control-input">
-                            <label class="d-flex justify-content-between custom-control-label" for="payment-method">
-                                <span>Aamarpay</span>
-
+                            <label class="d-flex custom-control-label" for="payment-method">
                                 <img src="{{ asset('assets/images/aamarpay_logo.png') }}" alt="Aamarpay-logo">
                             </label>
                         </div><!-- End .custom-control -->
