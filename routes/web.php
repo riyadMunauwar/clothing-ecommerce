@@ -59,6 +59,16 @@ Route::middleware([
 
 });
 
+Route::group(['prefix' => 'payment'], function(){
+
+    Route::post('/aamarpay/success', [\App\Http\Controllers\Payment\AamarpayPaymentController::class, 'success'])->name('aamarpay.success');
+    Route::post('/aamarpay/failed', [\App\Http\Controllers\Payment\AamarpayPaymentController::class, 'failed'])->name('aamarpay.failed');
+    Route::post('/aamarpay/hook/ipn', [\App\Http\Controllers\Payment\AamarpayPaymentController::class, 'ipn'])->name('aamarpay.ipn');
+    Route::get('/aamarpay/cancel', [\App\Http\Controllers\Payment\AamarpayPaymentController::class, 'cancel'])->name('aamarpay.cancel');
+
+});
+
+
 Route::group(['prefix' => 'auth'], function(){
 
     Route::get('/login/google/redirect', [\App\Http\Controllers\Auth\GoogleAuthController::class, 'googleAuthRedirect'])->name('auth-google-redirect');

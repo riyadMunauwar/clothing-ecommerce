@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Front;
 
 use Livewire\Component;
 use App\Services\Cart\CartService;
+use App\Services\Payment\PaymentContext;
 
 class Checkout extends Component
 {
@@ -21,5 +22,15 @@ class Checkout extends Component
     public function render()
     {
         return view('front.components.checkout');
+    }
+
+
+    public function startPayment()
+    {
+        $payment = new PaymentContext('aamarpay');
+
+        $res = $payment->pay(100, []);
+
+        dd($res);
     }
 }
