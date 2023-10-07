@@ -31,6 +31,8 @@ class Checkout extends Component
 
         $response = $payment->pay(1000.000, []);
 
+        dd($response);
+
         redirect()->away($response['payment_url']);
     }
 }
