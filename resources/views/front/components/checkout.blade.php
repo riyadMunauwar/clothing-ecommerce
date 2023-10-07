@@ -114,7 +114,7 @@
                             <label class="d-flex justify-content-between custom-control-label" for="payment-method">
                                 <span>Aamarpay</span>
 
-                                <img src="{{ asset('assets/images/aamarpay-logo.png') }}" alt="Aamarpay-logo">
+                                <img src="{{ asset('assets/images/aamarpay_logo.png') }}" alt="Aamarpay-logo">
                             </label>
                         </div><!-- End .custom-control -->
 
