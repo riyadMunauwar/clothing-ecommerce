@@ -109,9 +109,9 @@
                             </tbody>
                         </table><!-- End .table table-summary -->
 
-                        <div class="custom-control custom-radio">
+                        <div class="custom-control custom-radio d-flex align-items-sm-center">
                             <input type="radio" id="payment-method" name="payment-method" class="custom-control-input">
-                            <label class="d-flex custom-control-label" for="payment-method">
+                            <label class="custom-control-label" for="payment-method">
                                 <img src="{{ asset('assets/images/aamarpay_logo.png') }}" alt="Aamarpay-logo">
                             </label>
                         </div><!-- End .custom-control -->
