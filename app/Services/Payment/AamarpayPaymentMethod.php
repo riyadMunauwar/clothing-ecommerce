@@ -11,7 +11,7 @@ class AamarpayPaymentMethod implements PaymentMethodContract
 
         $options = [
             'amount' => $amount,
-            'tran_id' => '124554478556',
+            'tran_id' => rand(11111111111, 11111111111111111),
             'cus_name' => 'Riyad Munauwar',  
             'cus_email' => 'contact.riyad@gmail.com', 
             'cus_add1' => 'paratungi',  
