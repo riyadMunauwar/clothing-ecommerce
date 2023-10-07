@@ -111,8 +111,10 @@
 
                         <div class="custom-control custom-radio">
                             <input type="radio" id="payment-method" name="payment-method" class="custom-control-input">
-                            <label class="custom-control-label" for="payment-method">
-                                Aamarpay
+                            <label class="d-flex justify-content-between custom-control-label" for="payment-method">
+                                <span>Aamarpay</span>
+
+                                <img src="{{ asset('assets/images/aamarpay-logo.png') }}" alt="Aamarpay-logo">
                             </label>
                         </div><!-- End .custom-control -->
 
@@ -123,9 +125,9 @@
                                 </div><!-- End .custom-checkbox -->
                         </div>
 
-                        <button type="submit" class="btn btn-outline-primary-2 btn-order btn-block">
+                        <button type="button" class="btn btn-outline-primary-2 btn-order btn-block">
                             <span class="btn-text">Place Order</span>
-                            <span class="btn-hover-text">Proceed to Checkout</span>
+                            <span class="btn-hover-text">Proceed for payment</span>
                         </button>
                     </div><!-- End .summary -->
                 </aside><!-- End .col-lg-3 -->
