@@ -5,7 +5,7 @@ use App\Services\Payment\AamarpayPaymentService;
 
 class AamarpayPaymentMethod implements PaymentMethodContract
 {
-    public function pay(double $amount, array $options)
+    public function pay(float $amount, array $options)
     {
         $aamarpay = new AamarpayPaymentService();
 
@@ -21,6 +21,6 @@ class AamarpayPaymentMethod implements PaymentMethodContract
             'cus_phone' => '01794263387',
         ];
 
-        return $aamarpay->ssendPaymentRequest();
+        return $aamarpay->sendPaymentRequest($options);
     }
 }

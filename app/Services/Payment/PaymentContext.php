@@ -22,7 +22,7 @@ class PaymentContext
     }
 
 
-    public function pay(double $amount, array $options)
+    public function pay(float $amount, array $options)
     {
         return $this->strategy($amount, $options);
     }
