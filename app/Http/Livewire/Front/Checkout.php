@@ -29,7 +29,7 @@ class Checkout extends Component
     {
         $payment = new PaymentContext('aamarpay');
 
-        $res = $payment->pay(floatval(1000), []);
+        $res = $payment->pay((double) 1000, []);
 
         dd($res);
     }
