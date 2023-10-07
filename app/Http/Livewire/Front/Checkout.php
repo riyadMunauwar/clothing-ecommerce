@@ -29,8 +29,8 @@ class Checkout extends Component
     {
         $payment = new PaymentContext('aamarpay');
 
-        $res = $payment->pay(1000.000, []);
+        $response = $payment->pay(1000.000, []);
 
-        dd($res);
+        redirect()->away($response['payment_url']);
     }
 }
