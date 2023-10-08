@@ -33,7 +33,7 @@ class Cart extends Component
 
     public function goToCheckout()
     {
-        if(!$shipping_method){
+        if(!$this->shipping_method){
             return $this->error('Please select a shipping method', '');
         }
     }

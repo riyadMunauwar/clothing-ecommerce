@@ -96,7 +96,7 @@
                         </tbody>
                     </table><!-- End .table table-summary -->
 
-                    <a wire:click="goToCheckout" class="btn btn-outline-primary-2 btn-order btn-block">PROCEED TO CHECKOUT</a>
+                    <button wire:click="goToCheckout" class="btn btn-outline-primary-2 btn-order btn-block"><span wire:loading.remove wire:target="goToCheckout">PROCEED TO CHECKOUT</span> <span wire:loading wire:target="goToCheckout">LOADING...</span></button>
                 </div><!-- End .summary -->
 
                 <a href="/" class="btn btn-outline-dark-2 btn-block mb-3"><span>CONTINUE SHOPPING</span><i class="icon-refresh"></i></a>
