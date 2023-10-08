@@ -24,6 +24,11 @@ class Cart extends Component
         'onCartItemChanges' => '$refresh',
     ];
 
+    public function mount()
+    {
+        $this->setPreviousSelectedShippingOption();
+    }
+
     public function render()
     {
         $this->prearedCartItemsData();
@@ -39,7 +44,7 @@ class Cart extends Component
 
         $this->setupShippingOption();
 
-        return redirect()->route('cart');
+        return redirect()->route('checkout');
     }
 
     public function prearedCartItemsData()
@@ -50,7 +55,6 @@ class Cart extends Component
         $this->cart_items_count = $cart->itemsCount();
         $this->sub_total = $cart->subTotal();
 
-        $this->setPreviousSelectedShippingOption();
     }
 
 
