@@ -38,7 +38,7 @@ class Cart extends Component
         }
 
 
-        return redirect()->to()->route('cart');
+        return redirect()->route('cart');
     }
 
     public function prearedCartItemsData()
