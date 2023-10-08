@@ -108,18 +108,34 @@
                             </tbody>
                         </table><!-- End .table table-summary -->
 
-                        <div class="payment-method-container custom-control custom-radio">
-                            <input type="radio" id="payment-method" name="payment-method" class="custom-control-input">
-                            <label style="width: 100%; display:flex; justify-conent: end" class="custom-control-label" for="payment-method">
-                                <img class="payment-method-img " src="{{ asset('assets/images/aamarpay_logo.png') }}" alt="Aamarpay-logo">
-                            </label>
-                        </div><!-- End .custom-control -->
+                        <div>
+                            <div class="custom-control custom-radio">
+                                <input wire:model.debounce="payment_method_option" type="radio" id="payment-method" name="payment-method" class="custom-control-input">
+                                <label class="custom-control-label" for="payment-method">
+                                    Cash On Delivery
+                                </label>
+                            </div>
+
+                            <div class="custom-control custom-radio">
+                                <input wire:model.debounce="payment_method_option" type="radio" id="payment-method" name="payment-method" class="custom-control-input">
+                                <label class="custom-control-label" for="payment-method">
+                                    Delivery Charge Only
+                                </label>
+                            </div>
+
+                            <div class="custom-control custom-radio">
+                                <input wire:model.debounce="payment_method_option" type="radio" id="payment-method" name="payment-method" class="custom-control-input">
+                                <label class="custom-control-label" for="payment-method">
+                                    <img class="payment-method-img " src="{{ asset('assets/images/aamarpay_logo.png') }}" alt="Aamarpay-logo">
+                                </label>
+                            </div>
+                        </div>
 
                         <div class="form-group">
-                                <div class="custom-control custom-checkbox">
-                                    <input name="terms" type="checkbox" class="custom-control-input" id="register-policy-2" required>
-                                    <label class="custom-control-label" for="register-policy-2">I agree to the <a href="{{ route('tos') }}" >Terms of Service</a> & <a href="{{ route('return-and-refund') }}">refund, return</a> & <a href="{{ route('cancellation-policy') }}">cancellation</a> policy</label>
-                                </div><!-- End .custom-checkbox -->
+                            <div class="custom-control custom-checkbox">
+                                <input name="terms" type="checkbox" class="custom-control-input" id="register-policy-2" required>
+                                <label class="custom-control-label" for="register-policy-2">I agree to the <a href="{{ route('tos') }}" >Terms of Service</a> & <a href="{{ route('return-and-refund') }}">refund, return</a> & <a href="{{ route('cancellation-policy') }}">cancellation</a> policy</label>
+                            </div>
                         </div>
 
                         <button wire:click.debounce="startPayment" type="button" class="btn btn-outline-primary-2 btn-order btn-block">
