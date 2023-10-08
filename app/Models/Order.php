@@ -8,6 +8,7 @@ use LaracraftTech\LaravelDateScopes\DateScopes;
 use App\Models\OrderItem;
 use App\Models\Product;
 use App\Models\User;
+use App\Models\Payment;
 use Carbon\Carbon;
 
 class Order extends Model
@@ -16,11 +17,20 @@ class Order extends Model
     use DateScopes;
 
 
-    protected $casts = [
-        'order_date' => 'datetime',
-        'paid_at' => 'datetime',
+    protected $fillable = [
+        'order_no',
+        'total_price',
+        'shipping_price',
+        'admin_notes',
+        'customer_notes',
+        'user_id',
+        'admin_id',
+        'address_id',
+        'shipping_option',
+        'payment_option',
+        'order_status',
+        'payment_status',
     ];
-
 
 
     public function totalPrice()
@@ -67,11 +77,15 @@ class Order extends Model
 
     // Relation
 
+    public function payments()
+    {
+        return $this->hasMany(Payment::class);
+    }
+
     public function orderItems()
     {
         return $this->hasMany(OrderItem::class);
     }
-
 
     public function user()
     {
