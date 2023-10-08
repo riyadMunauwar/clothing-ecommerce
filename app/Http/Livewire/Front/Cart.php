@@ -37,6 +37,7 @@ class Cart extends Component
             return $this->info('Please select a shipping method', '');
         }
 
+        $this->setupShippingOption();
 
         return redirect()->route('cart');
     }
@@ -77,6 +78,16 @@ class Cart extends Component
             $this->emit('onCartItemChanges');
             return $this->success($result['message'], '');
         }
+    }
+
+
+    private function setupShippingOption()
+    {
+        $shipping_cost = $this->getShippingCost($this->shipping_method);
+    
+        $shipping_option = $this->getShippingProvider($this->shipping_method);
+
+        dd($shipping_cost, $shipping_option);
     }
 
     private function getShippingCost($str)
