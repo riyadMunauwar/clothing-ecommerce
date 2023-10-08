@@ -9,14 +9,13 @@ use App\Services\Payment\PaymentContext;
 class Checkout extends Component
 {
 
+    public $cartItems = [];
     public $subTotal = 0;
     public $shippingCost = 0;
 
     public function mount()
     {
-        $cart = new CartService();
-        
-        $this->subTotal = $cart->subTotal();
+        $this->initData();
     }
 
     public function render()
@@ -33,5 +32,14 @@ class Checkout extends Component
 
 
         redirect()->away($response['payment_url']);
+    }
+
+
+    private function initData()
+    {
+        $cart = new CartService();
+        
+        $this->cartItems = $cart->all();
+        $this->subTotal = $cart->subTotal();
     }
 }

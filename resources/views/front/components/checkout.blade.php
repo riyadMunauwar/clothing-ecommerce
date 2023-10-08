@@ -85,15 +85,14 @@
                             </thead>
 
                             <tbody>
-                                <!-- <tr>
-                                    <td><a href="#">Beige knitted elastic runner shoes</a></td>
-                                    <td>$84.00</td>
-                                </tr>
 
-                                <tr>
-                                    <td><a href="#">Blue utility pinafore denimdress</a></td>
-                                    <td>$76,00</td>
-                                </tr> -->
+                                @foreach($cartItems as $item)
+                                    <tr>
+                                        <td><a href="#">{{ $item->name }}</a></td>
+                                        <td>BDT {{ $item->price }}</td>
+                                    </tr>
+                                @endforeach
+
                                 <tr class="summary-subtotal">
                                     <td>Subtotal:</td>
                                     <td>BDT {{ number_format($subTotal, 2) }}</td>
