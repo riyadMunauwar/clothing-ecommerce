@@ -54,8 +54,8 @@ class Checkout extends Component
 
     public function startPayment()
     {
-        dd($this->createOrder());
-        
+        // dd($this->createOrder());
+
         $payment = new PaymentContext('aamarpay');
 
         $response = $payment->pay(1000.000, []);
