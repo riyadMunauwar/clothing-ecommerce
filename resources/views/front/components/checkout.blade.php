@@ -137,7 +137,7 @@
     <style>
         .payment-method-container {
             display: flex;
-            justify-items: between;
+            justify-content: between;
             align-items: center;
             gap: 2rem;
         }
