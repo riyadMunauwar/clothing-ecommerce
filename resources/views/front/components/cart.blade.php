@@ -76,7 +76,7 @@
                                 <tr class="summary-shipping-row">
                                     <td>
                                         <div class="custom-control custom-radio">
-                                            <input value="{{$method['shipper'] .-. $method['delivery_cost']}}" type="radio" id="shipping-method-{{ $index }}" name="shipping-method" class="custom-control-input">
+                                            <input value="{{$method['shipper'] . '-' . $method['delivery_cost']}}" type="radio" id="shipping-method-{{ $index }}" name="shipping-method" class="custom-control-input">
                                             <label class="custom-control-label" for="shipping-method-{{ $index }}">
                                                 <span class="text-md">{{ $method['shipper'] ?? $method['area'] }}</span>
                                                 <span class="d-block text-sm"> {{ $method['area'] }} </span>
