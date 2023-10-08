@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('method')->nullable();
             $table->decimal('amount', 10, 2);
             $table->string('currency')->default('BDT')->nullable();
+            $table->enum('status', ['pending', 'success', 'failed'])->default('pending');
             $table->foreignId('order_id')->constrained();
             $table->timestamps();
         });
