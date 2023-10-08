@@ -12,6 +12,8 @@ class Cart extends Component
 
     use WithSweetAlert;
 
+    public $shipping_method;
+
     public $cart_items = [];
 
     public $sub_total = 0;
@@ -26,6 +28,14 @@ class Cart extends Component
     {
         $this->prearedCartItemsData();
         return view('front.components.cart');
+    }
+
+
+    public function goToCheckout()
+    {
+        if(!$shipping_method){
+            return $this->error('Please select a shipping method', '');
+        }
     }
 
     public function prearedCartItemsData()
@@ -65,4 +75,15 @@ class Cart extends Component
             return $this->success($result['message'], '');
         }
     }
+
+    private function getShippingCost($str)
+    {
+        return (int) explode('-', $str)[1];
+    }
+
+    private function getShippingProvider($str)
+    {
+        return explode('-', $str)[0];
+    }
+
 }
