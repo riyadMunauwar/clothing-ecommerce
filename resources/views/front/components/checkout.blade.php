@@ -99,7 +99,7 @@
                                 </tr><!-- End .summary-subtotal -->
                                 <tr>
                                     <td>Shipping:</td>
-                                    <td>Free shipping</td>
+                                    <td>BDT {{ $shippingCost }}</td>
                                 </tr>
                                 <tr class="summary-total">
                                     <td>Total:</td>
