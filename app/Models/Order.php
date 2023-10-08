@@ -25,7 +25,7 @@ class Order extends Model
 
     public function totalPrice()
     {
-        return $this->total_product_price + $this->shipping_cost + $this->total_vat;
+        return $this->total_price + $this->shipping_cost;
     }
 
     public static function getCurrentMonthSales()
@@ -33,8 +33,8 @@ class Order extends Model
         $currentMonthStart = Carbon::now()->startOfMonth();
         $currentMonthEnd = Carbon::now()->endOfMonth();
 
-        $sales = static::selectRaw('DATE(order_date) as date, SUM(total_product_price) as total_sales')
-            ->whereBetween('order_date', [$currentMonthStart, $currentMonthEnd])
+        $sales = static::selectRaw('DATE(created_at) as date, SUM(total_price) as total_sales')
+            ->whereBetween('created_at', [$currentMonthStart, $currentMonthEnd])
             ->groupBy('date')
             ->get();
 
@@ -52,8 +52,8 @@ class Order extends Model
         $currentMonthStart = Carbon::now()->startOfMonth();
         $currentMonthEnd = Carbon::now()->endOfMonth();
 
-        $orders = static::selectRaw('DATE(order_date) as date, COUNT(*) as total_orders')
-            ->whereBetween('order_date', [$currentMonthStart, $currentMonthEnd])
+        $orders = static::selectRaw('DATE(created_at) as date, COUNT(*) as total_orders')
+            ->whereBetween('created_at', [$currentMonthStart, $currentMonthEnd])
             ->groupBy('date')
             ->get();
 
