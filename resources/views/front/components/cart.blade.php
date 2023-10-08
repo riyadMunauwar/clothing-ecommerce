@@ -43,16 +43,19 @@
                 </table><!-- End .table table-wishlist -->
 
                 <div class="cart-bottom">
-                    <div class="cart-discount">
+
+                <!-- Coupon Discount -->
+
+                    <!-- <div class="cart-discount">
                         <form action="#">
                             <div class="input-group">
                                 <input type="text" class="form-control" required placeholder="coupon code">
                                 <div class="input-group-append">
                                     <button class="btn btn-outline-primary-2" type="submit"><i class="icon-long-arrow-right"></i></button>
-                                </div><!-- .End .input-group-append -->
-                            </div><!-- End .input-group -->
+                                </div>
+                            </div>
                         </form>
-                    </div><!-- End .cart-discount -->
+                    </div> -->
 
                     <button wire:click.debounce="removeAll" class="btn btn-outline-dark-2"><span wire:loading.remove wire:target="removeAll">RESET CART</span> <span wire:loading wire:target="removeAll">RESETING...</span><i class="icon-refresh"></i></button>
                 </div><!-- End .cart-bottom -->
