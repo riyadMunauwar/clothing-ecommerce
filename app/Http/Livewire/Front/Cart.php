@@ -87,7 +87,8 @@ class Cart extends Component
     
         $shipping_option = $this->getShippingProvider($this->shipping_method);
 
-        dd($shipping_cost, $shipping_option);
+        session()->put('shipping_cost', $shipping_cost);
+        session()->put('shipping_option', $shipping_option);
     }
 
     private function getShippingCost($str)
