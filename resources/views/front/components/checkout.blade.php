@@ -110,7 +110,7 @@
 
                         <div class="payment-method-container custom-control custom-radio">
                             <input type="radio" id="payment-method" name="payment-method" class="custom-control-input">
-                            <label style="display:flex; justify-conent: end" class="custom-control-label" for="payment-method">
+                            <label style="width: 100%; display:flex; justify-conent: end" class="custom-control-label" for="payment-method">
                                 <img class="payment-method-img " src="{{ asset('assets/images/aamarpay_logo.png') }}" alt="Aamarpay-logo">
                             </label>
                         </div><!-- End .custom-control -->
