@@ -16,10 +16,10 @@ return new class extends Migration
         Schema::create('payments', function (Blueprint $table) {
             $table->id()->startingValue(1000000);
             $table->string('reference')->nullable();
-            $table->string('provider');
-            $table->string('method');
-            $table->decimal('amount');
-            $table->string('currency');
+            $table->string('provider')->nullable();
+            $table->string('method')->nullable();
+            $table->decimal('amount', 10, 2)->nullable();
+            $table->string('currency')->nullable();
             $table->foreignId('order_id')->constrained();
             $table->timestamps();
         });
