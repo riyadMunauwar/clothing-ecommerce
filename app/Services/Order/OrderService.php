@@ -6,6 +6,7 @@ use App\Models\Payment;
 use App\Models\OrderItem;
 use Illuminate\Support\Facades\DB;
 use App\Services\Cart\CartService;
+use Illuminate\Support\Str;
 
 class OrderService {
 
@@ -35,13 +36,31 @@ class OrderService {
             $payment = new Payment();
 
             $payment->amount = $amount;
+            $payment->status = 'pending';
             $payment->order_id = $order->id;
-
 
             $payment->save();
 
             return $payment;
 
         });
+    }
+
+
+
+
+    public function generateRandomNumberString($minLength = 6, $maxLength = 32)
+    {
+        // Ensure that $minLength and $maxLength are within bounds
+        $minLength = max(1, $minLength);
+        $maxLength = max($minLength, min(32, $maxLength));
+    
+        // Generate a random length between $minLength and $maxLength
+        $length = rand($minLength, $maxLength);
+    
+        // Generate a random number string with the specified length
+        $randomNumberString = Str::random($length);
+    
+        return $randomNumberString;
     }
 }

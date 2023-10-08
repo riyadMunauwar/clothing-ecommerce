@@ -5,6 +5,7 @@ namespace App\Http\Livewire\Front;
 use Livewire\Component;
 use App\Services\Cart\CartService;
 use App\Services\Payment\PaymentContext;
+use App\Services\Order\OrderService;
 
 class Checkout extends Component
 {
@@ -26,8 +27,35 @@ class Checkout extends Component
     }
 
 
+    private function createOrder()
+    {
+
+        $service = new OrderService();
+
+
+        $data = [
+            'order_no' => $service->generateRandomNumberString(),
+            'total_price' => 1000,
+            'shipping_price' => 100,
+            'admin_notes' => '',
+            'customer_notes' => '',
+            'user_id' => '',
+            'admin_id' => '',
+            'address_id' => '',
+            'shipping_option' => '',
+            'payment_option' => '',
+            'order_status' => '',
+            'payment_status' => '',
+        ];
+
+        return $data;
+    }
+
+
     public function startPayment()
     {
+        dd($this->createOrder());
+        
         $payment = new PaymentContext('aamarpay');
 
         $response = $payment->pay(1000.000, []);
