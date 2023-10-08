@@ -9,6 +9,7 @@ use App\Services\Payment\PaymentContext;
 class Checkout extends Component
 {
 
+    public $payment_method_option;
     public $cartItems = [];
     public $subTotal = 0;
     public $shippingCost = 0;
@@ -41,5 +42,6 @@ class Checkout extends Component
         
         $this->cartItems = $cart->all();
         $this->subTotal = $cart->subTotal();
+        $this->shippingCost = session()->get('shipping_cost');
     }
 }

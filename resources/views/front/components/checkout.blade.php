@@ -110,21 +110,21 @@
 
                         <div>
                             <div class="custom-control custom-radio">
-                                <input wire:model.debounce="payment_method_option" type="radio" id="payment-method" name="payment-method" class="custom-control-input">
+                                <input value="cash-on-delivery" wire:model.debounce="payment_method_option" type="radio" id="payment-method" name="payment-method" class="custom-control-input">
                                 <label class="custom-control-label" for="payment-method">
                                     Cash On Delivery
                                 </label>
                             </div>
 
                             <div class="custom-control custom-radio">
-                                <input wire:model.debounce="payment_method_option" type="radio" id="payment-method" name="payment-method" class="custom-control-input">
+                                <input value="delivery-charge-only" wire:model.debounce="payment_method_option" type="radio" id="payment-method" name="payment-method" class="custom-control-input">
                                 <label class="custom-control-label" for="payment-method">
                                     Delivery Charge Only
                                 </label>
                             </div>
 
                             <div class="custom-control custom-radio">
-                                <input wire:model.debounce="payment_method_option" type="radio" id="payment-method" name="payment-method" class="custom-control-input">
+                                <input value="aamarpay" wire:model.debounce="payment_method_option" type="radio" id="payment-method" name="payment-method" class="custom-control-input">
                                 <label class="custom-control-label" for="payment-method">
                                     <img class="payment-method-img " src="{{ asset('assets/images/aamarpay_logo.png') }}" alt="Aamarpay-logo">
                                 </label>
