@@ -103,7 +103,7 @@
                                 </tr>
                                 <tr class="summary-total">
                                     <td>Total:</td>
-                                    <td>BDT {{ number_format($subTotal, 2) }}</td>
+                                    <td>BDT {{ number_format($total, 2) }}</td>
                                 </tr><!-- End .summary-total -->
                             </tbody>
                         </table><!-- End .table table-summary -->

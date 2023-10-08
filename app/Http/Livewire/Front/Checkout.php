@@ -12,6 +12,7 @@ class Checkout extends Component
     public $payment_method_option;
     public $cartItems = [];
     public $subTotal = 0;
+    public $total = 0;
     public $shippingCost = 0;
 
     public function mount()
@@ -38,10 +39,13 @@ class Checkout extends Component
 
     private function initData()
     {
+        $this->shippingCost = session()->get('shipping_cost');
+
         $cart = new CartService();
         
         $this->cartItems = $cart->all();
         $this->subTotal = $cart->subTotal();
-        $this->shippingCost = session()->get('shipping_cost');
+        $this->total = $cart->total(discount: 0, shippingCost: $this->shippingCost);
+  
     }
 }

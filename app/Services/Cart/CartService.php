@@ -180,7 +180,7 @@ class CartService {
     }
 
 
-    public function total($discount = 0, $shippingCost)
+    public function total($discount = 0, $shippingCost = 0)
     {
         return ( $this->subTotal() + $shippingCost ) - $discount; 
     }
