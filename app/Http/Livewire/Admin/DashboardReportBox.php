@@ -62,7 +62,8 @@ class DashboardReportBox extends Component
 
     public function getTodayTotalSales()
     {
-        return Order::ofToday()->whereNotNull('paid_at')->sum('total_product_price');
+        // return Order::ofToday()->whereNotNull('paid_at')->sum('total_product_price');
+        return 0;
     }
 
     public function getTodayTotalOrdersCount()
