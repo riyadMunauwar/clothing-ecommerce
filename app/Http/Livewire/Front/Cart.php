@@ -36,6 +36,9 @@ class Cart extends Component
         if(!$this->shipping_method){
             return $this->info('Please select a shipping method', '');
         }
+
+
+        return redirect()->to()->route('cart');
     }
 
     public function prearedCartItemsData()
