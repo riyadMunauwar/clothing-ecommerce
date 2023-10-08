@@ -49,6 +49,8 @@ class Cart extends Component
         $this->cart_items = $cart->all();
         $this->cart_items_count = $cart->itemsCount();
         $this->sub_total = $cart->subTotal();
+
+        $this->setPreviousSelectedShippingOption();
     }
 
 
@@ -80,6 +82,17 @@ class Cart extends Component
         }
     }
 
+
+    private function setPreviousSelectedShippingOption()
+    {
+        $shipping_cost = session()->has('shipping_cost') ? session()->get('shipping_cost') : 0;
+        
+        $shipping_option = session()->has('shipping_option') ? session()->get('shipping_option') : '';
+
+        if($shipping_cost && $shipping_option){
+            $this->shipping_method = "{$shipping_option}-{$shipping_cost}";
+        }
+    }
 
     private function setupShippingOption()
     {
