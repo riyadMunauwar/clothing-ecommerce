@@ -108,10 +108,10 @@
                             </tbody>
                         </table><!-- End .table table-summary -->
 
-                        <div class="payment-method-container custom-control">
+                        <div class="payment-method-container custom-control custom-radio">
                             <input type="radio" id="payment-method" name="payment-method" class="custom-control-input">
-                            <label class="custom-control-label" for="payment-method">
-                                <img src="{{ asset('assets/images/aamarpay_logo.png') }}" alt="Aamarpay-logo">
+                            <label style="display:flex; justify-conent: end" class="custom-control-label" for="payment-method">
+                                <img class="payment-method-img " src="{{ asset('assets/images/aamarpay_logo.png') }}" alt="Aamarpay-logo">
                             </label>
                         </div><!-- End .custom-control -->
 
@@ -135,14 +135,8 @@
 
 @push('styles')
     <style>
-        .payment-method-container {
-            display: flex !important;
-            justify-content: between !important;
-            align-items: center !important;
-            gap: 2rem !important;
-        }
 
-        .payment-method-container img{
+        .payment-method-img {
             display: block;
             object-fit: contain;
             height: 40px;
