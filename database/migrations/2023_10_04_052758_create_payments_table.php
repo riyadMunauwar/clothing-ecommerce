@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('reference')->nullable();
             $table->string('provider')->nullable();
             $table->string('method')->nullable();
-            $table->decimal('amount', 10, 2)->nullable();
-            $table->string('currency')->nullable();
+            $table->decimal('amount', 10, 2);
+            $table->string('currency')->default('BDT')->nullable();
             $table->foreignId('order_id')->constrained();
             $table->timestamps();
         });
