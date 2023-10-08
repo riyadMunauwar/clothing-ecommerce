@@ -12,7 +12,7 @@ class DashboardLatestOrderListBox extends Component
 
     public function mount()
     {
-        $this->orders = Order::latest()->limit(9)->get();
+        // $this->orders = Order::latest()->limit(9)->get();
     }
 
     public function render()
