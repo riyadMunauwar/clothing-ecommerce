@@ -136,16 +136,16 @@
 @push('styles')
     <style>
         .payment-method-container {
-            display: flex;
-            justify-content: between;
-            align-items: center;
-            gap: 2rem;
+            display: flex !important;
+            justify-content: between !important;
+            align-items: center !important;
+            gap: 2rem !important;
         }
 
         .payment-method-container img{
             display: block;
             object-fit: contain;
-            height: 30px;
+            height: 40px;
         }
 
     </style>
