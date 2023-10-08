@@ -69,7 +69,8 @@ class DashboardReportBox extends Component
 
     public function getTodayTotalOrdersCount()
     {
-        return Order::ofToday()->count();
+        // return Order::ofToday()->count();
+        return 0;
     }
 
     public function getTodayTotalProductsCount()
