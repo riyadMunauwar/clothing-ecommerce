@@ -39,13 +39,13 @@ class Footer extends Component
  
     private function getFooterColumnsItems() {
         
-        $footerColumns = FooterColumn::with(['attributes' => function($query){
-                $query->select('name', 'link')
-                      ->where('is_published', true);
-            }])
-            ->select('column_title')
+        $footerColumns = FooterColumn::with('attributes')->select('id', 'column_title')
             ->where('is_published', true)
             ->get();
+
+        // foreach($footerColumns as $column){
+
+        // }
 
         return $footerColumns;
     }
