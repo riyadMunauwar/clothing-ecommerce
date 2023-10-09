@@ -57,16 +57,7 @@
     <body>
 
         <div class="page-wrapper">
-            <!-- Header -->
-            <livewire:front.header />
 
-            <!-- Main -->
-            <main class="main">
-                {{ $slot }}
-            </main>
-
-            <!-- Footer -->
-            <livewire:front.footer />
         </div>
 
         

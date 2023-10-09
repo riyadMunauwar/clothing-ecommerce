@@ -23,7 +23,7 @@ Route::middleware([
     'verified'
 ])->group(function () {
 
-    // Route::view('/dashboard', 'admin.pages.dashboard')->name('dashboard');
+    Route::view('/dashboard', 'admin.pages.dashboard')->name('dashboard');
     Route::view('/products/create', 'admin.pages.products.create')->name('products.create');
     Route::view('/products', 'admin.pages.products.list')->name('products.list');
     Route::view('/orders', 'admin.pages.orders.list')->name('orders.list');
@@ -109,8 +109,8 @@ Route::view('/cancellation-policy', 'front.pages.static.cancellation')->name('ca
 Route::view('/faq', 'front.pages.static.faq')->name('faq');
 
 
-// Route::view('/', 'front.pages.home');
-Route::view('/', 'admin.pages.dashboard')->name('dashboard');
+Route::view('/', 'front.pages.home');
+
 
 // Route::get('/', function(){
 //     return ['hello' => 'test'];
