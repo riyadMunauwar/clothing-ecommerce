@@ -31,7 +31,7 @@ class Header extends Component
             ->get();
     
         foreach ($menuItems as $menu) {
-            $menu->children = getMenuTree($menu->id);
+            $menu->children = $this->getMenuTree($menu->id);
         }
     
         return $menuItems;
