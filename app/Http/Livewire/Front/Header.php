@@ -24,7 +24,7 @@ class Header extends Component
 
 
  
-    function getMenuTree($parentId = null) {
+    private function getMenuTree($parentId = null) {
         $menuItems = Menu::with('category')
             ->where('parent_id', $parentId)
             ->where('is_published', true)
