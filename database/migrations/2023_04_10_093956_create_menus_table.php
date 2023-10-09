@@ -21,6 +21,7 @@ return new class extends Migration
             $table->boolean('is_published')->nullable()->default(true);
             $table->foreignId('category_id')->nullable()->constrained();
             $table->foreignId('parent_id')->nullable()->constrained('menus');
+            $talbe->enum('type', ['mega', 'dropdown'])->default('dropdown');
             $table->string('cache_key')->nullable();
             $table->timestamps();
         });
