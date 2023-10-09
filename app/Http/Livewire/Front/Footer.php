@@ -16,7 +16,7 @@ class Footer extends Component
     {
         $this->footerColumns = $this->getFooterColumns();
 
-        dd($this->footerColumns);
+        dd($this->getFooterColumnsItems());
     }
 
 
