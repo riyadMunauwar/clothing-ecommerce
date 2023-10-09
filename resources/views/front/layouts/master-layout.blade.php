@@ -69,12 +69,9 @@
             <livewire:front.footer />
         </div>
 
-        
+        @include('front.partials.mobile-nav')
 
         @stack('modals')
-
-
-        @include('front.partials.mobile-nav')
 
         @stack('scripts')
 

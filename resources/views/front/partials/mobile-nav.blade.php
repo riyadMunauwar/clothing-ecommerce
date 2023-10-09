@@ -15,19 +15,13 @@
 
                 @php 
                             
-                    $menus = \App\Models\Menu::published()->where('parent_id', null)->orderBy('order')->get();
+                    $menus = \Illuminate\Support\Facades\Cache::get(config('cache_keys.menu_items_cache_key')); 
 
                 @endphp
 
                 @foreach($menus as $menu)
 
-                    @php 
-                    
-                        $children = \App\Models\Menu::published()->where('parent_id', $menu->id)->orderBy('order')->get();
-
-                    @endphp
-
-                    @if(!count($children) > 0)
+                    @if(!count($menu->children) > 0)
                         @if($menu->category)
                             <li>
                                 <a href="{{ route('category', ['category_slug' => $menu->category->slug, 'id' => $menu->category->id]) }}">{{ $menu->name }}</a>
@@ -42,15 +36,10 @@
                             <a href="#">{{ $menu->name }}</a>
 
                             <ul>
-                                @foreach($children as $child)
+                                @foreach($menus->children as $child)
 
-                                    @php 
 
-                                        $grandChildren = \App\Models\Menu::published()->where('parent_id', $child->id)->orderBy('order')->get();
-
-                                    @endphp
-
-                                    @if(!count($grandChildren) > 0)
+                                    @if(!count($child->children) > 0)
 
                                         @if($child->category)
                                             <li><a href="{{ route('category', ['category_slug' => $child->category->slug, 'id' => $child->category->id]) }}">{{ $child->name }}</a></li>
@@ -63,7 +52,7 @@
                                             <a href="#">{{ $child->name }}</a>
 
                                             <ul>
-                                                @foreach($grandChildren as $grandChild)
+                                                @foreach($child->children as $grandChild)
 
                                                     @if($grandChild->category)
                                                         <li><a href="{{ route('category', ['category_slug' => $grandChild->category->slug, 'id' => $grandChild->category->id]) }}">{{ $grandChild->name }}</a></li>
