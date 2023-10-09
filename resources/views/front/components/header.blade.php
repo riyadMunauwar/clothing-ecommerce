@@ -86,9 +86,9 @@
                                             @if(!count($child->children) > 0)
 
                                                 @if($child->category)
-                                                    <li><a class="fw-bold" href="{{ route('category', ['category_slug' => $child->category->slug, 'id' => $child->category->id]) }}">{{ $child->name }}</a></li>
+                                                    <li><a style="font-weight: bold" href="{{ route('category', ['category_slug' => $child->category->slug, 'id' => $child->category->id]) }}">{{ $child->name }}</a></li>
                                                 @else
-                                                    <li><a class="fw-bold" href="{{ $child->link }}">{{ $child->name }}</a></li>
+                                                    <li><a style="font-weight: bold" href="{{ $child->link }}">{{ $child->name }}</a></li>
                                                 @endif
 
                                             @else
@@ -99,9 +99,9 @@
                                                         @foreach($child->children as $grandChild)
 
                                                             @if($grandChild->category)
-                                                                <li><a class="fw-bold" href="{{ route('category', ['category_slug' => $grandChild->category->slug, 'id' => $grandChild->category->id]) }}">{{ $grandChild->name }}</a></li>
+                                                                <li><a style="font-weight: bold" href="{{ route('category', ['category_slug' => $grandChild->category->slug, 'id' => $grandChild->category->id]) }}">{{ $grandChild->name }}</a></li>
                                                             @else
-                                                                <li><a class="fw-bold" href="{{ $grandChild->link }}">{{ $grandChild->name }}</a></li>
+                                                                <li><a style="font-weight: bold" href="{{ $grandChild->link }}">{{ $grandChild->name }}</a></li>
                                                             @endif
 
                                                         @endforeach
