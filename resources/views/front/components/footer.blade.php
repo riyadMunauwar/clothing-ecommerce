@@ -23,14 +23,9 @@
                     </div><!-- End .widget about-widget -->
                 </div><!-- End .col-sm-6 col-lg-3 -->
 
-                @php 
-                    
-                    $footer_columns = \App\Models\FooterColumn::published()->get();
-
-                @endphp
 
 
-                @foreach($footer_columns as $footer_column)
+                @foreach($footerColumns as $footer_column)
 
                     @php
                         $column = $loop->index === 1 ? '3' : '2';
@@ -41,13 +36,7 @@
                             <h4 class="widget-title">{{ $footer_column->column_title }}</h4><!-- End .widget-title -->
 
                             <ul class="widget-list">
-                                @php 
-                                    
-                                    $columns_attributes = \App\Models\FooterColumnAttribute::published()->where('footer_column_id', $footer_column->id)->get();
-
-                                @endphp
-
-                                @foreach($columns_attributes as $columns_attribute)
+                                @foreach($footer_column->attributes as $columns_attribute)
                                     <li><a href="{{ $columns_attribute->link }}">{{ $columns_attribute->name }}</a></li>
                                 @endforeach
                             </ul>

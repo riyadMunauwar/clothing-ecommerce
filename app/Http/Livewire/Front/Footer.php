@@ -15,7 +15,6 @@ class Footer extends Component
     public function mount()
     {
         $this->footerColumns = $this->getFooterColumns();
-        dd($this->footerColumns);
     }
 
 
