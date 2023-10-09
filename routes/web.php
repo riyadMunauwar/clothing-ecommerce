@@ -112,10 +112,6 @@ Route::view('/faq', 'front.pages.static.faq')->name('faq');
 Route::view('/', 'front.pages.home');
 
 
-// Route::get('/', function(){
-//     return ['hello' => 'test'];
-// });
-
 
 
 

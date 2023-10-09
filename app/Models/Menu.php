@@ -56,6 +56,18 @@ class Menu extends Model implements HasMedia
         return $this->belongsTo(Category::class)->with('children');
     }
 
+
+    public function children()
+    {
+        return $this->hasMany(Menu::class, 'parent_id');
+    }
+
+    // Define the relationship for the parent menu
+    public function parent()
+    {
+        return $this->belongsTo(Menu::class, 'parent_id');
+    }
+
     // Model Scope
 
     public function scopePublished($query)
