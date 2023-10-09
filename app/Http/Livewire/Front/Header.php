@@ -12,7 +12,7 @@ class Header extends Component
 
     public function mount()
     {
-        $this->menus = $this->getMenus();
+        $this->menus = $this->getMenuTree();
 
         dd($this->menus);
     }
@@ -23,19 +23,19 @@ class Header extends Component
     }
 
 
-    public function getMenus()
-    {
-        return Menu::with([
-            'children' => function ($query) {
-                $query->where('is_published', true); // Filter children with is_published = true
-            },
-            'category' => function ($query) {
-                $query->where('is_published', true); // Filter related category with is_published = true
-            }
-        ])
-        ->whereNull('parent_id') // Only select parent menu items
-        ->where('is_published', true) // Filter parent menu items with is_published = true
-        ->get();
+ 
+    function getMenuTree($parentId = null) {
+        $menuItems = Menu::with('category')
+            ->where('parent_id', $parentId)
+            ->where('is_published', true)
+            ->get();
+    
+        foreach ($menuItems as $menu) {
+            $menu->children = getMenuTree($menu->id);
+        }
+    
+        return $menuItems;
     }
+    
 
 }
