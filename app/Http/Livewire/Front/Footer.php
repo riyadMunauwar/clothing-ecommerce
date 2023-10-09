@@ -15,7 +15,7 @@ class Footer extends Component
     public function mount()
     {
         $this->footerColumns = $this->getFooterColumns();
-
+        dd($this->footerColumns);
     }
 
 
@@ -27,13 +27,12 @@ class Footer extends Component
     private function getFooterColumns()
     {
         $cacheKey = config('cache_keys.footer_items_cache_key');
-        Cache::forget($cacheKey);
     
-        // $footerColumns = Cache::remember( $cacheKey, config('cache.cache_ttl'), function(){
-        //     return $this->getFooterColumnsItems();
-        // });
+        $footerColumns = Cache::remember( $cacheKey, config('cache.cache_ttl'), function(){
+            return $this->getFooterColumnsItems();
+        });
 
-        // return $footerColumns;
+        return $footerColumns;
     }
 
  
