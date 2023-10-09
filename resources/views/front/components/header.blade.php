@@ -78,7 +78,7 @@
                                 @endif
                             @else
                                 <li>
-                                    <a href="#" class="sf-with-ul">{{ $menu->name }}</a>
+                                    <a style="font-weight: 500; color: #333" class="sf-with-ul">{{ $menu->name }}</a>
 
                                     <ul>
                                         @foreach($menu->children as $child)
@@ -93,7 +93,7 @@
 
                                             @else
                                                 <li>
-                                                    <a href="#" class="sf-with-ul">{{ $child->name }}</a>
+                                                    <a style="font-weight: 500; color: #333" class="sf-with-ul">{{ $child->name }}</a>
 
                                                     <ul>
                                                         @foreach($child->children as $grandChild)
