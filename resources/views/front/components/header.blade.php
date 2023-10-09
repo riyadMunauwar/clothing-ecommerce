@@ -62,21 +62,11 @@
                 <nav class="main-nav">
                     <ul class="menu sf-arrows">
 
-                        @php 
-                        
-                            $menus = \App\Models\Menu::published()->where('parent_id', null)->orderBy('order')->get();
-
-                        @endphp
 
                         @foreach($menus as $menu)
 
-                            @php 
-                            
-                                $children = \App\Models\Menu::published()->where('parent_id', $menu->id)->orderBy('order')->get();
+                            @if(!count($menu->children) > 0)
 
-                            @endphp
-
-                            @if(!count($children) > 0)
                                 @if($menu->category)
                                     <li>
                                         <a href="{{ route('category', ['category_slug' => $menu->category->slug, 'id' => $menu->category->id]) }}">{{ $menu->name }}</a>
@@ -91,15 +81,9 @@
                                     <a href="#" class="sf-with-ul">{{ $menu->name }}</a>
 
                                     <ul>
-                                        @foreach($children as $child)
+                                        @foreach($menu->children as $child)
 
-                                            @php 
-
-                                                $grandChildren = \App\Models\Menu::published()->where('parent_id', $child->id)->orderBy('order')->get();
-
-                                            @endphp
-
-                                            @if(!count($grandChildren) > 0)
+                                            @if(!count($child->children) > 0)
 
                                                 @if($child->category)
                                                     <li><a href="{{ route('category', ['category_slug' => $child->category->slug, 'id' => $child->category->id]) }}">{{ $child->name }}</a></li>
@@ -112,7 +96,7 @@
                                                     <a href="#" class="sf-with-ul">{{ $child->name }}</a>
 
                                                     <ul>
-                                                        @foreach($grandChildren as $grandChild)
+                                                        @foreach($child->children as $grandChild)
 
                                                             @if($grandChild->category)
                                                                 <li><a href="{{ route('category', ['category_slug' => $grandChild->category->slug, 'id' => $grandChild->category->id]) }}">{{ $grandChild->name }}</a></li>

@@ -14,13 +14,11 @@ class Header extends Component
     public function mount()
     {
         $this->menus = $this->getMenus();
-
-        dd($this->menus);
     }
 
     public function render()
     {
-        return view('front.components.header');
+        return view('front.components.header')->with(['menus' => $this->menus]);
     }
 
 
