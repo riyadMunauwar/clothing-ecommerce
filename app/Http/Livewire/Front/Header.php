@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Front;
 
 use Livewire\Component;
 use App\Models\Menu;
+use Illuminate\Support\Facades\Cache; 
 
 class Header extends Component
 {
@@ -12,7 +13,7 @@ class Header extends Component
 
     public function mount()
     {
-        $this->menus = $this->getMenuTree();
+        $this->menus = $this->getMenus();
 
         dd($this->menus);
     }
@@ -22,6 +23,17 @@ class Header extends Component
         return view('front.components.header');
     }
 
+
+    private function getMenus()
+    {
+        $cacheKey = config('cache_keys.menu_items_cache_key');
+
+        $menus = Cache::remember( $cacheKey, config('cache.cache_ttl'), function(){
+            return $this->getMenuTree();
+        });
+
+        return $menus;
+    }
 
  
     private function getMenuTree($parentId = null) {
