@@ -43,9 +43,9 @@ class Footer extends Component
             ->where('is_published', true)
             ->get();
 
-        // foreach($footerColumns as $column){
-
-        // }
+        foreach($footerColumns as $column){
+            $column->attributes = $this->attributes->where('is_published', true);
+        }
 
         return $footerColumns;
     }
