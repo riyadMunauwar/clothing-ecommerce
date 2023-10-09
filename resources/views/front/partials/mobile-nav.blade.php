@@ -36,7 +36,7 @@
                             <a href="#">{{ $menu->name }}</a>
 
                             <ul>
-                                @foreach($menus->children as $child)
+                                @foreach($menu->children as $child)
 
 
                                     @if(!count($child->children) > 0)
