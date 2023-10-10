@@ -98,7 +98,7 @@
                                         @if($loop->last)
                                             <a href="#">{{ $category->name }}</a>
                                         @else 
-                                            <a href="#">{{ $category->name }}</a>
+                                            <a href="#">{{ $category->name }},</a>
                                         @endif
                                     @endforeach
                                 </div>
