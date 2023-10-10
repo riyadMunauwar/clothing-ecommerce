@@ -21,6 +21,7 @@ class ProductDetails extends Component
     public $sale_price = 0;
     public $regular_price = 0;
     public $variation_options = [];
+    public $qty = 1;
 
     public function mount()
     {   

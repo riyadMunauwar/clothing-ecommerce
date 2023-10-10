@@ -79,7 +79,7 @@
                                 <div class="details-action-col">
                                     <label for="qty">Qty:</label>
                                     <div class="product-details-quantity">
-                                        <input type="number" id="qty" class="form-control" value="1" min="1" max="10" step="1" data-decimals="0" required>
+                                        <input wire:model.debounce="qty" type="number" id="qty" class="form-control" value="1" min="1" max="10000" step="1" data-decimals="0" required>
                                     </div><!-- End .product-details-quantity -->
 
                                     <button wire:click.debounce="AddToCart" class="btn-product btn-cart"><span>add to cart</span></button>
