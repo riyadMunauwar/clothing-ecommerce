@@ -56,7 +56,7 @@ class ProductDetails extends Component
 
         if(!$produdctId) redirect()->to('/');
 
-        $this->product = Product::with('variations', 'category', 'media')->find($produdctId);
+        $this->product = Product::with('variations', 'categories', 'media')->find($produdctId);
     
         $variations = $this->product->variations;
 
