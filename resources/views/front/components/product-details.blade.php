@@ -285,12 +285,14 @@
                                 BDT {{ number_format($product->sale_price) }}
                             </div><!-- End .product-price -->
 
-                            <div class="ratings-container">
+
+                            <!-- Ratings -->
+                            <!-- <div class="ratings-container">
                                 <div class="ratings">
-                                    <div class="ratings-val" style="width: 20%;"></div><!-- End .ratings-val -->
-                                </div><!-- End .ratings -->
+                                    <div class="ratings-val" style="width: 20%;"></div>
+                                </div>
                                 <span class="ratings-text">( 2 Reviews )</span>
-                            </div><!-- End .rating-container -->
+                            </div> -->
 
                             <!-- Color -->
                             <!-- <div class="product-nav product-nav-dots">
