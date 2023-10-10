@@ -5,7 +5,7 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                 <li class="breadcrumb-item"><a href="#">Products</a></li>
-                <li class="breadcrumb-item active" aria-current="page">With Sidebar</li>
+                <li class="breadcrumb-item active" aria-current="page">Details</li>
             </ol>
 
             <nav class="product-pager ml-auto" aria-label="Product">
