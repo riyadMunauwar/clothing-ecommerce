@@ -20,7 +20,7 @@ class ProductDetails extends Component
 
     public $sale_price = 0;
     public $regular_price = 0;
-    public $variation_options;
+    public $variation_options = [];
 
     public function mount()
     {   
