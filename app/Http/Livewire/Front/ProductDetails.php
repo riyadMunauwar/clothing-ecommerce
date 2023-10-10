@@ -60,7 +60,11 @@ class ProductDetails extends Component
     
         $variations = $this->product->variations;
 
-        dd($variations);
+        if($variations->isEmpty()){
+            dd('empty');
+        }else{
+            dd('not empty');
+        }
     }
 
     private function getRecommendationProducts()
