@@ -14,12 +14,17 @@ class ProductDetails extends Component
     use WithSweetAlert;
 
     public $product;
+    public $variant;
     public $recommendation_products = [];
     public $related_products = [];
 
+    public $sale_price = 0;
+    public $regular_price = 0;
+    public $viration_options;
+
     public function mount()
     {   
-        $this->product = $this->getProduct();
+        $this->setProductAndVariation();
         $this->recommendation_products = $this->getRecommendationProducts();
         $this->related_products = $this->getRelatedProducts();
     }
@@ -45,13 +50,17 @@ class ProductDetails extends Component
         }
     }
 
-    private function getProduct()
+    private function setProductAndVariation()
     {
         $produdctId = request()->id;
 
         if(!$produdctId) redirect()->to('/');
 
-        return Product::find($produdctId);
+        $this->product = Product::with('variations', 'category', 'media')->find($produdctId);
+    
+        $variations = $this->product->variations;
+
+        dd($variations);
     }
 
     private function getRecommendationProducts()
