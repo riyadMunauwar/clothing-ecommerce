@@ -65,7 +65,7 @@
                                     <label for="size">{{$attribute}}:</label>
                                     <div class="select-custom">
                                         <select name="size" id="size" class="form-control">
-                                            <option value="#" selected="selected">Select a {{ $attribute }}</option>
+                                            <option wire:model="variation_options.{{ $attribute }}" selected="selected">Select a {{ $attribute }}</option>
                                             @foreach($values as $value)
                                                 <option value="{{ $value }}">{{ $value }}</option>
                                             @endforeach
