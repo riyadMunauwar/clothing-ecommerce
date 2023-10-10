@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Front;
 
 use Livewire\Component;
 use App\Models\Product;
+use App\Models\Variant;
 use App\Traits\WithSweetAlert;
 use App\Traits\WithSweetAlertToast;
 use App\Services\Cart\CartService;
@@ -36,6 +37,15 @@ class ProductDetails extends Component
     }
 
 
+    public function updated($attr, $value)
+    {
+        if($attr === 'qty' || $attr === 'sale_price' || $attr === 'regular_price'){
+
+        }else {
+            $this->findVariant();
+        }
+    }
+
     public function AddToCart()
     {
         $cart = new CartService();
@@ -63,9 +73,9 @@ class ProductDetails extends Component
 
         if(!$variations->isEmpty()){
             $this->variant = $variations->first();
-            $this->variation_options = $this->product->variation_options;
             $this->sale_price = $this->variant->sale_price;
             $this->regular_price = $this->variant->regular_price;
+            $this->preparedVariationOptions();
         }else {
             $this->sale_price = $this->product->sale_price;
             $this->regular_price = $this->product->regular_price;
@@ -80,5 +90,34 @@ class ProductDetails extends Component
     private function getRelatedProducts()
     {
         return Product::select('id', 'slug', 'sale_price', 'regular_price', 'name')->whereNotIn('id', [$this->product->id])->inRandomOrder()->take(4)->get();
+    }
+
+    private function findVariant(){
+
+        $query = Variant::where('product_id', $this->product->id);
+
+        foreach($this->variation_options as $option => $value){
+            $query->where("attributes->{$option}", $value);
+        }
+
+        $this->variant = $query->first();
+
+        if($this->variant){
+            $this->variant = $this->variant;
+            $this->sale_price = $this->variant->sale_price;
+        }
+
+    }
+
+    private function preparedVariationOptions(){
+
+        $queryPrams = [];
+
+
+        foreach($this->product->variation_options as $key => $option){
+            $queryPrams["$key"] = $option[0];
+        }
+
+        $this->variation_options = $queryPrams;
     }
 }

@@ -60,7 +60,7 @@
                                 </div>
                             </div> -->
 
-                            @foreach($variation_options as $attribute => $values)
+                            @foreach($product->variation_options as $attribute => $values)
                                 <div class="details-filter-row details-row-size">
                                     <label for="size">{{$attribute}}:</label>
                                     <div class="select-custom">
