@@ -60,10 +60,14 @@ class ProductDetails extends Component
     
         $variations = $this->product->variations;
 
-        if($variations->isEmpty()){
-            dd('empty');
-        }else{
-            dd('not empty');
+        if(!$variations->isEmpty()){
+            $this->variant = $variations->first();
+            $this->variation_options = $this->product->variation_options;
+            $this->sale_price = $this->variant->sale_price;
+            $this->regular_price = $this->variant->regular_price;
+        }else {
+            $this->sale_price = $this->product->sale_price;
+            $this->regular_price = $this->product->regular_price;
         }
     }
 

@@ -42,8 +42,8 @@
                             </div> -->
 
                             <div class="product-price">
-                                {{ number_format($product->sale_price) }}
-                                <del style="color: #333" class="ml-3 text-2xl">{{ number_format($product->regular_price) }}</del>
+                                {{ number_format($sale_price) }}
+                                <del style="color: #333" class="ml-3 text-2xl">{{ number_format($regular_price) }}</del>
                             </div><!-- End .product-price -->
 
                             <div class="product-content">
@@ -60,7 +60,7 @@
                                 </div>
                             </div> -->
 
-                            @foreach($product->variation_options as $attribute => $values)
+                            @foreach($variation_options as $attribute => $values)
                                 <div class="details-filter-row details-row-size">
                                     <label for="size">{{$attribute}}:</label>
                                     <div class="select-custom">
