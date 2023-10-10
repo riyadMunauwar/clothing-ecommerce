@@ -9,7 +9,7 @@
                 }
             }
         }'>
-        <div class="intro-slide" style="background-image: url('{{ asset('assets/images/demos/demo-11/slider/slide-1.jpg') }}');">
+        <div class="intro-slide" style="background-image: url('{{ asset('assets/images/caurosels/selowar.webp') }}');">
             <div class="container intro-content">
                 <h3 class="intro-subtitle text-primary">SEASONAL PICKS</h3><!-- End .h3 intro-subtitle -->
                 <h1 class="intro-title">Get All <br>The Good Stuff</h1><!-- End .intro-title -->
@@ -21,7 +21,7 @@
             </div><!-- End .intro-content -->
         </div><!-- End .intro-slide -->
 
-        <div class="intro-slide" style="background-image: url('{{ asset('assets/images/demos/demo-11/slider/slide-2.jpg') }}');">
+        <div class="intro-slide" style="background-image: url('{{ asset('assets/images/caurosels/saree-collection.webp') }}');">
             <div class="container intro-content">
                 <h3 class="intro-subtitle text-primary">all at 50% off</h3><!-- End .h3 intro-subtitle -->
                 <h1 class="intro-title text-white">The Most Beautiful <br>Novelties In Our Shop</h1><!-- End .intro-title -->
