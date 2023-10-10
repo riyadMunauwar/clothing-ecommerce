@@ -3,7 +3,7 @@
             "nav": false, 
             "dots": true,
             "autoplay":true,
-            "autoplayTimeout":5000,
+            "autoplayTimeout":3000,
             "autoplayHoverPause":true,
             "responsive": {
                 "992": {
