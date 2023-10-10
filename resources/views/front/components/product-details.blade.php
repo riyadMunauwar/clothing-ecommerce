@@ -127,7 +127,7 @@
                     <li class="nav-item">
                         <a class="nav-link active" id="product-desc-link" data-toggle="tab" href="#product-desc-tab" role="tab" aria-controls="product-desc-tab" aria-selected="true">Description</a>
                     </li>
-                    <!-- <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link" id="product-info-link" data-toggle="tab" href="#product-info-tab" role="tab" aria-controls="product-info-tab" aria-selected="false">Additional information</a>
                     </li>
                     <li class="nav-item">
@@ -135,7 +135,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="product-review-link" data-toggle="tab" href="#product-review-tab" role="tab" aria-controls="product-review-tab" aria-selected="false">Reviews (2)</a>
-                    </li> -->
+                    </li>
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane fade show active" id="product-desc-tab" role="tabpanel" aria-labelledby="product-desc-link">
@@ -187,7 +187,7 @@
                                         <h4><a href="#">Samanta J.</a></h4>
                                         <div class="ratings-container">
                                             <div class="ratings">
-                                                <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
+                                                <div class="ratings-val" style="width: 80%;"></div>
                                             </div>
                                         </div>
                                         <span class="review-date">6 days ago</span>
@@ -213,7 +213,7 @@
                                         <h4><a href="#">John Doe</a></h4>
                                         <div class="ratings-container">
                                             <div class="ratings">
-                                                <div class="ratings-val" style="width: 100%;"></div><!-- End .ratings-val -->
+                                                <div class="ratings-val" style="width: 100%;"></div>
                                             </div>
                                         </div>
                                         <span class="review-date">5 days ago</span>
