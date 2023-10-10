@@ -43,7 +43,7 @@
 
                             <div class="product-price">
                                 {{ number_format($product->sale_price) }}
-                                <del style="color: #333" class="ml-3 text-lg">{{ number_format($product->regular_price) }}</del>
+                                <del style="color: #333" class="ml-3 text-xl">{{ number_format($product->regular_price) }}</del>
                             </div><!-- End .product-price -->
 
                             <div class="product-content">
@@ -134,7 +134,7 @@
                         <a class="nav-link" id="product-shipping-link" data-toggle="tab" href="#product-shipping-tab" role="tab" aria-controls="product-shipping-tab" aria-selected="false">Shipping & Returns</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="product-review-link" data-toggle="tab" href="#product-review-tab" role="tab" aria-controls="product-review-tab" aria-selected="false">Reviews (2)</a>
+                        <a class="nav-link" id="product-review-link" data-toggle="tab" href="#product-review-tab" role="tab" aria-controls="product-review-tab" aria-selected="false">Reviews</a>
                     </li>
                 </ul>
                 <div class="tab-content">
