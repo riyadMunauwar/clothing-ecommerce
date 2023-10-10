@@ -40,7 +40,7 @@ class ProductDetails extends Component
     {
         $cart = new CartService();
 
-        $result = $cart->add($this->product->id, null, 1);
+        $result = $cart->add($this->product->id, $this->variant->id ?? null, $this->qty);
 
         if(!$result['isError']){
             $this->emit('onCartItemChanges');
