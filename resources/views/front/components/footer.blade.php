@@ -14,11 +14,11 @@
                          <p>Email: customercare@rayat.com.bd </p>
 
                         <div class="social-icons mt-4">
-                            <a href="#" class="social-icon" target="_blank" title="Facebook"><i class="icon-facebook-f"></i></a>
-                            <a href="#" class="social-icon" target="_blank" title="Twitter"><i class="icon-twitter"></i></a>
-                            <a href="#" class="social-icon" target="_blank" title="Instagram"><i class="icon-instagram"></i></a>
-                            <a href="#" class="social-icon" target="_blank" title="Youtube"><i class="icon-youtube"></i></a>
-                            <a href="#" class="social-icon" target="_blank" title="Pinterest"><i class="icon-pinterest"></i></a>
+                            <a target="_blank" href="https://www.instagram.com/rayatboutiquebd/" class="social-icon" target="_blank" title="Facebook"><i class="icon-facebook-f"></i></a>
+                            <a target="_blank" href="https://twitter.com/rayatboutique" class="social-icon" target="_blank" title="Twitter"><i class="icon-twitter"></i></a>
+                            <!-- <a href="#" class="social-icon" target="_blank" title="Instagram"><i class="icon-instagram"></i></a> -->
+                            <a target="_blank" href="https://www.youtube.com/@rayatBoutiquebd" class="social-icon" target="_blank" title="Youtube"><i class="icon-youtube"></i></a>
+                            <a target="_blank" href="https://www.pinterest.com/rayatboutique/" class="social-icon" target="_blank" title="Pinterest"><i class="icon-pinterest"></i></a>
                         </div><!-- End .soial-icons -->
                     </div><!-- End .widget about-widget -->
                 </div><!-- End .col-sm-6 col-lg-3 -->
