@@ -33,12 +33,13 @@
                         <div class="product-details product-details-sidebar">
                             <h1 class="product-title">{{ $product->name }}</h1><!-- End .product-title -->
 
-                            <div class="ratings-container">
+                            <!-- Ratings -->
+                            <!-- <div class="ratings-container">
                                 <div class="ratings">
-                                    <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
-                                </div><!-- End .ratings -->
+                                    <div class="ratings-val" style="width: 80%;"></div>
+                                </div>
                                 <a class="ratings-text" href="#product-review-link" id="review-link">( 2 Reviews )</a>
-                            </div><!-- End .rating-container -->
+                            </div> -->
 
                             <div class="product-price">
                                 {{ number_format($product->sale_price) }}
@@ -93,10 +94,14 @@
                             <div class="product-details-footer details-footer-col">
                                 <div class="product-cat">
                                     <span>Category:</span>
-                                    <a href="#">Women</a>,
-                                    <a href="#">Dresses</a>,
-                                    <a href="#">Yellow</a>
-                                </div><!-- End .product-cat -->
+                                    @foreach($product->categories as $category)
+                                        @if($loop->last)
+                                            <a href="#">{{ $category->name }}</a>
+                                        @else 
+                                            <a href="#">{{ $category->name }}</a>
+                                        @endif
+                                    @endforeach
+                                </div>
 
                                 <div class="social-icons social-icons-sm">
                                     <span class="social-label">Share:</span>
