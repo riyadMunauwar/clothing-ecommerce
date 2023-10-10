@@ -42,6 +42,7 @@
 
                             <div class="product-price">
                                 {{ number_format($product->sale_price) }}
+                                <del class="bg-red-600">{{ number_format($product->regular_price) }}</del>
                             </div><!-- End .product-price -->
 
                             <div class="product-content">
