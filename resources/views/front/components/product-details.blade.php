@@ -151,20 +151,7 @@
                     <div class="tab-pane fade" id="product-info-tab" role="tabpanel" aria-labelledby="product-info-link">
                         <div class="product-desc-content">
                             <h3>Information</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. </p>
-
-                            <h3>Fabric & care</h3>
-                            <ul>
-                                <li>Faux suede fabric</li>
-                                <li>Gold tone metal hoop handles.</li>
-                                <li>RI branding</li>
-                                <li>Snake print trim interior </li>
-                                <li>Adjustable cross body strap</li>
-                                <li> Height: 31cm; Width: 32cm; Depth: 12cm; Handle Drop: 61cm</li>
-                            </ul>
-
-                            <h3>Size</h3>
-                            <p>one size</p>
+                            {!! $product->short_description !!}
                         </div>
                     </div>
 
@@ -349,15 +336,18 @@
                     <a href="category.html" class="btn btn-outline-dark-3"><span>View More Products</span><i class="icon-long-arrow-right"></i></a>
                 </div><!-- End .widget widget-products -->
 
-                <div class="widget widget-banner-sidebar">
-                    <div class="banner-sidebar-title">ad box 280 x 280</div><!-- End .ad-title -->
+                <!-- Add box -->
+                <!-- <div class="widget widget-banner-sidebar">
+                    <div class="banner-sidebar-title">ad box 280 x 280</div>
                     
                     <div class="banner-sidebar banner-overlay">
                         <a href="#">
                             <img src="assets/images/blog/sidebar/banner.jpg" alt="banner">
                         </a>
-                    </div><!-- End .banner-ad -->
-                </div><!-- End .widget -->
+                    </div>
+                </div> -->
+
+
             </div><!-- End .sidebar sidebar-product -->
         </aside><!-- End .col-lg-3 -->
     </div><!-- End .row -->
