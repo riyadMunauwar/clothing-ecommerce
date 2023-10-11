@@ -4,7 +4,7 @@ namespace App\Http\Livewire\Front;
 
 use Livewire\Component;
 use App\Models\Product;
-use App\Models\Variant;
+use App\Models\Variation;
 use App\Traits\WithSweetAlert;
 use App\Traits\WithSweetAlertToast;
 use App\Services\Cart\CartService;
@@ -95,7 +95,7 @@ class ProductDetails extends Component
 
     private function findVariant(){
 
-        $query = Variant::where('product_id', $this->product->id);
+        $query = Variation::where('product_id', $this->product->id);
 
         foreach($this->variation_options as $option => $value){
             $query->where("attributes->{$option}", $value);
