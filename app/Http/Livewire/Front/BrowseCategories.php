@@ -32,7 +32,7 @@ class BrowseCategories extends Component
             return redirect()->route('category', ['category_slug' => $category->slug, 'id' => $category->id]);
         }else {
             $this->categories = $children;
-            $this->makeBreadCrumbs($categoryId);
+            $this->breadCrumbs = makeBreadCrumbs($categoryId);
         }
 
     }
@@ -40,18 +40,23 @@ class BrowseCategories extends Component
     private function makeBreadCrumbs($categoryId)
     {
 
+        $currentCategory = Category::select('id', 'name')->find($categoryId);
+ 
+        $breadcrumbs = [];
 
-        $category = Category::select('id', 'name')->find($categoryId);
+        while ($currentCategory) {
 
-        while($category->parent_id){
+            $breadcrumbs[] = $currentCategory;
 
-            $category = Category::select('id', 'name')->find($category->parent_id);
+            $currentCategory = $currentCategory->parent; 
 
-            array_push($this->breadCrumbs, $category);
-            
+            if (!$currentCategory) {
+                break;
+            }
         }
-   
-        $this->breadCrumbs = array_reverse($this->breadCrumbs);
+
+        return array_reverse($breadcrumbs);
+       
 
     }
 
