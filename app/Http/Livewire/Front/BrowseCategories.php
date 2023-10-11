@@ -20,10 +20,14 @@ class BrowseCategories extends Component
         return view('front.components.browse-categories');
     }
 
+    public function goToCategory($categoryId)
+    {
+        dd($categoryId);
+    }
+
     private function getFeaturedCategories()
     {
         return Category::withCount('products')->published()->where('parent_id', null)->get();
     }
-
 
 }
