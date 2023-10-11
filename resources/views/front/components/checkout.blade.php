@@ -4,7 +4,7 @@
         <div>
             @if($errors->any())
                 @foreach($errors->all() as $error)
-                    <div class="alert alert-danger" role="alert">
+                    <div class="alert alert-danger mb-2" role="alert">
                         {{ $error }}
                     </div>
                 @endforeach
@@ -110,6 +110,12 @@
 
                             <tbody>
 
+                                @foreach($cartItems as $item)
+                                    <tr>
+                                        <td><a href="#">{{ $item->name ?? '' }}</a></td>
+                                        <td>BDT {{ $item->qty }} * {{ $item->price }}</td>
+                                    </tr>
+                                @endforeach
 
                                 <tr class="summary-subtotal">
                                     <td>Subtotal:</td>
