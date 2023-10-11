@@ -12,7 +12,7 @@
                                     <img style="aspect-ratio: 1 / 1; object-fit: contain" src="{{ $category->iconUrl('medium') }}" alt="{{ $category->name }}">
                                 </a>
 
-                                <a class="banner-link" href="#">
+                                <a class="banner-link">
                                     <h3 class="banner-title">{{ $category->name }}</h3><!-- End .banner-title -->
                                     <h4 class="banner-subtitle">{{ $category->products_count }} Products</h4><!-- End .banner-subtitle -->
                                     <span class="banner-link-text">Shop Now</span>
