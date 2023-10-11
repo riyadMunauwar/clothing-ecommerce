@@ -16,6 +16,32 @@ class Checkout extends Component
     public $total = 0;
     public $shippingCost = 0;
 
+
+
+    public $first_name;
+    public $last_name;
+    public $email;
+    public $mobile_no;
+    public $city;
+    public $state;
+    public $country;
+    public $zip;
+    public $street_address;
+    public $order_notes;
+
+
+    protected $rules = [
+        'first_name' => ['required', 'string', 'max:125'],
+        'last_name' => ['required', 'string', 'max:125'],
+        'email' => ['required', 'string', 'email', 'max:255'],
+        'mobile_no' => ['required', 'string', 'max:255'],
+        'city' => ['required', 'string', 'max:255'],
+        'state' => ['required', 'string', 'max:255'],
+        'zip' => ['required', 'string', 'max:255'],
+        'street_address' => ['required', 'string', 'max:255'],
+        'order_notes' => ['required', 'string', 'max:5000'],
+    ];
+
     public function mount()
     {
         $this->checkIsShippingOptionSelected();

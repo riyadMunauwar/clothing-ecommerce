@@ -1,6 +1,16 @@
 <div class="checkout">
     <div class="container">
 
+        <div>
+            @if($errors->any())
+                @foreach($errors->all() as $error)
+                    <div class="alert alert-danger" role="alert">
+                        {{ $error }}
+                    </div>
+                @endif
+            @endif
+        </div>
+
         <!-- Discount Coupon -->
         <!-- <div class="checkout-discount">
             <form action="#">
@@ -36,55 +46,55 @@
 
 
 
-        <form action="#">
+        <form>
             <div class="row">
                 <div class="col-lg-9">
                     <h2 class="checkout-title">Billing Details</h2><!-- End .checkout-title -->
                         <div class="row">
                             <div class="col-sm-6">
                                 <label>First Name *</label>
-                                <input type="text" class="form-control" required>
+                                <input wire:model.debounce="first_name" type="text" class="form-control" required>
                             </div><!-- End .col-sm-6 -->
 
                             <div class="col-sm-6">
                                 <label>Last Name *</label>
-                                <input type="text" class="form-control" required>
+                                <input wire:model.debounce="last_name" type="text" class="form-control" required>
                             </div><!-- End .col-sm-6 -->
                         </div><!-- End .row -->
 
                         <label>Email address *</label>
-                        <input type="email" class="form-control" required>
+                        <input wire:model.debounce="email" type="email" class="form-control" required>
 
                         <div class="row">
                             <div class="col-sm-6">
                                 <label>Town / City *</label>
-                                <input type="text" class="form-control" required>
+                                <input wire:model.debounce="city" type="text" class="form-control" required>
                             </div><!-- End .col-sm-6 -->
 
                             <div class="col-sm-6">
                                 <label>State / County *</label>
-                                <input type="text" class="form-control" required>
+                                <input wire:model.debounce="state" type="text" class="form-control" required>
                             </div><!-- End .col-sm-6 -->
                         </div><!-- End .row -->
 
                         <div class="row">
                             <div class="col-sm-6">
                                 <label>Postcode / ZIP *</label>
-                                <input type="text" class="form-control" required>
+                                <input wire:model.debounce="zip" type="text" class="form-control" required>
                             </div><!-- End .col-sm-6 -->
 
                             <div class="col-sm-6">
                                 <label>Phone *</label>
-                                <input type="tel" class="form-control" required>
+                                <input wire:model.debounce="mobile_no" type="tel" class="form-control" required>
                             </div><!-- End .col-sm-6 -->
                         </div><!-- End .row -->
 
 
                         <label>Street address *</label>
-                        <input type="text" class="form-control" placeholder="House number and Street name" required>
+                        <input wire:model.debounce="street_address" type="text" class="form-control" placeholder="House number and Street name" required>
 
                         <label>Order notes (optional)</label>
-                        <textarea class="form-control" cols="30" rows="4" placeholder="Notes about your order, e.g. special notes for delivery"></textarea>
+                        <textarea wire:model.debounce="order_notes" class="form-control" cols="30" rows="4" placeholder="Notes about your order, e.g. special notes for delivery"></textarea>
                 </div><!-- End .col-lg-9 -->
                 <aside class="col-lg-3">
                     <div class="summary">
