@@ -13,7 +13,7 @@
                                 </a>
 
                                 <a class="banner-link">
-                                    <h3 class="banner-title">{{ $category->name }}</h3>
+                                    <h3 class="banner-title"><span wire:loading.remove wire:target="goToCategory" >{{ $category->name }}</span><span wire:loading wire:target="goToCategory">Loading...</span></h3>
                                     <h4 class="banner-subtitle">{{ $category->products_count }} Products</h4>
                                     <span class="banner-link-text">Shop Now</span>
                                 </a>
