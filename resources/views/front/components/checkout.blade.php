@@ -1,11 +1,31 @@
 <div class="checkout">
     <div class="container">
-        <div class="checkout-discount">
+
+        <!-- Discount Coupon -->
+        <!-- <div class="checkout-discount">
             <form action="#">
                 <input type="text" class="form-control" required id="checkout-discount-input">
                 <label for="checkout-discount-input" class="text-truncate">Have a coupon? <span>Click here to enter your code</span></label>
             </form>
-        </div><!-- End .checkout-discount -->
+        </div> -->
+
+
+        <!-- Existing Address -->
+
+        <div>
+            <div class="custom-control custom-checkbox">
+                <input name="address" type="radio" class="custom-control-input" id="checkout-create-acc">
+                <label class="custom-control-label" for="checkout-create-acc">Create an account?</label>
+            </div>
+
+            <div class="custom-control custom-checkbox">
+                <input name="address" type="radio" class="custom-control-input" id="checkout-diff-address">
+                <label class="custom-control-label" for="checkout-diff-address">Ship to a different address?</label>
+            </div>
+        </div>
+
+
+
         <form action="#">
             <div class="row">
                 <div class="col-lg-9">
@@ -58,16 +78,6 @@
 
                         <label>Email address *</label>
                         <input type="email" class="form-control" required>
-
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="checkout-create-acc">
-                            <label class="custom-control-label" for="checkout-create-acc">Create an account?</label>
-                        </div><!-- End .custom-checkbox -->
-
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="checkout-diff-address">
-                            <label class="custom-control-label" for="checkout-diff-address">Ship to a different address?</label>
-                        </div><!-- End .custom-checkbox -->
 
                         <label>Order notes (optional)</label>
                         <textarea class="form-control" cols="30" rows="4" placeholder="Notes about your order, e.g. special notes for delivery"></textarea>
