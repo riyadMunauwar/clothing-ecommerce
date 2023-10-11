@@ -32,8 +32,9 @@ class BrowseCategories extends Component
             return redirect()->route('category', ['category_slug' => $category->slug, 'id' => $category->id]);
         }else {
             $this->categories = $children;
-            $this->makeBreadCrumbs($categoryId);
         }
+
+        $this->makeBreadCrumbs($categoryId);
     }
 
     private function makeBreadCrumbs($categoryId)
