@@ -8,8 +8,8 @@
 
                         <div style="cursor: pointer" wire:click.debounce="goToCategory({{ $category->id }})" class="col-4 col-sm-3 col-md-2">
                             <div class="banner banner-cat banner-badge">
-                                <a style="position: absolute; top: 50%; left: 50%; width: 50%; left: 50%">
-                                    <img style="aspect-ratio: 1 / 1; object-fit: contain" src="{{ $category->iconUrl('medium') }}" alt="{{ $category->name }}">
+                                <a style="display: flex; align-items: center; justify-content: center">
+                                    <img style="aspect-ratio: 1 / 1; object-fit: contain; width: 50%;" src="{{ $category->iconUrl('medium') }}" alt="{{ $category->name }}">
                                 </a>
 
                                 <a class="banner-link">
