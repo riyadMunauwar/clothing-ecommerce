@@ -18,6 +18,7 @@ class Checkout extends Component
 
     public function mount()
     {
+        $this->checkIsShippingOptionSelected();
         $this->initData();
     }
 
@@ -26,6 +27,15 @@ class Checkout extends Component
         return view('front.components.checkout');
     }
 
+
+    private function checkIsShippingOptionSelected()
+    {
+        $isSelect = session()->has('shipping_option') ? session()->get('shipping_option') : false;
+
+        if($isSelect){
+            return redirect()->route('cart');
+        }
+    }
 
     private function createOrder()
     {
