@@ -45,11 +45,11 @@ class Checkout extends Component
     public function mount()
     {
         $this->checkIsShippingOptionSelected();
-        $this->initData();
     }
 
     public function render()
     {
+        $this->initData();
         return view('front.components.checkout');
     }
 
