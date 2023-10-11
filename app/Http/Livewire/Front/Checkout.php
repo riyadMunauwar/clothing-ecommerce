@@ -6,6 +6,7 @@ use Livewire\Component;
 use App\Services\Cart\CartService;
 use App\Services\Payment\PaymentContext;
 use App\Services\Order\OrderService;
+use App\Models\Address;
 
 class Checkout extends Component
 {
@@ -66,25 +67,44 @@ class Checkout extends Component
         }
     }
 
+    private function createAddress()
+    {
+        $address = new Address();
+
+        $address->name = $this->first_name . ' ' . $this->last_name;
+        $address->email = $this->email;
+        $address->mobile_no = $this->mobile_no;
+        $address->city = $this->city;
+        $address->state = $this->state;
+        $address->zip = $this->zip;
+        $address->street = $this->street;
+        $address->user_id = auth()->id();
+
+        $address->save();
+
+        return $address->id;
+    }
+
     private function createOrder()
     {
 
         $service = new OrderService();
 
+        $addressId = $this->createAddress();
 
-        $data = [
+        $order_data = [
             'order_no' => $service->generateRandomNumberString(),
-            'total_price' => 1000,
-            'shipping_price' => 100,
-            'admin_notes' => '',
-            'customer_notes' => '',
-            'user_id' => '',
-            'admin_id' => '',
-            'address_id' => '',
-            'shipping_option' => '',
-            'payment_option' => '',
-            'order_status' => '',
-            'payment_status' => '',
+            'total_price' => $this->total,
+            'shipping_price' => $this->shippingCost,
+            'admin_notes' => null,
+            'customer_notes' => $this->order_notes,
+            'user_id' => auth()->id(),
+            'admin_id' => null,
+            'address_id' => $addressId,
+            'shipping_option' => session()->get('shipping_option'),
+            'payment_option' => $this->payment_method_option,
+            'order_status' => 'new',
+            'payment_status' => 'unpaid',
         ];
 
         return $data;
