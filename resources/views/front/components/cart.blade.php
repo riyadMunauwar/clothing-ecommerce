@@ -27,17 +27,6 @@
                                         <h3 class="product-title">
                                             <a href="{{ route('product', ['product_slug' => $item->options->slug, 'id' => $item->id]) }}">
                                                 {{ $item->name }}
-                                                </br>
-                                                <span class="text-sm">
-                                                @foreach($item->options as $option => $value)
-                                                    @if($loop->last)
-                                                        {{ $value }} 
-                                                    @else 
-                                                        {{ $value }} , 
-                                                    @endif
-                                                @endforeach
-                                                </span>
-
                                             </a>
                                         </h3><!-- End .product-title -->
                                     </div><!-- End .product -->
