@@ -98,7 +98,7 @@ class ProductDetails extends Component
         $query = Variation::where('product_id', $this->product->id);
 
         foreach($this->variation_options as $option => $value){
-            $query->where("attributes->{$option}", $value);
+            $query->where("options->{$option}", $value);
         }
 
         $this->variant = $query->first();
@@ -106,6 +106,7 @@ class ProductDetails extends Component
         if($this->variant){
             $this->variant = $this->variant;
             $this->sale_price = $this->variant->sale_price;
+            $this->regular_price = $this->variant->regular_price;
         }
 
     }
