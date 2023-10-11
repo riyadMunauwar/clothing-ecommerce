@@ -35,7 +35,7 @@ class BrowseCategories extends Component
 
     private function findChildren($id)
     {
-        return Category::select('is', 'name')->withCount('products')->published()->where('parent_id', $id)->get();
+        return Category::select('id', 'name')->withCount('products')->published()->where('parent_id', $id)->get();
     }
 
     private function getFeaturedCategories()
