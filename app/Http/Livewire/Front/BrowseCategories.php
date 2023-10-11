@@ -9,6 +9,7 @@ class BrowseCategories extends Component
 {
 
     public $categories = [];
+    public $breadCrumbs = [];
 
     public function mount()
     {
@@ -31,9 +32,25 @@ class BrowseCategories extends Component
             return redirect()->route('category', ['category_slug' => $category->slug, 'id' => $category->id]);
         }else {
             $this->categories = $children;
+            $this->makeBreadCrumbs($categoryId);
         }
     }
 
+    private function makeBreadCrumbs($categoryId)
+    {
+        while($categoryId){
+
+            $category = Category::select('id', 'name')->find($categoryId);
+
+            array_push($this->breadCrumbs, $category);
+
+            $categoryId = $category->parent_id;
+
+        }
+
+        $this->breadCrumbs = array_reverse($this->breadCrumbs);
+
+    }
 
     private function findChildren($id)
     {
