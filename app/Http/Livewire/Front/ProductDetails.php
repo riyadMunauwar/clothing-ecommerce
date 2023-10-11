@@ -29,6 +29,7 @@ class ProductDetails extends Component
         $this->setProductAndVariation();
         $this->recommendation_products = $this->getRecommendationProducts();
         $this->related_products = $this->getRelatedProducts();
+        dd($this->variation_options);
     }
 
     public function render()
@@ -40,7 +41,7 @@ class ProductDetails extends Component
     public function updated($attr, $value)
     {
         dd($attr, $value);
-        
+
         if($attr === 'qty' || $attr === 'sale_price' || $attr === 'regular_price'){
 
         }else {
