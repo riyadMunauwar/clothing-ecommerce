@@ -1,11 +1,11 @@
 <div class="checkout">
     <div class="container">
-        
+
     @if($errors->any())
         <div class="mb-3">
 
             @foreach($errors->all() as $error)
-                <div class="alert alert-danger" role="alert">
+                <div class="alert alert-danger mb-1" role="alert">
                     {{ $error }}
                 </div>
             @endforeach
