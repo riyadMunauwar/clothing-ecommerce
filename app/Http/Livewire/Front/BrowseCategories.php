@@ -22,7 +22,20 @@ class BrowseCategories extends Component
 
     public function goToCategory($categoryId)
     {
-        dd($categoryId);
+        $children = $this->findChildren($categoryId);
+
+        if($children->isEmpty())
+        {
+            dd('empty');
+        }else {
+            dd($children);
+        }
+    }
+
+
+    private function findChildren($id)
+    {
+        return Category::select('is', 'name')->withCount('products')->published()->where('parent_id', $id)->get();
     }
 
     private function getFeaturedCategories()
