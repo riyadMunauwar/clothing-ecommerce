@@ -1,16 +1,17 @@
 <div class="checkout">
     <div class="container">
+        
+    @if($errors->any())
+        <div class="mb-3">
 
-        <div>
-            @if($errors->any())
-                @foreach($errors->all() as $error)
-                    <div class="alert alert-danger mb-3" role="alert">
-                        {{ $error }}
-                    </div>
-                @endforeach
-            @endif
+            @foreach($errors->all() as $error)
+                <div class="alert alert-danger" role="alert">
+                    {{ $error }}
+                </div>
+            @endforeach
+
         </div>
-
+    @endif
         <!-- Discount Coupon -->
         <!-- <div class="checkout-discount">
             <form action="#">
