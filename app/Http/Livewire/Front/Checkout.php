@@ -39,7 +39,7 @@ class Checkout extends Component
         'state' => ['required', 'string', 'max:255'],
         'zip' => ['required', 'string', 'max:255'],
         'street_address' => ['required', 'string', 'max:255'],
-        'order_notes' => ['required', 'string', 'max:5000'],
+        'order_notes' => ['nullable', 'string', 'max:5000'],
     ];
 
     public function mount()
@@ -90,6 +90,8 @@ class Checkout extends Component
 
     public function startPayment()
     {
+        $this->validate();
+        
         // dd($this->createOrder());
 
         $payment = new PaymentContext('aamarpay');
