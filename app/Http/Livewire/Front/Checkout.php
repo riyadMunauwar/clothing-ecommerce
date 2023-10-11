@@ -32,8 +32,7 @@ class Checkout extends Component
     {
         $isSelect = session()->has('shipping_option') ? session()->get('shipping_option') : false;
 
-        dd($isSelect);
-        if($isSelect){
+        if(!$isSelect){
             return redirect()->route('cart');
         }
     }
