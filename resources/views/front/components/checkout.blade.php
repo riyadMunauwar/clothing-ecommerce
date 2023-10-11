@@ -11,16 +11,26 @@
 
 
         <!-- Existing Address -->
-
         <div>
-            <div class="custom-control custom-checkbox">
-                <input name="address" type="radio" class="custom-control-input" id="checkout-create-acc">
-                <label class="custom-control-label" for="checkout-create-acc">Create an account?</label>
+            <div class="custom-control custom-radio">
+                <input value="cash-on-delivery" wire:model.debounce="payment_method_option" type="radio" id="payment-method" name="payment-method" class="custom-control-input">
+                <label class="custom-control-label" for="payment-method">
+                    Cash On Delivery
+                </label>
             </div>
 
-            <div class="custom-control custom-checkbox">
-                <input name="address" type="radio" class="custom-control-input" id="checkout-diff-address">
-                <label class="custom-control-label" for="checkout-diff-address">Ship to a different address?</label>
+            <div class="custom-control custom-radio">
+                <input value="delivery-charge-only" wire:model.debounce="payment_method_option" type="radio" id="payment-method" name="payment-method" class="custom-control-input">
+                <label class="custom-control-label" for="payment-method">
+                    Delivery Charge Only
+                </label>
+            </div>
+
+            <div class="custom-control custom-radio">
+                <input value="aamarpay" wire:model.debounce="payment_method_option" type="radio" id="payment-method" name="payment-method" class="custom-control-input">
+                <label class="custom-control-label" for="payment-method">
+                    Existing addr
+                </label>
             </div>
         </div>
 
