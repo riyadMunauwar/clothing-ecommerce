@@ -39,6 +39,8 @@ class ProductDetails extends Component
 
     public function updated($attr, $value)
     {
+        dd($attr, $value);
+        
         if($attr === 'qty' || $attr === 'sale_price' || $attr === 'regular_price'){
 
         }else {
