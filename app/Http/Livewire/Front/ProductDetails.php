@@ -29,7 +29,6 @@ class ProductDetails extends Component
         $this->setProductAndVariation();
         $this->recommendation_products = $this->getRecommendationProducts();
         $this->related_products = $this->getRelatedProducts();
-        dd($this->variation_options);
     }
 
     public function render()
