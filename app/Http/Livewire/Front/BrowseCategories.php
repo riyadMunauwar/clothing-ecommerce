@@ -26,9 +26,11 @@ class BrowseCategories extends Component
 
         if($children->isEmpty())
         {
-            dd('empty');
+            $category = Category::select('id', 'slug')->find($categoryId);
+
+            return redirect()->route('category', ['slug' => $category->slug, 'id' => $category->id]);
         }else {
-            dd($children);
+            $this->categories = $children;
         }
     }
 
@@ -40,7 +42,7 @@ class BrowseCategories extends Component
 
     private function getFeaturedCategories()
     {
-        return Category::withCount('products')->published()->where('parent_id', null)->get();
+        return Category::select('id', 'name')->withCount('products')->published()->where('parent_id', null)->get();
     }
 
 }

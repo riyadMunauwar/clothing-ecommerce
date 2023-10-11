@@ -13,16 +13,16 @@
                                 </a>
 
                                 <a class="banner-link">
-                                    <h3 class="banner-title">{{ $category->name }}</h3><!-- End .banner-title -->
-                                    <h4 class="banner-subtitle">{{ $category->products_count }} Products</h4><!-- End .banner-subtitle -->
+                                    <h3 class="banner-title">{{ $category->name }}</h3>
+                                    <h4 class="banner-subtitle">{{ $category->products_count }} Products</h4>
                                     <span class="banner-link-text">Shop Now</span>
-                                </a><!-- End .banner-link -->
-                            </div><!-- End .banner -->
-                        </div><!-- End .col-sm-8 -->
+                                </a>
+                            </div>
+                        </div>
 
                 @endforeach
 
-            </div><!-- End .row -->
-        </div><!-- End .container-fluid -->
-    </div><!-- End .categories-page -->
-</div><!-- End .page-content -->
+            </div>
+        </div>
+    </div>
+</div>
