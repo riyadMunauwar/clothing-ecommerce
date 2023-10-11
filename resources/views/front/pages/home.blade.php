@@ -2,7 +2,7 @@
     @include('front.partials.full-width-intro-caurosel')
 
     @include('front.partials.category-collection')
-    <livewire:front.featured-category-showcase />
+    <livewire:front.browse-categories />
     <livewire:front.trendy-products-with-caurosel />
     <livewire:front.featured-products />
     <livewire:front.recent-arrival-products />
