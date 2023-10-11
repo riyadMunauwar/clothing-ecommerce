@@ -53,7 +53,7 @@ class CartService {
 
             if($variation){
                 $salePrice = $variation->sale_price;
-                $thumbnail = $variation->thumbnailUrl('thumb');
+                $thumbnail = $variation->imageUrl('thumb');
                 $weight = $variation->weight ?? 0;
                 $height = $variation->height ?? 0;
                 $width = $variation->width ?? 0;
