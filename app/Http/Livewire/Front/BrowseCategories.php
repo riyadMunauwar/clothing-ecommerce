@@ -5,7 +5,7 @@ namespace App\Http\Livewire\Front;
 use Livewire\Component;
 use App\Models\Category;
 
-class FeaturedCategoryShowcase extends Component
+class BrowseCategories extends Component
 {
 
     public $categories = [];
@@ -17,12 +17,12 @@ class FeaturedCategoryShowcase extends Component
 
     public function render()
     {
-        return view('front.components.featured-category-showcase');
+        return view('front.components.browse-categories');
     }
 
     private function getFeaturedCategories()
     {
-        return Category::withCount('products')->published()->featured()->take(12)->get();
+        return Category::withCount('products')->published()->where('parent_id', null)->get();
     }
 
 
