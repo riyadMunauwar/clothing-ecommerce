@@ -11,6 +11,7 @@ class Checkout extends Component
 {
 
     public $payment_method_option;
+    public $terms_and_condition;
     public $cartItems = [];
     public $subTotal = 0;
     public $total = 0;
@@ -40,6 +41,8 @@ class Checkout extends Component
         'zip' => ['required', 'string', 'max:255'],
         'street_address' => ['required', 'string', 'max:255'],
         'order_notes' => ['nullable', 'string', 'max:5000'],
+        'payment_method_option' => ['required'],
+        'terms_and_condition' => ['required'],
     ];
 
     public function mount()
