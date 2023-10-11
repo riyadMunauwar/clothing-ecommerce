@@ -28,7 +28,7 @@ class BrowseCategories extends Component
         {
             $category = Category::select('id', 'slug')->find($categoryId);
 
-            return redirect()->route('category', ['slug' => $category->slug, 'id' => $category->id]);
+            return redirect()->route('category', ['category_slug' => $category->slug, 'id' => $category->id]);
         }else {
             $this->categories = $children;
         }
