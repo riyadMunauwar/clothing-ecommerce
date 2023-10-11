@@ -50,6 +50,7 @@ class CartService {
             $width = $product->width ?? 0;
             $length = $product->length ?? 0;
             $variationId = null;
+            $variationOption = [];
 
             if($variation){
                 $salePrice = $variation->sale_price;
@@ -59,6 +60,7 @@ class CartService {
                 $width = $variation->width ?? 0;
                 $length = $variation->length ?? 0;
                 $variationId = $variation->id;
+                $variationOption = $variation->options;
             }
 
             Cart::add([
@@ -74,6 +76,7 @@ class CartService {
                     'width' => $width,
                     'height' => $height,
                     'length' => $length,
+                    'options' => $variationOption,
                 ]
             ]);
 
