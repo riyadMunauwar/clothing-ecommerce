@@ -11,7 +11,7 @@
 
 
         <!-- Existing Address -->
-        <div>
+        <!-- <div>
             <div class="custom-control custom-radio">
                 <input value="cash-on-delivery" wire:model.debounce="payment_method_option" type="radio" id="payment-method" name="payment-method" class="custom-control-input">
                 <label class="custom-control-label" for="payment-method">
@@ -32,7 +32,7 @@
                     Existing addr
                 </label>
             </div>
-        </div>
+        </div> -->
 
 
 
@@ -52,15 +52,12 @@
                             </div><!-- End .col-sm-6 -->
                         </div><!-- End .row -->
 
-                        <label>Company Name (Optional)</label>
-                        <input type="text" class="form-control">
+                        <label>Email address *</label>
+                        <input type="email" class="form-control" required>
 
-                        <label>Country *</label>
-                        <input type="text" class="form-control" required>
 
                         <label>Street address *</label>
                         <input type="text" class="form-control" placeholder="House number and Street name" required>
-                        <input type="text" class="form-control" placeholder="Appartments, suite, unit etc ..." required>
 
                         <div class="row">
                             <div class="col-sm-6">
@@ -85,9 +82,6 @@
                                 <input type="tel" class="form-control" required>
                             </div><!-- End .col-sm-6 -->
                         </div><!-- End .row -->
-
-                        <label>Email address *</label>
-                        <input type="email" class="form-control" required>
 
                         <label>Order notes (optional)</label>
                         <textarea class="form-control" cols="30" rows="4" placeholder="Notes about your order, e.g. special notes for delivery"></textarea>
