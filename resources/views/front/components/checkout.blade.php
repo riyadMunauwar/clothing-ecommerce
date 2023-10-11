@@ -110,12 +110,6 @@
 
                             <tbody>
 
-                                @foreach($cartItems as $item)
-                                    <tr>
-                                        <td><a href="#">{{ $item->name }}</a></td>
-                                        <td>BDT {{ $item->qty }} * {{ $item->price }}</td>
-                                    </tr>
-                                @endforeach
 
                                 <tr class="summary-subtotal">
                                     <td>Subtotal:</td>
