@@ -19,6 +19,7 @@ class ProductDetails extends Component
     public $recommendation_products = [];
     public $related_products = [];
 
+    public $thumbnail;
     public $sale_price = 0;
     public $regular_price = 0;
     public $variation_options = [];
@@ -76,8 +77,10 @@ class ProductDetails extends Component
             $this->variant = $variations->first();
             $this->sale_price = $this->variant->sale_price;
             $this->regular_price = $this->variant->regular_price;
+            $this->thumbnail = $this->variant->imageUrl('medium');
             $this->preparedVariationOptions();
         }else {
+            $this->thumbnail = $this->product->thumbnailUrl('medium');
             $this->sale_price = $this->product->sale_price;
             $this->regular_price = $this->product->regular_price;
         }

@@ -7,7 +7,7 @@
                         <div class="product-gallery">
                             <figure class="product-main-image">
                                 <span class="product-label label-top">Top</span>
-                                <img id="product-zoom" src="{{ $product->thumbnailUrl('medium') }}" data-zoom-image="{{ $product->thumbnailUrl('medium') }}" alt="{{ $product->name }}">
+                                <img id="product-zoom" src="{{ $thumbnail }}" data-zoom-image="{{ $product->thumbnailUrl('medium') }}" alt="{{ $product->name }}">
 
                                 <a href="#" id="btn-product-gallery" class="btn-product-gallery">
                                     <i class="icon-arrows"></i>
