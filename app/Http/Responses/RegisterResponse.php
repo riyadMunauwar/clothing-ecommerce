@@ -15,10 +15,11 @@ class RegisterResponse implements RegisterResponseContract
 
         if($redirectRoute === 'checkout'){
 
-            return redirect()->route('checkout');
+            return redirect()->route('cart');
         }
         else {
-            return redirect()->route('cart');
+
+            return redirect()->route('checkout');
         }
 
     }
