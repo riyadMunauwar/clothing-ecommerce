@@ -12,7 +12,6 @@ class RegisterResponse implements RegisterResponseContract
 
         $redirectRoute = $request->redirect;
 
-        dd($redirectRoute === 'checkout');
 
         if($redirectRoute === 'checkout'){
 
