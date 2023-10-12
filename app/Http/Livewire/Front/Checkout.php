@@ -48,8 +48,15 @@ class Checkout extends Component
 
     public function mount()
     {
-        $this->verifyLogin();
-        $this->checkIsShippingOptionSelected();
+        if(!auth()->check()){
+            return redirect()->route('register')->with(['redirect' => 'checkout']);
+        }
+
+        $isSelect = session()->has('shipping_option') ? session()->get('shipping_option') : false;
+
+        if(!$isSelect){
+            return redirect()->route('cart');
+        }
     }
 
     public function render()
@@ -59,22 +66,6 @@ class Checkout extends Component
     }
 
 
-    private function verifyLogin()
-    {
-        if(!auth()->check()){
-            return redirect()->route('register')->with(['redirect' => 'checkout']);
-        }
-    }
-
-
-    private function checkIsShippingOptionSelected()
-    {
-        $isSelect = session()->has('shipping_option') ? session()->get('shipping_option') : false;
-
-        if(!$isSelect){
-            return redirect()->away()->route('cart');
-        }
-    }
 
     private function createAddress()
     {
