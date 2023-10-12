@@ -46,6 +46,33 @@ class OrderService {
         });
     }
 
+    public function createOrderWithoutPayment($amount, $orderData)
+    {
+        $cart = new CartService();
+
+        $orderItems = $cart->all();
+
+        return DB::transaction(function()use($amount, $orderData, $orderItems){
+
+            $order = Order::create($orderData);
+
+            foreach($orderItems as $item){
+
+                $orderItem = new OrderItem();
+
+                $orderItem->price = $item->price;
+                $orderItem->qty = $item->qty;
+                $orderItem->product_id = $item->id;
+                $orderItem->order_id = $order->id;
+
+                $orderItem->save();
+            }
+
+            return $order;
+
+        });
+    }
+
 
 
 

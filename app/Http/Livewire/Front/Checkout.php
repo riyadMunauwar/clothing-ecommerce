@@ -73,7 +73,7 @@ class Checkout extends Component
         return $address->id;
     }
 
-    private function createOrder()
+    private function createOrder($type)
     {
 
         $service = new OrderService();
@@ -95,7 +95,11 @@ class Checkout extends Component
             'payment_status' => 'unpaid',
         ];
 
-        return $data;
+        if($type === 'cash-on-delivery'){
+            return $service->createOrderWithoutPayment($this->total, $order_data);
+        }
+
+        return $service->createOrderWithPayment($this->total, $order_data);
     }
 
 
@@ -125,7 +129,7 @@ class Checkout extends Component
     private function handleAamarPayPaymentOrder()
     {
 
-        dd('aamarpay');
+        // dd('aamarpay');
 
         $payment = new PaymentContext('aamarpay');
 
