@@ -9,11 +9,10 @@ class RegisterResponse implements RegisterResponseContract
 
     public function toResponse($request)
     {
-        // if(Auth::user()->hasAnyRoles(['Administrator', 'Employee'])) {
-        //     return redirect()->route('backend.dashboard');
-        // }
 
-        return redirect()->route('cart');
+        $redirectRoute = $request->redierct ?? 'cart';
+
+        return redirect()->route($redirectRoute);
     }
 
 }
