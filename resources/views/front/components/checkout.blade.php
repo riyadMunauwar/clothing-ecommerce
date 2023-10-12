@@ -12,6 +12,13 @@
 
         </div>
     @endif
+
+    @if (session('message'))
+        <div class="alert alert-warning mb-2">
+            {{ session('message') }}
+        </div>
+    @endif
+    
         <!-- Discount Coupon -->
         <!-- <div class="checkout-discount">
             <form action="#">
