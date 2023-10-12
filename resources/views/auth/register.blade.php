@@ -49,7 +49,7 @@
                 @endif
 
                 @if (session('message'))
-                    <div class="alert alert-warning mb-2">
+                    <div class="alert alert-info mb-2">
                         {{ session('message') }}
                     </div>
                 @endif
