@@ -175,12 +175,6 @@
                             <span class="btn-text" wire:loading wire:target="startPayment">Procesing...</span>
                             <span class="btn-hover-text" wire:loading.remove wire:target="startPayment">Proceed for payment</span>
                         </button>
-
-                        <atype="button" class="btn btn-outline-primary-2 btn-order btn-block">
-                            <span class="btn-text" wire:loading.remove wire:target="startPayment">Place Order</span>
-                            <span class="btn-text" wire:loading wire:target="startPayment">Procesing...</span>
-                            <span class="btn-hover-text" wire:loading.remove wire:target="startPayment">Proceed for payment</span>
-                        </atype=>
                     </div><!-- End .summary -->
                 </aside><!-- End .col-lg-3 -->
             </div><!-- End .row -->
