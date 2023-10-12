@@ -119,7 +119,7 @@
                         @endphp
 
                         <div class="tab-pane fade show active" id="register-2" role="tabpanel" aria-labelledby="register-tab-2">
-                            <form method="POST" action="{{ route('register') }}{{ $queryParam }}">
+                            <form method="POST" action="{{ route('register') }}">
                                 @csrf 
 
                                 @if($queryParam)
