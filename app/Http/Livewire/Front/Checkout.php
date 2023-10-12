@@ -46,18 +46,6 @@ class Checkout extends Component
         'terms_and_condition' => ['required'],
     ];
 
-    public function mount()
-    {
-        if(!auth()->check()){
-            return redirect()->route('register')->with(['redirect' => 'checkout']);
-        }
-
-        $isSelect = session()->has('shipping_option') ? session()->get('shipping_option') : false;
-
-        if(!$isSelect){
-            return redirect()->route('cart');
-        }
-    }
 
     public function render()
     {
