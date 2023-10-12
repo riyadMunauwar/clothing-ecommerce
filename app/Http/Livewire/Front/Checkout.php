@@ -62,7 +62,7 @@ class Checkout extends Component
     private function verifyLogin()
     {
         if(!auth()->check()){
-            return redirect()->route('register')->query(['redirect' => 'checkout']);
+            return redirect()->route('register')->with(['redirect' => 'checkout']);
         }
     }
 
