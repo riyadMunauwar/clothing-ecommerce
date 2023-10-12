@@ -34,6 +34,13 @@
                             <li><a href="{{ route('contact-us') }}">Contact Us</a></li>
                             @auth
                                 <li><a href="{{ route('user-dashboard') }}">Account</a></li>
+                                <li>
+                                    <form method="POST" action="{{ route('logout') }}" x-data>
+                                        @csrf
+
+                                        <a @click.prevent="$root.submit();" href="{{ route('logout') }}">Logout</a>
+                                    </form>
+                                </li>
                             @endauth
 
                             @guest
