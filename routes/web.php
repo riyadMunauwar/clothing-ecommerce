@@ -91,7 +91,7 @@ Route::group(['prefix' => 'auth'], function(){
 Route::view('/c/{category_slug}/{id}', 'front.pages.archieve')->name('category');
 Route::view('/p/{product_slug}/{id}', 'front.pages.single')->name('product');
 Route::view('/cart', 'front.pages.cart')->name('cart');
-Route::get('/checkout', App\Http\Controllers\GetCheckoutPageController::class)->name('checkout');
+Route::get('/checkout', App\Http\Controllers\Checkout\GetCheckoutPageController::class)->name('checkout');
 Route::view('/wishlist', 'front.pages.wishlist')->name('wishlist');
 
 // User Profile
