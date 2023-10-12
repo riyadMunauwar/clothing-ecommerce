@@ -115,7 +115,7 @@
                         </div><!-- .End .tab-pane -->
 
                         @php 
-                            $queryParam = session()->has('message') ? '?redirect=checkout' : '';
+                            $queryParam = request()->query('redirect') ? '?redirect=checkout' : '';
                         @endphp
 
                         <div class="tab-pane fade show active" id="register-2" role="tabpanel" aria-labelledby="register-tab-2">
