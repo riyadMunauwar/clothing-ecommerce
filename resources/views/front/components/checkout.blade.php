@@ -171,8 +171,9 @@
                         </div>
 
                         <button wire:click.debounce="startPayment" type="button" class="btn btn-outline-primary-2 btn-order btn-block">
-                            <span class="btn-text">Place Order</span>
-                            <span class="btn-hover-text">Proceed for payment</span>
+                            <span class="btn-text" wire:loading.remove wire:target="startPayment">Place Order</span>
+                            <span class="btn-text" wire:loading wire:target="startPayment">Place Order</span>
+                            <span class="btn-hover-text" wire:loading.remove wire:target="startPayment">Proceed for payment</span>
                         </button>
                     </div><!-- End .summary -->
                 </aside><!-- End .col-lg-3 -->

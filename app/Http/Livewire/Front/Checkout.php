@@ -103,7 +103,29 @@ class Checkout extends Component
     {
         $this->validate();
         
-        // dd($this->createOrder());
+        match($this->payment_method_option){
+
+            'cash-on-delivery' => $this->handleCashOnDeliveryOrder(),
+
+            'delivery-charge-only' => handleAamarPayPaymentOrder(),
+
+            'aamarpay' => handleAamarPayPaymentOrder(),
+
+        };
+
+    }
+
+
+    private function handleCashOnDeliveryOrder()
+    {
+        dd('cash on delivery');
+    }
+
+
+    private function handleAamarPayPaymentOrder()
+    {
+
+        dd('aamarpay');
 
         $payment = new PaymentContext('aamarpay');
 
