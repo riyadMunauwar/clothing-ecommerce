@@ -107,9 +107,9 @@ class Checkout extends Component
 
             'cash-on-delivery' => $this->handleCashOnDeliveryOrder(),
 
-            'delivery-charge-only' => handleAamarPayPaymentOrder(),
+            'delivery-charge-only' => $this->handleAamarPayPaymentOrder(),
 
-            'aamarpay' => handleAamarPayPaymentOrder(),
+            'aamarpay' => $this->handleAamarPayPaymentOrder(),
 
         };
 
