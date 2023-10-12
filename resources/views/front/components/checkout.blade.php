@@ -170,11 +170,14 @@
                             </div>
                         </div>
 
-                        <button wire:click.debounce="startPayment" type="button" class="btn btn-outline-primary-2 btn-order btn-block">
-                            <span class="btn-text" wire:loading.remove wire:target="startPayment">Place Order</span>
-                            <span class="btn-text" wire:loading wire:target="startPayment">Procesing...</span>
-                            <span class="btn-hover-text" wire:loading.remove wire:target="startPayment">Proceed for payment</span>
+                        <button wire:loading.remove wire:target="startPayment" wire:click.debounce="startPayment" type="button" class="btn btn-outline-primary-2 btn-order btn-block">
+                            <span class="btn-text">Place Order</span>
+                            <span class="btn-hover-text">Proceed for payment</span>
                         </button>
+
+                        <a wire:loading wire:target="startPayment" class="btn btn-outline-primary-2 btn-order btn-block">
+                            <span class="btn-text">Procesing...</span>
+                        </a>
                     </div><!-- End .summary -->
                 </aside><!-- End .col-lg-3 -->
             </div><!-- End .row -->
