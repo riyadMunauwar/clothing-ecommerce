@@ -122,7 +122,9 @@ class Checkout extends Component
 
     private function handleCashOnDeliveryOrder()
     {
-        dd('cash on delivery');
+        $order = $this->createOrder('cash-on-delivery');
+
+        dd($order);
     }
 
 
