@@ -39,12 +39,18 @@
         <div class="container">
             <div class="form-box">
                 @if($errors->any())
-                    <div>
+                    <div class="mb-2">
                         @foreach($errors->all() as $error)
-                            <div class="alert alert-warning" role="alert">
+                            <div class="alert alert-warning mb-1" role="alert">
                                 {{ $error }}
                             </div>
                         @endforeach
+                    </div>
+                @endif
+
+                @if (session('message'))
+                    <div class="alert alert-warning mb-2">
+                        {{ session('message') }}
                     </div>
                 @endif
 
