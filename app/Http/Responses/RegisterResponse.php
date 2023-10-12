@@ -17,8 +17,10 @@ class RegisterResponse implements RegisterResponseContract
 
             return redirect()->route('checkout');
         }
+        else {
+            return redirect()->route('cart');
+        }
 
-        // return redirect()->route('cart');
     }
 
 }
