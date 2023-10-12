@@ -136,10 +136,8 @@ class Checkout extends Component
         $payment = $this->createOrder('aamarpay');
 
 
-        dd($payment);
-
         $options = [
-            'tran_id' => rand(11111111111, 11111111111111111),
+            'tran_id' => $payment->id,
             'cus_name' => 'Riyad Munauwar',  
             'cus_email' => 'contact.riyad@gmail.com', 
             'cus_add1' => 'paratungi',  
