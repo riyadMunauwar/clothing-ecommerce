@@ -63,6 +63,11 @@
                 </div><!-- End .cart-bottom -->
             </div><!-- End .col-lg-9 -->
             <aside class="col-lg-3">
+                @if (session('success'))
+                    <div class="alert alert-warning mb-2">
+                        {{ session('success') }}
+                    </div>
+                @endif
                 <div class="summary summary-cart">
                     <h3 class="summary-title">Cart Total</h3><!-- End .summary-title -->
 
