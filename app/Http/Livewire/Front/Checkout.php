@@ -65,7 +65,7 @@ class Checkout extends Component
         $address->city = $this->city;
         $address->state = $this->state;
         $address->zip = $this->zip;
-        $address->street = $this->street;
+        $address->street = $this->street_address;
         $address->user_id = auth()->id();
 
         $address->save();
