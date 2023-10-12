@@ -10,6 +10,8 @@ class RegisterResponse implements RegisterResponseContract
     public function toResponse($request)
     {
 
+        dd($request->redirect);
+
         $redirectRoute = $request->redirect ?? 'cart';
 
         return redirect()->route($redirectRoute);
