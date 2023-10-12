@@ -115,14 +115,16 @@
                         </div><!-- .End .tab-pane -->
 
                         @php 
-                            $queryParam = request()->query('redirect') ? '?redirect=checkout' : '';
-
-                            dd($queryParam);
+                            $queryParam = request()->query('redirect') ? request()->query('redirect'): false;
                         @endphp
 
                         <div class="tab-pane fade show active" id="register-2" role="tabpanel" aria-labelledby="register-tab-2">
                             <form method="POST" action="{{ route('register') }}{{ $queryParam }}">
                                 @csrf 
+
+                                @if($queryParam)
+                                    <input type="hidden" name="redirect" value="{{ $queryParam }}">
+                                @endif 
 
                                 <div class="form-group">
                                     <label for="name">Your name *</label>
