@@ -116,6 +116,8 @@
 
                         @php 
                             $queryParam = request()->query('redirect') ? '?redirect=checkout' : '';
+
+                            dd($queryParam);
                         @endphp
 
                         <div class="tab-pane fade show active" id="register-2" role="tabpanel" aria-labelledby="register-tab-2">
