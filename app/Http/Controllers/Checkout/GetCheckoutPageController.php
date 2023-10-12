@@ -16,7 +16,7 @@ class GetCheckoutPageController extends Controller
         $isSelect = session()->has('shipping_option') ? session()->get('shipping_option') : false;
 
         if(!$isSelect){
-            return redirect()->route('cart')->with('message', 'Please select a shipping method');
+            return redirect()->route('cart')->with('message', 'Please select a shipping option');
         }
 
         return view('front.pages.checkout');

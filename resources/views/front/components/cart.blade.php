@@ -63,9 +63,9 @@
                 </div><!-- End .cart-bottom -->
             </div><!-- End .col-lg-9 -->
             <aside class="col-lg-3">
-                @if (session('success'))
+                @if (session('message'))
                     <div class="alert alert-warning mb-2">
-                        {{ session('success') }}
+                        {{ session('message') }}
                     </div>
                 @endif
                 <div class="summary summary-cart">
