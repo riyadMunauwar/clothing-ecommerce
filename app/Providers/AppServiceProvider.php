@@ -1,9 +1,6 @@
 <?php
 
 namespace App\Providers;
-use App\Http\Responses\LoginResponse;
-use Laravel\Fortify\Contracts\LoginResponse as LoginResponseContract;
-use Laravel\Fortify\Contracts\TwoFactorLoginResponse as TwoFactorLoginResponseContract;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -27,9 +24,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // Jetstream Override Login Response
-        $this->app->singleton(LoginResponseContract::class, LoginResponse::class);
-        $this->app->singleton(TwoFactorLoginResponseContract::class, LoginResponse::class);
 
     }
 }
