@@ -9,6 +9,12 @@ class AamarpayPaymentMethod implements PaymentMethodContract
     {
         $aamarpay = new AamarpayPaymentService();
 
-        return $aamarpay->sendPaymentRequest($options);
+        $mergeAmountWithOptions = [
+            'amount' => $amount,
+        ];
+
+        $mergeAmountWithOptions = array_merge($mergeAmountWithOptions, $options);
+
+        return $aamarpay->sendPaymentRequest($mergeAmountWithOptions);
     }
 }
