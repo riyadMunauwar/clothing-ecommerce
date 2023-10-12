@@ -48,6 +48,7 @@ class Checkout extends Component
 
     public function mount()
     {
+        $this->verifyLogin();
         $this->checkIsShippingOptionSelected();
     }
 
@@ -58,12 +59,20 @@ class Checkout extends Component
     }
 
 
+    private function verifyLogin()
+    {
+        if(!auth()->check()){
+            return redirect()->route('register')->query(['redirect' => 'checkout']);
+        }
+    }
+
+
     private function checkIsShippingOptionSelected()
     {
         $isSelect = session()->has('shipping_option') ? session()->get('shipping_option') : false;
 
         if(!$isSelect){
-            return redirect()->route('cart');
+            return redirect()->away()->route('cart');
         }
     }
 
