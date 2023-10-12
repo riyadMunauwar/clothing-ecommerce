@@ -146,7 +146,7 @@ class Checkout extends Component
             'cus_phone' => '01794263387',
         ];
 
-        $response = $payment->pay(amount: $this->total, options: $options);
+        $response = $aamarpay->pay(amount: $this->total, options: $options);
 
 
         redirect()->away($response['payment_url']);
