@@ -23,7 +23,7 @@ class AamarpayPaymentController extends Controller
 
     public function cancel()
     {
-        dd('cancel url');
+        return redirect()->route('cart')->with('message', 'Payment cancel');
     }
 
 
