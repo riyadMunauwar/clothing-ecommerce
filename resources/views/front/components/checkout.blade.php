@@ -170,8 +170,8 @@
                             </div>
                         </div>
 
-                        <button wire:loading.remove wire:target="startPayment" wire:click.debounce="startPayment" type="button" class="btn btn-outline-primary-2 btn-order btn-block">
-                            <span class="btn-text">Place Order</span>
+                        <button wire:click.debounce="startPayment" type="button" class="btn btn-outline-primary-2 btn-order btn-block">
+                            <span class="btn-text" wire:loading.remove wire:target="startPayment">Place Order</span>
                             <span class="btn-text" wire:loading wire:target="startPayment">Procesing...</span>
                             <span class="btn-hover-text" wire:loading.remove wire:target="startPayment">Proceed for payment</span>
                         </button>
