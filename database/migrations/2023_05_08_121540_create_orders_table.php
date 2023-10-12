@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('customer_notes', 2048)->nullable();
 
             $table->foreignId('user_id')->constrained();
-            $table->foreignId('admin_id')->nullalbe()->constrained('users', 'id');
+            $table->foreignId('admin_id')->nullable()->constrained('users', 'id');
             $table->foreignId('address_id')->constrained();
 
             $table->string('shipping_option')->nullable();

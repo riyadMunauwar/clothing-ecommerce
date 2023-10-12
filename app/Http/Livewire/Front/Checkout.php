@@ -124,16 +124,19 @@ class Checkout extends Component
     {
         $order = $this->createOrder('cash-on-delivery');
 
-        dd($order);
+        dd('success');
     }
 
 
     private function handleAamarPayPaymentOrder()
     {
 
-        // dd('aamarpay');
+        $aamarpay = new PaymentContext('aamarpay');
 
-        $payment = new PaymentContext('aamarpay');
+        $payment = $this->createOrder('aamarpay');
+
+
+        dd($payment);
 
         $options = [
             'tran_id' => rand(11111111111, 11111111111111111),

@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('city')->nullable();
             $table->string('state')->nullable();
             $table->string('zip')->nullable();
-            $table->string('adress', 2048)->nullable();
+            $table->string('address', 2048)->nullable();
             $table->foreignId('user_id')->constrained();
             $table->timestamps();
         });
