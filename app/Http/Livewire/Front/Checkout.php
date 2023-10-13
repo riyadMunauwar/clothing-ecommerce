@@ -4,12 +4,14 @@ namespace App\Http\Livewire\Front;
 
 use Livewire\Component;
 use App\Services\Cart\CartService;
+use App\Traits\WithSweetAlert;
 use App\Services\Payment\PaymentContext;
 use App\Services\Order\OrderService;
 use App\Models\Address;
 
 class Checkout extends Component
 {
+    use WithSweetAlert;
 
     public $payment_method_option;
     public $terms_and_condition;
@@ -122,36 +124,50 @@ class Checkout extends Component
 
     private function handleCashOnDeliveryOrder()
     {
-        $order = $this->createOrder('cash-on-delivery');
+        try {
 
-        dd('success');
+            $order = $this->createOrder('cash-on-delivery');
+
+        }catch(\Exception $e){
+
+            return $this->error('Failed to create order');
+
+        }
+        
     }
 
 
     private function handleAamarPayPaymentOrder()
     {
 
-        $aamarpay = new PaymentContext('aamarpay');
+        try {
 
-        $payment = $this->createOrder('aamarpay');
+            $aamarpay = new PaymentContext('aamarpay');
 
-        $options = [
-            'tran_id' => $payment->id,
-            'cus_name' => $this->first_name . ' ' . $this->last_name,  
-            'cus_email' => $this->email, 
-            'cus_add1' => "$this->street_address, $this->zip, $this->city, $this->state",  
-            'cus_add2' => $this->street_address, 
-            'cus_city' => $this->city, 
-            'cus_phone' => $this->mobile_no,
-        ];
+            $payment = $this->createOrder('aamarpay');
+    
+            $options = [
+                'tran_id' => $payment->id,
+                'cus_name' => $this->first_name . ' ' . $this->last_name,  
+                'cus_email' => $this->email, 
+                'cus_add1' => "$this->street_address, $this->zip, $this->city, $this->state",  
+                'cus_add2' => $this->street_address, 
+                'cus_city' => $this->city, 
+                'cus_phone' => $this->mobile_no,
+            ];
+    
+            $response = $aamarpay->pay(amount: $this->total, options: $options);
 
+            $this->clearCartAndSession();
 
-        dd($options);
+            redirect()->away($response['payment_url']);
 
-        $response = $aamarpay->pay(amount: $this->total, options: $options);
+        }catch(\Exception $e){
 
+            return $this->error('Failed to create order');
+            
+        }
 
-        redirect()->away($response['payment_url']);
     }
 
 
@@ -170,6 +186,14 @@ class Checkout extends Component
 
     private function clearCartAndSession()
     {
+        $cart = new CartService();
+
+        $cart->removeAll();
+
+        session()->forget('shipping_cost');
+        session()->forget('shipping_option');
 
     }
+
+
 }

@@ -78,4 +78,15 @@ class OrderService {
     {
         return Str::random($length);
     }
+
+
+    private function clearCartAndSession()
+    {
+        $cart = new CartService();
+
+        $cart->removeAll();
+
+        session()->forget('shipping_cost');
+        session()->forget('shipping_option');
+    }
 }
