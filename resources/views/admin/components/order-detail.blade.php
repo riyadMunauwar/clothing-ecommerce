@@ -217,7 +217,7 @@
                         <th scope="row" class="px-4 whaitespace-nowrap w-6 py-1 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                             {{ $payment->id }}
                         </th>
-                        <td class="px-4 py-1 whaitespace-nowrap">{{ $payment->reference '' }}</td>
+                        <td class="px-4 py-1 whaitespace-nowrap">{{ $payment->reference }}</td>
                         <td class="px-4 py-1 whaitespace-nowrap">{{ $payment->provider }}</td>
                         <td class="px-4 py-1 whaitespace-nowrap">{{ $payment->method }}</td>
                         <td class="px-4 py-1 whaitespace-nowrap">{{ $payment->currency }}</td>
