@@ -104,6 +104,12 @@ class OrderList extends Component
                       ->orWhere('email', 'like', '%' . $search . '%')
                       ->orWhere('email', $search);
             });
+
+            $query->withWhereHas('address', function($query) use($search){
+                $query->orWhere('mobile_no', 'like', '%' . $search . '%');
+                $query->orWhere('email', 'like', '%' . $search . '%');
+            });
+
         });
 
         $query->when($this->status, function($query) use($status){

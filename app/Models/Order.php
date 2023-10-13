@@ -9,6 +9,7 @@ use App\Models\OrderItem;
 use App\Models\Product;
 use App\Models\User;
 use App\Models\Payment;
+use App\Models\Address;
 use Carbon\Carbon;
 
 class Order extends Model
@@ -92,6 +93,11 @@ class Order extends Model
     public function user()
     {
        return $this->belongsTo(User::class);
+    }
+
+    public function address()
+    {
+       return $this->belongsTo(Address::class);
     }
 
     public function admin()
