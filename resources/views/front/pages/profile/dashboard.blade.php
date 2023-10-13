@@ -7,11 +7,11 @@
     </div><!-- End .page-header -->
 
     @if (session('message'))
-        <div class="alert alert-warning mb-2">
+        <div class="alert alert-warning mb-2 text-center">
             {{ session('message') }}
         </div>
     @endif
-    
+
     <nav aria-label="breadcrumb" class="breadcrumb-nav mb-3">
         <div class="container">
             <ol class="breadcrumb">
