@@ -29,7 +29,7 @@ return new class extends Migration
 
             $table->string('shipping_option')->nullable();
             $table->string('payment_option');
-            $table->enum('order_status', ['new', 'processing', 'shipped', 'delivered', 'cancelled'])->default('new');
+            $table->enum('order_status', ['new', 'processing', 'shipped', 'delivered', 'cancelled', 'refunded'])->default('new');
             $table->enum('payment_status', ['paid', 'unpaid', 'partially-paid'])->default('unpaid');
 
             $table->timestamps();

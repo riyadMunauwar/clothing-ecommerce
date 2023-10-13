@@ -105,10 +105,10 @@ class OrderList extends Component
 
         $query->when($this->from_date && $this->to_date, function($query) use($from_date, $to_date){
             
-            $query->whereBetween('order_date', [$from_date, $to_date]);
+            $query->whereBetween('created_at', [$from_date, $to_date]);
         });
 
-        return $query->with('orderItems', 'user')->withCount('orderItems')->latest()->paginate(50);
+        return $query->with('orderItems', 'user')->withCount('orderItems')->latest()->paginate(25);
 
     }
 }

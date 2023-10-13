@@ -23,12 +23,12 @@
                             <x-label for="status" value="{{ __('Status') }}" />
                             <x-ui.select wire:model.debounce="status" id="status" class="block bg-gray-50 h-8 text-sm mt-1 w-full">
                                 <option value="">None</option>
-                                <option value="canceled">Canceled</option>
-                                <option value="completed">Completed</option>
-                                <option value="on_hold">On Hold</option>
-                                <option value="pending" selected="">Pending</option>
-                                <option value="pending_payment">Pending Payment</option>
+                                <option value="new">New</option>
+                                <option value="pending">Pending</option>
                                 <option value="processing">Processing</option>
+                                <option value="shipped">Shipped</option>
+                                <option value="delivered">Delivered</option>
+                                <option value="cancelled">Cancelled</option>
                                 <option value="refunded">Refunded</option>
                             </x-ui.select>
                         </div>
@@ -52,8 +52,9 @@
                             <th scope="col" class="px-4 py-3">Order Id</th>
                             <th scope="col" class="px-4 py-3">Customer Name</th>
                             <th scope="col" class="px-4 py-3">Customer Email</th>
-                            <th scope="col" class="px-4 py-3">Status</th>
                             <th scope="col" class="px-4 py-3">Total</th>
+                            <th scope="col" class="px-4 py-3">Shipping Cost</th>
+                            <th scope="col" class="px-4 py-3">Status</th>
                             <th scope="col" class="px-4 py-3">Items</th>
                             <th scope="col" class="px-4 py-3 text-center">Created</th>
                             <th scope="col" class="px-4 py-3 text-center">Date</th>
@@ -70,21 +71,33 @@
                             </th>
                             <td class="px-4 py-1">{{ $order->user->name ?? '' }}</td>
                             <td class="px-4 py-1">{{ $order->user->email ?? '' }}</td>
+                            <td class="px-4 py-1">{{ $order->total_price ?? '' }}</td>
+                            <td class="px-4 py-1">{{ $order->shipping_price ?? '' }}</td>
                             <td class="px-4 py-1">
-                                @if($order->status ?? '' === 'Canceled' || $order->status ?? '' === 'Refunded')
-                                    <span class="bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">{{ $order->status ?? '' }}</span>
-                                @elseif($order->status ?? '' === 'Payment Pending' || $order->status ?? '' === 'Pending')
-                                    <span class="bg-yellow-100 text-yellow-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">{{ $order->status ?? '' }}</span>
+
+                                @if($order->payment_status === 'unpaid')
+                                    <span class="bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">Unpaid</span>
+                                @elseif($order->payment_status === 'partially-paid')
+                                    <span class="bg-yellow-100 text-yellow-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">Partially Paid</span>
                                 @else 
-                                    <span class="bg-indigo-100 text-indigo-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">{{ $order->status ?? 'Paid' }}</span>
+                                    <span class="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">Paid</span>
+                                @endif
+
+
+                                @if($order->order_status === 'refunded')
+                                    <span class="bg-yellow-100 text-yellow-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">Refunded</span>
+                                @elseif($order->order_status === 'cancelled')
+                                    <span class="bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">Cancelled</span>
+                                @else 
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">{{ ucfirst($order->order_status) }}</span>
                                 @endif
                             </td>
-                            <td class="px-4 py-1">{{ $order->total_product_price ?? '' }}</td>
+                       
                             <td class="px-4 py-1">
                                 <span class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">{{ $order->order_items_count ?? '' }}</span>
                             </td>
-                            <td class="px-4 py-1">{{ $order->order_date->diffForHumans() }}</td>
-                            <td class="px-4 py-1">{{ $order->order_date->format('d M y') }}</td>
+                            <td class="px-4 py-1">{{ $order->created_at->diffForHumans() }}</td>
+                            <td class="px-4 py-1">{{ $order->created_at->format('d M y') }}</td>
                             <td class="px-4 py-1">
                                 <div class="flex items-center gap-1 justify-end">
                                     <a href="{{ route('orders.show', ['order' => $order->id]) }}">
@@ -95,11 +108,6 @@
                                             </svg>
                                         </span>
                                     </a>
-                                    <button wire:click.debounce="enableProductEditMode({{ $order->id }})" type="button">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
-                                        </svg>
-                                    </button>
                                     <button wire:click.debounce="confirmDeleteOrder({{ $order->id }})" class="text-red-400" type="button">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
@@ -117,12 +125,10 @@
             </nav>
         </div>
     </div>
-    <x-ui.loading-spinner wire:loading.flex wire:target="search, status, to_date, enableAddStockModal, confirmDeleteProduct, deleteProduct, enableProductEditMode, showVariationList" />
+    <x-ui.loading-spinner wire:loading.flex wire:target="search, status, to_date, confirmDeleteOrder" />
 </section>
 
 
 @push('modals')
-    <livewire:admin.edit-product />
-    <livewire:admin.variation-list />
-    <livewire:admin.add-stock />
+
 @endpush
