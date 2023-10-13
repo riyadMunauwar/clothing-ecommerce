@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('reference')->nullable();
             $table->string('provider')->nullable();
             $table->string('method')->nullable();
+            $table->string('trx_id', 32)->nullable();
             $table->decimal('amount', 10, 2);
             $table->string('currency')->default('BDT')->nullable();
             $table->enum('status', ['pending', 'success', 'failed'])->default('pending');

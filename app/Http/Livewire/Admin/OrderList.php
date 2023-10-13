@@ -99,13 +99,15 @@ class OrderList extends Component
             $query->withWhereHas('user', function($query) use($search){
                 $query->where('name', 'like', '%' . $search . '%')
                       ->orWhere('name', $search)
+                      ->orWhere('id', $search)
+                      ->orWhere('order_no', $search)
                       ->orWhere('email', 'like', '%' . $search . '%')
                       ->orWhere('email', $search);
             });
         });
 
         $query->when($this->status, function($query) use($status){
-
+            $query->where('order_status', $status);
         });
 
         $query->when($this->from_date && $this->to_date, function($query) use($from_date, $to_date){
