@@ -93,6 +93,8 @@ class AamarpayPaymentController extends Controller
 
             $payment->save();
 
+            $order = $payment->order;
+
             if($amount < $order->total_price){
                 $order->payment_status = 'partially-paid';
             }else {
