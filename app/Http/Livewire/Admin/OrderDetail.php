@@ -24,7 +24,7 @@ class OrderDetail extends Component
 
     public function mount($orderId)
     {
-        $this->order = Order::with('orderItems.product', 'address', 'user')->find($orderId);
+        $this->order = Order::with('orderItems.product', 'address', 'user', 'payments')->find($orderId);
         $this->calculateSubtotalPrice();
     }
 

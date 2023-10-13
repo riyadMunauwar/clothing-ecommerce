@@ -30,7 +30,7 @@
 
             <div class="grid grid-cols-3 mt-4">
                 <h6 class="grid-cols-1 text-md text-gray-600">Subtotal</h6>
-                <h6 class="grid-cols-2 text-md text-gray-600">$ {{ $order->total_price ?? 0 }}</h6>
+                <h6 class="grid-cols-2 text-md text-gray-600">$ {{ $order->total_price - $order->shipping_price }}</h6>
             </div>
 
             <div class="grid grid-cols-3 mt-4">
@@ -73,23 +73,34 @@
             </div>
 
             <div class="grid grid-cols-3 mt-2">
-                <h6 class="grid-cols-1 text-md text-gray-600">Delivery/Payment Type</h6>
+                <h6 class="grid-cols-1 text-md text-gray-600">Current Order Status</h6>
                 <h6 class="grid-cols-2 text-md text-gray-600"><span class="bg-indigo-100 text-indigo-800 text-lg font-medium mr-2 px-2.5 py-0.5 rounded">{{ $order->order_status ?? '' }}</span></h6>
             </div>
 
             <div class="grid grid-cols-3 mt-2">
-                <h6 class="grid-cols-1 text-md text-gray-600">Shipper</h6>
+                <h6 class="grid-cols-1 text-md text-gray-600">Current Payment Status</h6>
                 <h6 class="grid-cols-2 text-md text-gray-600"><span class="bg-indigo-100 text-indigo-800 text-lg font-medium mr-2 px-2.5 py-0.5 rounded">{{ $order->payment_status ?? '' }}</span></h6>
             </div>
 
             <div class="grid grid-cols-3 mt-2">
-                <h6 class="grid-cols-1 text-md text-gray-600">Payment Method</h6>
+                <h6 class="grid-cols-1 text-md text-gray-600">Shipping Option</h6>
                 <h6 class="grid-cols-2 text-md text-gray-600"><span class="bg-indigo-100 text-indigo-800 text-lg font-medium mr-2 px-2.5 py-0.5 rounded">{{ $order->shipping_option ?? '' }}</span></h6>
             </div>
 
             <div class="grid grid-cols-3 mt-2">
-                <h6 class="grid-cols-1 text-md text-gray-600">Parcel Id</h6>
+                <h6 class="grid-cols-1 text-md text-gray-600">Payment Option</h6>
                 <h6 class="grid-cols-2 text-md text-gray-600"><span class="bg-purple-100 text-purple-800 text-lg font-medium mr-2 px-2.5 py-0.5 rounded">{{ $order->payment_option ?? '' }}</span></h6>
+            </div>
+
+            <div class="grid grid-cols-3 mt-2">
+                <h6 class="grid-cols-1 text-md text-gray-600">Order No</h6>
+                <h6 class="grid-cols-2 text-md text-gray-600"><span class="bg-purple-100 text-purple-800 text-lg font-medium mr-2 px-2.5 py-0.5 rounded">#{{ $order->id ?? '' }}</span></h6>
+            </div>
+
+
+            <div class="grid grid-cols-3 mt-2">
+                <h6 class="grid-cols-1 text-md text-gray-600">Order Unique No</h6>
+                <h6 class="grid-cols-2 text-md text-gray-600"><span class="bg-purple-100 text-purple-800 text-lg font-medium mr-2 px-2.5 py-0.5 rounded">#{{ $order->order_no ?? '' }}</span></h6>
             </div>
 
 
@@ -183,6 +194,61 @@
                 <h6 class="grid-cols-2 text-md font-semibold text-gray-900">{{ $order->address->country ?? ''}}</h6>
             </div>
         </div>
+    </div>
+
+    <h4 class="text-2xl font-bold border-b pb-3 mt-10">Payments</h4>
+
+    <div class="overflow-x-auto z-20 mt-3 pb-20">
+        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                    <th scope="col" class="px-4 py-3">Id</th>
+                    <th scope="col" class="px-4 py-3">Reference</th>
+                    <th scope="col" class="px-4 py-3">Provider</th>
+                    <th scope="col" class="px-4 py-3">Method</th>
+                    <th scope="col" class="px-4 py-3">Currency</th>
+                    <th scope="col" class="px-4 py-3">Status</th>
+                    <th scope="col" class="px-4 py-3">Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($order->payments ?? [] as $payment)
+                    <tr class="border-b dark:border-gray-700">
+                        <th scope="row" class="px-4 whaitespace-nowrap w-6 py-1 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            {{ $payment->id }}
+                        </th>
+                        <td class="px-4 py-1 whaitespace-nowrap">{{ $payment->reference '' }}</td>
+                        <td class="px-4 py-1 whaitespace-nowrap">{{ $payment->provider }}</td>
+                        <td class="px-4 py-1 whaitespace-nowrap">{{ $payment->method }}</td>
+                        <td class="px-4 py-1 whaitespace-nowrap">{{ $payment->currency }}</td>
+                        <td class="px-4 py-1 whaitespace-nowrap">
+                            @if($payment->status === 'failed')
+                                <span class="bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">Failed</span>
+                            @elseif($payment->status === 'pending')
+                                <span class="bg-yellow-100 text-yellow-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">Pending</span>
+                            @else 
+                                <span class="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">Success</span>
+                            @endif
+                        </td>
+
+                        <td class="px-4 py-1 whaitespace-nowrap">{{ number_format($orderItem->qty * $orderItem->price, 2) }}</td>
+                    </tr>
+                @endforeach
+                    <tr>
+                        <th scope="row" class="px-4 whaitespace-nowrap w-6 py-1 font-medium text-gray-900 whitespace-nowrap dark:text-white"></th>
+                        <td class="px-4 py-1 whaitespace-nowrap"></td>
+                        <td class="px-4 py-1 whaitespace-nowrap"></td>
+                        <td class="px-4 py-1 whaitespace-nowrap"></td>
+                        <td class="px-4 py-1 whaitespace-nowrap">
+                            <h5 class="text-md mt-5">Total</h5>
+                        </td>
+                        <td class="px-4 py-1 whaitespace-nowrap">
+                            <h5 class="text-md mt-5">$ {{ number_format($order->payments->where('status', 'success')->sum('amount'), 2) }}</h5>
+                        </td>
+                    </tr>
+                    
+            </tbody>
+        </table>
     </div>
 
     <h4 class="text-2xl font-bold border-b pb-3 mt-10">Items Orderd</h4>
