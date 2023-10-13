@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Payment;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Payment;
 
 class AamarpayPaymentController extends Controller
 {
@@ -19,8 +20,16 @@ class AamarpayPaymentController extends Controller
         $payment_id = $request->mer_txnid;
 
 
+        if($pay_status === 'Successful'){
 
-        dd($pay_status, $card_trx, $card_type, $pay_time, $currency, $payment_id);
+            $payment = Payment::with('order')->find($payment_id);
+
+
+            dd($payment);
+
+
+        }
+
     }
 
 
