@@ -44,8 +44,6 @@ class AamarpayPaymentController extends Controller
         $payment_id = $request->mer_txnid;
         $amount = (double) $request->amount;
 
-        dd($pay_status);
-
 
         if($pay_status === 'Failed'){
 
@@ -59,13 +57,13 @@ class AamarpayPaymentController extends Controller
 
             $payment->currency = $currency;
 
-            $payment->status = 'success';
+            $payment->status = 'failed';
 
             $payment->save();
 
+            return redirect()->route('user-dashboard')->with('message', "Payment failed. Please contact to our technical support team");
         }
 
-        return 'failed';
     }
 
     private function aamarpayPaymentSuccessHandeler($request)
@@ -95,9 +93,6 @@ class AamarpayPaymentController extends Controller
 
             $payment->save();
 
-            $order = $payment->order;
-
-
             if($amount < $order->total_price){
                 $order->payment_status = 'partially-paid';
             }else {
@@ -105,8 +100,11 @@ class AamarpayPaymentController extends Controller
             }
 
             $order->save();
+
+            return redirect()->route('user-dashboard')->with('success', "Thank you for choosing us for your recent purchase. Your order #{$order->order_no} has been successfully completed, and we are thrilled to have you as our valued customer.");
+
         }
 
-        return 'success';
+
     }
 }

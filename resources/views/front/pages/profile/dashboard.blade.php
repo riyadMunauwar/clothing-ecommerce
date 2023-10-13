@@ -12,6 +12,12 @@
         </div>
     @endif
 
+    @if (session('success'))
+        <div class="alert alert-success }} mb-2 text-center">
+            {{ session('success') }}
+        </div>
+    @endif
+
     <nav aria-label="breadcrumb" class="breadcrumb-nav mb-3">
         <div class="container">
             <ol class="breadcrumb">
