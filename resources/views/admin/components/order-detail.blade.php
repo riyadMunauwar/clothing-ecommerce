@@ -230,8 +230,6 @@
                                 <span class="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">Success</span>
                             @endif
                         </td>
-
-                        <td class="px-4 py-1 whaitespace-nowrap">{{ number_format($orderItem->qty * $orderItem->price, 2) }}</td>
                     </tr>
                 @endforeach
                     <tr>
