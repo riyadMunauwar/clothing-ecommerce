@@ -11,13 +11,31 @@ class AamarpayPaymentController extends Controller
 
     public function success(Request $request)
     {
-        dd($request);
+        $pay_status = $request->pay_status; 
+        $card_trx = $request->bank_txn;
+        $card_type = $request->card_type;
+        $pay_time = $request->pay_time;
+        $currency = $request->currency;
+        $payment_id = $request->mer_txnid;
+
+
+
+        dd($pay_status, $card_trx, $card_type, $pay_time, $currency, $payment_id);
     }
 
 
     public function failed(Request $request)
     {
-        dd($request);
+        $pay_status = $request->pay_status; 
+        $card_trx = $request->bank_txn;
+        $card_type = $request->card_type;
+        $pay_time = $request->pay_time;
+        $currency = $request->currency;
+        $payment_id = $request->mer_txnid;
+
+
+
+        dd($pay_status, $card_trx, $card_type, $pay_time, $currency, $payment_id);
     }
 
 
