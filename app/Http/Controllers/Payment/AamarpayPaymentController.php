@@ -18,7 +18,7 @@ class AamarpayPaymentController extends Controller
 
     public function failed(Request $request)
     {
-        $this->aamarpayPaymentFailerHandeler($request);
+        return $this->aamarpayPaymentFailerHandeler($request);
     }
 
 
