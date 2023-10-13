@@ -12,13 +12,71 @@ class AamarpayPaymentController extends Controller
 
     public function success(Request $request)
     {
+        return $this->aamarpayPaymentSuccessHandeler($request);
+    }
+
+
+    public function failed(Request $request)
+    {
+        $this->aamarpayPaymentFailerHandeler($request);
+    }
+
+
+    public function cancel()
+    {
+        return redirect()->route('user-dashboard')->with('message', 'Payment cancel. Go to account > orders section for payment or contact sales support');
+    }
+
+
+    public function ipn(Request $request)
+    {
+        dd($request);
+    }
+
+
+    private function aamarpayPaymentFailerHandeler($request)
+    {
         $pay_status = $request->pay_status; 
         $card_trx = $request->bank_txn;
         $card_type = $request->card_type;
         $pay_time = $request->pay_time;
         $currency = $request->currency;
         $payment_id = $request->mer_txnid;
-        $amount = $request->amount;
+        $amount = (double) $request->amount;
+
+        dd($pay_status);
+
+
+        if($pay_status === 'Failed'){
+
+            $payment = Payment::find($payment_id);
+
+            $payment->provider = 'Ammarpay';
+
+            $payment->method = $card_type;
+
+            $payment->amount = $amount;
+
+            $payment->currency = $currency;
+
+            $payment->status = 'success';
+
+            $payment->save();
+
+        }
+
+        return 'failed';
+    }
+
+    private function aamarpayPaymentSuccessHandeler($request)
+    {
+        $pay_status = $request->pay_status; 
+        $card_trx = $request->bank_txn;
+        $card_type = $request->card_type;
+        $pay_time = $request->pay_time;
+        $currency = $request->currency;
+        $payment_id = $request->mer_txnid;
+        $amount = (double) $request->amount;
 
 
         if($pay_status === 'Successful'){
@@ -40,38 +98,15 @@ class AamarpayPaymentController extends Controller
             $order = $payment->order;
 
 
-            dd((double) $amount);
-            // if((double) $amount);
+            if($amount < $order->total_price){
+                $order->payment_status = 'partially-paid';
+            }else {
+                $order->payment_status = 'paid';
+            }
 
-
+            $order->save();
         }
 
-    }
-
-
-    public function failed(Request $request)
-    {
-        $pay_status = $request->pay_status; 
-        $card_trx = $request->bank_txn;
-        $card_type = $request->card_type;
-        $pay_time = $request->pay_time;
-        $currency = $request->currency;
-        $payment_id = $request->mer_txnid;
-
-
-
-        dd($pay_status, $card_trx, $card_type, $pay_time, $currency, $payment_id);
-    }
-
-
-    public function cancel()
-    {
-        return redirect()->route('user-dashboard')->with('message', 'Payment cancel. Go to account > orders section for payment or contact sales support');
-    }
-
-
-    public function ipn(Request $request)
-    {
-        dd($request);
+        return 'success';
     }
 }
