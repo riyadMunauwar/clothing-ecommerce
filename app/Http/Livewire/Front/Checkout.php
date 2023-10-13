@@ -113,9 +113,9 @@ class Checkout extends Component
 
             'cash-on-delivery' => $this->handleCashOnDeliveryOrder(),
 
-            'delivery-charge-only' => $this->handleAamarPayPaymentOrder(),
+            'delivery-charge-only' => $this->handleAamarPayPaymentOrder($this->shippingCost),
 
-            'aamarpay' => $this->handleAamarPayPaymentOrder(),
+            'aamarpay' => $this->handleAamarPayPaymentOrder($this->total),
 
         };
 
@@ -142,7 +142,7 @@ class Checkout extends Component
     }
 
 
-    private function handleAamarPayPaymentOrder()
+    private function handleAamarPayPaymentOrder($amount)
     {
 
         try {
@@ -161,7 +161,7 @@ class Checkout extends Component
                 'cus_phone' => $this->mobile_no,
             ];
     
-            $response = $aamarpay->pay(amount: $this->total, options: $options);
+            $response = $aamarpay->pay(amount: $amount, options: $options);
 
             $this->clearCartAndSession();
 
