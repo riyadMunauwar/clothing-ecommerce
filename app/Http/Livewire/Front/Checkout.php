@@ -128,7 +128,7 @@ class Checkout extends Component
 
             $order = $this->createOrder('cash-on-delivery');
 
-            return redirect()->route('register', ['redirect' => 'checkout'])->with('message', "Thank you for choosing us for your recent purchase. Your order #{$order->order_no} has been successfully completed, and we are thrilled to have you as our valued customer.");
+            return redirect()->route('user-dashboard',)->with('message', "Thank you for choosing us for your recent purchase. Your order #{$order->order_no} has been successfully completed, and we are thrilled to have you as our valued customer.");
 
 
         }catch(\Exception $e){
