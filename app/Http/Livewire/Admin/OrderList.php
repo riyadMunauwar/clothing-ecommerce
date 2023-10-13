@@ -68,6 +68,11 @@ class OrderList extends Component
                 $orderItem->delete();
             }
 
+            foreach($Order->payments as $payment)
+            {
+                $payment->delete();
+            }
+
             if($Order->delete()){
                 return $this->success('Success', 'Order deleted successfully.');
             }
