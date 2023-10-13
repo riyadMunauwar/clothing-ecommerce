@@ -140,7 +140,7 @@ class Checkout extends Component
 
         }catch(\Exception $e){
 
-            return $this->error('Failed to create order');
+            return $this->error('Failed to create order', '');
 
         }
         
@@ -210,16 +210,16 @@ class Checkout extends Component
     }
 
 
-    // private function clearCartAndSession()
-    // {
-    //     $cart = new CartService();
+    private function clearCartAndSession()
+    {
+        $cart = new CartService();
 
-    //     $cart->removeAll();
+        $cart->removeAll();
 
-    //     session()->forget('shipping_cost');
-    //     session()->forget('shipping_option');
+        session()->forget('shipping_cost');
+        session()->forget('shipping_option');
 
-    // }
+    }
 
     function splitFullName($fullName) {
 
