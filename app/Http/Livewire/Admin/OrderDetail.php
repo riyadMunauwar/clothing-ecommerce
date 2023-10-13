@@ -4,12 +4,12 @@ namespace App\Http\Livewire\Admin;
 
 use Livewire\Component;
 use App\Models\Order;
-use App\Traits\WithSweetalert;
+use App\Traits\WithSweetAlert;
 use Barryvdh\DomPDF\Facade\Pdf;
 
 class OrderDetail extends Component
 {
-    use WithSweetalert;
+    use WithSweetAlert;
 
     public Order $order;
 
