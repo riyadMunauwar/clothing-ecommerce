@@ -49,6 +49,11 @@ class Checkout extends Component
     ];
 
 
+    public function mount()
+    {
+        $this->setCurrentUserNameEmail();
+    }
+
     public function render()
     {
         $this->initData();
@@ -185,7 +190,12 @@ class Checkout extends Component
         $this->cartItems = $cart->all();
         $this->subTotal = $cart->subTotal();
         $this->total = $cart->total(discount: 0, shippingCost: $this->shippingCost);
-  
+   
+    }
+
+
+    private function setCurrentUserNameEmail()
+    {
         if(auth()->check()){
 
             $full_name = $this->splitFullName(auth()->user()->name);
@@ -197,7 +207,6 @@ class Checkout extends Component
             $this->email = auth()->user()->email;
 
         }
- 
     }
 
 
