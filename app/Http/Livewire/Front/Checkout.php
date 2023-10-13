@@ -214,10 +214,10 @@ class Checkout extends Component
     {
         $cart = new CartService();
 
-        $cart->removeAll();
+        // $cart->removeAll();
 
-        // session()->forget('shipping_cost');
-        // session()->forget('shipping_option');
+        session()->forget('shipping_cost');
+        session()->forget('shipping_option');
 
     }
 
