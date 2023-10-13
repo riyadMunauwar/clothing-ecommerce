@@ -96,6 +96,7 @@ class OrderList extends Component
         $query = Order::query();
 
         $query->when($this->search, function($query) use($search){
+            
             $query->withWhereHas('user', function($query) use($search){
                 $query->where('name', 'like', '%' . $search . '%')
                       ->orWhere('name', $search)
@@ -103,11 +104,6 @@ class OrderList extends Component
                       ->orWhere('order_no', $search)
                       ->orWhere('email', 'like', '%' . $search . '%')
                       ->orWhere('email', $search);
-            });
-
-            $query->withWhereHas('address', function($query) use($search){
-                $query->orWhere('mobile_no', 'like', '%' . $search . '%');
-                $query->orWhere('email', 'like', '%' . $search . '%');
             });
 
         });
