@@ -37,7 +37,11 @@ class AamarpayPaymentController extends Controller
 
             $payment->save();
 
-            dd();
+            $order = $payment->order;
+
+
+            dd((double) $amount);
+            // if((double) $amount);
 
 
         }
