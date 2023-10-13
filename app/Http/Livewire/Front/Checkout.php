@@ -81,7 +81,7 @@ class Checkout extends Component
         $addressId = $this->createAddress();
 
         $order_data = [
-            'order_no' => $service->generateRandomNumberString(),
+            'order_no' => $service->getRandomStr(),
             'total_price' => $this->total,
             'shipping_price' => $this->shippingCost,
             'admin_notes' => null,
@@ -135,16 +135,18 @@ class Checkout extends Component
 
         $payment = $this->createOrder('aamarpay');
 
-
         $options = [
             'tran_id' => $payment->id,
-            'cus_name' => 'Riyad Munauwar',  
-            'cus_email' => 'contact.riyad@gmail.com', 
-            'cus_add1' => 'paratungi',  
-            'cus_add2' => 'paratungi, muktagacha', 
-            'cus_city' => 'muktagacha', 
-            'cus_phone' => '01794263387',
+            'cus_name' => $this->first_name . ' ' . $this->last_name,  
+            'cus_email' => $this->email, 
+            'cus_add1' => "$this->street_address, $this->zip, $this->city, $this->state",  
+            'cus_add2' => $this->street_address, 
+            'cus_city' => $this->city, 
+            'cus_phone' => $this->mobile_no,
         ];
+
+
+        dd($options);
 
         $response = $aamarpay->pay(amount: $this->total, options: $options);
 
@@ -163,5 +165,11 @@ class Checkout extends Component
         $this->subTotal = $cart->subTotal();
         $this->total = $cart->total(discount: 0, shippingCost: $this->shippingCost);
   
+    }
+
+
+    private function clearCartAndSession()
+    {
+
     }
 }

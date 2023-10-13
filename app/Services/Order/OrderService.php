@@ -74,20 +74,8 @@ class OrderService {
     }
 
 
-
-
-    public function generateRandomNumberString($minLength = 6, $maxLength = 32)
+    public function getRandomStr($length = 16)
     {
-        // Ensure that $minLength and $maxLength are within bounds
-        $minLength = max(1, $minLength);
-        $maxLength = max($minLength, min(32, $maxLength));
-    
-        // Generate a random length between $minLength and $maxLength
-        $length = rand($minLength, $maxLength);
-    
-        // Generate a random number string with the specified length
-        $randomNumberString = Str::random($length);
-    
-        return $randomNumberString;
+        return Str::random($length);
     }
 }
