@@ -181,6 +181,17 @@ class Checkout extends Component
         $this->subTotal = $cart->subTotal();
         $this->total = $cart->total(discount: 0, shippingCost: $this->shippingCost);
   
+        if(auth()->check()){
+
+            $full_name = $this->splitFullName(auth()->user()->first_name);
+
+            $this->first_name = $full_name['first_name'];
+            $this->last_name = $full_name['last_name'];
+    
+            $this->email = auth()->user()->email;
+            
+        }
+ 
     }
 
 
@@ -193,6 +204,14 @@ class Checkout extends Component
         session()->forget('shipping_cost');
         session()->forget('shipping_option');
 
+    }
+
+    function splitFullName($fullName) {
+        $names = explode(" ", $fullName);
+        $firstName = $names[0];
+        $lastName = (count($names) > 1) ? end($names) : '';
+        
+        return array('first_name' => $firstName, 'last_name' => $lastName);
     }
 
 
