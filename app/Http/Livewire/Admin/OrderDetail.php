@@ -9,21 +9,23 @@ use Barryvdh\DomPDF\Facade\Pdf;
 
 class OrderDetail extends Component
 {
-    use WithSweetAlert;
+    use WithSweetalert;
 
     public Order $order;
+    public $orderSubtotalPrice = 0;
 
     protected $rules = [
-        'order.parcel_weight' => ['numeric', 'required'],
-        'order.parcel_height' => ['numeric', 'required'],
-        'order.parcel_width' => ['numeric', 'required'],
-        'order.parcel_length' => ['numeric', 'required'],
-        'order.status' => ['string', 'required'],
+        'order.order_status' => ['string', 'required'],
+        'order.payment_status' => ['string', 'required'],
+        'order.payment_status' => ['string', 'required'],
+        'order.admin_notes' => ['string', 'nullable'],
+        'order.customer_notes' => ['string', 'nullable'],
     ];
 
     public function mount($orderId)
     {
-        $this->order = Order::with('orderItems.product', 'user')->find($orderId);
+        $this->order = Order::with('orderItems.product', 'address', 'user')->find($orderId);
+        $this->calculateSubtotalPrice();
     }
 
 
@@ -32,9 +34,9 @@ class OrderDetail extends Component
         return view('admin.components.order-detail');
     }
 
-    public function updatedOrderStatus()
+    public function updated($key, $value)
     {
-        dd($this->status);;
+        dd($key, $value);;
     }
 
     public function updateOrder()
@@ -49,16 +51,23 @@ class OrderDetail extends Component
 
     public function downloadInvoice()
     {
+        return redirect()->route('invoice.download', ['orderId' => $this->order->id]);
+    }
 
-        try {
-            $order = $this->order->toArray();
-        
-            $pdf = Pdf::loadView('invoices.invoice-template-1', compact('order'));
-            // dd($pdf);
-            return $pdf->download('billing-invoice');
-        }catch(\Exception $e){
-            dd($e->getMessage());
-        }   
+    public function printInvoice()
+    {
+        return redirect()->route('invoice', ['orderId' => $this->order->id]);
+    }
 
+
+    private function calculateSubtotalPrice()
+    {
+        $sum = 0;
+
+        foreach($this->order->orderItems as $item){
+            $sum += (float) $item->price * $item->qty;
+        }
+
+        $this->orderSubtotalPrice = $sum;
     }
 }
