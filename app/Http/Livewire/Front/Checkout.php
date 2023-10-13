@@ -183,13 +183,14 @@ class Checkout extends Component
   
         if(auth()->check()){
 
-            $full_name = $this->splitFullName(auth()->user()->first_name);
+            $full_name = $this->splitFullName(auth()->user()->name);
 
             $this->first_name = $full_name['first_name'];
+
             $this->last_name = $full_name['last_name'];
     
             $this->email = auth()->user()->email;
-            
+
         }
  
     }
@@ -207,11 +208,15 @@ class Checkout extends Component
     }
 
     function splitFullName($fullName) {
+
         $names = explode(" ", $fullName);
+
         $firstName = $names[0];
+
         $lastName = (count($names) > 1) ? end($names) : '';
         
         return array('first_name' => $firstName, 'last_name' => $lastName);
+
     }
 
 
