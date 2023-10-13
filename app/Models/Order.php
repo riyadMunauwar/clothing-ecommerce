@@ -49,6 +49,7 @@ class Order extends Model
             ->get();
 
         $chartData = [];
+        
         foreach ($sales as $sale) {
             $chartData[$sale->date] = $sale->total_sales;
         }
@@ -68,6 +69,7 @@ class Order extends Model
             ->get();
 
         $chartData = [];
+
         foreach ($orders as $order) {
             $chartData[$order->date] = $order->total_orders;
         }

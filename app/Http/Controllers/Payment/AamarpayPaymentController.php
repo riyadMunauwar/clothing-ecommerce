@@ -18,14 +18,26 @@ class AamarpayPaymentController extends Controller
         $pay_time = $request->pay_time;
         $currency = $request->currency;
         $payment_id = $request->mer_txnid;
+        $amount = $request->amount;
 
 
         if($pay_status === 'Successful'){
 
             $payment = Payment::with('order')->find($payment_id);
 
+            $payment->provider = 'Ammarpay';
 
-            dd($payment);
+            $payment->method = $card_type;
+
+            $payment->amount = $amount;
+
+            $payment->currency = $currency;
+
+            $payment->status = 'success';
+
+            $payment->save();
+
+            dd();
 
 
         }
