@@ -331,6 +331,7 @@
                         <td class="px-4 py-1 whaitespace-nowrap"></td>
                         <td class="px-4 py-1 whaitespace-nowrap"></td>
                         <td class="px-4 py-1 whaitespace-nowrap"></td>
+                        <td class="px-4 py-1 whaitespace-nowrap"></td>
                         <td class="px-4 py-1 whaitespace-nowrap">
                             <h5 class="text-xl font-bold mt-2">Total</h5>
                         </td>
