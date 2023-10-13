@@ -5,6 +5,13 @@
             <h1 class="page-title">My Account<span>Shop</span></h1>
         </div><!-- End .container -->
     </div><!-- End .page-header -->
+
+    @if (session('message'))
+        <div class="alert alert-warning mb-2">
+            {{ session('message') }}
+        </div>
+    @endif
+    
     <nav aria-label="breadcrumb" class="breadcrumb-nav mb-3">
         <div class="container">
             <ol class="breadcrumb">
