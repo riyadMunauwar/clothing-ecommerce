@@ -7,12 +7,6 @@
     <div class="mt-5 pb-5">
         <ul class="space-y-1">
 
-            @php 
-
-                $menus = \App\Models\Menu::where('parent_id', null)->orderBy('order')->get();
-
-            @endphp
-
             @forelse($menus as $menu)
                 <li class="group border px-4 h-12 rounded-md flex gap-3 items-center">
 
@@ -53,11 +47,8 @@
                 </li>
 
 
-                @php 
-                    $childrens = \App\Models\Menu::where('parent_id', $menu->id)->orderBy('order')->get();
-                @endphp
 
-                @forelse($childrens as $child)
+                @forelse($menu->children as $child)
                     <li class="ml-8 group border px-4 h-12 rounded-md flex gap-3 items-center">
 
                         @if($child->iconUrl())
@@ -101,11 +92,7 @@
                         </div>
                     </li>
 
-                    @php 
-                        $grandChildrens = \App\Models\Menu::where('parent_id', $child->id)->orderBy('order')->get();
-                    @endphp
-
-                    @forelse($grandChildrens as $grandChild)
+                    @forelse($child->children as $grandChild)
                         <li class="ml-16 group border px-4 h-12 rounded-md flex gap-3 items-center">
 
                             @if($grandChild->iconUrl())
@@ -149,12 +136,9 @@
                             </div>
                         </li>
 
-                        
-                        @php 
-                            $grandGrandChildrens = \App\Models\Menu::where('parent_id', $grandChild->id)->orderBy('order')->get();
-                        @endphp
 
-                        @forelse($grandGrandChildrens as $grandGrandChild)
+
+                        @forelse($grandChild->children as $grandGrandChild)
                             <li class="ml-24 group border px-4 h-12 rounded-md flex gap-3 items-center">
                                 
                                 @if($grandGrandChild->iconUrl())

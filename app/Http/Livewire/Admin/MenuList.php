@@ -5,6 +5,7 @@ namespace App\Http\Livewire\Admin;
 use Livewire\Component;
 use App\Traits\WithSweetAlert;
 use App\Models\Menu;
+use Illuminate\Support\Facades\Cache; 
 
 class MenuList extends Component
 {
@@ -20,7 +21,8 @@ class MenuList extends Component
 
     public function render()
     {
-        return view('admin.components.menu-list');
+        $menus = $this->getMenus();
+        return view('admin.components.menu-list', compact('menus'));
     }
 
 
@@ -51,6 +53,33 @@ class MenuList extends Component
             return $this->error('Failed', 'Delete child menu first.');
         }
 
+    }
+
+
+    private function getMenus()
+    {
+        $cacheKey = config('cache_keys.menu_items_cache_key');
+
+        $menus = Cache::remember( $cacheKey, config('cache.cache_ttl'), function(){
+            return $this->getMenuTree();
+        });
+
+        return $menus;
+    }
+
+ 
+    private function getMenuTree($parentId = null) {
+        
+        $menuItems = Menu::with('category')
+            ->where('parent_id', $parentId)
+            ->where('is_published', true)
+            ->get();
+    
+        foreach ($menuItems as $menu) {
+            $menu->children = $this->getMenuTree($menu->id);
+        }
+    
+        return $menuItems;
     }
 
 }
