@@ -13,4 +13,5 @@ return [
     'social_link_list_cache_key' => 'social_links',
     'menu_items_cache_key' => 'menus_items',
     'footer_items_cache_key' => 'footer_items',
+    'admin_menu_create_items' => 'admin_menu_create_items',
 ];

@@ -58,7 +58,7 @@ class MenuList extends Component
 
     private function getMenus()
     {
-        $cacheKey = config('cache_keys.menu_items_cache_key');
+        $cacheKey = config('cache_keys.admin_menu_create_items');
 
         $menus = Cache::remember( $cacheKey, config('cache.cache_ttl'), function(){
             return $this->getMenuTree();
