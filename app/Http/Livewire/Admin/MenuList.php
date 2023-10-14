@@ -23,7 +23,8 @@ class MenuList extends Component
     {
         $menus = $this->getMenus();
 
-        
+        dd($menus);
+
         return view('admin.components.menu-list', compact('menus'));
     }
 
