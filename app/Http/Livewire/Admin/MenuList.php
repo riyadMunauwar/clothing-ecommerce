@@ -22,6 +22,8 @@ class MenuList extends Component
     public function render()
     {
         $menus = $this->getMenus();
+
+        
         return view('admin.components.menu-list', compact('menus'));
     }
 
@@ -60,7 +62,7 @@ class MenuList extends Component
     {
         $cacheKey = config('cache_keys.admin_menu_create_items');
 
-        $menus = Cache::remember( $cacheKey, config('cache.cache_ttl'), function(){
+        $menus = Cache::remember($cacheKey, config('cache.cache_ttl'), function(){
             return $this->getMenuTree();
         });
 
