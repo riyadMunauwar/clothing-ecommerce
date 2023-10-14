@@ -11,5 +11,9 @@ class RemoveCachedMenuItems {
         if( Cache::has(config('cache_keys.menu_items_cache_key'))){
             Cache::forget(config('cache_keys.menu_items_cache_key'));
         }
+
+        if( Cache::has(config('cache_keys.admin_menu_create_items'))){
+            Cache::forget(config('cache_keys.admin_menu_create_items'));
+        }
     }
 }
