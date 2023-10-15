@@ -4,7 +4,7 @@
         <div class="col-lg-6">
             <div class="card card-dashboard">
                 <div class="card-body">
-                    <h3 class="card-title">Address {{ ++$loopt->index }}</h3><!-- End .card-title -->
+                    <h3 class="card-title">Address {{ ++$loop->index }}</h3><!-- End .card-title -->
 
                     <p>{{ $address->name }}<br>
                     {{ $address->mobile_no }}<br>
