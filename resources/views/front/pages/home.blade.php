@@ -1,5 +1,5 @@
 <x-front.master-layout title="Home">
-    <livewire:home-caurosel />
+    <livewire:front.home-caurosel />
 
     @include('front.partials.category-collection')
     <livewire:front.browse-categories />
