@@ -14,7 +14,9 @@ class HomeCaurosel extends Component
 
     public function mount()
     {
-        $this->slides = $this->getHomeCaurosel()->slides;
+        $this->slides = $this->getHomeCaurosel();
+
+        dd($this->slieds);
     }
 
     public function render()
