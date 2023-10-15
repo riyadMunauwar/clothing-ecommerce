@@ -130,14 +130,14 @@
                                                     <div class="menu-col">
                                                         <div class="row">
                                                             @foreach($menu->children as $child)
-                                                                <div class="col-md-4">
+                                                                <div class="col-md-3">
                                                                     <div class="menu-title">{{ $child->name }}</div><!-- End .menu-title -->
                                                                     <ul>
                                                                         @foreach($child->children ?? [] as $grandChild)
                                                                             @if($grandChild->category)
-                                                                                <li><a href="{{ route('category', ['category_slug' => $grandChild->category->slug, 'id' => $grandChild->category->id]) }}">{{ $grandChild->name }}</a></li>
+                                                                                <li><a style="color: #333" href="{{ route('category', ['category_slug' => $grandChild->category->slug, 'id' => $grandChild->category->id]) }}">{{ $grandChild->name }}</a></li>
                                                                             @else
-                                                                                <li><a href="{{ $grandChild->link }}">{{ $grandChild->name }}</a></li>
+                                                                                <li><a  style="color: #333" href="{{ $grandChild->link }}">{{ $grandChild->name }}</a></li>
                                                                             @endif
                                                                         @endforeach
                                                                     </ul>
