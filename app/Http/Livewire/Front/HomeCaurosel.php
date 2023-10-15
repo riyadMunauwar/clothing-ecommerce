@@ -14,9 +14,12 @@ class HomeCaurosel extends Component
 
     public function mount()
     {
-        $this->slides = $this->getHomeCaurosel();
+        $slides = $this->getHomeCaurosel()->slides;
 
-        dd($this->slides);
+        if($slides) {
+            $this->slides = $slides;
+        }
+        
     }
 
     public function render()
@@ -38,9 +41,9 @@ class HomeCaurosel extends Component
  
     private function queryHomeCauroselFromDb() {
 
-        return Caurosel::select('id')->withWhereHas('slides', function($query){
-            $query->select('id')->where('is_published', true);
-        })
+        return Caurosel::select('id')->with(['slides' => function ($query) {
+            $query->where('is_published', true);
+        }])
         ->where('is_published', true)
         ->where('show_in_page', 'intro-caurosel')
         ->first();
