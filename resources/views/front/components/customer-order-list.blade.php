@@ -8,6 +8,7 @@
                     <th>Order</th>
                     <th>ID</th>
                     <th>Items</th>
+                    <th>Shipping Charge</th>
                     <th>Total</th>
                     <th></th>
                 </tr>
@@ -25,17 +26,17 @@
                                 </figure>
 
                                 <h3 class="product-title">
-                                    <a href="#">Beige knitted elastic runner shoes</a>
+                                    <a>#{{ $order->order_no }}</a>
                                 </h3><!-- End .product-title -->
                             </div><!-- End .product -->
                         </td>
-                        <td class="price-col">$84.00</td>
-                        <td class="quantity-col">
-                            <div class="cart-product-quantity">
-                                <input type="number" class="form-control" value="1" min="1" max="10" step="1" data-decimals="0" required>
-                            </div><!-- End .cart-product-quantity -->
+                        <td class="quantity-col">{{ $order->order_items_count }}</td>
+                        <td class="price-col">
+                            BDT {{ $order->shipping_price }}
                         </td>
-                        <td class="total-col">$84.00</td>
+                        <td class="total-col">
+                             BDT {{ $order->total_price }}
+                        </td>
                         <td class="remove-col"><button class="btn-remove"><i class="icon-close"></i></button></td>
                     </tr>
                 @endforeach 
