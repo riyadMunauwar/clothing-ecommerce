@@ -8,6 +8,6 @@ class CustomerProfileSetting extends Component
 {
     public function render()
     {
-        return view('livewire.front.customer-profile-setting');
+        return view('front.components.customer-profile-setting');
     }
 }

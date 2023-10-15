@@ -6,8 +6,10 @@ use Livewire\Component;
 
 class CustomerOrderList extends Component
 {
+    public $orders = [];
+    
     public function render()
     {
-        return view('livewire.front.customer-order-list');
+        return view('front.components.customer-order-list');
     }
 }

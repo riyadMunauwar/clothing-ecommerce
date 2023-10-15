@@ -8,6 +8,6 @@ class CustomerAddressSetting extends Component
 {
     public function render()
     {
-        return view('livewire.front.customer-address-setting');
+        return view('front.components.customer-address-setting');
     }
 }
