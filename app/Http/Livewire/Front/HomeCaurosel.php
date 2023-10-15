@@ -42,7 +42,7 @@ class HomeCaurosel extends Component
             $query->select('id')->where('is_published', true);
         })
         ->where('is_published', true)
-        ->where('show_in_page', 'home-caurosel')
+        ->where('show_in_page', 'intro-caurosel')
         ->first();
 
     }
