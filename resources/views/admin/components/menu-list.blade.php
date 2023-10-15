@@ -22,6 +22,10 @@
                         <span class="hidden md:block bg-yellow-100 text-yellow-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">Unpublished</span>
                     @endif
 
+
+                    <span class="hidden md:block bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">{{ ucfirst($menu->type) }}</span>
+           
+
                     @if($menu->category)
                         <span class="hidden md:block bg-gray-100 text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">{{ $menu->category->name ?? ''  }}</span>
                     @elseif($menu->link)
