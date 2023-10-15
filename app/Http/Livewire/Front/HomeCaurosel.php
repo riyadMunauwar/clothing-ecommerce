@@ -9,7 +9,7 @@ use App\Models\Caurosel;
 class HomeCaurosel extends Component
 {
 
-    public $slides;
+    public $slides = [];
 
 
     public function mount()
