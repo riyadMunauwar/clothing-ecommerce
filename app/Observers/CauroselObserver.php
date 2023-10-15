@@ -16,7 +16,7 @@ class CauroselObserver
      */
     public function created(Caurosel $caurosel)
     {
-        //
+        new RemoveCachedSingleCaurosel($caurosel->cache_key ?? '');
     }
 
     /**

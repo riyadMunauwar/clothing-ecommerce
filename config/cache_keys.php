@@ -14,4 +14,5 @@ return [
     'menu_items_cache_key' => 'menus_items',
     'footer_items_cache_key' => 'footer_items',
     'admin_menu_create_items' => 'admin_menu_create_items',
+    'home_caurosel_cache_key' => 'home_caurosel',
 ];

@@ -29,7 +29,7 @@ class HomeCaurosel extends Component
 
     private function getHomeCaurosel()
     {
-        $cacheKey = config('cache_keys.caurosel_list_cache_key');
+        $cacheKey = config('cache_keys.home_caurosel_cache_key');
 
         $menus = Cache::remember($cacheKey, config('cache.cache_ttl'), function(){
             return $this->queryHomeCauroselFromDb();
