@@ -124,14 +124,14 @@
                                     <li>
                                         <a href="#" class="sf-with-ul">{{ $menu->name }}</a>
 
-                                        <div class="megamenu megamenu-md">
+                                        <div class="megamenu megamenu-lg">
                                             <div class="row no-gutters">
                                                 <div class="col-md-8">
                                                     <div class="menu-col">
                                                         <div class="row">
                                                             @foreach($menu->children as $child)
                                                                 <div class="col-md-6">
-                                                                    <div class="menu-title">Shop with sidebar</div><!-- End .menu-title -->
+                                                                    <div class="menu-title">$child->name</div><!-- End .menu-title -->
                                                                     <ul>
                                                                         @foreach($child->children ?? [] as $grandChild)
                                                                             @if($grandChild->category)
