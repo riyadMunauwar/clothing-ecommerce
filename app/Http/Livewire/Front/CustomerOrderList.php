@@ -20,7 +20,7 @@ class CustomerOrderList extends Component
 
     public function getCurrentUserOrders()
     {
-        return Order::withCount('orderItems')->where('user_id', auth()->id())->paginate(6);
+        return Order::withCount('orderItems')->where('user_id', auth()->id())->latest()->paginate(6);
     }
 
 
