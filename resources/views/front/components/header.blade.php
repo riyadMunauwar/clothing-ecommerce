@@ -84,40 +84,90 @@
                                     </li>
                                 @endif
                             @else
-                                <li>
-                                    <a href="#" style="font-weight: 500; color: #333" class="sf-with-ul">{{ $menu->name }}</a>
 
-                                    <ul>
-                                        @foreach($menu->children as $child)
+                                @if($menu->type === 'dropdown')
+                                    <li>
+                                        <a href="#" style="font-weight: 500; color: #333" class="sf-with-ul">{{ $menu->name }}</a>
 
-                                            @if(!count($child->children) > 0)
+                                        <ul>
+                                            @foreach($menu->children as $child)
 
-                                                @if($child->category)
-                                                    <li><a style="font-weight: 500; color: #333" href="{{ route('category', ['category_slug' => $child->category->slug, 'id' => $child->category->id]) }}">{{ $child->name }}</a></li>
+                                                @if(!count($child->children) > 0)
+
+                                                    @if($child->category)
+                                                        <li><a style="font-weight: 500; color: #333" href="{{ route('category', ['category_slug' => $child->category->slug, 'id' => $child->category->id]) }}">{{ $child->name }}</a></li>
+                                                    @else
+                                                        <li><a style="font-weight: 500; color: #333" href="{{ $child->link }}">{{ $child->name }}</a></li>
+                                                    @endif
+
                                                 @else
-                                                    <li><a style="font-weight: 500; color: #333" href="{{ $child->link }}">{{ $child->name }}</a></li>
+                                                    <li>
+                                                        <a href="#" style="font-weight: 500; color: #333" class="sf-with-ul">{{ $child->name }}</a>
+
+                                                        <ul>
+                                                            @foreach($child->children as $grandChild)
+
+                                                                @if($grandChild->category)
+                                                                    <li><a style="font-weight: 500; color: #333" href="{{ route('category', ['category_slug' => $grandChild->category->slug, 'id' => $grandChild->category->id]) }}">{{ $grandChild->name }}</a></li>
+                                                                @else
+                                                                    <li><a style="font-weight: 500; color: #333" href="{{ $grandChild->link }}">{{ $grandChild->name }}</a></li>
+                                                                @endif
+
+                                                            @endforeach
+                                                        </ul>
+                                                    </li>
                                                 @endif
+                                            @endforeach
+                                        </ul>
+                                    </li>
+                                @elseif($menu->type === 'mega')
+                                    <li>
+                                        <a href="#" class="sf-with-ul">{{ $menu->name }}</a>
 
-                                            @else
-                                                <li>
-                                                    <a href="#" style="font-weight: 500; color: #333" class="sf-with-ul">{{ $child->name }}</a>
+                                        <div class="megamenu megamenu-md">
+                                            <div class="row no-gutters">
+                                                <div class="col-md-8">
+                                                    <div class="menu-col">
+                                                        <div class="row">
+                                                            @foreach($menu->children as $child)
+                                                                <div class="col-md-6">
+                                                                    <div class="menu-title">Shop with sidebar</div><!-- End .menu-title -->
+                                                                    <ul>
+                                                                        @foreach($child->children ?? [] as $grandChild)
+                                                                            @if($grandChild->category)
+                                                                                <li><a style="font-weight: 500; color: #333" href="{{ route('category', ['category_slug' => $grandChild->category->slug, 'id' => $grandChild->category->id]) }}">{{ $grandChild->name }}</a></li>
+                                                                            @else
+                                                                                <li><a style="font-weight: 500; color: #333" href="{{ $grandChild->link }}">{{ $grandChild->name }}</a></li>
+                                                                            @endif
+                                                                        @endforeach
+                                                                    </ul>
+                                                                </div><!-- End .col-md-6 -->
+                                                            @endforeach
 
-                                                    <ul>
-                                                        @foreach($child->children as $grandChild)
+                                                        </div><!-- End .row -->
+                                                    </div><!-- End .menu-col -->
+                                                </div><!-- End .col-md-8 -->
 
-                                                            @if($grandChild->category)
-                                                                <li><a style="font-weight: 500; color: #333" href="{{ route('category', ['category_slug' => $grandChild->category->slug, 'id' => $grandChild->category->id]) }}">{{ $grandChild->name }}</a></li>
-                                                            @else
-                                                                <li><a style="font-weight: 500; color: #333" href="{{ $grandChild->link }}">{{ $grandChild->name }}</a></li>
-                                                            @endif
 
-                                                        @endforeach
-                                                    </ul>
-                                                </li>
-                                            @endif
-                                        @endforeach
-                                    </ul>
-                                </li>
+                                                <!-- Mega Menu Banner -->
+                                                <div class="col-md-4">
+                                                    <div class="banner banner-overlay">
+                                                        <a href="category.html" class="banner banner-menu">
+                                                            <img src="assets/images/menu/banner-1.jpg" alt="Banner">
+
+                                                            <div class="banner-content banner-content-top">
+                                                                <div class="banner-title text-white">Last <br>Chance<br><span><strong>Sale</strong></span></div><!-- End .banner-title -->
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+
+
+                                            </div><!-- End .row -->
+                                        </div><!-- End .megamenu megamenu-md -->
+                                    </li>
+                                @endif
                             @endif
                         @endforeach
                     </ul><!-- End .menu -->
