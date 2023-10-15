@@ -37,7 +37,7 @@ class SocialLinks extends Component
  
     private function querySocialLinkFromDb() {
 
-        return SocialLink::select('link')->where('is_published', true)->get();
+        return SocialLink::select('link', 'name')->where('is_published', true)->get();
 
     }
 
