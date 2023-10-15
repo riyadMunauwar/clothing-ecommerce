@@ -16,21 +16,21 @@
             <tbody>
                 @foreach($orders as $order)
                     <tr>
-                        <td class="product-col">
+                        <td>
                             <div class="product">
                                  <h3 class="product-title">
                                     <a>#{{ $order->order_no }}</a>
                                 </h3><!-- End .product-title -->
                             </div><!-- End .product -->
                         </td>
-                        <td class="quantity-col">{{ $order->order_items_count }}</td>
-                        <td class="price-col">
+                        <td>{{ $order->order_items_count }}</td>
+                        <td>
                             BDT {{ $order->shipping_price }}
                         </td>
-                        <td class="total-col">
+                        <td>
                              BDT {{ $order->total_price }}
                         </td>
-                        <td class="remove-col"><button class="btn-remove"><i class="icon-edit"></i></button></td>
+                        <td><button class="btn-remove"><i class="icon-edit"></i></button></td>
                     </tr>
                 @endforeach 
             </tbody>
