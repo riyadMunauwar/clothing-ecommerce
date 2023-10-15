@@ -16,9 +16,7 @@ class HomeCaurosel extends Component
     {
         $slides = $this->getHomeCaurosel()->slides;
 
-        if($slides) {
-            $this->slides = $slides;
-        }
+        dd($slides);
 
     }
 
