@@ -20,7 +20,8 @@ use App\Facades\SweetAlert;
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
-    'verified'
+    'verified',
+    'role:admin,editor,manager'
 ])->group(function () {
 
     Route::view('/dashboard', 'admin.pages.dashboard')->name('dashboard');
@@ -59,6 +60,19 @@ Route::middleware([
 
 });
 
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+    'role:user,admin,editor,manager'
+])->group(function () {
+
+    // User Profile
+    Route::view('/accounts', 'front.pages.profile.dashboard')->name('user-dashboard');
+
+});
+
+
 Route::group(['prefix' => 'payment'], function(){
 
     Route::post('/aamarpay/success', [\App\Http\Controllers\Payment\AamarpayPaymentController::class, 'success'])->name('aamarpay.success');
@@ -94,8 +108,6 @@ Route::view('/cart', 'front.pages.cart')->name('cart');
 Route::get('/checkout', App\Http\Controllers\Checkout\GetCheckoutPageController::class)->name('checkout');
 Route::view('/wishlist', 'front.pages.wishlist')->name('wishlist');
 
-// User Profile
-Route::view('/accounts', 'front.pages.profile.dashboard')->name('user-dashboard');
 
 
 Route::view('/about-us', 'front.pages.static.about')->name('about-us');
