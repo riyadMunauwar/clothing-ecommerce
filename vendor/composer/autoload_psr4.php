@@ -83,6 +83,7 @@ return array(
     'Laravel\\Sail\\' => array($vendorDir . '/laravel/sail/src'),
     'Laravel\\Jetstream\\' => array($vendorDir . '/laravel/jetstream/src'),
     'Laravel\\Fortify\\' => array($vendorDir . '/laravel/fortify/src'),
+    'LaravelDaily\\Invoices\\' => array($vendorDir . '/laraveldaily/laravel-invoices/src'),
     'LaracraftTech\\LaravelDateScopes\\Database\\Factories\\' => array($vendorDir . '/laracraft-tech/laravel-date-scopes/database/factories'),
     'LaracraftTech\\LaravelDateScopes\\' => array($vendorDir . '/laracraft-tech/laravel-date-scopes/src'),
     'Jenssegers\\Agent\\' => array($vendorDir . '/jenssegers/agent/src'),
