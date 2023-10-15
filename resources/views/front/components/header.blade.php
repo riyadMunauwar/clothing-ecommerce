@@ -131,7 +131,7 @@
                                                         <div class="row">
                                                             @foreach($menu->children as $child)
                                                                 <div class="col">
-                                                                    <div class="menu-title">$child->name</div><!-- End .menu-title -->
+                                                                    <div class="menu-title">{{ $child->name }}</div><!-- End .menu-title -->
                                                                     <ul>
                                                                         @foreach($child->children ?? [] as $grandChild)
                                                                             @if($grandChild->category)
