@@ -31,11 +31,11 @@ class HomeCaurosel extends Component
     {
         $cacheKey = config('cache_keys.home_caurosel_cache_key');
 
-        $menus = Cache::remember($cacheKey, config('cache.cache_ttl'), function(){
+        $caurosel = Cache::remember($cacheKey, config('cache.cache_ttl'), function(){
             return $this->queryHomeCauroselFromDb();
         });
 
-        return $menus;
+        return $caurosel;
     }
 
  
