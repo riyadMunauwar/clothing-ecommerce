@@ -130,7 +130,7 @@
                                                     <div class="menu-col">
                                                         <div class="row">
                                                             @foreach($menu->children as $child)
-                                                                <div class="col">
+                                                                <div class="col-md-4">
                                                                     <div class="menu-title">{{ $child->name }}</div><!-- End .menu-title -->
                                                                     <ul>
                                                                         @foreach($child->children ?? [] as $grandChild)
