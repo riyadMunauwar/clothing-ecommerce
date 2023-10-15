@@ -25,6 +25,7 @@ class CreateMenu extends Component
     public $name;
     public $link;
     public $order;
+    public $type;
     public $icon;
     public $old_icon;
     public $is_published;
@@ -35,6 +36,7 @@ class CreateMenu extends Component
         'name' => ['required', 'string'],
         'link' => ['nullable', 'string'],
         'order' => ['nullable', 'integer'],
+        'type' => ['required', 'string'],
         'parent_menu_id' => ['nullable', 'integer'],
         'is_published' => ['required', 'boolean'],
         'category_id' => ['nullable', 'integer'],
@@ -65,6 +67,7 @@ class CreateMenu extends Component
 
             $menu->name = $this->name;
             $menu->order = $this->order;
+            $menu->type = $this->type;
             $menu->is_published = $this->is_published;
     
             if($this->link){

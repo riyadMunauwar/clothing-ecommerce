@@ -27,6 +27,7 @@ class EditMenu extends Component
     public $name;
     public $link;
     public $order;
+    public $type;
     public $icon;
     public $old_icon;
     public $is_published;
@@ -76,6 +77,7 @@ class EditMenu extends Component
         $menu->name = $this->name;
         $menu->order = $this->order;
         $menu->link = $this->link;
+        $menu->type = $this->type;
         $menu->category_id = $this->category_id;
         $menu->parent_id = $this->parent_id;
         $menu->is_published = $this->is_published;
@@ -114,6 +116,7 @@ class EditMenu extends Component
         $this->name = $menu->name;
         $this->order = $menu->order;
         $this->link = $menu->link;
+        $this->type = $menu->type;
         $this->is_published = $menu->is_published;
         $this->category_id = $menu->category_id;
         $this->parent_id = $menu->parent_id;

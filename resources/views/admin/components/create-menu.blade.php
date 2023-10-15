@@ -22,6 +22,14 @@
                 </div>
 
                 <div>
+                    <x-label for="category_id" value="{{ __('Menu Type') }}" />
+                    <x-ui.select wire:model.debounce="type" id="type" class="block h-8 text-xs mt-1 w-full">
+                        <option selected value="mega">Mega</option>
+                        <option value="dropdown">Dropdown</option>
+                    </x-ui.select>
+                </div>
+
+                <div>
                     <x-label for="order" value="{{ __('Showing Order') }}" />
                     <x-input wire:model.debounce="order" id="order" class="block h-8 mt-1 w-full" type="number" />
                 </div>
