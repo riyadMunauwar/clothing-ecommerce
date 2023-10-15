@@ -5,8 +5,7 @@
         <table class="table table-cart table-mobile">
             <thead>
                 <tr>
-                    <th>Order</th>
-                    <th>ID</th>
+                    <th>Order ID</th>
                     <th>Items</th>
                     <th>Shipping Charge</th>
                     <th>Total</th>
@@ -19,13 +18,7 @@
                     <tr>
                         <td class="product-col">
                             <div class="product">
-                                <figure class="product-media">
-                                    <a href="#">
-                                        <img src="assets/images/products/table/product-1.jpg" alt="Product image">
-                                    </a>
-                                </figure>
-
-                                <h3 class="product-title">
+                                 <h3 class="product-title">
                                     <a>#{{ $order->order_no }}</a>
                                 </h3><!-- End .product-title -->
                             </div><!-- End .product -->
@@ -37,7 +30,7 @@
                         <td class="total-col">
                              BDT {{ $order->total_price }}
                         </td>
-                        <td class="remove-col"><button class="btn-remove"><i class="icon-close"></i></button></td>
+                        <td class="remove-col"><button class="btn-remove"><i class="icon-edit"></i></button></td>
                     </tr>
                 @endforeach 
             </tbody>
