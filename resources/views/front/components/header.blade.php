@@ -124,7 +124,7 @@
                                     <li>
                                         <a href="#" class="sf-with-ul">{{ $menu->name }}</a>
 
-                                        <div class="megamenu megamenu-lg">
+                                        <div class="megamenu megamenu-xl">
                                             <div class="row no-gutters">
                                                 <div class="col-md-8">
                                                     <div class="menu-col">
