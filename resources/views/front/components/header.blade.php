@@ -126,7 +126,7 @@
 
                                         <div class="megamenu megamenu-md">
                                             <div class="row no-gutters">
-                                                <div class="col-md-8">
+                                                <div class="col-md-12">
                                                     <div class="menu-col">
                                                         <div class="row">
                                                             @foreach($menu->children as $child)
@@ -135,9 +135,9 @@
                                                                     <ul>
                                                                         @foreach($child->children ?? [] as $grandChild)
                                                                             @if($grandChild->category)
-                                                                                <li><a style="font-weight: 500; color: #333" href="{{ route('category', ['category_slug' => $grandChild->category->slug, 'id' => $grandChild->category->id]) }}">{{ $grandChild->name }}</a></li>
+                                                                                <li><a href="{{ route('category', ['category_slug' => $grandChild->category->slug, 'id' => $grandChild->category->id]) }}">{{ $grandChild->name }}</a></li>
                                                                             @else
-                                                                                <li><a style="font-weight: 500; color: #333" href="{{ $grandChild->link }}">{{ $grandChild->name }}</a></li>
+                                                                                <li><a href="{{ $grandChild->link }}">{{ $grandChild->name }}</a></li>
                                                                             @endif
                                                                         @endforeach
                                                                     </ul>
@@ -150,17 +150,17 @@
 
 
                                                 <!-- Mega Menu Banner -->
-                                                <div class="col-md-4">
+                                                <!-- <div class="col-md-4">
                                                     <div class="banner banner-overlay">
                                                         <a href="category.html" class="banner banner-menu">
                                                             <img src="assets/images/menu/banner-1.jpg" alt="Banner">
 
                                                             <div class="banner-content banner-content-top">
-                                                                <div class="banner-title text-white">Last <br>Chance<br><span><strong>Sale</strong></span></div><!-- End .banner-title -->
+                                                                <div class="banner-title text-white">Last <br>Chance<br><span><strong>Sale</strong></span></div>
                                                             </div>
                                                         </a>
                                                     </div>
-                                                </div>
+                                                </div> -->
 
 
 
