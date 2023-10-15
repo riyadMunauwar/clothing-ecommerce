@@ -137,7 +137,6 @@
                         </li>
 
 
-
                         @forelse($grandChild->children as $grandGrandChild)
                             <li class="ml-24 group border px-4 h-12 rounded-md flex gap-3 items-center">
                                 
@@ -182,7 +181,7 @@
                                 </div>
                             </li>
                         @empty
-                            <li class="ml-24 border border-2 border-dotted px-4 h-12 rounded-md flex justify-end items-center">
+                            <li class="ml-24 border-2 border-dotted px-4 h-12 rounded-md flex justify-end items-center">
                                 <div class="flex items-center gap-2">
                                     <button wire:click.debounce="enableAddNewMenuModal({{ $grandChild->id ?? 0 }})">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -194,7 +193,7 @@
                         @endforelse
 
                     @empty
-                        <li class="ml-16 border border-2 border-dotted px-4 h-12 rounded-md flex justify-end items-center">
+                        <li class="ml-16 border-2 border-dotted px-4 h-12 rounded-md flex justify-end items-center">
                             <div class="flex items-center gap-2">
                                 <button wire:click.debounce="enableAddNewMenuModal({{ $child->id ?? 0 }})">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -206,7 +205,7 @@
                     @endforelse
 
                 @empty
-                    <li class="ml-8 border border-2 border-dotted px-4 h-12 rounded-md flex justify-end items-center">
+                    <li class="ml-8 border-2 border-dotted px-4 h-12 rounded-md flex justify-end items-center">
                         <div class="flex items-center gap-2">
                             <button wire:click.debounce="enableAddNewMenuModal({{ $menu->id ?? 0 }})">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -218,7 +217,7 @@
                 @endforelse
 
             @if($loop->last)
-                <li class="border border-4 border-dotted px-4 h-12 rounded-md flex justify-end items-center">
+                <li class="border-4 border-dotted px-4 h-12 rounded-md flex justify-end items-center">
                     <div class="flex items-center gap-2">
                         <button wire:click.debounce="enableAddNewMenuModal(0)">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -230,7 +229,7 @@
             @endif
 
             @empty
-                <li class="border border-4 border-dotted px-4 h-12 rounded-md flex justify-end items-center">
+                <li class="border-4 border-dotted px-4 h-12 rounded-md flex justify-end items-center">
                     <div class="flex items-center gap-2">
                         <button wire:click.debounce="enableAddNewMenuModal(0)">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
