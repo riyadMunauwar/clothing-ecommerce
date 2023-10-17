@@ -13,12 +13,17 @@ class CustomerProfileSetting extends Component
     public $user;
 
 
+    public $newPassword;
+    public $currentPassword;
+    public $confirmPassword;
+
+
     protected $rules = [
         'user.name' => ['required', 'string', 'max:255'],
         'user.email' => ['required', 'string', 'email', 'max:255'],
-        'newPassword' => ['required', 'string', 'min:8', 'max:255', 'max:255'],
-        'currentPassword' => ['required', 'string', 'min:8', 'max:255'],
-        'confirmPassword' => ['required', 'string', 'min:8', 'max:255', 'same:newPassword'],
+        'newPassword' => ['nullable', 'string', 'min:8', 'max:255', 'max:255'],
+        'currentPassword' => ['nullable', 'string', 'min:8', 'max:255'],
+        'confirmPassword' => ['nullable', 'string', 'min:8', 'max:255', 'same:newPassword'],
     ];
 
     public function mount()
