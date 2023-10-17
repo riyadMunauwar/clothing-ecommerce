@@ -9,6 +9,7 @@
                     <th>Items</th>
                     <th>Shipping Charge</th>
                     <th>Total</th>
+                    <th>Stats</th>
                     <th></th>
                 </tr>
             </thead>
@@ -29,6 +30,9 @@
                         </td>
                         <td>
                              BDT {{ $order->total_price }}
+                        </td>
+                        <td>
+                             <span class="badge badge-info">{{ $order->order_status }}</span>
                         </td>
                         <td><button class="btn-remove"><i class="icon-edit"></i></button></td>
                     </tr>

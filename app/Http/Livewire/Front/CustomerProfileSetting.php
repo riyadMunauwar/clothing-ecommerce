@@ -69,7 +69,7 @@ class CustomerProfileSetting extends Component
     {
         $this->currentPassword = '';
         $this->newPassword = '';
-        $this->oldPassword = '';
+        $this->confirmPassword = '';
     }
 
 
