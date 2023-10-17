@@ -49,13 +49,17 @@ class CustomerProfileSetting extends Component
 
         $newPassword = Hash::make($this->newPassword);
 
-        $this->user->password = $newPassword;
-        
+        if($this->newPassword){
+            $this->user->password = $newPassword;
+        }
+
         $this->user->save();
 
         $this->resetField();
 
-        Auth::login($this->user);
+        if($this->newPassword){
+            Auth::login($this->user);
+        }
 
         return $this->success('Profie updated', '');
 
