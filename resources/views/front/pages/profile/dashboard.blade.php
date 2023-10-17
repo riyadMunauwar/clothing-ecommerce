@@ -47,7 +47,11 @@
                                 <a class="nav-link" id="tab-account-link" data-toggle="tab" href="#tab-account" role="tab" aria-controls="tab-account" aria-selected="false">Account Details</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Sign Out</a>
+                                <form method="POST" action="{{ route('logout') }}" x-data>
+                                    @csrf
+
+                                    <a class="nav-link" @click.prevent="$root.submit();" href="{{ route('logout') }}">Sign Out</a>
+                                </form>
                             </li>
                         </ul>
                     </aside><!-- End .col-lg-3 -->
