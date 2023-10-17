@@ -41,7 +41,7 @@ class CustomerProfileSetting extends Component
     {
         $this->validate();
 
-        if(!$this->checkIsOldPassCorrect){
+        if(!$this->checkIsOldPassCorrect()){
             return $this->error('Your current password is wrong.', ' ');
         }
 
