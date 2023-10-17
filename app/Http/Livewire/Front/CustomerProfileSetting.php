@@ -6,6 +6,7 @@ use Livewire\Component;
 use App\Models\User;
 use App\Traits\WithSweetAlert;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 class CustomerProfileSetting extends Component
 {
@@ -22,7 +23,7 @@ class CustomerProfileSetting extends Component
     protected $rules = [
         'user.name' => ['required', 'string', 'max:255'],
         'user.email' => ['required', 'string', 'email', 'max:255'],
-        'newPassword' => ['nullable', 'string', 'min:8', 'max:255', 'max:255'],
+        'newPassword' => ['nullable', 'string'],
         'currentPassword' => ['nullable', 'string', 'min:8', 'max:255'],
         'confirmPassword' => ['nullable', 'string', 'min:8', 'max:255', 'same:newPassword'],
     ];
@@ -52,8 +53,19 @@ class CustomerProfileSetting extends Component
         
         $this->user->save();
 
+        $this->resetField();
+
+        Auth::login($this->user);
+
         return $this->success('Profie updated', '');
 
+    }
+
+    private function resetField()
+    {
+        $this->currentPassword = '';
+        $this->newPassword = '';
+        $this->oldPassword = '';
     }
 
 
