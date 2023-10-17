@@ -41,9 +41,18 @@ class CustomerProfileSetting extends Component
     {
         $this->validate();
 
-        if(!$this->checkIsOldPassCorrect()){
-            return $this->error('Your current password is wrong.', ' ');
-        }
+        // if(!$this->checkIsOldPassCorrect()){
+        //     return $this->error('Your current password is wrong.', ' ');
+        // }
+
+
+        $newPassword = Hash::make($this->newPassword);
+
+        $this->user->password = $newPassword;
+        
+        $this->user->save();
+
+        return $this->success('Profie updated', '');
 
     }
 
