@@ -5,6 +5,7 @@ namespace App\Http\Livewire\Front;
 use Livewire\Component;
 use App\Models\User;
 use App\Traits\WithSweetAlert;
+use Illuminate\Support\Facades\Hash;
 
 class CustomerProfileSetting extends Component
 {
@@ -40,6 +41,18 @@ class CustomerProfileSetting extends Component
     {
         $this->validate();
 
-        dd('done');
+        if(!$this->checkIsOldPassCorrect){
+            return $this->error('Your current password is wrong.', ' ');
+        }
+
+    }
+
+
+    private function checkIsOldPassCorrect()
+    {
+        $currentDbPass = $this->user->password;
+        $currentUserProvidePass = Hash::make($this->currentPassword);
+
+        return Hash::check($currentDbPass, $currentUserProvidePass);
     }
 }
