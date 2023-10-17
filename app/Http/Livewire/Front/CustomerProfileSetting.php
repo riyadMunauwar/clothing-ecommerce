@@ -33,6 +33,6 @@ class CustomerProfileSetting extends Component
 
     public function saveChanges()
     {
-        
+        $this->validate();
     }
 }
