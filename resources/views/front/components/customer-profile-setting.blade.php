@@ -8,8 +8,7 @@
             @endforeach
         </div>
     @endif
-    <form wire:submit.prevent="saveChanges">
-
+    <div>
         <label>Display Name</label>
         <input wire:model.debounce="user.name" type="text" class="form-control" required>
         <small class="form-text">This will be how your name will be displayed in the account section and in reviews</small>
@@ -26,9 +25,9 @@
         <label>Confirm new password</label>
         <input wire:model.debounce="confirmPassword" type="password" class="form-control mb-2">
 
-        <button type="submit" class="btn btn-outline-primary-2">
+        <button wire:click.debounce="saveChanges" type="button" class="btn btn-outline-primary-2">
             <span>SAVE CHANGES</span>
             <i class="icon-long-arrow-right"></i>
         </button>
-    </form>
+    </div>
 </div>
