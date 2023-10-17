@@ -50,7 +50,7 @@
         <div>
             <div class="row">
                 <div class="col-lg-9">
-                    @if(count($addresses) > 0)
+                    @if(!$address_id)
                     <h2 class="checkout-title">New Shipping Details</h2><!-- End .checkout-title -->
                         <div class="row">
                             <div class="col-sm-6">
