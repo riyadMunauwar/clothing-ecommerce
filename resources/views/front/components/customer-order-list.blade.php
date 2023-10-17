@@ -32,8 +32,10 @@
                              BDT {{ $order->total_price }}
                         </td>
                         <td>
-                             <span class="badge badge-info">{{ $order->order_status }}</span>
+                             <span class="badge badge-info">{{ $order->order_status }}</span> </br>
+                             <span class="badge badge-primary">{{ $order->payment_status }}</span> </br>
                         </td>
+   
                         <td><button class="btn-remove"><i class="icon-edit"></i></button></td>
                     </tr>
                 @endforeach 
