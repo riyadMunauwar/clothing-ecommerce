@@ -43,7 +43,7 @@
         @endif
 
 
-        @if($user_id)
+        @if($address_id)
             <div>
                 <div class="row">
                     <div class="col-lg-9">
