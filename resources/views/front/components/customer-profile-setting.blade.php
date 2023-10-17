@@ -1,11 +1,13 @@
 <div>
-    <div>
-        @foreach($errors->any() ?? $errors->all() as $error)
-            <div class="alert alert-warning">
-                {{ $error }}
-            </div>
-        @endforeach
-    </div>
+    @if($errors->any())
+        <div>
+            @foreach($errors->all() as $error)
+                <div class="alert alert-warning">
+                    {{ $error }}
+                </div>
+            @endforeach
+        </div>
+    @endif
     <form wire:submit.prevent="saveChanges">
 
         <label>Display Name</label>
