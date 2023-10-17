@@ -37,7 +37,7 @@
                         {!! $address->addressHtml() !!}
                     </label>
                 </div>
-            @endif
+            @endforeach
         </div>
 
 
