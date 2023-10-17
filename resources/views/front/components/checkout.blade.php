@@ -43,8 +43,8 @@
                 </div>
             @endforeach
             <div class="custom-control custom-radio mb-3">
-                <input value="cash-on-delivery" wire:model.debounce="address_id" value="" type="radio" id="address-{{ $address->id }}" name="payment_id" class="custom-control-input">
-                <label class="custom-control-label" for="address-{{ $address->id }}">
+                <input value="cash-on-delivery" wire:model.debounce="address_id" value="" type="radio" id="address-new" name="payment_id" class="custom-control-input">
+                <label class="custom-control-label" for="address-new">
                     New address
                 </label>
             </div>
