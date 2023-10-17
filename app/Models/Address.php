@@ -13,7 +13,7 @@ class Address extends Model
 
     public function addressHtml()
     {
-        return "{$this->name} </br> {$this->mobile_no} </br> {$this->email} </br> {$this->street}, {$this->city}, {$this->$this->zip}, {$this->state}";
+        return "{$this->name} </br> {$this->mobile_no} </br> {$this->email} </br> {$this->street}, {$this->city}, {$this->zip}, {$this->state}";
     }
 
 }
