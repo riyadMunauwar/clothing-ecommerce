@@ -20,6 +20,9 @@ class Checkout extends Component
     public $total = 0;
     public $shippingCost = 0;
 
+    public $addresses = [];
+    public $address_id;
+
 
 
     public $first_name;
@@ -52,6 +55,7 @@ class Checkout extends Component
     public function mount()
     {
         $this->setCurrentUserNameEmail();
+        $this->addresses = $this->getAddresses();
     }
 
     public function render()
@@ -231,6 +235,12 @@ class Checkout extends Component
         
         return array('first_name' => $firstName, 'last_name' => $lastName);
 
+    }
+
+
+    private function getAddresses()
+    {
+        return Address::where('user_id', auth()->id())->get();
     }
 
 

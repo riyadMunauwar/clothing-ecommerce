@@ -29,28 +29,16 @@
 
 
         <!-- Existing Address -->
-        <!-- <div>
-            <div class="custom-control custom-radio">
-                <input value="cash-on-delivery" wire:model.debounce="payment_method_option" type="radio" id="payment-method" name="payment-method" class="custom-control-input">
-                <label class="custom-control-label" for="payment-method">
-                    Cash On Delivery
-                </label>
-            </div>
-
-            <div class="custom-control custom-radio">
-                <input value="delivery-charge-only" wire:model.debounce="payment_method_option" type="radio" id="payment-method" name="payment-method" class="custom-control-input">
-                <label class="custom-control-label" for="payment-method">
-                    Delivery Charge Only
-                </label>
-            </div>
-
-            <div class="custom-control custom-radio">
-                <input value="aamarpay" wire:model.debounce="payment_method_option" type="radio" id="payment-method" name="payment-method" class="custom-control-input">
-                <label class="custom-control-label" for="payment-method">
-                    Existing addr
-                </label>
-            </div>
-        </div> -->
+        <div>
+            @foreach($addresses as $address)
+                <div class="custom-control custom-radio">
+                    <input value="cash-on-delivery" wire:model.debounce="address_id" type="radio" id="address-{{ $address->id }}" name="payment_id" class="custom-control-input">
+                    <label class="custom-control-label" for="address-{{ $address->id }}">
+                        {!! $address->addressHtml() !!}
+                    </label>
+                </div>
+            @endif
+        </div>
 
 
 
