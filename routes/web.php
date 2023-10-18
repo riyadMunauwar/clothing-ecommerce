@@ -101,7 +101,7 @@ Route::group(['prefix' => 'auth'], function(){
 // Route::redirect('/register', '/auth/register');
 
 // Static Pages
-Route::get('/search', App\Http\Controllers\Front\SearchController::class)->name('search');
+Route::get('/results', App\Http\Controllers\Front\SearchController::class)->name('search');
 Route::view('/c/{category_slug}/{id}', 'front.pages.archieve')->name('category');
 Route::view('/p/{product_slug}/{id}', 'front.pages.single')->name('product');
 Route::view('/cart', 'front.pages.cart')->name('cart');

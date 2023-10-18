@@ -16,7 +16,7 @@ class SearchController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $query = $request->query;
+        $query = $request->query('search_query');
 
         if(!$query) return redirect()->back();
 
