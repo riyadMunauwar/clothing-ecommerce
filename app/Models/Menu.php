@@ -53,7 +53,7 @@ class Menu extends Model implements HasMedia
 
     public function category()
     {
-        return $this->belongsTo(Category::class)->with('children');
+        return $this->belongsTo(Category::class);
     }
 
 
