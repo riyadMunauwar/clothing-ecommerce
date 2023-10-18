@@ -74,16 +74,16 @@
 
                             @if(!count($menu->children) > 0)
 
-                                @if($menu->category)
+                                @if($menu->category_id)
                                     <li>
-                                        <a href="{{ route('category', ['category_slug' => $menu->category->slug, 'id' => $menu->category->id]) }}">{{ $menu->name }}</a>
+                                        <a href="{{ route('category', ['category_slug' => $menu->category_slug, 'id' => $menu->category_id]) }}">{{ $menu->name }}</a>
                                     </li>
                                 @else 
                                     <li>
                                         <a href="{{ $menu->link }}">{{ $menu->name }}</a>
                                     </li>
                                 @endif
-                                
+
                             @else
 
                                 @if($menu->type === 'dropdown')
@@ -95,8 +95,8 @@
 
                                                 @if(!count($child->children) > 0)
 
-                                                    @if($child->category)
-                                                        <li><a style="font-weight: 500; color: #333" href="{{ route('category', ['category_slug' => $child->category->slug, 'id' => $child->category->id]) }}">{{ $child->name }}</a></li>
+                                                    @if($child->category_id)
+                                                        <li><a style="font-weight: 500; color: #333" href="{{ route('category', ['category_slug' => $child->category_slug, 'id' => $child->category_id]) }}">{{ $child->name }}</a></li>
                                                     @else
                                                         <li><a style="font-weight: 500; color: #333" href="{{ $child->link }}">{{ $child->name }}</a></li>
                                                     @endif
@@ -108,8 +108,8 @@
                                                         <ul>
                                                             @foreach($child->children as $grandChild)
 
-                                                                @if($grandChild->category)
-                                                                    <li><a style="font-weight: 500; color: #333" href="{{ route('category', ['category_slug' => $grandChild->category->slug, 'id' => $grandChild->category->id]) }}">{{ $grandChild->name }}</a></li>
+                                                                @if($grandChild->category_id)
+                                                                    <li><a style="font-weight: 500; color: #333" href="{{ route('category', ['category_slug' => $grandChild->category_slug, 'id' => $grandChild->category_id]) }}">{{ $grandChild->name }}</a></li>
                                                                 @else
                                                                     <li><a style="font-weight: 500; color: #333" href="{{ $grandChild->link }}">{{ $grandChild->name }}</a></li>
                                                                 @endif
@@ -135,8 +135,8 @@
                                                                     <div class="menu-title">{{ $child->name }}</div><!-- End .menu-title -->
                                                                     <ul>
                                                                         @foreach($child->children ?? [] as $grandChild)
-                                                                            @if($grandChild->category)
-                                                                                <li><a style="color: #333" href="{{ route('category', ['category_slug' => $grandChild->category->slug, 'id' => $grandChild->category->id]) }}">{{ $grandChild->name }}</a></li>
+                                                                            @if($grandChild->category_id)
+                                                                                <li><a style="color: #333" href="{{ route('category', ['category_slug' => $grandChild->category_slug, 'id' => $grandChild->category_id]) }}">{{ $grandChild->name }}</a></li>
                                                                             @else
                                                                                 <li><a  style="color: #333" href="{{ $grandChild->link }}">{{ $grandChild->name }}</a></li>
                                                                             @endif

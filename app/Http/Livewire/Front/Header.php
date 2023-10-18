@@ -15,7 +15,6 @@ class Header extends Component
     public function mount()
     {
         $this->menus = $this->getMenus();
-        dd($this->menus);
     }
 
     public function render()
@@ -39,7 +38,6 @@ class Header extends Component
     private function getMenuTree($parentId = null) {
         
         $menuItems = Menu::select('id', 'name', 'category_id', 'link', 'type')
-            ->with('category')
             ->where('parent_id', $parentId)
             ->where('is_published', true)
             ->orderBy('order')
