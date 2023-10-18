@@ -21,7 +21,7 @@ Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified',
-    // 'role:admin|editor|manager'
+    'role:admin|editor|manager'
 ])->group(function () {
 
     Route::view('/dashboard', 'admin.pages.dashboard')->name('dashboard');
@@ -101,6 +101,7 @@ Route::group(['prefix' => 'auth'], function(){
 // Route::redirect('/register', '/auth/register');
 
 // Static Pages
+Route::get('/search', App\Http\Controllers\Front\SearchController::class)->name('search');
 Route::view('/c/{category_slug}/{id}', 'front.pages.archieve')->name('category');
 Route::view('/p/{product_slug}/{id}', 'front.pages.single')->name('product');
 Route::view('/cart', 'front.pages.cart')->name('cart');
