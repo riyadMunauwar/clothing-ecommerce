@@ -52,7 +52,7 @@
                         <x-ui.select wire:model.debounce="category_id" id="category_id" class="block h-8 text-xs mt-1 w-full">
                             <option value="">None</option>
                             @foreach($categories ?? [] as $category)
-                                <option value="{{ $category->id }}">{{ $category->name ?? '' }} @if($category->parent)<span class="badge badge-secondary">{{ $category->parent->name }}</span>@endif</option>
+                                <option value="{{ $category->id }}">{{ $category->name ?? '' }} @if($category->parent)<span class="bg-purple-100 text-purple-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-purple-900 dark:text-purple-300">{{ $category->parent->name }}</span>@endif</option>
                             @endforeach
                         </x-ui.select>
                     </div>
