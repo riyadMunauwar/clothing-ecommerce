@@ -40,7 +40,7 @@ class Header extends Component
             ->with('category')
             ->where('parent_id', $parentId)
             ->where('is_published', true)
-            ->orderBy('sort_order')
+            ->orderBy('order')
             ->get();
     
         foreach ($menuItems as $menu) {
