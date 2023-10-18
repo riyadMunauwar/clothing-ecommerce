@@ -71,8 +71,7 @@ class MenuList extends Component
  
     private function getMenuTree($parentId = null) {
         
-        $menuItems = Menu::with('category')
-            ->select('id', 'parent_id', 'type', 'name', 'is_published', 'link', 'order')
+        $menuItems = Menu::select('id', 'parent_id', 'type', 'name', 'is_published', 'link', 'order')
             ->where('parent_id', $parentId)
             ->where('is_published', true)
             ->get();

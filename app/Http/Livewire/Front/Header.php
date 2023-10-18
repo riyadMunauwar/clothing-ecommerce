@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Front;
 
 use Livewire\Component;
 use App\Models\Menu;
+use App\Models\Category;
 use Illuminate\Support\Facades\Cache; 
 
 class Header extends Component
@@ -14,6 +15,7 @@ class Header extends Component
     public function mount()
     {
         $this->menus = $this->getMenus();
+        dd($this->menus);
     }
 
     public function render()
@@ -36,7 +38,7 @@ class Header extends Component
  
     private function getMenuTree($parentId = null) {
         
-        $menuItems = Menu::select('id', 'name', 'link', 'type')
+        $menuItems = Menu::select('id', 'name', 'category_id', 'link', 'type')
             ->with('category')
             ->where('parent_id', $parentId)
             ->where('is_published', true)
@@ -44,6 +46,12 @@ class Header extends Component
             ->get();
     
         foreach ($menuItems as $menu) {
+
+            if($menu->category_id) {
+                $category = Category::select('slug')->first();
+                $menu->category_slug = $category->slug;
+            }
+
             $menu->children = $this->getMenuTree($menu->id);
         }
     
