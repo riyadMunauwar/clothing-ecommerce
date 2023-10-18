@@ -70,7 +70,7 @@
                                {{ $order->id ?? '' }}
                             </th>
                             <td class="px-4 py-1">{{ $order->user->name ?? '' }}</td>
-                            <td class="px-4 py-1">{{ $order->user->email ?? '' }}</td>
+                            <td class="px-4 py-1">{{ $order->user->email ?? '' }} </br> {{ $order->address->mobile_no ?? '' }}</td>
                             <td class="px-4 py-1">{{ $order->total_price ?? '' }}</td>
                             <td class="px-4 py-1">{{ $order->shipping_price ?? '' }}</td>
                             <td class="px-4 py-1">
