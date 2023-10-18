@@ -74,6 +74,7 @@ class MenuList extends Component
         $menuItems = Menu::select('id', 'parent_id', 'type', 'name', 'is_published', 'link', 'order')
             ->where('parent_id', $parentId)
             ->where('is_published', true)
+            ->orderBy('sort')
             ->get();
     
         foreach ($menuItems as $menu) {
