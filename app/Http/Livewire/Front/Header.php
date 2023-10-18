@@ -14,6 +14,7 @@ class Header extends Component
     public function mount()
     {
         $this->menus = $this->getMenus();
+        dd($this->menu);
     }
 
     public function render()
