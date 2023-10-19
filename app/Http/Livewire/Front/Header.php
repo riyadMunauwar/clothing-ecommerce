@@ -45,10 +45,10 @@ class Header extends Component
     
         foreach ($menuItems as $menu) {
 
-            // if($menu->category_id) {
-            //     $category = Category::select('slug')->first();
-            //     $menu->category_slug = $category->slug;
-            // }
+            if($menu->category_id) {
+                $category = Category::select('slug')->first();
+                $menu->category_slug = $category->slug;
+            }
 
             $menu->children = $this->getMenuTree($menu->id);
         }
