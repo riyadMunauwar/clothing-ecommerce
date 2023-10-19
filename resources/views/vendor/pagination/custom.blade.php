@@ -11,7 +11,7 @@
                     </a>
                 </li>
             @else
-                <li class="page-item disabled">
+                <li class="page-item">
                     <a href="{{ $paginator->previousPageUrl() }}" class="page-link page-link-prev" aria-label="Previous" tabindex="-1" aria-disabled="true">
                         <span aria-hidden="true"><i class="icon-long-arrow-left"></i></span>@lang('pagination.previous')
                     </a>
