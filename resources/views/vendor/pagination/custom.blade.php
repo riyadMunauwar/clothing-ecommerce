@@ -11,9 +11,6 @@
                     </a>
                 </li>
             @else
-                <li class="page-item">
-                    <a class="page-link"  rel="prev"></a>
-                </li>
                 <li class="page-item disabled">
                     <a href="{{ $paginator->previousPageUrl() }}" class="page-link page-link-prev" aria-label="Previous" tabindex="-1" aria-disabled="true">
                         <span aria-hidden="true"><i class="icon-long-arrow-left"></i></span>@lang('pagination.previous')
@@ -21,11 +18,6 @@
                 </li>
             @endif
 
-<!-- 
-            <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item-total">of 6</li> -->
 
             {{-- Pagination Elements --}}
             @foreach ($elements as $element)
