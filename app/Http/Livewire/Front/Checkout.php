@@ -89,7 +89,12 @@ class Checkout extends Component
 
         $service = new OrderService();
 
-        $addressId = $this->createAddress();
+        
+        $addressId = $this->address_id;
+
+        if(!$this->address_id){
+            $addressId = $this->createAddress();
+        }
 
         $order_data = [
             'order_no' => $service->getRandomStr(),
@@ -116,7 +121,15 @@ class Checkout extends Component
 
     public function startPayment()
     {
-        $this->validate();
+
+        if($this->address_id){
+            $this->validate([
+                'payment_method_option' => ['required'],
+                'terms_and_condition' => ['required'],
+            ]);
+        }else {
+            $this->validate();
+        }
         
         match($this->payment_method_option){
 
