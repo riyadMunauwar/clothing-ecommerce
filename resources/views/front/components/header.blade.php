@@ -63,7 +63,7 @@
                 </button>
 
                 <a href="/" class="logo">
-                    <img src="{{ asset('assets/logos/rayat-logo.png') }}" alt="Rayatboutique Logo" width="105" height="25">
+                    <img src="{{ asset('assets/logos/rayat-logo.png') }}" alt="Rayatboutique Logo" width="105" height="35">
                 </a>
 
                 <nav class="main-nav">
@@ -76,7 +76,7 @@
 
                                 @if($menu->category_id)
                                     <li>
-                                        <a href="{{ route('category', ['category_slug' => $menu->category_slug, 'id' => $menu->category_id]) }}">{{ $menu->name }}</a>
+                                        <a href="{{ route('category', ['category_slug' => $menu->category_slug ?? 'categories', 'id' => $menu->category_id]) }}">{{ $menu->name }}</a>
                                     </li>
                                 @else 
                                     <li>
@@ -96,7 +96,7 @@
                                                 @if(!count($child->children) > 0)
 
                                                     @if($child->category_id)
-                                                        <li><a style="font-weight: 500; color: #333" href="{{ route('category', ['category_slug' => $child->category_slug, 'id' => $child->category_id]) }}">{{ $child->name }}</a></li>
+                                                        <li><a style="font-weight: 500; color: #333" href="{{ route('category', ['category_slug' => $child->category_slug ?? 'categories', 'id' => $child->category_id]) }}">{{ $child->name }}</a></li>
                                                     @else
                                                         <li><a style="font-weight: 500; color: #333" href="{{ $child->link }}">{{ $child->name }}</a></li>
                                                     @endif
@@ -109,7 +109,7 @@
                                                             @foreach($child->children as $grandChild)
 
                                                                 @if($grandChild->category_id)
-                                                                    <li><a style="font-weight: 500; color: #333" href="{{ route('category', ['category_slug' => $grandChild->category_slug, 'id' => $grandChild->category_id]) }}">{{ $grandChild->name }}</a></li>
+                                                                    <li><a style="font-weight: 500; color: #333" href="{{ route('category', ['category_slug' => $grandChild->category_slug ?? 'categories', 'id' => $grandChild->category_id]) }}">{{ $grandChild->name }}</a></li>
                                                                 @else
                                                                     <li><a style="font-weight: 500; color: #333" href="{{ $grandChild->link }}">{{ $grandChild->name }}</a></li>
                                                                 @endif
@@ -136,7 +136,7 @@
                                                                     <ul>
                                                                         @foreach($child->children ?? [] as $grandChild)
                                                                             @if($grandChild->category_id)
-                                                                                <li><a style="color: #333" href="{{ route('category', ['category_slug' => $grandChild->category_slug, 'id' => $grandChild->category_id]) }}">{{ $grandChild->name }}</a></li>
+                                                                                <li><a style="color: #333" href="{{ route('category', ['category_slug' => $grandChild->category_slug ?? 'categories', 'id' => $grandChild->category_id]) }}">{{ $grandChild->name }}</a></li>
                                                                             @else
                                                                                 <li><a  style="color: #333" href="{{ $grandChild->link }}">{{ $grandChild->name }}</a></li>
                                                                             @endif
