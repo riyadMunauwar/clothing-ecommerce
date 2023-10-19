@@ -108,13 +108,13 @@
                                 </div>
 
                                     <!-- Share button -->
-                                <!-- <div class="social-icons social-icons-sm">
+                                <div class="social-icons social-icons-sm">
                                     <span class="social-label">Share:</span>
                                     <a href="#" class="social-icon" title="Facebook" target="_blank"><i class="icon-facebook-f"></i></a>
                                     <a href="#" class="social-icon" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>
                                     <a href="#" class="social-icon" title="Instagram" target="_blank"><i class="icon-instagram"></i></a>
                                     <a href="#" class="social-icon" title="Pinterest" target="_blank"><i class="icon-pinterest"></i></a>
-                                </div> -->
+                                </div>
 
                             </div><!-- End .product-details-footer -->
                         </div><!-- End .product-details -->
