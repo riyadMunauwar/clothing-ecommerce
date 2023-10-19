@@ -4,7 +4,7 @@
             <div class="toolbox">
                 <div class="toolbox-left">
                     <div class="toolbox-info">
-                        Showing <span>{{ $products->to }} of {{ $products->total() }}</span> Products
+                        Showing <span>{{ $products->per_page }} of {{ $products->total() }}</span> Products
                     </div><!-- End .toolbox-info -->
                 </div><!-- End .toolbox-left -->
 
