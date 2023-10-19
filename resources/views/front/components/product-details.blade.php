@@ -110,7 +110,7 @@
                                     <!-- Share button -->
                                 <div class="social-icons social-icons-sm">
                                     <span class="social-label">Share:</span>
-                                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ route('product', ['product_slug' => $product->slug, 'id' => $product->id]) }} }}" target="_blank" class="social-ico" class="social-icon" title="Facebook" target="_blank"><i class="icon-facebook-f"></i></a>
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ route('product', ['product_slug' => $product->slug, 'id' => $product->id]) }} }}" target="_blank" class="social-icon" title="Facebook"><i class="icon-facebook-f"></i></a>
                                     <button href="#" class="social-icon" title="Twitter" target="_blank"><i class="icon-twitter"></i></button>
                                     <button href="#" class="social-icon" title="Instagram" target="_blank"><i class="icon-instagram"></i></button>
                                     <button href="#" class="social-icon" title="Pinterest" target="_blank"><i class="icon-pinterest"></i></button>
