@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="col-lg-9">
+        <div class="col-lg-12">
             <div class="toolbox">
                 <div class="toolbox-left">
                     <div class="toolbox-info">
@@ -91,7 +91,7 @@
 
 
         </div><!-- End .col-lg-9 -->
-        <aside class="col-lg-3 order-lg-first">
+        <aside class="col-lg-3 order-lg-first hidden">
             <div class="sidebar sidebar-shop">
                 <div class="widget widget-clean">
                     <label>Filters:</label>

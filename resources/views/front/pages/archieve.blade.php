@@ -6,7 +6,7 @@
 
 
     <div class="page-header text-center" style="background-image: url('{{ asset('assets/images/page-header-bg.jpg') }}')">
-        <div class="container-fluid">
+        <div class="container">
             <h1 class="page-title">{{ $category->name ?? '' }}<span>Shop</span></h1>
         </div><!-- End .container-fluid -->
     </div><!-- End .page-header -->
