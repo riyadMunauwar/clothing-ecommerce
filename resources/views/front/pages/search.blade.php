@@ -9,7 +9,7 @@
 
     
     <nav aria-label="breadcrumb" class="breadcrumb-nav mb-2">
-        <div class="container-fluid">
+        <div class="container">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/">Home</a></li>
                 <li class="breadcrumb-item"><a>Search</a></li>
