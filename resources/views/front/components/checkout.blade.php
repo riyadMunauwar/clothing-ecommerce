@@ -36,18 +36,18 @@
         <div>
             @foreach($addresses as $address)
                 <div class="custom-control custom-radio mb-3">
-                    <input value="cash-on-delivery" wire:model.debounce="address_id" value="{{ $address->id }}" type="radio" id="address-{{ $address->id }}" name="address_id" class="custom-control-input">
+                    <input  wire:model.debounce="address_id" value="{{ $address->id }}" type="radio" id="address-{{ $address->id }}" name="address_id" class="custom-control-input">
                     <label class="custom-control-label" for="address-{{ $address->id }}">
                         {!! $address->addressHtml() !!}
                     </label>
                 </div>
             @endforeach
-            <!-- <div class="custom-control custom-radio mb-3">
-                <input value="cash-on-delivery" wire:model.debounce="address_id" value="" type="radio" id="address-new" name="address_id" class="custom-control-input">
+            <div class="custom-control custom-radio mb-3">
+                <input value="" wire:model.debounce="address_id" type="radio" id="address-new" name="address_id" class="custom-control-input">
                 <label class="custom-control-label" for="address-new">
                     New address
                 </label>
-            </div> -->
+            </div>
     </div>
         @endif
 
