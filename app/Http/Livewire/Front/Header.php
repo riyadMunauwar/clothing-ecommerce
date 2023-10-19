@@ -15,8 +15,6 @@ class Header extends Component
     public function mount()
     {
         $this->menus = $this->getMenus();
-
-        dd($this->menus);
     }
 
     public function render()
@@ -46,6 +44,12 @@ class Header extends Component
             ->get();
     
         foreach ($menuItems as $menu) {
+
+            if($menu->category_id) {
+                $category = Category::select('slug')->first();
+                $menu->category_slug = $category->slug;
+            }
+
             $menu->children = $this->getMenuTree($menu->id);
         }
     
