@@ -110,7 +110,7 @@
                                     <!-- Share button -->
                                 <div class="social-icons social-icons-sm">
                                     <span class="social-label">Share:</span>
-                                    <button class="fb-share-button" data-href="https://www.your-domain.com/your-page.html"  class="social-icon" title="Facebook" target="_blank"><i class="icon-facebook-f"></i></button>
+                                    <button class="social-icon fb-share-button" data-href="https://www.your-domain.com/your-page.html"  class="social-icon" title="Facebook" target="_blank"><i class="icon-facebook-f"></i></button>
                                     <button href="#" class="social-icon" title="Twitter" target="_blank"><i class="icon-twitter"></i></button>
                                     <button href="#" class="social-icon" title="Instagram" target="_blank"><i class="icon-instagram"></i></button>
                                     <button href="#" class="social-icon" title="Pinterest" target="_blank"><i class="icon-pinterest"></i></button>
