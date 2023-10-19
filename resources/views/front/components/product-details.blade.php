@@ -110,7 +110,7 @@
                                     <!-- Share button -->
                                 <div class="social-icons social-icons-sm">
                                     <span class="social-label">Share:</span>
-                                    <button class="social-icon fb-share-button" data-href="https://www.your-domain.com/your-page.html"  class="social-icon" title="Facebook" target="_blank"><i class="icon-facebook-f"></i></button>
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ route('product', ['product_slug' => $product->slug, 'id' => $product->id]) }} }}" target="_blank" class="social-ico" class="social-icon" title="Facebook" target="_blank"><i class="icon-facebook-f"></i></a>
                                     <button href="#" class="social-icon" title="Twitter" target="_blank"><i class="icon-twitter"></i></button>
                                     <button href="#" class="social-icon" title="Instagram" target="_blank"><i class="icon-instagram"></i></button>
                                     <button href="#" class="social-icon" title="Pinterest" target="_blank"><i class="icon-pinterest"></i></button>
@@ -356,21 +356,3 @@
 
 </div><!-- End .container -->
 
-
-@push('modals')
-    <div id="fb-root"></div>
-@endpush
-
-@push('scripts')
-<script>
-    
-    (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-    fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-
-</script>
-@endpush
