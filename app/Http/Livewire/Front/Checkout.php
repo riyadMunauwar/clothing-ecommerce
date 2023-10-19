@@ -191,7 +191,7 @@ class Checkout extends Component
 
         }catch(\Exception $e){
 
-            return $this->error('Failed to create order');
+            return $this->error('Failed to create order', '');
             
         }
 
