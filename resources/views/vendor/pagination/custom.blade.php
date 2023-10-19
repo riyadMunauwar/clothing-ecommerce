@@ -56,7 +56,9 @@
                 </li>
             @else
                 <li class="page-item disabled" aria-disabled="true" aria-label="@lang('pagination.next')">
-                    @lang('pagination.next')<span class="page-link" aria-hidden="true"><i class="icon-long-arrow-right"></span>
+                    <a class="page-link page-link-next" href="#" aria-label="@lang('pagination.next')">
+                        @lang('pagination.next') <span aria-hidden="true"><i class="icon-long-arrow-right"></i></span>
+                    </a>
                 </li>
             @endif
         </ul>
