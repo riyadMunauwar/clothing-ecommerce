@@ -122,14 +122,16 @@ class Checkout extends Component
     public function startPayment()
     {
 
-        if($this->address_id){
-            $this->validate([
-                'payment_method_option' => ['required'],
-                'terms_and_condition' => ['required'],
-            ]);
-        }else {
-            $this->validate();
-        }
+        $this->validate();
+
+        // if($this->address_id){
+        //     $this->validate([
+        //         'payment_method_option' => ['required'],
+        //         'terms_and_condition' => ['required'],
+        //     ]);
+        // }else {
+        //     $this->validate();
+        // }
         
         match($this->payment_method_option){
 
