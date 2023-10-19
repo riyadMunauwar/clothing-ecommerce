@@ -1,7 +1,7 @@
 <x-front.master-layout title="Home">
     <livewire:front.home-caurosel />
 
-    @include('front.partials.category-collection')
+   
     <livewire:front.browse-categories />
     <livewire:front.trendy-products-with-caurosel />
     <livewire:front.featured-products />
