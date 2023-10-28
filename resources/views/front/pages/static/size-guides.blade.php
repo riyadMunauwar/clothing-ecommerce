@@ -42,9 +42,64 @@
 
     <div class="page-content">
         <div class="container">
+
             <h2 class="title text-center mb-3">Polo Shirt Measurement Chart</h2><!-- End .title -->
             <div>
                 <img src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/polo_measurement_chart.png?v=1619602632" alt="">
+            </div>
+
+            <h2 class="title text-center mb-3 mt-5">Pant Measurement Chart</h2><!-- End .title -->
+            <div>
+                <img src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/pant_measurement_chart.png?v=1619416114" alt="">
+            </div>
+
+
+            <h2 class="title text-center mb-3 mt-5">Long Panjabi Measurement Chart</h2><!-- End .title -->
+            <div>
+                <img src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/long-panjabi-size-chart_02.jpg?v=1617450555" alt="">
+            </div>
+
+
+            <h2 class="title text-center mb-3 mt-5">Slim Fit Panjabi Measurement Chart</h2><!-- End .title -->
+            <div>
+                <img src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/PANJABI_measurement_chart_SLIM_FIT_e199f042-1711-40a6-a3f1-6a8a392073ff.jpg?v=1616065911" alt="">
+            </div>
+
+            <h2 class="title text-center mb-3 mt-5">Slim Fit Shirt Measurement Chart</h2><!-- End .title -->
+            <div>
+                <img src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/MEASUREMENT_CHART.jpg?v=1617520022" alt="">
+            </div>
+
+
+
+            <h2 class="title text-center mb-3 mt-5">T Shirt Measurement Chart</h2><!-- End .title -->
+            <div>
+                <img src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/measurement_chart_T-SHIRT.jpg?v=1614848380" alt="">
+            </div>
+
+            <h2 class="title text-center mb-3 mt-5">Blazer Measurement Chart</h2><!-- End .title -->
+            <div>
+                <img src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/measurement-chart-box-640x603-1.jpg?v=1610872369" alt="">
+            </div>
+
+            <h2 class="title text-center mb-3 mt-5">Sherwani Measurement Chart</h2><!-- End .title -->
+            <div>
+                <img src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/Sherowani-size_chart.jpg?v=1611048930" alt="">
+            </div>
+
+            <h2 class="title text-center mb-3 mt-5">Women's Measurement Chart</h2><!-- End .title -->
+            <div>
+                <img src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/ladies_measurement_chart.jpg?v=1620208996" alt="">
+                <img src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/9ed5c601adb7e2e6d9d6f9410d3e4e50.jpg?v=1635411973" alt="">
+                <img src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/WhatsApp_Image_2020-12-11_at_23.57.21.jpg?v=1610874598" alt="">
+                <img src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/137616249_320493049273089_8323974522438039279_n.jpg?v=1611048092" alt="">
+                <img src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/127508431_397969941558504_1726531307225635296_n.jpg?v=1611048141" alt="">
+                <img src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/WhatsApp_Image_2020-11-14_at_10.22.07.jpg?v=1611048174" alt="">
+                <img src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/Measurement_chart_all_Jacket.jpg?v=1611048234" alt="">
+                <img src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/Kids_Measurement_Chart.jpg?v=1620281597" alt="">
+                <img src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/Pant.jpg?v=1611048430" alt="">
+                <img src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/WhatsApp_Image_2020-11-14_at_10.22.09.jpg?v=1611048445" alt="">
+                <img src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/WhatsApp_Image_2020-11-14_at_10.22.08.jpg?v=1611048463" alt="">
             </div>
 
         </div><!-- End .container -->
