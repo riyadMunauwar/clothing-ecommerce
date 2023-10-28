@@ -73,6 +73,9 @@
                                     </div><!-- End .select-custom -->
                                 </div><!-- End .details-filter-row -->
                             @endforeach
+
+                            <a href="route('size-guides')" class="size-guide"><i class="icon-th-list"></i>Size guide</a>
+
                             <div class="product-details-action">
                                 <div class="details-action-col">
                                     <label for="qty">Qty:</label>
@@ -93,7 +96,6 @@
 
                             </div><!-- End .product-details-action -->
 
-                            <a href="route('size-guides')" class="size-guide"><i class="icon-th-list"></i>Size guide</a>
 
                             <div class="product-details-footer details-footer-col">
                                 <div class="product-cat">
