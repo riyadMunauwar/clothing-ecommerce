@@ -64,7 +64,7 @@
 
                 <div class="col-lg-6">
                     <div class="row">
-                        <div class="col-sm-3">
+                        <div class="col-sm-6">
                             <div class="banner banner-cat banner-badge">
                                 <a href="#">
                                     <img src="{{ asset('assets/images/category/featured/4-shirt.webp') }}" alt="Shirt">
@@ -90,7 +90,7 @@
                             </div><!-- End .banner -->
                         </div><!-- End .col-sm-8 -->
 
-                        <div class="col-sm-3">
+                        <div class="col-sm-6">
                             <div class="banner banner-cat banner-badge">
                                 <a href="#">
                                     <img src="{{ asset('assets/images/category/featured/accessories.webp') }}" alt="accessories.webp">
