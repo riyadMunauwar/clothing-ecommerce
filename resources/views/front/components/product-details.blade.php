@@ -74,7 +74,7 @@
                                 </div><!-- End .details-filter-row -->
                             @endforeach
 
-                            <a href="{{ route('size-guides') }}" class="size-guide"><i class="icon-th-list"></i>Size guide</a>
+                            <a class="mb-2" href="{{ route('size-guides') }}" class="size-guide"><i class="icon-th-list"></i>Size guide</a>
 
                             <div class="product-details-action">
                                 <div class="details-action-col">
