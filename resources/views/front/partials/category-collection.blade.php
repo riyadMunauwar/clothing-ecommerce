@@ -7,12 +7,12 @@
                         <div class="col-sm-8">
                             <div class="banner banner-cat banner-badge">
                                 <a href="#">
-                                    <img src="{{ asset('assets/images/category/fullwidth-page/banner-1.jpg') }}" alt="Banner">
+                                    <img src="{{ asset('assets/images/category/featured/1-shari-webp') }}" alt="Shari">
                                 </a>
 
-                                <a class="banner-link" href="#">
-                                    <h3 class="banner-title">Jackets</h3><!-- End .banner-title -->
-                                    <h4 class="banner-subtitle">2 Products</h4><!-- End .banner-subtitle -->
+                                <a class="banner-link" href="https://rayat.com.bd/c/categories/26">
+                                    <h3 class="banner-title">Shari</h3><!-- End .banner-title -->
+                                    <!-- <h4 class="banner-subtitle">2 Products</h4> -->
                                     <span class="banner-link-text">Shop Now</span>
                                 </a><!-- End .banner-link -->
                             </div><!-- End .banner -->
@@ -21,12 +21,12 @@
                         <div class="col-sm-4">
                             <div class="banner banner-cat banner-badge">
                                 <a href="#">
-                                    <img src="{{ asset('assets/images/category/fullwidth-page/banner-2.jpg') }}" alt="Banner">
+                                    <img src="{{ asset('assets/images/category/featured/2-home-decor.webp') }}" alt="Home Decor">
                                 </a>
 
-                                <a class="banner-link" href="#">
-                                    <h3 class="banner-title">Jeans</h3><!-- End .banner-title -->
-                                    <h4 class="banner-subtitle">1 Product</h4><!-- End .banner-subtitle -->
+                                <a class="banner-link" href="https://rayat.com.bd/c/categories/62">
+                                    <h3 class="banner-title">Home Decor</h3><!-- End .banner-title -->
+                                    <!-- <h4 class="banner-subtitle">1 Product</h4> -->
                                     <span class="banner-link-text">Shop Now</span>
                                 </a><!-- End .banner-link -->
                             </div><!-- End .banner -->
@@ -35,12 +35,12 @@
                         <div class="col-sm-4">
                             <div class="banner banner-cat banner-badge">
                                 <a href="#">
-                                    <img src="{{ asset('assets/images/category/fullwidth-page/banner-3.jpg') }}" alt="Banner">
+                                    <img src="{{ asset('assets/images/category/featured/2-selowar-kamiz.webp') }}" alt="Selwar Kamiz">
                                 </a>
 
                                 <a class="banner-link" href="#">
-                                    <h3 class="banner-title">Sportwear</h3><!-- End .banner-title -->
-                                    <h4 class="banner-subtitle">0 Product</h4><!-- End .banner-subtitle -->
+                                    <h3 class="banner-title">Selowar Kamiz</h3><!-- End .banner-title -->
+                                    <!-- <h4 class="banner-subtitle">0 Product</h4> -->
                                     <span class="banner-link-text">Shop Now</span>
                                 </a><!-- End .banner-link -->
                             </div><!-- End .banner -->
@@ -49,12 +49,12 @@
                         <div class="col-sm-8">
                             <div class="banner banner-cat banner-badge">
                                 <a href="#">
-                                    <img src="{{ asset('assets/images/category/fullwidth-page/banner-4.jpg') }}" alt="Banner">
+                                    <img src="{{ asset('assets/images/category/featured/3-panjabi.webp') }}" alt="Panjabi">
                                 </a>
 
-                                <a class="banner-link" href="#">
-                                    <h3 class="banner-title">Bags</h3><!-- End .banner-title -->
-                                    <h4 class="banner-subtitle">4 Products</h4><!-- End .banner-subtitle -->
+                                <a class="banner-link" href="https://rayat.com.bd/c/categories/45">
+                                    <h3 class="banner-title">Panjabi</h3><!-- End .banner-title -->
+                                    <!-- <h4 class="banner-subtitle">4 Products</h4> -->
                                     <span class="banner-link-text">Shop Now</span>
                                 </a><!-- End .banner-link -->
                             </div><!-- End .banner -->
@@ -67,24 +67,24 @@
                         <div class="col-sm-8">
                             <div class="banner banner-cat banner-badge">
                                 <a href="#">
-                                    <img src="{{ asset('assets/images/category/fullwidth-page/banner-5.jpg') }}" alt="Banner">
+                                    <img src="{{ asset('assets/images/category/featured/4-shirt.webp') }}" alt="Shirt">
                                 </a>
 
                                 <a class="banner-link" href="#">
-                                    <h3 class="banner-title">Dresses</h3><!-- End .banner-title -->
-                                    <h4 class="banner-subtitle">3 Products</h4><!-- End .banner-subtitle -->
+                                    <h3 class="banner-title">Shirt</h3><!-- End .banner-title -->
+                                    <!-- <h4 class="banner-subtitle">3 Products</h4> -->
                                     <span class="banner-link-text">Shop Now</span>
                                 </a><!-- End .banner-link -->
                             </div><!-- End .banner -->
 
                             <div class="banner banner-cat banner-badge">
                                 <a href="#">
-                                    <img src="{{ asset('assets/images/category/fullwidth-page/banner-6.jpg') }}" alt="Banner">
+                                    <img src="{{ asset('assets/images/category/featured/5-kids.webp') }}" alt="Kids">
                                 </a>
 
-                                <a class="banner-link" href="#">
+                                <a class="banner-link" href="https://rayat.com.bd/c/categories/37">
                                     <h3 class="banner-title">Shoes</h3><!-- End .banner-title -->
-                                    <h4 class="banner-subtitle">2 Products</h4><!-- End .banner-subtitle -->
+                                    <!-- <h4 class="banner-subtitle">2 Products</h4> -->
                                     <span class="banner-link-text">Shop Now</span>
                                 </a><!-- End .banner-link -->
                             </div><!-- End .banner -->
@@ -93,24 +93,24 @@
                         <div class="col-sm-4">
                             <div class="banner banner-cat banner-badge">
                                 <a href="#">
-                                    <img src="{{ asset('assets/images/category/fullwidth-page/banner-7.jpg') }}" alt="Banner">
+                                    <img src="{{ asset('assets/images/category/featured/accessories.webp') }}" alt="accessories.webp">
                                 </a>
 
                                 <a class="banner-link" href="#">
-                                    <h3 class="banner-title">T-shirts</h3><!-- End .banner-title -->
-                                    <h4 class="banner-subtitle">0 Products</h4><!-- End .banner-subtitle -->
+                                    <h3 class="banner-title">Accessories</h3><!-- End .banner-title -->
+                                    <!-- <h4 class="banner-subtitle">0 Products</h4> -->
                                     <span class="banner-link-text">Shop Now</span>
                                 </a><!-- End .banner-link -->
                             </div><!-- End .banner -->
 
                             <div class="banner banner-cat banner-badge">
                                 <a href="#">
-                                    <img src="{{ asset('assets/images/category/fullwidth-page/banner-8.jpg') }}" alt="Banner">
+                                    <img src="{{ asset('assets/images/category/featured/gift-and-card.webp') }}" alt="Gift & Card">
                                 </a>
 
-                                <a class="banner-link" href="#">
-                                    <h3 class="banner-title">Jumpers</h3><!-- End .banner-title -->
-                                    <h4 class="banner-subtitle">1 Product</h4><!-- End .banner-subtitle -->
+                                <a class="banner-link" href="https://rayat.com.bd/c/categories/37">
+                                    <h3 class="banner-title">Gift & Craft</h3><!-- End .banner-title -->
+                                    <!-- <h4 class="banner-subtitle">1 Product</h4> -->
                                     <span class="banner-link-text">Shop Now</span>
                                 </a><!-- End .banner-link -->
                             </div><!-- End .banner -->
