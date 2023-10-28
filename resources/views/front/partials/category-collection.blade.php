@@ -7,7 +7,7 @@
                         <div class="col-sm-8">
                             <div class="banner banner-cat banner-badge">
                                 <a href="#">
-                                    <img src="{{ asset('assets/images/category/featured/1-shari-webp') }}" alt="Shari">
+                                    <img src="{{ asset('assets/images/category/featured/1-shari.webp') }}" alt="Shari">
                                 </a>
 
                                 <a class="banner-link" href="https://rayat.com.bd/c/categories/26">
@@ -105,7 +105,7 @@
 
                             <div class="banner banner-cat banner-badge">
                                 <a href="#">
-                                    <img src="{{ asset('assets/images/category/featured/gift-and-card.webp') }}" alt="Gift & Card">
+                                    <img src="{{ asset('assets/images/category/featured/gift-and-craft.webp') }}" alt="Gift & Card">
                                 </a>
 
                                 <a class="banner-link" href="https://rayat.com.bd/c/categories/37">
