@@ -110,6 +110,7 @@ Route::view('/wishlist', 'front.pages.wishlist')->name('wishlist');
 
 
 
+Route::view('/size-guides', 'front.pages.static.size-guides')->name('size-guides');
 Route::view('/about-us', 'front.pages.static.about')->name('about-us');
 Route::view('/contact-us', 'front.pages.static.contact')->name('contact-us');
 Route::view('/terms-of-service', 'front.pages.static.tos')->name('tos');
