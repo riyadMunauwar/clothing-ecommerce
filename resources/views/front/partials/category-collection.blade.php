@@ -2,7 +2,7 @@
     <div class="categories-page">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-12">
                     <div class="row">
                         <div class="col-sm-3">
                             <div class="banner banner-cat banner-badge">
@@ -59,11 +59,7 @@
                                 </a><!-- End .banner-link -->
                             </div><!-- End .banner -->
                         </div><!-- End .col-sm-8 -->
-                    </div><!-- End .row -->
-                </div><!-- End .col-lg-6 -->
 
-                <div class="col-lg-6">
-                    <div class="row">
                         <div class="col-sm-6">
                             <div class="banner banner-cat banner-badge">
                                 <a href="#">
@@ -76,7 +72,9 @@
                                     <span class="banner-link-text">Shop Now</span>
                                 </a><!-- End .banner-link -->
                             </div><!-- End .banner -->
+                        </div>
 
+                        <div class="col-sm-6">
                             <div class="banner banner-cat banner-badge">
                                 <a href="#">
                                     <img src="{{ asset('assets/images/category/featured/5-kids.webp') }}" alt="Kids">
@@ -88,7 +86,8 @@
                                     <span class="banner-link-text">Shop Now</span>
                                 </a><!-- End .banner-link -->
                             </div><!-- End .banner -->
-                        </div><!-- End .col-sm-8 -->
+                        </div>
+
 
                         <div class="col-sm-6">
                             <div class="banner banner-cat banner-badge">
@@ -102,7 +101,9 @@
                                     <span class="banner-link-text">Shop Now</span>
                                 </a><!-- End .banner-link -->
                             </div><!-- End .banner -->
+                        </div>
 
+                        <div class="col-sm-6">
                             <div class="banner banner-cat banner-badge">
                                 <a href="#">
                                     <img src="{{ asset('assets/images/category/featured/gift-and-craft.webp') }}" alt="Gift & Card">
@@ -114,9 +115,12 @@
                                     <span class="banner-link-text">Shop Now</span>
                                 </a><!-- End .banner-link -->
                             </div><!-- End .banner -->
-                        </div><!-- End .col-sm-4 -->
+                        </div>
+
+
                     </div><!-- End .row -->
                 </div><!-- End .col-lg-6 -->
+
             </div><!-- End .row -->
         </div><!-- End .container-fluid -->
     </div><!-- End .categories-page -->
