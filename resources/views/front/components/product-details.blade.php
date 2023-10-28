@@ -71,8 +71,6 @@
                                             @endforeach
                                         </select>
                                     </div><!-- End .select-custom -->
-
-                                    <a href="#" class="size-guide"><i class="icon-th-list"></i>{{ $attribute }} guide</a>
                                 </div><!-- End .details-filter-row -->
                             @endforeach
                             <div class="product-details-action">
@@ -94,6 +92,8 @@
 
 
                             </div><!-- End .product-details-action -->
+
+                            <a href="route('size-guides')" class="size-guide"><i class="icon-th-list"></i>Size guide</a>
 
                             <div class="product-details-footer details-footer-col">
                                 <div class="product-cat">
