@@ -74,9 +74,9 @@
                                 </div><!-- End .details-filter-row -->
                             @endforeach
 
-                            <a class="mb-3" href="{{ route('size-guides') }}" class="size-guide"><i class="icon-th-list"></i>Size guide</a>
+                            <a href="{{ route('size-guides') }}" class="size-guide"><i class="icon-th-list"></i>Size guide</a>
 
-                            <div class="product-details-action">
+                            <div class="product-details-action mt-2">
                                 <div class="details-action-col">
                                     <label for="qty">Qty:</label>
                                     <div class="product-details-quantity">
