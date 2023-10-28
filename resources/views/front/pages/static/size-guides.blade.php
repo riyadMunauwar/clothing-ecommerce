@@ -89,17 +89,17 @@
 
             <h2 class="title text-center mb-3 mt-5">Women's Measurement Chart</h2><!-- End .title -->
             <div>
-                <img src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/ladies_measurement_chart.jpg?v=1620208996" alt="">
-                <img src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/9ed5c601adb7e2e6d9d6f9410d3e4e50.jpg?v=1635411973" alt="">
-                <img src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/WhatsApp_Image_2020-12-11_at_23.57.21.jpg?v=1610874598" alt="">
-                <img src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/137616249_320493049273089_8323974522438039279_n.jpg?v=1611048092" alt="">
-                <img src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/127508431_397969941558504_1726531307225635296_n.jpg?v=1611048141" alt="">
-                <img src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/WhatsApp_Image_2020-11-14_at_10.22.07.jpg?v=1611048174" alt="">
-                <img src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/Measurement_chart_all_Jacket.jpg?v=1611048234" alt="">
-                <img src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/Kids_Measurement_Chart.jpg?v=1620281597" alt="">
-                <img src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/Pant.jpg?v=1611048430" alt="">
-                <img src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/WhatsApp_Image_2020-11-14_at_10.22.09.jpg?v=1611048445" alt="">
-                <img src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/WhatsApp_Image_2020-11-14_at_10.22.08.jpg?v=1611048463" alt="">
+                <img class="" src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/ladies_measurement_chart.jpg?v=1620208996" alt="">
+                <img class="mt-4" src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/9ed5c601adb7e2e6d9d6f9410d3e4e50.jpg?v=1635411973" alt="">
+                <img class="mt-4" src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/WhatsApp_Image_2020-12-11_at_23.57.21.jpg?v=1610874598" alt="">
+                <img class="mt-4" src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/137616249_320493049273089_8323974522438039279_n.jpg?v=1611048092" alt="">
+                <img class="mt-4" src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/127508431_397969941558504_1726531307225635296_n.jpg?v=1611048141" alt="">
+                <img class="mt-4" src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/WhatsApp_Image_2020-11-14_at_10.22.07.jpg?v=1611048174" alt="">
+                <img class="mt-4" src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/Measurement_chart_all_Jacket.jpg?v=1611048234" alt="">
+                <img class="mt-4" src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/Kids_Measurement_Chart.jpg?v=1620281597" alt="">
+                <img class="mt-4" src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/Pant.jpg?v=1611048430" alt="">
+                <img class="mt-4" src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/WhatsApp_Image_2020-11-14_at_10.22.09.jpg?v=1611048445" alt="">
+                <img class="mt-4" src="https://cdn.shopify.com/s/files/1/0529/0685/2523/files/WhatsApp_Image_2020-11-14_at_10.22.08.jpg?v=1611048463" alt="">
             </div>
 
         </div><!-- End .container -->
