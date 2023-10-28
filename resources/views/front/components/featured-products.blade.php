@@ -11,7 +11,7 @@
 
                         <figure class="product-media">
                             <span class="product-label">Sale</span>
-                            <a href="{{ route('product', ['product_slug' => $product->slug, 'id' => $product->id]) }}">
+                            <a target="_blank" href="{{ route('product', ['product_slug' => $product->slug, 'id' => $product->id]) }}">
                                 <img src="{{ $product->thumbnailUrl() }}" alt="{{ $product->name }}" class="product-image">
                             </a>
 
@@ -31,7 +31,7 @@
                                 <a href="{{ route('category', ['category_slug' => $product->categories->first()->slug ?? 'none', 'id' => $product->categories->first()->id ?? 'none' ]) }}">{{ $product->categories->first()->name ?? 'None' }}</a>
                             </div>
                             
-                            <h3 class="product-title"><a href="{{ route('product', ['product_slug' => $product->slug, 'id' => $product->id]) }}">{{ $product->name }}</a></h3>
+                            <h3 target="_blank" class="product-title"><a href="{{ route('product', ['product_slug' => $product->slug, 'id' => $product->id]) }}">{{ $product->name }}</a></h3>
                             
                             <div class="product-price">
                                 <span class="new-price">BDT {{ number_format($product->sale_price) }}</span>

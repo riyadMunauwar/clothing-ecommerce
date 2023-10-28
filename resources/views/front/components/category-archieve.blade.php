@@ -30,7 +30,7 @@
                             <div class="product product-7 text-center">
                                 <figure class="product-media">
                                     <span class="product-label label-new">New</span>
-                                    <a href="{{ route('product', ['product_slug' => $product->slug, 'id' => $product->id]) }}">
+                                    <a target="_blank" href="{{ route('product', ['product_slug' => $product->slug, 'id' => $product->id]) }}">
                                         <img src="{{ $product->thumbnailUrl() }}" alt="{{ $product->name }}" class="product-image">
                                     </a>
 
@@ -48,7 +48,7 @@
                                     <div class="product-cat">
                                         <a href="{{ route('category', ['category_slug' => $product->categories->first()->slug ?? 'none', 'id' => $product->categories->first()->id ?? 'none' ]) }}">{{ $product->categories->first()->name ?? 'None' }}</a>
                                     </div><!-- End .product-cat -->
-                                    <h3 class="product-title"><a href="{{ route('product', ['product_slug' => $product->slug, 'id' => $product->id]) }}">{{ $product->name }}</a></h3><!-- End .product-title -->
+                                    <h3 class="product-title"><a target="_blank" href="{{ route('product', ['product_slug' => $product->slug, 'id' => $product->id]) }}">{{ $product->name }}</a></h3><!-- End .product-title -->
                                     
                                     <div class="product-price">
                                         <span class="new-price">BDT {{ number_format($product->sale_price) }}</span>
@@ -56,12 +56,12 @@
                                     </div>
 
                                     <!-- Product Rating -->
-                                    <div class="ratings-container">
+                                    <!-- <div class="ratings-container">
                                         <div class="ratings">
-                                            <div class="ratings-val" style="width: 20%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
+                                            <div class="ratings-val" style="width: 20%;"></div>
+                                        </div>
                                         <span class="ratings-text">( 2 Reviews )</span>
-                                    </div>
+                                    </div> -->
 
                                     <!-- Variation Section -->
                                     <!-- <div class="product-nav product-nav-thumbs">
