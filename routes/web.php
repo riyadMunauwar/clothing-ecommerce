@@ -30,7 +30,7 @@ Route::middleware([
     Route::view('/orders', 'admin.pages.orders.list')->name('orders.list');
     Route::view('/orders/new', 'admin.pages.orders.new-order-list')->name('orders.new-list');
     Route::get('/orders/{order}/show', \App\Http\Controllers\Admin\OrderDetailController::class)->name('orders.show');
-    Route::get('/orders/{order}/invoice', \App\Http\Controllers\Admin\GenerateInvoiceController::class)->name('orders.invoice');
+    Route::get('/orders/{order}/invoice', \App\Http\Controllers\Admin\GenerateInvoiceController::class, 'downloadInvoice')->name('orders.invoice');
     Route::view('/categories/create', 'admin.pages.categories.create')->name('categories.create');
     Route::view('/categories', 'admin.pages.categories.list')->name('categories.list');
     Route::view('/brands/create', 'admin.pages.brands.create')->name('brands.create');
@@ -58,10 +58,6 @@ Route::middleware([
     Route::view('/reports/products-search', 'admin.pages.reports.products-search-report')->name('reports.products-search');
     Route::view('/reports/customer-orders', 'admin.pages.reports.customer-orders-report')->name('reports.customer-orders');
 
-
-    // Download Invoice Controller
-    Route::get('/invoice/download/{orderId}', [\App\Http\Controllers\Admin\GenerateInvoiceController::class, 'downloadInvoice'])->name('invoice.download');
-    
 });
 
 Route::middleware([

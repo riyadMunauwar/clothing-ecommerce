@@ -51,12 +51,12 @@ class OrderDetail extends Component
 
     public function downloadInvoice()
     {
-        return redirect()->route('invoice.download', ['orderId' => $this->order->id]);
+        return redirect()->route('orders.download', ['orderId' => $this->order->id]);
     }
 
     public function printInvoice()
     {
-        // return redirect()->route('invoice', ['orderId' => $this->order->id]);
+        
     }
 
 
