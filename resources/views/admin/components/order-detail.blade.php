@@ -30,17 +30,17 @@
 
             <div class="grid grid-cols-3 mt-4">
                 <h6 class="grid-cols-1 text-md text-gray-600">Subtotal</h6>
-                <h6 class="grid-cols-2 text-md text-gray-600">$ {{ $order->total_price - $order->shipping_price }}</h6>
+                <h6 class="grid-cols-2 text-md text-gray-600">{{ config('currency.currency_symbol') }} {{ $order->total_price - $order->shipping_price }}</h6>
             </div>
 
             <div class="grid grid-cols-3 mt-4">
                 <h6 class="grid-cols-1 text-md text-gray-600">Shipping Cost</h6>
-                <h6 class="grid-cols-2 text-md text-gray-600">$ {{ $order->shipping_price ?? 0 }}</h6>
+                <h6 class="grid-cols-2 text-md text-gray-600">{{ config('currency.currency_symbol') }} {{ $order->shipping_price ?? 0 }}</h6>
             </div>
 
             <div class="grid grid-cols-3 mt-4">
                 <h6 class="grid-cols-1 text-md text-gray-600">Order Total</h6>
-                <h6 class="grid-cols-2 text-md text-gray-600">$ {{ $order->totalPrice() ?? 0 }}</h6>
+                <h6 class="grid-cols-2 text-md text-gray-600">{{ config('currency.currency_symbol') }} {{ $order->totalPrice() ?? 0 }}</h6>
             </div>
 
             <div class="grid grid-cols-3 mt-2">
@@ -230,7 +230,7 @@
                                 <span class="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">Success</span>
                             @endif
                         </td>
-                        <td class="px-4 py-1 whaitespace-nowrap">{{ number_format($payment->amount, 2) }}</td>
+                        <td class="px-4 py-1 whaitespace-nowrap">{{ config('currency.currency_symbol') }} {{ number_format($payment->amount, 2) }}</td>
 
                     </tr>
                 @endforeach
@@ -243,7 +243,7 @@
                             <h5 class="text-md mt-5">Total</h5>
                         </td>
                         <td class="px-4 py-1 whaitespace-nowrap">
-                            <h5 class="text-md mt-5">$ {{ number_format($order->payments->where('status', 'success')->sum('amount'), 2) }}</h5>
+                            <h5 class="text-md mt-5">{{ config('currency.currency_symbol') }} {{ number_format($order->payments->where('status', 'success')->sum('amount'), 2) }}</h5>
                         </td>
                     </tr>
                     
@@ -272,10 +272,10 @@
                             <img class="w-6 h-6" src="{{ $orderItem->product->thumbnailUrl() }}" alt="">
                         </th>
                         <td class="px-4 py-1 whaitespace-nowrap">{{ $orderItem->product->name ?? '' }}</td>
-                        <td class="px-4 py-1 whaitespace-nowrap">{{ number_format($orderItem->price ?? 0, 2) }}</td>
+                        <td class="px-4 py-1 whaitespace-nowrap">{{ config('currency.currency_symbol') }} {{ number_format($orderItem->price ?? 0, 2) }}</td>
                         <td class="px-4 py-1 whaitespace-nowrap">{{ $orderItem->qty }}</td>
                         <td class="px-4 py-1 whaitespace-nowrap">{{ number_format($orderItem->product->stock_qty ?? 0, 2) }}</td>
-                        <td class="px-4 py-1 whaitespace-nowrap">{{ number_format($orderItem->qty * $orderItem->price, 2) }}</td>
+                        <td class="px-4 py-1 whaitespace-nowrap">{{ config('currency.currency_symbol') }} {{ number_format($orderItem->qty * $orderItem->price, 2) }}</td>
                     </tr>
                 @endforeach
                     <tr>
@@ -287,7 +287,7 @@
                             <h5 class="text-md mt-5">Sub Total</h5>
                         </td>
                         <td class="px-4 py-1 whaitespace-nowrap">
-                            <h5 class="text-md mt-5">$ {{ number_format($orderSubtotalPrice, 2) }}</h5>
+                            <h5 class="text-md mt-5">{{ config('currency.currency_symbol') }}  {{ number_format($orderSubtotalPrice, 2) }}</h5>
                         </td>
                     </tr>
                     <tr>
@@ -299,7 +299,7 @@
                             <h5 class="text-md mt-2">Shipping Charge</h5>
                         </td>
                         <td class="px-4 py-1 whaitespace-nowrap">
-                            <h5 class="text-md mt-2">$ {{ number_format($order->shipping_cost, 2) }}</h5>
+                            <h5 class="text-md mt-2">{{ config('currency.currency_symbol') }} {{ number_format($order->shipping_cost, 2) }}</h5>
                         </td>
                     </tr>
                     <tr class="">
@@ -311,7 +311,7 @@
                             <h5 class="text-md mt-2">Vat/Tax</h5>
                         </td>
                         <td class="px-4 border-b py-1 whaitespace-nowrap">
-                            <h5 class="text-md mt-2">$ {{ number_format($order->total_vat, 2) }}</h5>
+                            <h5 class="text-md mt-2">{{ config('currency.currency_symbol') }} {{ number_format($order->total_vat, 2) }}</h5>
                         </td>
                     </tr>
                     <tr class="">
@@ -323,7 +323,7 @@
                             <h5 class="text-md mt-2">Coupon Discount</h5>
                         </td>
                         <td class="px-4 border-b py-1 whaitespace-nowrap">
-                            <h5 class="text-md mt-2">$ {{ number_format($order->coupon_discount ?? 0, 2) }}</h5>
+                            <h5 class="text-md mt-2">{{ config('currency.currency_symbol') }} {{ number_format($order->coupon_discount ?? 0, 2) }}</h5>
                         </td>
                     </tr>
                     <tr>
@@ -335,7 +335,7 @@
                             <h5 class="text-xl font-bold mt-2">Total</h5>
                         </td>
                         <td class="px-4 py-1 whaitespace-nowrap">
-                            <h5 class="text-xl font-bold mt-2">$ {{ number_format($order->totalPrice(), 2) }}</h5>
+                            <h5 class="text-xl font-bold mt-2">{{ config('currency.currency_symbol') }} {{ number_format($order->totalPrice(), 2) }}</h5>
                         </td>
                     </tr>
             </tbody>

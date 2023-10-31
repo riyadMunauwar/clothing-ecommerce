@@ -1,6 +1,5 @@
 <?php 
 
-
 return [
     'payment_endpoint' => env('AAMARPAY_PAYMENT_ENDPOINT'),
     'store_id' => env('AAMARPAY_STORE_ID'),
