@@ -40,7 +40,7 @@ class GenerateInvoiceController extends Controller
          ]);
  
          $customer = new Party([
-             'name'          => $order->address->first_name . ' ' . $order->address->last_name,
+             'name'          => $order->address->name,
              'address'       => $order->address->street_1 . ", " . "zipcode:" . $order->address->zip . ", " . $order->address->city . ", " . $order->address->state . ", " . $order->address->country,
              // 'code'          => '',
              'custom_fields' => [
