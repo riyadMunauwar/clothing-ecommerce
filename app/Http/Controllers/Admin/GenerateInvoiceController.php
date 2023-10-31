@@ -87,7 +87,7 @@ class GenerateInvoiceController extends Controller
              ->filename($client->name . ' ' . $customer->name)
              ->addItems($order_items)
              ->notes($notes)
-             ->logo('https://rayat.com.bd/assets/logos/rayat-logo.png')
+             ->logo(asset('assets/logos/rayat-logo.png'))
  
              ->save('public');
  
