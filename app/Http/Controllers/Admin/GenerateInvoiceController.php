@@ -79,7 +79,7 @@ class GenerateInvoiceController extends Controller
              ->date($order->created_at)
              ->dateFormat('d M Y')
              ->payUntilDays(14)
-             ->currencySymbol('BDT')
+             ->currencySymbol('Tk ')
              ->currencyCode('BDT')
              ->currencyFormat('{SYMBOL}{VALUE}')
              ->currencyThousandsSeparator('.')
