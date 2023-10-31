@@ -56,7 +56,7 @@ class OrderDetail extends Component
 
     public function printInvoice()
     {
-        return redirect()->route('invoice', ['orderId' => $this->order->id]);
+        // return redirect()->route('invoice', ['orderId' => $this->order->id]);
     }
 
 

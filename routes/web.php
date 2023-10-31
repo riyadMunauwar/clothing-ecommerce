@@ -58,6 +58,10 @@ Route::middleware([
     Route::view('/reports/products-search', 'admin.pages.reports.products-search-report')->name('reports.products-search');
     Route::view('/reports/customer-orders', 'admin.pages.reports.customer-orders-report')->name('reports.customer-orders');
 
+
+    // Download Invoice Controller
+    Route::get('/invoice/download/{orderId}', [\App\Http\Controllers\Admin\GenerateInvoiceController::class, 'downloadInvoice'])->name('invoice.download');
+    
 });
 
 Route::middleware([
