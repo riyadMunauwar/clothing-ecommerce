@@ -27,15 +27,15 @@ class GenerateInvoiceController extends Controller
  
     
          $client = new Party([
-             'name'          => config('setting.company_name'),
-             'phone'         => config('setting.phone'),
+             'name' => 'Rayat Boutique LTD',
+             'phone' => '+8809644776611',
              'custom_fields' => [
-                 'street'        => config('setting.street_1'),
-                 'zip'        => config('setting.zip'),
-                 'city'        => config('setting.city'),
-                 'state'        => config('setting.state'),
-                 'country'        => config('setting.country'),
-                 'email'        => config('setting.email'),
+                 'street' => 'Dhorompur, Bogura Sadar, ',
+                 'zip' => 'Bogura-5800',
+                 'city' => 'Bogura',
+                 'state' => 'Bogura',
+                 'country' => 'Bangaldesh',
+                 'email' => 'customercare@rayat.com.bd',
              ],
          ]);
  
@@ -56,7 +56,7 @@ class GenerateInvoiceController extends Controller
              array_push($order_items, (new InvoiceItem())->title($singleItem->product->name)->pricePerUnit($singleItem->price)->quantity($singleItem->qty));
          }
  
-         array_push($order_items, (new InvoiceItem())->title('Shipping Cost')->pricePerUnit($order->shipping_cost));
+         array_push($order_items, (new InvoiceItem())->title('Shipping Cost')->pricePerUnit($order->shipping_price));
  
  
          $notes = [
@@ -79,8 +79,8 @@ class GenerateInvoiceController extends Controller
              ->date($order->created_at)
              ->dateFormat('d M Y')
              ->payUntilDays(14)
-             ->currencySymbol('$')
-             ->currencyCode('USD')
+             ->currencySymbol('BDT')
+             ->currencyCode('BDT')
              ->currencyFormat('{SYMBOL}{VALUE}')
              ->currencyThousandsSeparator('.')
              ->currencyDecimalPoint('.')
