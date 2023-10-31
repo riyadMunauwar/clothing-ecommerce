@@ -131,7 +131,7 @@
     <body>
         {{-- Header --}}
         
-        <img src="{{ asset('assets/logos/rayat-logo.png') }}" alt="logo" height="100">
+        <img src="https://rayat.com.bd/assets/logos/rayat-logo.png" alt="logo" height="100">
      
         <table class="table mt-5">
             <tbody>
