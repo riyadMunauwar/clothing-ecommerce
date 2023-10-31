@@ -18,7 +18,7 @@ class GenerateInvoiceController extends Controller
      public function downloadInvoice(Request $request)
      {
  
-         $orderId = $request->orderId;
+         $orderId = $request->order;
  
          if(!$orderId) return abort(403);
  
