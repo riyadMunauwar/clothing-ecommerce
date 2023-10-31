@@ -22,7 +22,7 @@
 
                         <div style="cursor: pointer" wire:click.debounce="goToCategory({{ $category->id }})" class="col-4 col-sm-3 col-md-2">
                             <div class="banner banner-cat banner-badge">
-                                <a class="mb-6">
+                                <a>
                                     <img src="{{ $category->iconUrl('medium') }}" alt="{{ $category->name }}">
                                 </a>
 
