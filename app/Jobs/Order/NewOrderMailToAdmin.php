@@ -8,6 +8,9 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
+use App\Models\User;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\Order\NewOrderMailToAdmin as _NewOrderMailToAdmin;
 
 class NewOrderMailToAdmin implements ShouldQueue
 {
@@ -18,7 +21,7 @@ class NewOrderMailToAdmin implements ShouldQueue
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(public $order)
     {
         //
     }
@@ -30,6 +33,10 @@ class NewOrderMailToAdmin implements ShouldQueue
      */
     public function handle()
     {
-        //
+        $admins = User::role('admin')->get();
+
+        foreach($admins as $admin){
+            Mail::to($admin->email)->send(new _NewOrderMailToAdmin($this->order));
+        }
     }
 }

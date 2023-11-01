@@ -18,7 +18,7 @@ class NewOrderMailToAdmin extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(public $order)
     {
         //
     }
@@ -31,7 +31,7 @@ class NewOrderMailToAdmin extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'New Order Mail To Admin',
+            subject: 'A new order has been created',
         );
     }
 
@@ -43,7 +43,7 @@ class NewOrderMailToAdmin extends Mailable
     public function content()
     {
         return new Content(
-            view: 'view.name',
+            markdown: 'emails.new-order-mail-to-admin',
         );
     }
 
