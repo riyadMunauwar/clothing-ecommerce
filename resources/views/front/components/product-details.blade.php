@@ -42,8 +42,8 @@
                             </div> -->
 
                             <div class="product-price">
-                                BDT {{ number_format($sale_price) }}
-                                <del style="color: #333" class="ml-3 text-2xl">BDT {{ number_format($regular_price) }}</del>
+                                {{ config('currency.currency_symbol') }} {{ number_format($sale_price) }}
+                                <del style="color: #333" class="ml-3 text-2xl">{{ config('currency.currency_symbol') }} {{ number_format($regular_price) }}</del>
                             </div><!-- End .product-price -->
 
                             <div class="product-content">
@@ -284,7 +284,7 @@
                             <h3 class="product-title"><a href="{{ route('product', ['product_slug' => $product->slug, 'id' => $product->id]) }}">{{ $product->name }}</a></h3>
                             
                             <div class="product-price">
-                                BDT {{ number_format($product->sale_price) }}
+                                {{ config('currency.currency_symbol') }} {{ number_format($product->sale_price) }}
                             </div><!-- End .product-price -->
 
 
@@ -329,8 +329,8 @@
                                 <div class="product-body">
                                     <h5 class="product-title"><a href="{{ route('product', ['product_slug' => $product->slug, 'id' => $product->id]) }}">{{ $product->name }}</a></h5><!-- End .product-title -->
                                     <div class="product-price">
-                                        <span class="new-price">BDT {{ number_format($product->sale_price) }}</span>
-                                        <span class="old-price"><del>was BDT {{ number_format($product->regular_price) }}</del></span>
+                                        <span class="new-price">{{ config('currency.currency_symbol') }} {{ number_format($product->sale_price) }}</span>
+                                        <span class="old-price"><del>was {{ config('currency.currency_symbol') }} {{ number_format($product->regular_price) }}</del></span>
                                     </div><!-- End .product-price -->
                                 </div><!-- End .product-body -->
                             </div><!-- End .product product-sm -->

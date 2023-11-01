@@ -34,8 +34,8 @@
                             <h3 target="_blank" class="product-title"><a href="{{ route('product', ['product_slug' => $product->slug, 'id' => $product->id]) }}">{{ $product->name }}</a></h3>
                             
                             <div class="product-price">
-                                <span class="new-price">BDT {{ number_format($product->sale_price) }}</span>
-                                <span class="old-price">Was BDT {{ number_format($product->regular_price) }}</span>
+                                <span class="new-price">{{ config('currency.currency_symbol') }} {{ number_format($product->sale_price) }}</span>
+                                <span class="old-price">Was {{ config('currency.currency_symbol') }} {{ number_format($product->regular_price) }}</span>
                             </div>
 
                         </div>
@@ -43,12 +43,12 @@
                         <div class="product-footer">
 
                             <!-- Rating -->
-                            <div class="ratings-container">
+                            <!-- <div class="ratings-container">
                                 <div class="ratings">
                                     <div class="ratings-val" style="width: 40%;"></div>
                                 </div>
                                 <span class="ratings-text">( 4 Reviews )</span>
-                            </div>
+                            </div> -->
                             <!-- End Rating -->
 
                             <!-- Variation -->

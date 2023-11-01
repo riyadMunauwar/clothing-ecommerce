@@ -67,7 +67,7 @@
                                 <h3 class="product-title"><a target="_blank" href="{{ route('product', ['product_slug' => $product->slug, 'id' => $product->id]) }}">{{ $product->name }}</a></h3>
                                 
                                 <div class="product-price">
-                                    BDT {{ number_format($product->sale_price) }}
+                                    {{ config('currency.currency_symbol') }} {{ number_format($product->sale_price) }}
                                 </div>
 
                                 <!-- Product Color -->
@@ -140,7 +140,7 @@
                                     <h3 class="product-title"><a target="_blank" href="{{ route('product', ['product_slug' => $product->slug, 'id' => $product->id]) }}">{{ $product->name }}</a></h3>
                                     
                                     <div class="product-price">
-                                        BDT {{ number_format($product->sale_price) }}
+                                        {{ config('currency.currency_symbol') }} {{ number_format($product->sale_price) }}
                                     </div>
 
                                     <!-- Product Color -->
