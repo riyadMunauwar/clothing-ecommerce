@@ -29,6 +29,8 @@ use App\Models\SocialLink;
 use App\Observers\SocialLinkObserver;
 use App\Models\Coupon;
 use App\Observers\CouponObserver;
+use App\Models\Order;
+use App\Observers\OrderObserver;
 
 
 class ObserverServiceProvider extends ServiceProvider
@@ -63,6 +65,7 @@ class ObserverServiceProvider extends ServiceProvider
         Menu::observe(MenuObserver::class);
         SocialLink::observe(SocialLinkObserver::class);
         Coupon::observe(CouponObserver::class);
+        Order::observe(OrderObserver::class);
     }
 
 }
